@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions — ideas, questions, venture pitches
+    url: https://github.com/wjlgatech/daniel-and-david/discussions
+    about: Not sure where to start? Have an idea or a question? Say hi here first.
+  - name: 📖 Read the Mission
+    url: https://github.com/wjlgatech/daniel-and-david/blob/main/docs/vision/mission.md
+    about: What this whole project is for.

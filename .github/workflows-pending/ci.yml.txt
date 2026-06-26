@@ -1,0 +1,52 @@
+name: CI
+
+# Friendly guardrails that run on every push and PR.
+# Designed to be green on a fresh repo and to grow as ventures add real test suites.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  guardrails:
+    name: Guardrails (secrets + sanity)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: No committed secrets
+        run: |
+          echo "Checking that no .env or key files are committed..."
+          if git ls-files | grep -E '(^|/)\.env($|\.)' | grep -v '\.env\.example$'; then
+            echo "::error::A .env file is committed. Secrets must never be in the repo."
+            exit 1
+          fi
+          if git ls-files | grep -E '\.(pem|key)$'; then
+            echo "::error::A key file is committed."
+            exit 1
+          fi
+          echo "OK — no secrets found."
+
+      - name: Required docs exist
+        run: |
+          for f in README.md CONTRIBUTING.md CODE_OF_CONDUCT.md LICENSE CHANGELOG.md AGENTS.md; do
+            if [ ! -f "$f" ]; then echo "::error::Missing $f"; exit 1; fi
+          done
+          echo "OK — core docs present."
+
+  agent-smoke:
+    name: hello-agent smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run the starter agent
+        run: |
+          python3 agents/hello-agent/agent.py --price 29 --cost 7
+          echo "OK — hello-agent runs."

@@ -1,0 +1,15 @@
+# Code owners — who reviews what.
+# As the community grows, add trusted maintainers per directory.
+
+# Default owner for everything
+*                       @wjlgatech
+
+# The values, vision, and agent guides are the heart — owner reviews these closely.
+/docs/principles/       @wjlgatech
+/docs/vision/           @wjlgatech
+/CLAUDE.md              @wjlgatech
+/AGENTS.md              @wjlgatech
+/CODE_OF_CONDUCT.md     @wjlgatech
+
+# Ventures involve real money and real legal gates — owner review required.
+/ventures/              @wjlgatech

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel &amp; David — Builders in Training</title>
+  <style>
+    :root {
+      --ink: #11203a;
+      --sky: #2563eb;
+      --grow: #16a34a;
+      --gold: #f59e0b;
+      --paper: #fbfaf6;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+    header {
+      background: linear-gradient(160deg, #1e3a8a 0%, #2563eb 55%, #16a34a 130%);
+      color: #fff;
+      text-align: center;
+      padding: 72px 20px 64px;
+    }
+    header .seed { font-size: 54px; line-height: 1; }
+    header h1 { font-size: clamp(34px, 6vw, 52px); margin: 14px 0 6px; letter-spacing: -0.5px; }
+    header p.tag { font-size: clamp(16px, 2.6vw, 20px); opacity: 0.95; margin: 0 auto; max-width: 620px; }
+    .ladder { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px; }
+    .rung {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      padding: 7px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    section { padding: 48px 0; }
+    h2 { font-size: clamp(24px, 4vw, 32px); margin: 0 0 6px; }
+    .lead { color: #475569; margin-top: 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 24px; }
+    .card {
+      background: var(--card);
+      border: 1px solid #e7e3d8;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 1px 3px rgba(17,32,58,0.06);
+    }
+    .card .emoji { font-size: 30px; }
+    .card h3 { margin: 10px 0 6px; font-size: 19px; }
+    .card p { margin: 0; color: #475569; font-size: 15px; }
+    .card a { color: var(--sky); font-weight: 600; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+    .venture {
+      background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+      border: 1px solid #bbf7d0;
+      border-radius: 18px;
+      padding: 28px;
+      margin-top: 24px;
+    }
+    .venture h3 { margin: 0 0 8px; font-size: 22px; }
+    .pill {
+      display: inline-block; background: var(--grow); color: #fff;
+      font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+      vertical-align: middle; margin-left: 8px;
+    }
+    .verse {
+      text-align: center; font-style: italic; color: #475569;
+      max-width: 600px; margin: 8px auto 0;
+    }
+    footer { text-align: center; padding: 40px 20px 56px; color: #64748b; font-size: 14px; }
+    footer strong { color: var(--ink); }
+    .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700; color: var(--gold); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="seed">🌱</div>
+    <h1>Daniel &amp; David</h1>
+    <p class="tag">A workshop for raising two boys into builders, wealth creators, and servants of the Kingdom of God — run like an AI-native company, built in the open.</p>
+    <div class="ladder">
+      <span class="rung">🌱 $1M · Yr 1</span>
+      <span class="rung">🌿 $10M · Yr 2</span>
+      <span class="rung">🌳 $100M · Yr 3</span>
+      <span class="rung">🌲 $1B · Yr 5</span>
+      <span class="rung">⛰️ $10B · Yr 7</span>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <p class="kicker">The idea</p>
+    <h2>We don't find jobs. We create value.</h2>
+    <p class="lead">A wealth creator makes something people genuinely need, does it honestly, and stewards what comes back well. You learn it by building one real thing, end to end — with an AI team at your side.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🤖</div>
+        <h3>AI-Native</h3>
+        <p>Agents are teammates, not features. One kid + a few AI agents can run a real business. <a href="../../docs/principles/ai-native-company.md">Read more →</a></p>
+      </div>
+      <div class="card">
+        <div class="emoji">🛠️</div>
+        <h3>Agentic Engineering</h3>
+        <p>Small, reversible steps. Evals over vibes. The human stays the editor. <a href="../../docs/principles/agentic-engineering.md">Read more →</a></p>
+      </div>
+      <div class="card">
+        <div class="emoji">✝️</div>
+        <h3>Built to Bless</h3>
+        <p>Money is a tool and a test. We make it well and give it well. <a href="../../docs/principles/values.md">Read more →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <p class="kicker">Venture #1 — live now</p>
+    <div class="venture">
+      <h3>🏕️ KC Matchday Basecamp <span class="pill">SHIPPING</span></h3>
+      <p class="lead">A legal, venue-partnered fan-utility &amp; local-commerce business around Kansas City's global-football summer. Real demand, real margins, real compliance gates — the boys' first taste of building something people pay for.</p>
+      <p><a href="../../ventures/kc-matchday-basecamp/README.md" style="color:#16a34a;font-weight:700;text-decoration:none;">See the venture &amp; full spec →</a></p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <p class="kicker">For two builders</p>
+    <h2>Pick your track</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">👦</div>
+        <h3>Daniel — age 11</h3>
+        <p>Ship, price, sell, measure, read a P&amp;L, and code with an AI pair. <a href="../../docs/curriculum/daniel-age-11/README.md">Start →</a></p>
+      </div>
+      <div class="card">
+        <div class="emoji">🧒</div>
+        <h3>David — age 6</h3>
+        <p>Count the treasure, make the signs, greet the customer, learn to give. <a href="../../docs/curriculum/david-age-6/README.md">Start →</a></p>
+      </div>
+      <div class="card">
+        <div class="emoji">🌍</div>
+        <h3>The whole world</h3>
+        <p>Built for 100 contributions a day. Anyone can help. <a href="../../CONTRIBUTING.md">Contribute →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="verse">"Build something good. Make it pay. Use it to bless."</p>
+    <p><strong>Daniel &amp; David</strong> — built in the open · <a href="../../README.md" style="color:var(--sky);">README</a> · <a href="../../docs/vision/mission.md" style="color:var(--sky);">Mission</a></p>
+  </footer>
+</body>
+</html>
