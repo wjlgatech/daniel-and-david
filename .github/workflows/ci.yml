@@ -70,3 +70,6 @@ jobs:
 
       - name: Registration-safety (adults-only, privacy-safe signup)
         run: bash scripts/check-registration-safety.sh
+
+      - name: Web app (PWA) smoke check
+        run: bash scripts/check-webapp.sh

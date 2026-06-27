@@ -45,7 +45,14 @@ else
   warn "The founding-cohort form is missing a child-safety guardrail. Run: scripts/check-registration-safety.sh"
 fi
 
-# 5. Big-PR nudge
+# 5. Web app (PWA) shell stays installable & coherent
+if bash "$(dirname "$0")/check-webapp.sh" >/dev/null 2>&1; then
+  pass "Web app PWA shell is coherent (or no app yet)."
+else
+  warn "The Builder Loop web app shell is broken. Run: scripts/check-webapp.sh"
+fi
+
+# 6. Big-PR nudge
 count=$(echo "$changed" | grep -c . )
 if [ "${count:-0}" -gt 40 ]; then
   warn "This PR touches $count files — that's large. Consider splitting it. Small PRs merge faster."

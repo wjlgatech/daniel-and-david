@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="0.55" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <!-- maskable safe zone: keep art within central ~80% -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- sprout -->
+  <g transform="translate(256,300)">
+    <path d="M0,40 C0,-30 0,-70 0,-110" fill="none" stroke="#eafff0" stroke-width="14" stroke-linecap="round"/>
+    <path d="M0,-30 C-60,-40 -96,-80 -100,-128 C-44,-126 -6,-92 0,-40 Z" fill="#7DA060"/>
+    <path d="M0,-50 C58,-62 92,-104 96,-150 C44,-146 6,-110 0,-58 Z" fill="#8FB36B"/>
+    <circle cx="0" cy="56" r="16" fill="#f59e0b"/>
+  </g>
+</svg>

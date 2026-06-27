@@ -7,6 +7,19 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop web app (installable PWA)** — `apps/web/public/app.html`, so non-technical
+  families can *run* the loop without ever touching GitHub. A dual-mode (kid-playful /
+  parent-calm) single-file app that guides the **5 fast cycles** (pick → build → show a real
+  person → learn the flop → decide), tracks progress (ring + dots), keeps an evidence checklist,
+  **celebrates every flop**, and exports/prints. Research-backed UX: one-thing-per-screen,
+  per-step accent colors, read-aloud (Web Speech), large-text mode, Finch-style "celebrate, never
+  punish." **Installable + offline** via `manifest.webmanifest` + `sw.js` + `icons/`.
+  **Privacy by design:** all data is on-device (localStorage behind a swappable `Store` seam),
+  **no accounts, no external scripts, no network calls for user data** — COPPA-clean. Linked from
+  the landing page ("Open the Builder Loop app"), README, and the Builder Loop guide.
+- **`scripts/check-webapp.sh`** + CI + `check.sh`: PWA smoke check — verifies the app/manifest/
+  service-worker/icons exist, the manifest is installable (name/start_url/display/512-icon), the JS
+  parses, and the app links the manifest + registers the SW + states the on-device promise.
 - **Founding Families — "The Halving"** (`docs/founding-families.md`, `FOUNDERS.md`): an authentic,
   honor-based exclusivity model for the pilot cohort. Like Bitcoin issuance, the founder's reward
   **halves** each epoch while the cohort **doubles** (Genesis 8 → 16 → 32 → 64 → open at #121).

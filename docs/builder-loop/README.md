@@ -19,7 +19,9 @@ conscience**. The rule: *form your own first attempt before you ask the AI.* (Se
 [`docs/principles/values.md`](../principles/values.md) and the
 [mission](../vision/mission.md).)
 
-> 🖨️ **Want to just run it?** Print the **[one-page family sheet](printable.md)** and copy the
+> ▶️ **Just want to run it?** Open the free **[Builder Loop app](https://wjlgatech.github.io/daniel-and-david/app.html)**
+> — 1-click, no signup, installs to your home screen, works offline, keeps everything on your
+> device. Prefer paper? Print the **[one-page family sheet](printable.md)** and copy the
 > **[iteration log](iteration-log.md)** (one block per cycle). Devs can scaffold a dated log
 > entry with `./scripts/builder-loop-log.sh` — see [Infrastructure](#infrastructure-that-keeps-you-iterating).
 
