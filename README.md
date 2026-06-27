@@ -70,6 +70,17 @@ How we work — the same way the best AI-native companies work:
 
 <p align="center"><img src="docs/assets/agent-loop.svg" alt="Your AI teammate: an agent is a loop — LOOK at the goal, THINK of one step, ACT with a tool, CHECK if it worked. You are the boss; the robot does the busy work." width="78%"></p>
 
+### The thinking tool every builder needs
+
+Before you build, buy, believe, or sell anything — **interrogate it.** We use the **5W1H
+critical-thinking grid**: six question-words you point at any claim, plan, or product to surface
+hidden risks and untested assumptions. It's taught to the boys
+([🧠 Critical Thinking](docs/curriculum/critical-thinking/) — David's "Six Detective Words" and
+Daniel's applied version) and [wired into our AI teammates](.claude/README.md) as a skill,
+workflow, hook, and plugin — so humans and agents think the same way.
+
+<p align="center"><img src="docs/assets/critical-thinking.svg" alt="Critical Thinking is Key — the 5W1H grid: Who, What, Where, When, Why, How, each with eight probing questions to interrogate any topic." width="100%"></p>
+
 ---
 
 ## Repository map
