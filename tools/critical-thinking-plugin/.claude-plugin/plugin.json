@@ -1,0 +1,12 @@
+{
+  "name": "critical-thinking",
+  "description": "The 5W1H critical-thinking grid as an installable agent toolkit: a /critical-thinking command, a skill, and a high-stakes-edit nudge hook. Helps an agent interrogate a claim, plan, product, or decision before acting.",
+  "version": "0.1.0",
+  "author": {
+    "name": "wjlgatech and the Daniel & David contributors",
+    "url": "https://github.com/wjlgatech/daniel-and-david"
+  },
+  "homepage": "https://github.com/wjlgatech/daniel-and-david/tree/main/tools/critical-thinking-plugin",
+  "license": "MIT",
+  "keywords": ["critical-thinking", "5w1h", "decision", "review", "education"]
+}

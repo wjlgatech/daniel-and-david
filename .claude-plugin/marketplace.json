@@ -1,0 +1,17 @@
+{
+  "name": "daniel-and-david",
+  "owner": {
+    "name": "wjlgatech",
+    "url": "https://github.com/wjlgatech/daniel-and-david"
+  },
+  "metadata": {
+    "description": "Agent tools from the Daniel & David venture studio — capabilities for humans and AI teammates that share the same thinking."
+  },
+  "plugins": [
+    {
+      "name": "critical-thinking",
+      "source": "./tools/critical-thinking-plugin",
+      "description": "The 5W1H critical-thinking grid as a command + skill + hook: interrogate a claim, plan, product, or decision before acting."
+    }
+  ]
+}

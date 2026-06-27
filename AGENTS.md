@@ -13,6 +13,17 @@ creators and Kingdom builders. It holds:
 - `ventures/` — real businesses built in the open. **Venture #1 = `kc-matchday-basecamp/`.**
 - `apps/web/` — the academy's own static landing page.
 - `agents/` — small, readable starter agents.
+- `.claude/` — the **agent toolkit**: skills, workflows, and hooks you can use here.
+- `tools/` — installable plugins.
+
+## Your toolkit
+
+Before any **judgment call** (a venture decision, trusting a claim, reviewing a plan for what's
+missing), use the **`critical-thinking` skill** (`.claude/skills/critical-thinking/`) — the 5W1H
+grid. For a deep multi-perspective pass, run the **`critical-thinking-review` workflow**
+(`.claude/workflows/`), which fans the grid across six agents and returns a verdict. See
+[`.claude/README.md`](.claude/README.md) for the full toolkit and how to add to it. This is the
+*same* thinking tool the human curriculum teaches — keep humans and agents in sync.
 
 ## How to work here
 

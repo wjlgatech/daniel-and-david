@@ -87,6 +87,8 @@ daniel-and-david/
 │   └── web/             The academy's own landing page (open it in a browser)
 ├── agents/
 │   └── hello-agent/     A tiny, readable starter agent — your first AI teammate
+├── .claude/             Agent toolkit — skills, workflows, hooks (capabilities for AI teammates)
+├── tools/               Installable plugins (e.g. the critical-thinking plugin)
 ├── packages/            Shared code as ventures grow
 ├── scripts/             Setup and helper scripts
 └── .github/             Issue/PR templates, CI, and the contributor on-ramp

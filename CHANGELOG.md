@@ -27,6 +27,19 @@ this project aims for [Semantic Versioning](https://semver.org/).
   `docs/vision/milestones.md`; `values-non-negotiables.svg` (the 7 non-negotiables) +
   the 4-question test in `docs/principles/values.md`.
 
+- **Critical-thinking (5W1H) capability — for humans *and* agents.** Recreated the classic
+  5W1H critical-thinking poster in the repo's Anthropic style (`docs/assets/critical-thinking.svg`,
+  all 48 questions) and built a matching toolkit around it:
+  - *Human curriculum* in `docs/curriculum/critical-thinking/` — David (6) "Six Detective Words"
+    and Daniel (11) applied 5W1H (decisions, media/AI literacy, venture #1).
+  - *Agent toolkit* in `.claude/`: a `critical-thinking` **skill**, a `critical-thinking-review`
+    **dynamic workflow** (six agents fan out, one per question-word, then synthesize a verdict),
+    and a high-stakes-edit **hook** (`hooks/critical-thinking-nudge.sh`).
+  - *Installable plugin* in `tools/critical-thinking-plugin/` (command + skill + hook), listed
+    in a new repo `.claude-plugin/marketplace.json`.
+  - `.claude/README.md` documents the five ways to extend an AI teammate (skill / command / hook
+    / workflow / plugin) as a teaching artifact.
+
 ### Investigated / Rejected
 - **Single-app repo (just the KC web app).** Rejected: the goal is a *durable studio* that
   hosts many ventures over years, plus a teaching layer — a monorepo serves both.

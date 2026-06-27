@@ -9,6 +9,14 @@ something real.
 | 👦 [Daniel — age 11](daniel-age-11/) | the builder | ship, price, sell, measure, read a P&L, code with an AI pair |
 | 🧒 [David — age 6](david-age-6/) | the apprentice | count, create, greet the customer, learn that good work serves people |
 
+## Thinking tools (cross-cutting)
+
+Skills that sharpen *how you think*, used across both tracks and by our AI teammates:
+
+- 🧠 [**Critical Thinking (5W1H)**](critical-thinking/) — six question-words to interrogate any
+  claim, plan, or product before you build, believe, or sell it. (David: "The Six Detective
+  Words"; Daniel: applied to real decisions, claims, and venture #1.)
+
 ## How the tracks work
 
 Each track is a set of **quests**. A quest is small, doable in a sitting or two, and ends
