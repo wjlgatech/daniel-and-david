@@ -87,14 +87,23 @@ The application form is **provider-agnostic** — it posts to a single endpoint 
 const FORM = { provider: "none", endpoint: "" };  // ← set this to go live
 ```
 
-- `provider: "none"` (default) → the form falls back to a **mailto:** so nothing is lost before a
-  provider is chosen.
-- Pick a provider and paste its endpoint to go live. Recommended for this brand:
-  - **Tally** — EU data residency (Belgium), unlimited free tier, multi-field + consent. Best
-    privacy story for a family brand. (Embed/redirect.)
-  - **Formspree** — simplest pure-HTML `action=` endpoint, 50 submissions/mo free (plenty for a
-    120-family cap), built-in `_gotcha` honeypot, DPA on request.
-- Then update the [privacy notice](../apps/web/public/privacy.html) with the chosen processor.
+Until an endpoint is set, the form falls back to a **mailto:** so nothing is lost — that's the
+current, most-private state (no third-party processor at all), which is perfectly fine for the
+8-family Genesis cohort.
+
+**Recommended provider: Formspree.** To go live, just paste its endpoint into `FORM.endpoint`:
+
+1. Create a free form at [formspree.io](https://formspree.io) using `wjlgatech@gmail.com`.
+2. Copy the endpoint (`https://formspree.io/f/XXXX`) into `FORM.endpoint`.
+3. Update the [privacy notice](../apps/web/public/privacy.html) to confirm Formspree is live.
+
+Why Formspree over the alternatives **for this project**: it posts straight into the custom,
+child-safety-checked form we already built (keeping `scripts/check-registration-safety.sh` intact),
+has a **GDPR DPA**, a built-in `_gotcha` honeypot, and a free tier (50/mo) that easily covers the
+120-family cap. **Tally** has a stronger EU-residency story but would require *replacing* this form
+with an embed/iframe (losing the inline UX and the CI safety guard) — only worth it if you later
+want managed multi-cohort forms. Whatever you choose, name the processor in the privacy notice
+before switching it on.
 
 The form already includes the **honeypot, the adults-only notice, and the consent checkbox**;
 `scripts/check-registration-safety.sh` fails the build if any of those go missing.

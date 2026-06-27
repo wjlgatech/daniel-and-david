@@ -17,8 +17,9 @@ this project aims for [Semantic Versioning](https://semver.org/).
   single swappable `FORM` endpoint (the email-capture **seam**) with a **mailto: fallback** so no
   application is lost before a provider is chosen. Includes a honeypot, a required 18+ consent
   checkbox, an adults-only notice, and an honest "spots remaining" counter from one config value.
-  New hosted **privacy notice** (`apps/web/public/privacy.html`); provider options (Tally/Formspree)
-  documented in `docs/founding-families.md`.
+  New hosted **privacy notice** (`apps/web/public/privacy.html`). **Recommended provider: Formspree**
+  (posts into the custom safety-checked form, GDPR DPA, free tier covers the 120-family cap) — go
+  live by pasting one endpoint; Tally documented as an alternative in `docs/founding-families.md`.
 - **`scripts/check-registration-safety.sh`** + a CI step + a `check.sh` check — fails the build if
   the signup form loses its honeypot, consent, adults-only notice, or privacy link, or if it ever
   collects a child's identity. Closed-loop guard on the child-safety promise; self-disables if no

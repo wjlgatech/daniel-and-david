@@ -295,11 +295,13 @@
 
   <script>
     /* ===== CONFIG — the only things to edit to go live ===== */
-    // The email-capture SEAM: swap providers by changing these two lines only.
-    //   provider "none"     → falls back to a mailto: so nothing is lost before a provider is chosen
-    //   provider "formspree"→ set endpoint to your Formspree URL (https://formspree.io/f/XXXX)
-    //   provider "tally"    → use Tally's embed/redirect instead (see docs/founding-families.md)
-    const FORM = { provider: "none", endpoint: "", fallbackEmail: "wjlgatech@gmail.com" };
+    // The email-capture SEAM: to GO LIVE, paste ONE endpoint below — nothing else changes.
+    //   1. Create a free form at https://formspree.io (New form → use email wjlgatech@gmail.com).
+    //   2. Copy its endpoint (looks like https://formspree.io/f/abcdwxyz) into FORM.endpoint.
+    // Until an endpoint is set, the form safely falls back to a mailto: so no application is lost.
+    // (Formspree keeps this custom form + the CI registration-safety guard intact, and has a GDPR
+    //  DPA. To use Tally/another provider instead, see docs/founding-families.md.)
+    const FORM = { provider: "formspree", endpoint: "", fallbackEmail: "wjlgatech@gmail.com" };
     // Honest scarcity: update as Genesis families are accepted.
     const SPOTS = { epoch: "Genesis", remaining: 8, total: 8 };
 
