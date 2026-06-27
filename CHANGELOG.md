@@ -18,6 +18,9 @@ this project aims for [Semantic Versioning](https://semver.org/).
 - `hello-agent/` — a tiny, readable starter agent as a first "AI teammate."
 - Open-source contributor on-ramp: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`,
   issue/PR templates, CODEOWNERS, and a CI workflow, designed for ~100 contributions/day.
+- Four kid-friendly, Anthropic-styled SVG infographics in `docs/assets/` embedded in the
+  README — the milestone "Climb," the builder's loop, the AI-teammate agent loop, and the
+  4-question values test — so a 6- and 11-year-old can grasp each section visually.
 
 ### Investigated / Rejected
 - **Single-app repo (just the KC web app).** Rejected: the goal is a *durable studio* that

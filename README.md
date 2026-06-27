@@ -8,6 +8,8 @@ This repository is a **venture studio + learning academy in one**. It is run lik
 kids — and eventually contributors from all over the world — can learn to ship real
 products, create real value, and steward it for a purpose bigger than themselves.
 
+<p align="center"><img src="docs/assets/ladder.svg" alt="The Climb — the milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain" width="100%"></p>
+
 ---
 
 ## Why this exists
@@ -40,9 +42,7 @@ the journey builds: courage, honesty, craftsmanship, generosity, and faith. Mone
 Not from a lecture. From **building one real thing, end to end, and learning every part
 of why it worked or didn't.** So this repo pairs *curriculum* with *real ventures*.
 
-```
-You learn the principle  →  you apply it on a live venture  →  the venture teaches you back
-```
+<p align="center"><img src="docs/assets/builder-loop.svg" alt="How you become a builder: 1. Learn a principle, 2. Build it on a real venture, 3. Learn back from the work — and repeat, stronger each time" width="100%"></p>
 
 ### The ventures
 Real businesses, built in the open. The first one is live in this repo:
@@ -68,6 +68,8 @@ How we work — the same way the best AI-native companies work:
   evals over vibes, docs-as-code, the human stays the editor.
 - ✝️ [Values](docs/principles/values.md) — the *why* under all of it.
 
+<p align="center"><img src="docs/assets/agent-loop.svg" alt="Your AI teammate: an agent is a loop — LOOK at the goal, THINK of one step, ACT with a tool, CHECK if it worked. You are the boss; the robot does the busy work." width="78%"></p>
+
 ---
 
 ## Repository map
@@ -77,7 +79,8 @@ daniel-and-david/
 ├── docs/
 │   ├── vision/          Mission and the milestone ladder ($1M → $10B)
 │   ├── principles/      How we work: AI-native + agentic engineering + values
-│   └── curriculum/      Two tracks: Daniel (11) and David (6)
+│   ├── curriculum/      Two tracks: Daniel (11) and David (6)
+│   └── assets/          Infographics (SVG) — the visuals in this README
 ├── ventures/
 │   └── kc-matchday-basecamp/   Venture #1 — full spec, economics, app PRD
 ├── apps/
@@ -114,6 +117,8 @@ contributions a day from around the world** — small, clear, reviewable, kind.
 ---
 
 ## The standard we hold
+
+<p align="center"><img src="docs/assets/four-question-test.svg" alt="The 4-Question Test: Is it true? Is it legal and is my word kept? Does it really serve someone? Would I be proud to explain it? If any answer is no, we find another way." width="92%"></p>
 
 - **Legal and honest, always.** Venture #1 has explicit compliance gates and a "do-not"
   list for a reason. We win by being trustworthy, not by cutting corners.

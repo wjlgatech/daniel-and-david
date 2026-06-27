@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="600" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="42" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="86" font-size="40" font-weight="bold" fill="#29261F">The Climb</text>
+  <text x="62" y="118" font-size="19" fill="#6B6258">From a tiny seed to a mountain. Each step needs a new skill — the number is a compass, not a promise.</text>
+
+  <!-- Journey dotted line -->
+  <polyline points="150,430 375,368 600,306 825,244 1050,182" fill="none" stroke="#D97757" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.5 15"/>
+
+  <!-- START tag -->
+  <rect x="104" y="334" width="92" height="26" rx="13" fill="#D97757"/>
+  <text x="150" y="352" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">START</text>
+  <!-- DREAM BIG tag -->
+  <rect x="858" y="150" width="120" height="26" rx="13" fill="#6B89A8"/>
+  <text x="918" y="168" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">DREAM BIG</text>
+
+  <!-- ============ STEP 1 ============ -->
+  <rect x="46" y="480" width="208" height="96" rx="18" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="1.5"/>
+  <text x="150" y="518" font-size="30" font-weight="bold" fill="#D97757" text-anchor="middle">$1M</text>
+  <text x="150" y="540" font-size="14" fill="#9A9081" text-anchor="middle">Year 1</text>
+  <text x="150" y="562" font-size="13.5" fill="#5F574C" text-anchor="middle">Ship one real thing</text>
+  <circle cx="150" cy="430" r="38" fill="#FFFFFF" stroke="#D97757" stroke-width="4"/>
+  <g transform="translate(150,430)">
+    <ellipse cx="-6" cy="2" rx="9" ry="5" fill="#8FB36B" transform="rotate(-28)"/>
+    <ellipse cx="6" cy="2" rx="9" ry="5" fill="#8FB36B" transform="rotate(28)"/>
+    <path d="M0,14 L0,-4" stroke="#6E8C5A" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- ============ STEP 2 ============ -->
+  <rect x="271" y="418" width="208" height="96" rx="18" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="1.5"/>
+  <text x="375" y="456" font-size="30" font-weight="bold" fill="#D97757" text-anchor="middle">$10M</text>
+  <text x="375" y="478" font-size="14" fill="#9A9081" text-anchor="middle">Year 2</text>
+  <text x="375" y="500" font-size="13.5" fill="#5F574C" text-anchor="middle">Make it repeatable</text>
+  <circle cx="375" cy="368" r="38" fill="#FFFFFF" stroke="#D97757" stroke-width="4"/>
+  <g transform="translate(375,368)">
+    <ellipse cx="-7" cy="4" rx="11" ry="6" fill="#8FB36B" transform="rotate(-26)"/>
+    <ellipse cx="7" cy="4" rx="11" ry="6" fill="#8FB36B" transform="rotate(26)"/>
+    <path d="M0,16 L0,-8" stroke="#6E8C5A" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="0" cy="-12" r="5" fill="#D97757"/>
+  </g>
+
+  <!-- ============ STEP 3 ============ -->
+  <rect x="496" y="356" width="208" height="96" rx="18" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="1.5"/>
+  <text x="600" y="394" font-size="30" font-weight="bold" fill="#D97757" text-anchor="middle">$100M</text>
+  <text x="600" y="416" font-size="14" fill="#9A9081" text-anchor="middle">Year 3</text>
+  <text x="600" y="438" font-size="13.5" fill="#5F574C" text-anchor="middle">Build through people</text>
+  <circle cx="600" cy="306" r="38" fill="#FFFFFF" stroke="#D97757" stroke-width="4"/>
+  <g transform="translate(600,306)">
+    <rect x="-3" y="2" width="6" height="16" rx="2" fill="#9A7B5C"/>
+    <circle cx="0" cy="-6" r="15" fill="#7DA060"/>
+  </g>
+
+  <!-- ============ STEP 4 ============ -->
+  <rect x="721" y="294" width="208" height="96" rx="18" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="1.5"/>
+  <text x="825" y="332" font-size="30" font-weight="bold" fill="#D97757" text-anchor="middle">$1B</text>
+  <text x="825" y="354" font-size="14" fill="#9A9081" text-anchor="middle">Year 5</text>
+  <text x="825" y="376" font-size="13.5" fill="#5F574C" text-anchor="middle">Build to last</text>
+  <circle cx="825" cy="244" r="38" fill="#FFFFFF" stroke="#D97757" stroke-width="4"/>
+  <g transform="translate(825,244)">
+    <rect x="-4" y="4" width="8" height="18" rx="2" fill="#9A7B5C"/>
+    <circle cx="0" cy="-8" r="15" fill="#6E9457"/>
+    <circle cx="-12" cy="-1" r="10" fill="#7DA060"/>
+    <circle cx="12" cy="-1" r="10" fill="#7DA060"/>
+  </g>
+
+  <!-- ============ STEP 5 ============ -->
+  <rect x="946" y="232" width="208" height="96" rx="18" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="1.5"/>
+  <text x="1050" y="270" font-size="30" font-weight="bold" fill="#D97757" text-anchor="middle">$10B</text>
+  <text x="1050" y="292" font-size="14" fill="#9A9081" text-anchor="middle">Year 7</text>
+  <text x="1050" y="314" font-size="13.5" fill="#5F574C" text-anchor="middle">Move a market</text>
+  <circle cx="1050" cy="182" r="38" fill="#FFFFFF" stroke="#D97757" stroke-width="4"/>
+  <g transform="translate(1050,182)">
+    <path d="M-19,16 L-2,-16 L15,16 Z" fill="#6B89A8"/>
+    <path d="M-2,-16 L-9,-3 L5,-3 Z" fill="#FAF9F5"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1000" height="620" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="44" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="88" font-size="34" font-weight="bold" fill="#29261F">Your AI Teammate</text>
+  <text x="62" y="118" font-size="18" fill="#6B6258">An agent is just a loop. You are the boss; the robot does the busy work.</text>
+
+  <!-- Ring -->
+  <circle cx="500" cy="360" r="150" fill="none" stroke="#EAD0C1" stroke-width="10"/>
+
+  <!-- Clockwise arrowheads on the ring -->
+  <g fill="#D97757">
+    <polygon points="0,-7 0,7 14,0" transform="translate(606,466) rotate(135)"/>
+    <polygon points="0,-7 0,7 14,0" transform="translate(394,466) rotate(225)"/>
+    <polygon points="0,-7 0,7 14,0" transform="translate(394,254) rotate(315)"/>
+    <polygon points="0,-7 0,7 14,0" transform="translate(606,254) rotate(45)"/>
+  </g>
+
+  <!-- Robot in the center -->
+  <g transform="translate(500,360)">
+    <line x1="0" y1="-40" x2="0" y2="-54" stroke="#29261F" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="-58" r="5" fill="#D97757"/>
+    <rect x="-45" y="-40" width="90" height="80" rx="18" fill="#FAF9F5" stroke="#29261F" stroke-width="3"/>
+    <circle cx="-18" cy="-8" r="8" fill="#D97757"/>
+    <circle cx="18" cy="-8" r="8" fill="#D97757"/>
+    <path d="M-18,18 Q0,32 18,18" fill="none" stroke="#29261F" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== NODE 1: LOOK (top) ===== -->
+  <rect x="425" y="178" width="150" height="66" rx="16" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="500" y="208" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">1. LOOK</text>
+  <text x="500" y="230" font-size="13" fill="#5F574C" text-anchor="middle">at the goal</text>
+
+  <!-- ===== NODE 2: THINK (right) ===== -->
+  <rect x="625" y="327" width="150" height="66" rx="16" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="700" y="357" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">2. THINK</text>
+  <text x="700" y="379" font-size="13" fill="#5F574C" text-anchor="middle">of one step</text>
+
+  <!-- ===== NODE 3: ACT (bottom) ===== -->
+  <rect x="425" y="476" width="150" height="66" rx="16" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="500" y="506" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">3. ACT</text>
+  <text x="500" y="528" font-size="13" fill="#5F574C" text-anchor="middle">use a tool</text>
+
+  <!-- ===== NODE 4: CHECK (left) ===== -->
+  <rect x="225" y="327" width="150" height="66" rx="16" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="300" y="357" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">4. CHECK</text>
+  <text x="300" y="379" font-size="13" fill="#5F574C" text-anchor="middle">did it work?</text>
+
+  <!-- Caption -->
+  <text x="500" y="590" font-size="15" fill="#5F574C" text-anchor="middle">You decide WHAT to do and check it is good. The agent does the heavy lifting.</text>
+</svg>

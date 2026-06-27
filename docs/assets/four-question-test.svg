@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1100" height="540" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="38" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="80" font-size="34" font-weight="bold" fill="#29261F">The 4-Question Test</text>
+  <text x="62" y="110" font-size="18" fill="#6B6258">Before any big choice, we ask these four. If any answer is &quot;no&quot; — we find another way.</text>
+
+  <!-- Card -->
+  <rect x="60" y="138" width="980" height="362" rx="24" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+
+  <!-- Row 1 -->
+  <rect x="100" y="170" width="44" height="44" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <path d="M112,192 L120,200 L136,182" fill="none" stroke="#D97757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="190" font-size="23" font-weight="bold" fill="#29261F">Is it TRUE?</text>
+  <text x="172" y="212" font-size="14.5" fill="#6F665A">No tricks, no fake claims, no pretending.</text>
+
+  <!-- Row 2 -->
+  <rect x="100" y="245" width="44" height="44" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <path d="M112,267 L120,275 L136,257" fill="none" stroke="#D97757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="265" font-size="23" font-weight="bold" fill="#29261F">Is it LEGAL — and is my word kept?</text>
+  <text x="172" y="287" font-size="14.5" fill="#6F665A">Follow the rules. Keep every promise.</text>
+
+  <!-- Row 3 -->
+  <rect x="100" y="320" width="44" height="44" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <path d="M112,342 L120,350 L136,332" fill="none" stroke="#D97757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="340" font-size="23" font-weight="bold" fill="#29261F">Does it really SERVE someone?</text>
+  <text x="172" y="362" font-size="14.5" fill="#6F665A">Does it make a real person&apos;s life better?</text>
+
+  <!-- Row 4 -->
+  <rect x="100" y="395" width="44" height="44" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <path d="M112,417 L120,425 L136,407" fill="none" stroke="#D97757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="415" font-size="23" font-weight="bold" fill="#29261F">Would I be PROUD to explain it?</text>
+  <text x="172" y="437" font-size="14.5" fill="#6F665A">To my family — and to God.</text>
+
+  <!-- Bottom strip -->
+  <rect x="100" y="462" width="900" height="2" fill="#E6E0D2"/>
+  <text x="550" y="487" font-size="16" font-style="italic" fill="#C2613F" text-anchor="middle">Doing it the right way is also the way that works.</text>
+</svg>
