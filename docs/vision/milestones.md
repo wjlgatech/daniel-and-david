@@ -1,8 +1,36 @@
-# The Milestone Ladder
+# The Ladders
 
-A compass, not a promise. Each rung is less about the number and more about the **new skill
-the number forces you to learn.** You cannot fake your way up — each level requires a real
-capability the last one didn't.
+There are **two** ladders here, and the order matters. The first is the one we lead with and
+measure; the second is the long-horizon venture track. *The game is who you become while you
+climb* — so we climb the Capability Ladder first.
+
+## The Capability Ladder (this is the real one)
+
+The public, near-term ladder. Each level is a **capability a child can actually demonstrate** —
+no money required. This is what we measure (see [Theory of Change](theory-of-change.md)) and
+what a [Builder Loop](../builder-loop/) is designed to grow.
+
+| Level | Capability |
+|---|---|
+| 1 | **Notice** a real problem |
+| 2 | **Ask** good questions |
+| 3 | **Make** something useful |
+| 4 | **Serve** one real person |
+| 5 | **Learn** from feedback |
+| 6 | **Work** with a team |
+| 7 | **Use resources to bless** others |
+
+> A child who can climb to Level 4 — *served one real person with something they made* — has
+> learned more than most adults are ever taught. That is the win we chase first.
+
+---
+
+## The Venture Track — the milestone ladder (advanced, later)
+
+A compass, not a promise — and deliberately **not** the homepage headline. This is the
+long-horizon track for older learners and parents thinking about ventures. Each rung is less
+about the number and more about the **new skill the number forces you to learn.** You cannot
+fake your way up — each level requires a real capability the last one didn't.
 
 <p align="center"><img src="../assets/ladder.svg" alt="The Climb — the milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain" width="100%"></p>
 

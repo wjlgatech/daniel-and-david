@@ -6,7 +6,42 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **Repositioned the public wedge to "a family field lab for raising wise, creative, AI-ready
+  builders."** The README hero and the landing page (`apps/web/`) now lead with a **Capability
+  Ladder** (Notice→Ask→Make→Serve→Learn→Team→Bless) instead of the $1M→$10B money ladder. Why:
+  competing ambitions on the homepage obscured one clear promise; the money ladder is preserved
+  but demoted to an advanced "venture track" in `docs/vision/milestones.md`.
+- **Truth fix — venture #1 status.** The landing page no longer says venture #1 is "live now /
+  SHIPPING"; it now reads "pilot in design · spec ready · build not started," matching
+  `ventures/kc-matchday-basecamp/`. Same correction in `README.md`. Why: the prior wording
+  failed our own first question ("Is it true?"). Agent guides now forbid "live"/"shipping" for
+  unbuilt work.
+- **Reframed the near-term goal away from "100 contributions a day"** in `README.md` and the
+  landing page toward a behavior-change proof goal (ten families finishing one Builder Loop) and
+  safety-gated, tightly-scoped contributions. Why: a volume target creates moderation/safety
+  risk while children are involved and measures the wrong thing.
+- **Curriculum now measures capability, not participation** — added Before/During/After/Transfer
+  checkpoints and a weak-vs-strong outcomes table in `docs/curriculum/README.md`.
+
 ### Added
+- **The Builder Loop** (`docs/builder-loop/`) — the four-week family loop (Notice → Understand →
+  Build → Serve) that is now the project's atomic unit, with a fixed six-part weekly structure
+  (child activity / parent guide / AI exercise / independent-thinking task / real-world action /
+  reflection) and a measurable per-loop scorecard.
+- **Theory of Change + North Star metric** (`docs/vision/theory-of-change.md`) — the causal model
+  (inputs → behaviors → near-term → long-term outcomes) and the metric we track: *Independent
+  Builder Evidence per child per month* (capability, not stars/dollars).
+- **Child-safety governance layer** (`docs/safety/`) — `child-safety.md`, `privacy-by-design.md`,
+  `parent-consent.md`, `community-moderation.md`, `ai-use-boundaries.md`, plus an index. These
+  bind humans *and* AI agents, and must exist before any account/profile/upload/matching feature.
+- **Capability Ladder** added to `docs/vision/milestones.md` as the public, measured ladder
+  above the (now clearly-labeled) venture/money track.
+- **Status-truth eval** (`scripts/check-status-truth.sh` + a CI step in `toolkit-validate` +
+  a check in `scripts/check.sh`) — fails the build if a public surface (`README.md`,
+  `apps/web/`) claims venture #1 is "live"/"shipping" while `ventures/.../README.md` still says
+  "build not started." Turns our first question ("Is it true?") into a machine-checkable eval so
+  status drift can't regress. Self-disables once the venture build actually starts.
 - Initial repository scaffold: an AI-native venture studio + learning academy for raising
   the next generation of wealth creators (Daniel, 11, and David, 6).
 - Mission and milestone ladder ($1M → $10M → $100M → $1B → $10B) in `docs/vision/`.

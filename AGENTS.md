@@ -6,11 +6,18 @@ an **AI-native** project: agents are first-class teammates. But the human is alw
 
 ## What this repo is
 
-A venture studio + learning academy raising two kids (Daniel, 11; David, 6) into wealth
-creators and Kingdom builders. It holds:
+A **family field lab** for raising wise, creative, AI-ready builders — anchored on two kids
+(Daniel, 11; David, 6) and opening to other families. The public promise leads with
+**capability** (think clearly, use AI responsibly, create value, serve people), *not* the money
+ladder (which is a deliberately-demoted "venture track"). It holds:
 
-- `docs/` — vision, principles, and a two-track curriculum.
-- `ventures/` — real businesses built in the open. **Venture #1 = `kc-matchday-basecamp/`.**
+- `docs/builder-loop/` — **the atomic unit**: the four-week family Builder Loop. Start here.
+- `docs/vision/` — mission, the **Theory of Change + North Star metric**, and the two ladders
+  (Capability Ladder = public/measured; money ladder = advanced venture track).
+- `docs/safety/` — **child-safety governance** (read before any community/account/upload feature).
+- `docs/` — principles and a two-track curriculum (now written against measurable outcomes).
+- `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
+  (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
 - `apps/web/` — the academy's own static landing page.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, and hooks you can use here.
@@ -33,9 +40,16 @@ grid. For a deep multi-perspective pass, run the **`critical-thinking-review` wo
    changed. Same PR, no deferral. (Formatting/test-only changes are exempt.)
 3. **Evals over vibes.** Prefer changes you can verify — a test, a checklist, a screenshot,
    a measurable metric. See `docs/principles/agentic-engineering.md`.
-4. **Keep it child-safe and kind.** Children read this repo. Language, images, and topics
-   stay appropriate. See `CODE_OF_CONDUCT.md`.
-5. **Legal and honest in `ventures/`.** Respect every compliance gate and "do-not" list in
+4. **Keep it child-safe and kind.** Children read, use, and contribute to this repo. Language,
+   images, and topics stay appropriate, and the **hard rules in [`docs/safety/`](docs/safety/)
+   bind agents too** — no child personal data, no private adult–child contact, no child–adult
+   matching, public child contributions reviewed first, AI never replaces the child's own
+   thinking. When a safety rule and a feature conflict, the rule wins and the feature waits.
+   See also `CODE_OF_CONDUCT.md`.
+5. **Tell the truth about status.** Never describe a planned thing as shipped. Venture #1 is
+   "pilot in design / build not started," not "live." Match every public claim to reality —
+   it's literally the first of our [4 questions](docs/principles/values.md).
+6. **Legal and honest in `ventures/`.** Respect every compliance gate and "do-not" list in
    the venture specs. Never generate marketing that implies false affiliation, and never
    weaken a go/no-go gate.
 
@@ -54,7 +68,9 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
 ## Repo conventions
 
 - Default branch: `main`. Branch names: `name/short-description`.
-- Run `./scripts/check.sh` before opening a PR.
+- Run `./scripts/check.sh` before opening a PR. CI also runs `validate-toolkit.sh`,
+  `check-links.sh`, and `check-status-truth.sh` (the last fails if a public surface claims
+  venture #1 is live/shipping while its README says "build not started").
 - Prefer plain, readable code and prose. If a 6-year-old's parent can't follow the *why*,
   simplify.
 
