@@ -1,8 +1,12 @@
-# I'm Raising My Two Sons to Build Billion-Dollar Companies for the Kingdom of God — In Public, On GitHub, With AI
+# I'm Raising My Two Sons to Be Wise, Creative, AI-Ready Builders — In Public, On GitHub, With AI
 
-### A father's open-source experiment in raising the next generation of wealth creators. Simple enough for a 10-year-old. Cited enough for a skeptic. Built in the open so your kids can join mine.
+### A father's open-source field lab for raising kids who think clearly, use AI wisely, create real value, and serve real people. Simple enough for a 10-year-old. Cited enough for a skeptic. Built in the open so your kids can join mine.
 
 *~12 minute read · every claim below is backed by a peer-reviewed study or a Bible verse · all the artwork is real and lives in the [repo](https://github.com/wjlgatech/daniel-and-david)*
+
+> **The one promise, before anything else:** AI may change work dramatically; your child doesn't
+> need to fear it — your child needs to become *wiser* than it. Everything below serves that. The
+> atomic unit is a four-week **[Builder Loop](https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/)** any family can run.
 
 ---
 
@@ -14,19 +18,23 @@ I have no such confidence. I am, on most mornings, the Mr. Bean of fathers — t
 
 But I *do* have a hypothesis, and I've bet my two sons' education on it. So I built it in the open, on GitHub, where anyone — including *your* kids — can read it, use it, laugh at it, and improve it.
 
-Meet the project: **[Daniel & David](https://github.com/wjlgatech/daniel-and-david)**. Daniel is 11. David is 6. The repository is my attempt to raise them into **wealth creators** — people who build things the world genuinely needs, do it honestly, and steward the results for a purpose far bigger than themselves.
+Meet the project: **[Daniel & David](https://github.com/wjlgatech/daniel-and-david)**. Daniel is 11. David is 6. The repository is my attempt to raise them into **builders** — people who notice a real problem, build something the world genuinely needs, do it honestly, and steward the results for a purpose far bigger than themselves.
 
-Here's the whole thesis in one picture.
+Here's the whole thesis in one picture — and notice it has *no dollar signs.* The public ladder we actually climb is a ladder of **capability**, not cash.
 
-<p align="center"><img src="../assets/ladder.svg" alt="The Climb — a milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain." width="100%"></p>
+<p align="center"><img src="../assets/capability-ladder.svg" alt="The Capability Ladder we climb: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others." width="100%"></p>
 
-That ladder is on purpose. It's also — I need you to hear this — **a compass, not a promise.** I'll explain why in a minute. First, let me earn the right to your attention by admitting what this is really about.
+A child who reaches level 4 — *served one real person with something they made* — has learned more than most adults are ever taught. That's the win we chase first. (There *is* a famous money ladder too — $1M to $10B. It's real, it's deliberate, and it's **a compass, not a promise.** I keep it one level down, as a later "venture track," and I'll show you the trick inside it in a minute.)
 
 ---
 
-## Session 1: The Climb (and why the dollar signs are a trick)
+## Session 1: The venture track (and why the dollar signs are a trick)
 
-Look at the ladder again. $1M, $10M, $100M, $1B, $10B. An AI director reading this is already narrowing their eyes: *"That's a fantasy timeline."* You're right. It is. **And that's the point.**
+Okay — *now* the money ladder, because I promised you the trick. This is the **venture track**: a long-horizon companion to the Capability Ladder, for older kids and parents thinking about real businesses. I keep it one level down on purpose, but I don't hide it.
+
+<p align="center"><img src="../assets/ladder.svg" alt="The venture track — a milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain." width="100%"></p>
+
+Look at the ladder. $1M, $10M, $100M, $1B, $10B. An AI director reading this is already narrowing their eyes: *"That's a fantasy timeline."* You're right. It is. **And that's the point.**
 
 The numbers are a magician's misdirection. What I actually care about is the tiny grey text under each rung — *the skill it forces you to learn.* You cannot fake your way up this ladder. Rung 1 ($1M) only teaches one thing: **can you create value at all?** Rung 3 ($100M) teaches a completely different thing: **can you build through other people?** Each level is a new game with new rules.
 
@@ -69,6 +77,10 @@ Here's where the education experts lean in, because this is the part most school
 You do not become a builder by being *told* about building. You become one by **building one real thing, watching it succeed or fail, and learning from what the world tells you back.** Then doing it again, a little stronger.
 
 <p align="center"><img src="../assets/builder-loop.svg" alt="How you become a builder: 1. Learn a principle, 2. Build it on a real venture people can pay for, 3. Learn back from the work — and repeat, stronger each time." width="100%"></p>
+
+I packaged that idea into something a family can actually *run*: a four-week **[Builder Loop](https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/)**. Week 1 notice a real problem; week 2 understand it (talk to three real people — don't build yet); week 3 build the smallest useful thing (AI only *after* a first human attempt); week 4 serve one real person and tell the truth about what happened. It's the atomic unit of the whole project — there's even a [one-page printable](https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/printable.md).
+
+<p align="center"><img src="../assets/builder-loop-4week.svg" alt="The Builder Loop over four weeks: Week 1 NOTICE, Week 2 UNDERSTAND, Week 3 BUILD, Week 4 SERVE — then repeat. Each week has the same six parts: child activity, parent guide, AI exercise, independent thinking, real-world action, and reflection." width="100%"></p>
 
 > **The science:** This loop has a century of evidence behind it. John Dewey argued learning is grounded in *experience* (Dewey, 1938, *Experience and Education*). Jean Piaget and then Seymour Papert showed children build knowledge by building *things* — "constructionism" (Papert, 1980, *Mindstorms: Children, Computers, and Powerful Ideas*). David Kolb formalized the cycle of concrete experience → reflection → concept → experiment (Kolb, 1984, *Experiential Learning*). Most strikingly, **productive failure** research shows that students who *struggle and even fail first*, before being taught, end up understanding more deeply (Kapur, 2008, *Productive Failure*, **Cognition and Instruction** 26(3): 379–424). We let the boys fail on purpose. On a $29 poncho. Cheap tuition.
 
@@ -132,15 +144,15 @@ Before any big decision, we run one four-question test:
 
 ---
 
-## Session 7: This is not a curriculum. It's a *hub*. (And you're invited.)
+## Session 7: Where this is going — a *hub* (but the loop comes first)
 
-Here's the turn. A book you finish. A *hub* you join. **Daniel & David is built to be a living thing that gets better the more people show up** — and it's designed as three hubs in one:
+Here's the turn. A book you finish. A *hub* you join. **Daniel & David is built to be a living thing that gets better the more people show up.** But I want to be honest about sequence: today the job is to **prove the loop, not scale the hub** — to get ten families through one real Builder Loop and watch whether their kids can independently explain what they learned. The three-hubs vision below is the *direction*, not a claim about today:
 
 **1. A living learning hub.** Two age-tracked curricula (a 6-year-old's "Six Detective Words"; an 11-year-old's applied critical thinking), tied to *real* ventures, with the infographics you've seen as the visual backbone. New lessons, translations, and corrections come from contributors worldwide.
 
 **2. A tools hub for AI agents.** Every capability we teach a human, we also teach our AIs — as **skills, plugins, workflows, and hooks**, all in the open, all installable. It's a working library of how to extend an AI-native company, doubling as a textbook.
 
-**3. A hub where AI and people exchange ideas, match up, and build.** The endgame: a place where a parent in Lagos, a 12-year-old in São Paulo, an AI director in Berlin, and an agent swarm can meet, swap ideas, *match into teams,* and launch ventures that solve real, foundational problems.
+**3. A hub where AI and people exchange ideas, match up, and build.** The *long-term* endgame: a place where a parent in Lagos, a 12-year-old in São Paulo, an AI director in Berlin, and an agent swarm can meet, swap ideas, *match into teams,* and launch ventures that solve real, foundational problems. Because children are involved, that hub gets built *behind* a real [child-safety layer](https://github.com/wjlgatech/daniel-and-david/blob/main/docs/safety/) — consent, privacy, reviewed contributions, AI boundaries — not before it.
 
 > **The science:** Why open it up instead of guarding it? Because **open, networked collaboration outproduces closed effort** for this kind of work. Eric Raymond's study of open-source development ("given enough eyeballs, all bugs are shallow") and Yochai Benkler's analysis of *commons-based peer production* (Benkler, 2006, *The Wealth of Networks*) show that distributed contributors, loosely coordinated, can outbuild centralized teams. And mentorship across skill levels has a name in developmental psychology: Vygotsky's **Zone of Proximal Development** — we learn fastest with a more-capable guide just ahead of us (Vygotsky, 1978, *Mind in Society*). In a hub, every kid has a thousand guides.
 
@@ -156,7 +168,7 @@ If you've read this far, you're my kind of person, and there's a job for you.
 
 **Parents and educators:** come add a lesson, fix an explanation, translate a page into your language, or just open an issue telling us what your kid found confusing. The curriculum gets better every time a real child bumps into it.
 
-**Kids (read this part with a grown-up):** you can help build this! Improve a drawing, suggest a business idea, try a "detective words" game and tell us if it was fun. Your name goes in the project. You become a builder by *building*, and this is real.
+**Kids (read this part with a grown-up):** you can help build this! Improve a drawing, suggest a business idea, try a "detective words" game and tell us if it was fun. A grown-up helps you share it, and we keep you safe — no full names, no private chats ([here are the rules](https://github.com/wjlgatech/daniel-and-david/blob/main/docs/safety/)). You become a builder by *building*, and this is real.
 
 **Engineers, designers, AI folks, founders:** the venture app needs building, the agent toolkit wants extending, and the collaboration hub needs people who can match ideas to teams. Come find your unfair contribution.
 

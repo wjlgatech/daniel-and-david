@@ -6,7 +6,31 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **Hosted landing page (GitHub Pages).** New `.github/workflows/pages.yml` publishes
+  `apps/web/public` to `https://wjlgatech.github.io/daniel-and-david/` on every push to `main`,
+  so a non-technical parent gets a clickable URL — no `git clone`. (One-time: Settings → Pages →
+  Source: GitHub Actions.) Landing-page doc links rewritten to absolute GitHub URLs so they work
+  from both the hosted page and a local file.
+- **Printable Builder Loop** (`docs/builder-loop/printable.md`) — a one-page, tick-box family
+  sheet a parent can print and run.
+- **Four new infographics** (Anthropic style) for the new developments:
+  `capability-ladder.svg`, `builder-loop-4week.svg`, `theory-of-change.svg`, `safety-layer.svg`
+  — embedded in the README, milestones, builder-loop, theory-of-change, and safety docs.
+
 ### Changed
+- **Onboarding split into two clear paths.** README now has **"For families (no code)"** (just a
+  web link → Builder Loop → safety → child's track) and **"For developers & contributors"**
+  (clone, run `./scripts/check.sh`, open a PR). Closes the gap where the only on-ramp was
+  `git clone` + opening a file path.
+- **Marketing realigned to the new positioning.** `docs/marketing/the-daniel-and-david-story.md`
+  now leads with capability/builders (not the billion-dollar headline), shows the Capability
+  Ladder as the hero (money ladder moved into a "venture track" section), introduces the 4-week
+  Builder Loop, and sequences the hub *after* the loop with a safety note. `linkedin-posts.md`
+  reframed to match (capability-first hooks, Builder Loop, new launch images).
+- **Discoverability:** curriculum tracks (Daniel/David), `docs/community/hub.md`, and
+  `ventures/README.md` now link the Builder Loop + safety layer and stop overclaiming venture
+  status ("Live ventures" → "Current ventures"; venture #1 marked "pilot in design").
 - **Repositioned the public wedge to "a family field lab for raising wise, creative, AI-ready
   builders."** The README hero and the landing page (`apps/web/`) now lead with a **Capability
   Ladder** (Notice→Ask→Make→Serve→Learn→Team→Bless) instead of the $1M→$10B money ladder. Why:

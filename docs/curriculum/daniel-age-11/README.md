@@ -7,6 +7,10 @@ Basecamp](../../../ventures/kc-matchday-basecamp/).
 
 Work through the quests in order. Each one ends with **something real you made or measured.**
 
+> 🛠️ **New here? Run the [Builder Loop](../../builder-loop/) first** — a four-week loop (notice →
+> understand → build → serve) that ties these quests to one real problem and one real person.
+> An adult should skim the [safety rules](../../safety/) before you start.
+
 ---
 
 ## Level 1 — The Engine of Value

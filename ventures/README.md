@@ -1,7 +1,11 @@
 # Ventures
 
-Real businesses, built in the open. This is where principles meet payroll — where the boys
+Real businesses, designed in the open. This is where principles meet payroll — where the boys
 (and contributors worldwide) turn ideas into things people actually pay for.
+
+> 🛠️ **Ventures are the graduation, not the starting line.** A child learns the moves first on
+> the four-week **[Builder Loop](../docs/builder-loop/)** (notice → understand → build → serve),
+> then points that same engine at a real venture.
 
 ## The studio model
 
@@ -15,11 +19,11 @@ We run ventures like an [AI-native company](../docs/principles/ai-native-company
 human team, AI teammates doing the heavy lifting, everything measured, docs shipped with the
 work, and the [values](../docs/principles/values.md) held without exception.
 
-## Live ventures
+## Current ventures
 
 | # | Venture | What it is | Status |
 |---|---|---|---|
-| 1 | 🏕️ [kc-matchday-basecamp](kc-matchday-basecamp/) | Legal, venue-partnered fan-utility + local-commerce around KC's global-football summer | Spec complete; app PRD ready to build |
+| 1 | 🏕️ [kc-matchday-basecamp](kc-matchday-basecamp/) | Legal, venue-partnered fan-utility + local-commerce around KC's global-football summer | 🟡 Pilot in design — spec complete, build not started |
 
 ## Starting a new venture
 

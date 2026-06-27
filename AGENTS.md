@@ -18,7 +18,10 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
 - `docs/` — principles and a two-track curriculum (now written against measurable outcomes).
 - `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
-- `apps/web/` — the academy's own static landing page.
+- `apps/web/` — the academy's own static landing page, **hosted on GitHub Pages**
+  (`https://wjlgatech.github.io/daniel-and-david/`) via `.github/workflows/pages.yml`. Its
+  outbound links use **absolute** GitHub URLs (so they work hosted *and* from a local file) —
+  keep that convention if you edit it.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, and hooks you can use here.
 - `tools/` — installable plugins.

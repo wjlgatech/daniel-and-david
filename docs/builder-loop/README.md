@@ -14,9 +14,14 @@ conscience**. The rule: *form your own first attempt before you ask the AI.* (Se
 [`docs/principles/values.md`](../principles/values.md) and the
 [mission](../vision/mission.md).)
 
+> 🖨️ **Want to just run it?** Print the **[one-page family sheet](printable.md)** — the whole
+> loop with tick-boxes and reflection lines, no scrolling required.
+
 ---
 
 ## The loop at a glance
+
+<p align="center"><img src="../assets/builder-loop-4week.svg" alt="The Builder Loop over four weeks: Week 1 NOTICE a real problem, Week 2 UNDERSTAND it (ask 5W1H, talk to three real people, don't build yet), Week 3 BUILD the smallest useful thing (AI only after a human attempt), Week 4 SERVE one real person and tell the truth — then repeat. Every week has the same six parts: child activity, parent guide, AI exercise, independent thinking, real-world action, reflection." width="100%"></p>
 
 ```text
 Week 1  NOTICE    Find one real problem worth solving.

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="640" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="34" font-weight="bold" fill="#29261F">The Ladder We Climb</text>
+  <text x="62" y="114" font-size="18" fill="#6B6258">Capability, not cash — what a child can actually <tspan font-style="italic">do</tspan>. The game is who you become while you climb.</text>
+
+  <!-- dashed climb line -->
+  <path d="M150,560 L1075,150" fill="none" stroke="#C9A98E" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/>
+
+  <!-- Rungs (ascending) -->
+  <!-- L1 -->
+  <g transform="translate(70,534)">
+    <rect width="250" height="52" rx="26" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#D97757"/>
+    <text x="32" y="33" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="62" y="33" font-size="19" font-weight="bold" fill="#29261F">Notice</text>
+    <text x="148" y="33" font-size="13" fill="#6B6258">a real problem</text>
+  </g>
+  <!-- L2 -->
+  <g transform="translate(225,466)">
+    <rect width="250" height="52" rx="26" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#D97757"/>
+    <text x="32" y="33" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="62" y="33" font-size="19" font-weight="bold" fill="#29261F">Ask</text>
+    <text x="120" y="33" font-size="13" fill="#6B6258">good questions</text>
+  </g>
+  <!-- L3 -->
+  <g transform="translate(380,398)">
+    <rect width="250" height="52" rx="26" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#D97757"/>
+    <text x="32" y="33" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="62" y="33" font-size="19" font-weight="bold" fill="#29261F">Make</text>
+    <text x="128" y="33" font-size="13" fill="#6B6258">something useful</text>
+  </g>
+  <!-- L4 -->
+  <g transform="translate(535,330)">
+    <rect width="250" height="52" rx="26" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#D97757"/>
+    <text x="32" y="33" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="62" y="33" font-size="19" font-weight="bold" fill="#29261F">Serve</text>
+    <text x="134" y="33" font-size="13" fill="#6B6258">one real person</text>
+  </g>
+  <!-- L5 -->
+  <g transform="translate(690,262)">
+    <rect width="250" height="52" rx="26" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#D97757"/>
+    <text x="32" y="33" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="62" y="33" font-size="19" font-weight="bold" fill="#29261F">Learn</text>
+    <text x="126" y="33" font-size="13" fill="#6B6258">from feedback</text>
+  </g>
+  <!-- L6 -->
+  <g transform="translate(845,194)">
+    <rect width="250" height="52" rx="26" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#D97757"/>
+    <text x="32" y="33" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">6</text>
+    <text x="62" y="33" font-size="19" font-weight="bold" fill="#29261F">Work</text>
+    <text x="122" y="33" font-size="13" fill="#6B6258">with a team</text>
+  </g>
+  <!-- L7 -->
+  <g transform="translate(900,118)">
+    <rect width="270" height="56" rx="28" fill="#D97757" stroke="#C2613F" stroke-width="2.5"/>
+    <circle cx="34" cy="28" r="19" fill="#FAF9F5"/>
+    <text x="34" y="35" font-size="18" font-weight="bold" fill="#D97757" text-anchor="middle">7</text>
+    <text x="66" y="34" font-size="18" font-weight="bold" fill="#FFFFFF">Bless</text>
+    <text x="132" y="34" font-size="13" fill="#FDEDE6">for others</text>
+  </g>
+
+  <!-- footnote -->
+  <text x="60" y="612" font-size="14" font-style="italic" fill="#8A8175">The $1M→$10B money ladder is a later "venture track" — a compass, not the headline.</text>
+</svg>

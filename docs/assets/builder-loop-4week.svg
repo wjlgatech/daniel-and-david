@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="560" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="34" font-weight="bold" fill="#29261F">The Builder Loop — 4 Weeks</text>
+  <text x="62" y="114" font-size="18" fill="#6B6258">The atomic unit: notice a problem, understand it, build small, serve one real person — then repeat.</text>
+
+  <!-- arrows between week boxes -->
+  <line x1="312" y1="232" x2="350" y2="232" stroke="#D97757" stroke-width="5" stroke-linecap="round"/>
+  <path d="M350,232 L338,225 L338,239 Z" fill="#D97757"/>
+  <line x1="592" y1="232" x2="630" y2="232" stroke="#D97757" stroke-width="5" stroke-linecap="round"/>
+  <path d="M630,232 L618,225 L618,239 Z" fill="#D97757"/>
+  <line x1="872" y1="232" x2="910" y2="232" stroke="#D97757" stroke-width="5" stroke-linecap="round"/>
+  <path d="M910,232 L898,225 L898,239 Z" fill="#D97757"/>
+
+  <!-- loop-back arrow -->
+  <path d="M1020,308 C1020,392 180,392 180,312" fill="none" stroke="#C9A98E" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/>
+  <path d="M180,312 L173,326 L187,326 Z" fill="#C9A98E"/>
+  <text x="600" y="398" font-size="16" font-style="italic" fill="#8A8175" text-anchor="middle">...run it again on a new problem, stronger each loop</text>
+
+  <!-- Week 1 -->
+  <g transform="translate(60,160)">
+    <rect width="252" height="148" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="22" y="40" font-size="13" font-weight="bold" fill="#8A8175">WEEK 1</text>
+    <text x="22" y="74" font-size="24" font-weight="bold" fill="#D97757">NOTICE</text>
+    <text x="22" y="104" font-size="14" fill="#5F574C">Find one real problem</text>
+    <text x="22" y="124" font-size="14" fill="#5F574C">worth solving.</text>
+  </g>
+  <!-- Week 2 -->
+  <g transform="translate(340,160)">
+    <rect width="252" height="148" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="22" y="40" font-size="13" font-weight="bold" fill="#8A8175">WEEK 2</text>
+    <text x="22" y="74" font-size="24" font-weight="bold" fill="#D97757">UNDERSTAND</text>
+    <text x="22" y="104" font-size="14" fill="#5F574C">Ask 5W1H. Talk to</text>
+    <text x="22" y="124" font-size="14" fill="#5F574C">3 real people. Don't build.</text>
+  </g>
+  <!-- Week 3 -->
+  <g transform="translate(620,160)">
+    <rect width="252" height="148" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="22" y="40" font-size="13" font-weight="bold" fill="#8A8175">WEEK 3</text>
+    <text x="22" y="74" font-size="24" font-weight="bold" fill="#D97757">BUILD</text>
+    <text x="22" y="104" font-size="14" fill="#5F574C">Smallest useful thing.</text>
+    <text x="22" y="124" font-size="14" fill="#5F574C">AI after a human try.</text>
+  </g>
+  <!-- Week 4 -->
+  <g transform="translate(900,160)">
+    <rect width="252" height="148" rx="20" fill="#D97757" stroke="#C2613F" stroke-width="2.5"/>
+    <text x="22" y="40" font-size="13" font-weight="bold" fill="#FDEDE6">WEEK 4</text>
+    <text x="22" y="74" font-size="24" font-weight="bold" fill="#FFFFFF">SERVE</text>
+    <text x="22" y="104" font-size="14" fill="#FDEDE6">Give it to one person.</text>
+    <text x="22" y="124" font-size="14" fill="#FDEDE6">Learn. Tell the truth.</text>
+  </g>
+
+  <!-- weekly six-part legend -->
+  <text x="60" y="448" font-size="15" font-weight="bold" fill="#29261F">Every week has the same six parts:</text>
+  <g font-size="13" fill="#5F574C">
+    <rect x="60" y="466" width="168" height="34" rx="17" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="78" y="488">🧒 Child activity</text>
+    <rect x="240" y="466" width="168" height="34" rx="17" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="258" y="488">👪 Parent guide</text>
+    <rect x="420" y="466" width="168" height="34" rx="17" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="438" y="488">🤖 AI exercise</text>
+    <rect x="600" y="466" width="196" height="34" rx="17" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="618" y="488">🧠 Think (no AI)</text>
+    <rect x="808" y="466" width="180" height="34" rx="17" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="826" y="488">🌍 Real-world act</text>
+    <rect x="1000" y="466" width="152" height="34" rx="17" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="1018" y="488">📓 Reflection</text>
+  </g>
+</svg>
