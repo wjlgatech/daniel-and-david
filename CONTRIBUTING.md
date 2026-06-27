@@ -31,7 +31,9 @@ and finished beats big and stuck.
 2. **Claim it.** Comment "I'll take this" so we don't double up.
 3. **Fork & branch.** `git checkout -b your-name/short-description`
 4. **Make one small change.** Keep it focused. If it grows, split it.
-5. **Check your work.** Run `./scripts/check.sh` (it's friendly and tells you what to fix).
+5. **Check your work.** Run `./scripts/check.sh` (friendly pre-PR checks). If you touched docs
+   or the agent toolkit, also run `./scripts/check-links.sh` and `./scripts/validate-toolkit.sh` —
+   CI runs both, so catching issues locally saves a round-trip.
 6. **Open a Pull Request.** Fill in the template. Link the issue. Describe the *why*.
 7. **Respond to review.** We review fast and kindly. Iterate. Merge. 🎉
 

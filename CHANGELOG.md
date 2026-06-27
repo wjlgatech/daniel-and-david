@@ -44,6 +44,9 @@ this project aims for [Semantic Versioning](https://semver.org/).
   `.claude/workflows/*.js` passes `node --check`, every `SKILL.md`/command has valid frontmatter,
   hook scripts pass `bash -n`, and plugin `hooks.json` references resolve — so a malformed
   toolkit artifact can't merge.
+- **CI now checks Markdown links.** New `scripts/check-links.sh` walks every tracked `.md`,
+  resolves all relative links and image embeds, and fails on any dead target (skips external
+  URLs and `#` anchors) — so a renamed file or moved infographic can't silently break the docs.
 
 - **Storytelling + hub repositioning.** Added a long-form, kid-simple-but-expert-deep article
   (`docs/blog/the-daniel-and-david-story.md`) with one infographic per section and every main

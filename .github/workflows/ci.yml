@@ -61,3 +61,6 @@ jobs:
           node-version: "20"
       - name: Validate skills, workflows, hooks, and plugins
         run: bash scripts/validate-toolkit.sh
+
+      - name: Check Markdown links resolve
+        run: bash scripts/check-links.sh
