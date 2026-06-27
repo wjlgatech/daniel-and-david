@@ -2,10 +2,15 @@
 
 Welcome. This project is built **in the open** so that anyone — a curious kid, a parent, a
 seasoned engineer, a designer, a marketer — can help raise the next generation of builders.
-We are designed for **~100 contributions a day from around the world**. That only works if
-every contribution is **small, clear, reviewable, and kind.**
+Our **near-term goal is proof, not volume:** ten families finishing one real
+[Builder Loop](docs/builder-loop/) (see the
+[Theory of Change](docs/vision/theory-of-change.md)). A large, open contribution flow is a
+*later* stage we're building toward — and because **children are involved, every contribution
+is reviewed and safety-gated** (see [`docs/safety/`](docs/safety/)). For now, contributions
+open around **tightly scoped issues**, and every one should be **small, clear, reviewable, and
+kind.**
 
-## The one rule that makes 100/day work
+## The one rule
 
 > **One contribution = one small, complete, reviewable change.**
 

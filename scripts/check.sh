@@ -31,7 +31,14 @@ if echo "$changed" | grep -qE '\.(ts|tsx|js|jsx|py|html|css)$'; then
   fi
 fi
 
-# 3. Big-PR nudge
+# 3. Status-truth — don't claim venture #1 is live while its build hasn't started
+if bash "$(dirname "$0")/check-status-truth.sh" >/dev/null 2>&1; then
+  pass "Public status claims match reality (venture #1 not overclaimed)."
+else
+  warn "A public surface claims venture #1 is live/shipping but its README says 'build not started'. Run: scripts/check-status-truth.sh"
+fi
+
+# 4. Big-PR nudge
 count=$(echo "$changed" | grep -c . )
 if [ "${count:-0}" -gt 40 ]; then
   warn "This PR touches $count files — that's large. Consider splitting it. Small PRs merge faster."

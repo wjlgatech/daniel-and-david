@@ -1,18 +1,33 @@
 # Daniel & David
 
-> A father's workshop for raising two boys — **Daniel (11)** and **David (6)** — into the
-> next generation of wealth creators, builders, and servants of the Kingdom of God.
+### A family field lab for raising wise, creative, AI-ready builders.
 
-This repository is a **venture studio + learning academy in one**. It is run like an
-**AI-native company** and built with **agentic engineering** from day one, so that two
-kids — and eventually contributors from all over the world — can learn to ship real
-products, create real value, and steward it for a purpose bigger than themselves.
+> **AI may change work dramatically. Your child doesn't need to be afraid of it — your child
+> needs to become wiser than it.** This is a practical, faith-informed learning system for
+> families who want to help children (roughly ages 6–12) **think clearly, use AI responsibly,
+> create real value, and serve real people.**
 
-<p align="center"><img src="docs/assets/ladder.svg" alt="The Climb — the milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain" width="100%"></p>
+We do that one small loop at a time. The atomic unit is the **[Builder Loop](docs/builder-loop/)** —
+a four-week family experiment: *notice a real problem → understand it → build the smallest
+useful thing → serve one real person → tell the truth about what happened.* AI is the child's
+teammate; the child stays **the mind and the conscience.**
 
-> 📖 **New here? Read [the story](docs/marketing/the-daniel-and-david-story.md)** — the whole vision,
-> simple enough for a 10-year-old, cited enough for a skeptic (every claim backed by a study or a
-> scripture).
+> 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** · 📖 New to the whole vision?
+> [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for a 10-year-old,
+> cited enough for a skeptic.
+
+### The ladder we actually climb
+
+We measure **capability**, not dollars. The public ladder is what a child can *do*:
+
+```text
+1 Notice a real problem   2 Ask good questions   3 Make something useful
+4 Serve one real person   5 Learn from feedback   6 Work with a team
+7 Use resources to bless others
+```
+
+*The game is who you become while you climb.* (There's an advanced venture/money track too —
+it lives lower down, on purpose. See [the ladders](docs/vision/milestones.md).)
 
 ### What this is becoming: a hub 🌍
 
@@ -31,26 +46,21 @@ worth solving — see **[the Hub guide](docs/community/hub.md)** and [CONTRIBUTI
 
 ## Why this exists
 
-Most people are taught to *find* a job. We are learning to *create* value.
-
-The goal we are training toward, out loud and on purpose:
-
-| Milestone | Target | Horizon | What it really teaches |
-|---|---:|---|---|
-| 🌱 Seed | **$1M** | Year 1 | Ship one real product people pay for |
-| 🌿 Sprout | **$10M** | Year 2 | Repeatable system, not luck |
-| 🌳 Tree | **$100M** | Year 3 | Teams, leverage, distribution |
-| 🌲 Forest | **$1B** | Year 5 | Build an institution that outlives you |
-| ⛰️ Mountain | **$10B** | Year 7 | Move an entire market |
-
-These numbers are a **compass, not a promise.** What's non-negotiable is the *character*
-the journey builds: courage, honesty, craftsmanship, generosity, and faith. Money is a
-**tool and a test** — we learn to make it well and give it well. See
-[`docs/vision/mission.md`](docs/vision/mission.md).
+Most people are taught to *find* a job. We are learning to *create* value — to make something
+people genuinely need, do it honestly, and steward what comes back well. A child learns that
+not from a lecture but from **building one real thing, end to end**, with an AI team at their
+side. See [`docs/vision/mission.md`](docs/vision/mission.md) and our
+[Theory of Change](docs/vision/theory-of-change.md) — the causal model and the metric we
+actually track (*Independent Builder Evidence per child per month*, not dollars or stars).
 
 > **The deeper aim.** We build to bless. Every venture here is measured not only by what
 > it earns, but by who it serves and what it makes possible for others. See
 > [`docs/principles/values.md`](docs/principles/values.md).
+
+> **Older learners & parents:** there's a long-horizon *venture track* — a $1M→$10B milestone
+> ladder — but it's deliberately **not** the headline. It's a compass, not a promise, and it
+> lives in [`docs/vision/milestones.md`](docs/vision/milestones.md) under the Capability Ladder
+> we lead with.
 
 ---
 
@@ -62,12 +72,16 @@ of why it worked or didn't.** So this repo pairs *curriculum* with *real venture
 <p align="center"><img src="docs/assets/builder-loop.svg" alt="How you become a builder: 1. Learn a principle, 2. Build it on a real venture, 3. Learn back from the work — and repeat, stronger each time" width="100%"></p>
 
 ### The ventures
-Real businesses, built in the open. The first one is live in this repo:
+Real businesses, designed in the open. The first one's full plan lives in this repo — and we're
+honest about its stage: **the operating spec is complete; the build hasn't started yet** (pilot
+in design).
 
 - 🏕️ **[`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/)** — a *legal,
-  venue-partnered fan-utility + local-commerce* business launching around Kansas City's
-  global-football summer. Full operating spec, economics, compliance gates, and a buildable
-  web-app PRD. **This is venture #1 — the boys' first taste of demand, margin, and shipping.**
+  venue-partnered fan-utility + local-commerce* concept for Kansas City's global-football
+  summer. Full operating spec, economics, compliance gates, and a buildable web-app PRD —
+  **spec ✅ complete, web app 🟡 build not started.** This is venture #1: the boys' first
+  *planned* taste of demand, margin, and shipping. (The teaching vehicle is the
+  [Builder Loop](docs/builder-loop/) — start there even before the venture ships.)
 
 ### The curriculum
 Two tracks, age-appropriate, tied to the live ventures:
@@ -105,7 +119,9 @@ workflow, hook, and plugin — so humans and agents think the same way.
 ```
 daniel-and-david/
 ├── docs/
-│   ├── vision/          Mission and the milestone ladder ($1M → $10B)
+│   ├── builder-loop/    ⭐ The 4-week family Builder Loop — the atomic unit. Start here.
+│   ├── vision/          Mission, Theory of Change + North Star, and the two ladders
+│   ├── safety/          Child-safety, privacy, consent, moderation, AI-use boundaries
 │   ├── principles/      How we work: AI-native + agentic engineering + values
 │   ├── curriculum/      Two tracks: Daniel (11) and David (6) + thinking tools
 │   ├── marketing/       The long-form story + ready-to-post LinkedIn posts
@@ -143,8 +159,12 @@ open apps/web/public/index.html      # macOS  (Linux: xdg-open, Windows: start)
 #    https://github.com/wjlgatech/daniel-and-david/contribute
 ```
 
-New here? Start with **[CONTRIBUTING.md](CONTRIBUTING.md)**. We are designed for **100
-contributions a day from around the world** — small, clear, reviewable, kind.
+New here? Start with **[CONTRIBUTING.md](CONTRIBUTING.md)**. Contributions open around tightly
+scoped issues — small, clear, reviewable, kind, and **safe** (children are involved — see
+[`docs/safety/`](docs/safety/)). Our near-term goal isn't contribution *volume*; it's proof
+that the loop changes a child's behavior: **ten families finishing one real
+[Builder Loop](docs/builder-loop/).** (A bigger open hub is a *later* stage — see the
+[Theory of Change](docs/vision/theory-of-change.md) and the [Hub guide](docs/community/hub.md).)
 
 ---
 

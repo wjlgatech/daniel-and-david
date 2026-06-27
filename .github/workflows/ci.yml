@@ -64,3 +64,6 @@ jobs:
 
       - name: Check Markdown links resolve
         run: bash scripts/check-links.sh
+
+      - name: Status-truth (no overclaiming venture status)
+        run: bash scripts/check-status-truth.sh

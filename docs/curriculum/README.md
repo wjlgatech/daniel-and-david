@@ -32,6 +32,32 @@ kit, selling it, and counting what's left over is a *quest*.
 2. **Business** — understand value, price, margin, customer, demand.
 3. **Character** — honesty, courage, service, generosity (the [values](../principles/values.md)).
 
+## Measure capability, not participation
+
+A quest isn't "done" because a child sat through it. Each one should move a child from *can't*
+to *can*. We write every quest against four checkpoints:
+
+| Checkpoint | The question |
+|---|---|
+| **Before** | What can the child *not yet* do? |
+| **During** | What observable activity proves they're really engaging? |
+| **After** | What can the child *independently* explain, build, or demonstrate? |
+| **Transfer** | Can they use the lesson in a *different* situation? |
+
+What this looks like — weak vs. strong outcomes:
+
+| Module | Weak (participation) | Strong (capability) |
+|---|---|---|
+| Pricing | "Learn what price means" | Explain why one product costs more than another and choose a price *with a reason* |
+| AI literacy | "Use an AI agent" | Identify one AI mistake and explain how they verified it |
+| Customer service | "Practice greeting customers" | Ask a customer one question, summarize their need, propose one improvement |
+| Critical thinking | "Use 5W1H" | Find one unsupported claim and say what evidence would change their mind |
+| Integrity | "Learn honesty" | Refuse one misleading idea and explain why |
+
+These outcomes roll up into the project's North Star — *Independent Builder Evidence per child
+per month* — defined in the [Theory of Change](../vision/theory-of-change.md). The
+[**Builder Loop**](../builder-loop/) is the four-week container that exercises all of them.
+
 ## For parents / mentors
 
 - **Keep it real and small.** A finished tiny thing beats an abandoned big thing.

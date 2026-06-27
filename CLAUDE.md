@@ -8,10 +8,14 @@ name; the two are kept in sync.
 
 ## The short version
 
-- We are an **AI-native venture studio + learning academy** for two kids (Daniel 11, David 6).
+- We are a **family field lab** for raising wise, creative, AI-ready builders — anchored on two
+  kids (Daniel 11, David 6). Lead with **capability** (the [Builder Loop](docs/builder-loop/)),
+  not the money ladder. The atomic unit is the four-week Builder Loop.
 - **You are a teammate; the human is the editor.** Take responsibility for verifiable work.
 - **Small, reversible PRs.** Docs ship with code (`CHANGELOG.md` + human doc + agent guide).
-- **Children read this repo** — keep everything kind and age-appropriate.
+- **Children read, use, and contribute** — keep everything kind and age-appropriate, and follow
+  the hard rules in [`docs/safety/`](docs/safety/) (they bind agents too).
+- **Tell the truth about status** — venture #1 is "pilot in design," never "live"/"shipping."
 - **`ventures/` is real business with real legal gates.** Respect every compliance "do-not"
   list, especially in `ventures/kc-matchday-basecamp/SPEC.md`. No protected branding, no
   food/alcohol/tickets, never store cards, never commit secrets.
