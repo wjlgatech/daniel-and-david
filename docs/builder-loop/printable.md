@@ -1,52 +1,49 @@
 # The Builder Loop — One-Page Family Sheet 🛠️
 
-*Print this. One loop = four weeks. Tick a box when you finish it. Full guide:
-[the Builder Loop](README.md) · Read the [safety rules](../safety/) first.*
+*Print this. Stick it on the fridge. **5 fast cycles in 4 weeks** — [fast · frequent ·
+failing-forward](README.md). Read the [safety rules](../safety/) first. Log details in the
+[iteration log](iteration-log.md).*
 
-**Child: ____________________  ·  Loop #: ____  ·  Start date: ____________**
+**Child: ____________________  ·  Loop #: ____  ·  Start: __________**
 
 > **The one rule:** your child forms their **own first attempt before asking the AI.** AI is the
-> teammate; your child is the mind and the conscience.
+> teammate; your child is the mind and the conscience. **A failure with a lesson written down is
+> a win — celebrate it.**
 
 ---
 
-### Week 1 — NOTICE  ☐
-*Find one real problem (annoying, unfair, expensive, confusing, or missing).*
-- ☐ Child keeps a "Problem Hunt" list, then picks **one**.
-- ☐ Writes it as one sentence: **who** has it and **why it hurts** (no AI).
-- ☐ Asks AI: "name three other people who'd have this problem" — compare to their guess.
-- 📓 *Whose problem is this, really — and how do I know it's real?* ____________________
-
-### Week 2 — UNDERSTAND  ☐
-*Understand before building. Don't build yet.*
-- ☐ Run the 5W1H grid (Who/What/Where/When/Why/How).
-- ☐ **Talk to three real people** (you are present) and write down what they say.
-- ☐ Child writes: "The real need is ___" (their own words, not the AI's).
-- 📓 *What did a real person say that surprised me?* ____________________
-
-### Week 3 — BUILD  ☐
-*Make the smallest useful thing — a sign, a list, a kit, a one-page site.*
-- ☐ Child makes a **first human attempt**, then asks AI to improve it.
-- ☐ Child can **explain the part the AI changed** (if they can't, they don't ship it).
-- ☐ Child finds **one mistake the AI made** and how they checked it.
-- 📓 *What did I make myself, and what did the AI help with — honestly?* ____________________
-
-### Week 4 — SERVE  ☐
-*One real person is genuinely helped — and we tell the truth about it.*
-- ☐ Give it to **one real person.** Ask: what helped? what failed? what should change?
-- ☐ Apply the **4-Question Test:** Is it true? Is it legal & is my word kept? Does it serve
-  someone? Would I be proud to explain it?
-- ☐ Child names **one thing they'll change** next loop.
-- 📓 *Did I really help someone — and what would I do differently?* ____________________
+### 🎯 Aim — keep it to ~3 days  ☐
+- ☐ Pick one problem (annoying / unfair / expensive / confusing / missing).
+- ☐ Talk to **3 real people** (an adult is present); write what surprised you.
+- ☐ "The real need is ___" (your words). **Then stop planning — start shipping.**
 
 ---
 
-### Did the loop "count"? (tick what your child can do **independently** — aim for 4+)
-☐ Explain it  ☐ Spot a weak claim  ☐ Interview a person  ☐ Test the idea
-☐ Show what they built  ☐ Revise after feedback  ☐ Catch an AI mistake  ☐ Refuse a shortcut
+### Every cycle (~4–5 days) is the same five steps:
+**PICK** the smallest next thing → **BUILD** it fast & rough → **SHOW** one real person *today*
+→ **LEARN** what failed (write it down) → **DECIDE** keep / change / drop → next PICK.
 
-*These tally into the project's North Star — [Independent Builder Evidence per child per
-month](../vision/theory-of-change.md).*
+| # | Ver | ☐ Built it | ☐ Showed a real person | What **failed** (the gold) | The one **lesson** |
+|---|-----|-----------|------------------------|----------------------------|--------------------|
+| **1** | v0.1 | ☐ | ☐ | | |
+| **2** | v0.2 | ☐ | ☐ | | |
+| **3** | v0.3 | ☐ | ☐ | | |
+| **4** | v0.4 | ☐ | ☐ | | |
+| **5** | v1.0 | ☐ | ☐ | | |
 
-> **Adult supervision note:** every "talk to people," "serve a person," and "ask the AI" step
-> assumes a present, responsible adult. See [child-safety](../safety/child-safety.md).
+*v0.1 = roughest thing that shows the idea → v1.0 = best small version. Each version fixes the
+last cycle's biggest flop. More than 5 cycles is great — faster beats bigger.*
+
+**Each cycle, also:** 🤖 use the AI *after* your own first try, and 🧠 catch **one AI mistake**
+and say how you checked it.
+
+---
+
+### 🏁 Retro (end of loop)
+- **Cycles completed:** ____ (aim ≥ 5)   ·   **Our "Best Flop" (most useful failure):** ____________
+- **4-Question Test** on the final thing: ☐ true  ☐ legal & word kept  ☐ serves someone  ☐ proud to explain
+- **Did independently** (tick): ☐ explain  ☐ spot a weak claim  ☐ interview  ☐ test  ☐ build
+  ☐ revise after feedback  ☐ catch an AI mistake  ☐ choose honesty
+
+> **Adult supervision note:** every "show a real person" and "ask the AI" step assumes a present,
+> responsible adult. See [child-safety](../safety/child-safety.md).

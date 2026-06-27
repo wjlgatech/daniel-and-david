@@ -8,9 +8,10 @@
 > create real value, and serve real people.**
 
 We do that one small loop at a time. The atomic unit is the **[Builder Loop](docs/builder-loop/)** —
-a four-week family experiment: *notice a real problem → understand it → build the smallest
-useful thing → serve one real person → tell the truth about what happened.* AI is the child's
-teammate; the child stays **the mind and the conscience.**
+a four-week family experiment run as **5 fast build-show-learn cycles** (not one big reveal):
+*pick the smallest next thing → build it rough → show one real person → learn what failed →
+repeat.* The principle is **fast · frequent · failing-forward.** AI is the child's teammate; the
+child stays **the mind and the conscience.**
 
 > 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** · 📖 New to the whole vision?
 > [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for a 10-year-old,
@@ -145,7 +146,7 @@ daniel-and-david/
 You don't need GitHub, git, or any setup. Just:
 
 1. **Open the home page:** **[daniel-and-david on the web →](https://wjlgatech.github.io/daniel-and-david/)** (a normal link — opens in any browser).
-2. **Read the [Builder Loop](docs/builder-loop/)** — the four-week loop you'll run with your child. A [one-page printable](docs/builder-loop/printable.md) version is there too.
+2. **Read the [Builder Loop](docs/builder-loop/)** — the four-week loop (5 fast build-show-learn cycles) you'll run with your child. A [one-page printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md) are there too.
 3. **Read the [safety rules](docs/safety/)** before you start (consent, privacy, AI boundaries).
 4. **Open your child's track:** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/).
 

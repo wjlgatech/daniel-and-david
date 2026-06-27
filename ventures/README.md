@@ -4,8 +4,8 @@ Real businesses, designed in the open. This is where principles meet payroll —
 (and contributors worldwide) turn ideas into things people actually pay for.
 
 > 🛠️ **Ventures are the graduation, not the starting line.** A child learns the moves first on
-> the four-week **[Builder Loop](../docs/builder-loop/)** (notice → understand → build → serve),
-> then points that same engine at a real venture.
+> the four-week **[Builder Loop](../docs/builder-loop/)** (5 fast build-show-learn cycles —
+> fast, frequent, failing-forward), then points that same engine at a real venture.
 
 ## The studio model
 

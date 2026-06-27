@@ -11,7 +11,10 @@ A **family field lab** for raising wise, creative, AI-ready builders — anchore
 **capability** (think clearly, use AI responsibly, create value, serve people), *not* the money
 ladder (which is a deliberately-demoted "venture track"). It holds:
 
-- `docs/builder-loop/` — **the atomic unit**: the four-week family Builder Loop. Start here.
+- `docs/builder-loop/` — **the atomic unit**: the four-week family Builder Loop, run as **5 fast
+  build-show-learn iterations** (fast · frequent · failing-forward), *not* one big reveal. Includes
+  an `iteration-log.md` template and `scripts/builder-loop-log.sh` (a per-child log scaffolder;
+  output `builder-loop-log-*.md` is git-ignored — it can hold a child's notes). Start here.
 - `docs/vision/` — mission, the **Theory of Change + North Star metric**, and the two ladders
   (Capability Ladder = public/measured; money ladder = advanced venture track).
 - `docs/safety/` — **child-safety governance** (read before any community/account/upload feature).

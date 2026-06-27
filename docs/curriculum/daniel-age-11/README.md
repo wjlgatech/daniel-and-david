@@ -7,9 +7,9 @@ Basecamp](../../../ventures/kc-matchday-basecamp/).
 
 Work through the quests in order. Each one ends with **something real you made or measured.**
 
-> 🛠️ **New here? Run the [Builder Loop](../../builder-loop/) first** — a four-week loop (notice →
-> understand → build → serve) that ties these quests to one real problem and one real person.
-> An adult should skim the [safety rules](../../safety/) before you start.
+> 🛠️ **New here? Run the [Builder Loop](../../builder-loop/) first** — four weeks of **5 fast
+> build-show-learn cycles** (fast · frequent · failing-forward) that tie these quests to one real
+> problem and real people. An adult should skim the [safety rules](../../safety/) before you start.
 
 ---
 

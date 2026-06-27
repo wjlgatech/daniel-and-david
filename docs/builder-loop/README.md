@@ -1,134 +1,167 @@
 # The Builder Loop 🛠️
 
-### A four-week family experiment in thinking, making, serving, and learning with AI
+### A four-week family experiment — run as **5 fast iterations**, not one big reveal
 
 This is the **atomic unit** of everything in this repo. Not a giant curriculum, not a global
 hub — one small loop a family can actually run, finish, and repeat.
 
-> **The promise, in one sentence:** in four weeks, a child notices a real problem, understands
-> it by talking to real people, builds the smallest useful thing, gives it to one real person,
-> and tells the truth about what happened.
+> **The promise, in one sentence:** in four weeks, a child runs **at least five quick
+> build-show-learn cycles** — each one puts something real in front of a real person, fails at
+> something, and gets a little better.
+
+The old way is to plan for three weeks and reveal once. We do the opposite. **Fast, frequent,
+failing-forward:** ship something tiny *this week*, watch a real person use it, learn what
+broke, improve, repeat. You learn ten times more from five rough tries than from one polished
+guess.
 
 AI is the child's **teammate** the whole way — but the child stays the **mind and the
 conscience**. The rule: *form your own first attempt before you ask the AI.* (See
 [`docs/principles/values.md`](../principles/values.md) and the
 [mission](../vision/mission.md).)
 
-> 🖨️ **Want to just run it?** Print the **[one-page family sheet](printable.md)** — the whole
-> loop with tick-boxes and reflection lines, no scrolling required.
+> 🖨️ **Want to just run it?** Print the **[one-page family sheet](printable.md)** and copy the
+> **[iteration log](iteration-log.md)** (one block per cycle). Devs can scaffold a dated log
+> entry with `./scripts/builder-loop-log.sh` — see [Infrastructure](#infrastructure-that-keeps-you-iterating).
+
+---
+
+## The three rules (this is the whole philosophy)
+
+| Rule | What it means | What it kills |
+|---|---|---|
+| ⚡ **Fast** | Each cycle is ~4–5 days and ships *something*, however rough (a v0.1). | Perfectionism, endless planning |
+| 🔁 **Frequent** | Touch reality every cycle — show a real person, every time. | The "big reveal" that fails all at once |
+| 💪 **Failing-forward** | A failure *with a lesson written down* is a **win**, not a setback. We celebrate it. | Fear of trying, hiding mistakes |
+
+> **Climbing analogy:** nobody learns to climb by studying one perfect route for a month. You
+> get on the wall, fall, adjust a foot, try again — fast, and often. Each fall *is* the lesson.
+> *(Where it breaks: on a real climb a fall can hurt; here the whole point is that the falls are
+> cheap — a $0 paper prototype, a rough drawing — so fail as much as you can afford to.)*
 
 ---
 
 ## The loop at a glance
 
-<p align="center"><img src="../assets/builder-loop-4week.svg" alt="The Builder Loop over four weeks: Week 1 NOTICE a real problem, Week 2 UNDERSTAND it (ask 5W1H, talk to three real people, don't build yet), Week 3 BUILD the smallest useful thing (AI only after a human attempt), Week 4 SERVE one real person and tell the truth — then repeat. Every week has the same six parts: child activity, parent guide, AI exercise, independent thinking, real-world action, reflection." width="100%"></p>
+<p align="center"><img src="../assets/builder-loop-4week.svg" alt="The Builder Loop: a repeating five-step micro-cycle — PICK the smallest next thing to test, BUILD it fast, SHOW it to one real person, LEARN what failed, DECIDE keep/change/drop — run about five times in four weeks. The principle is fast, frequent, failing-forward. Cadence: Week 1 Aim plus Iteration 1, Week 2 Iterations 2 and 3, Week 3 Iterations 4 and 5, Week 4 best version plus a family retro." width="100%"></p>
+
+### Anatomy of **one** iteration (~4–5 days)
 
 ```text
-Week 1  NOTICE    Find one real problem worth solving.
-Week 2  UNDERSTAND  Ask better questions. Talk to three real people. Don't build yet.
-Week 3  BUILD     Make the smallest useful solution. AI only after your first human attempt.
-Week 4  SERVE     Give it to one real person. Learn from feedback. Tell the truth.
+PICK    →  BUILD   →  SHOW    →  LEARN    →  DECIDE  ─┐
+the one    make it    to ONE     write what  keep /   │
+smallest   fast &     real        failed +   change / │
+thing to   rough      person      the lesson  drop    │
+test                  (today!)                         │
+  └──────────────  next iteration's PICK  ─────────────┘
 ```
 
-Every week has the **same six parts**, so it becomes a habit, not a surprise:
+Each iteration touches the **same six parts** (so it becomes a habit, not a surprise):
 
-| Part | What it is |
+| Part | In one iteration |
 |---|---|
-| 🧒 **Child activity** | The one thing the child does this week. |
-| 👪 **Parent guide** | What the adult sets up, watches for, and protects. |
-| 🤖 **AI exercise** | One supervised use of an AI teammate — *after* a human first attempt. |
-| 🧠 **Independent thinking task** | One thing the child must do *without* AI, to keep their own judgment strong. |
-| 🌍 **Real-world action** | One step that touches a real person or place (not a screen). |
-| 📓 **Reflection question** | One honest question to answer out loud or in the journal. |
+| 🧒 **Child activity** | Pick → build the next tiny version → show it. |
+| 👪 **Parent guide** | Hold the timebox, set up the "show" safely, protect the joy. |
+| 🤖 **AI exercise** | Use the AI teammate — *after* a first human attempt — then verify it. |
+| 🧠 **Independent thinking** | One step done *without* AI, to keep the child's own judgment strong. |
+| 🌍 **Real-world action** | The "SHOW" — a real person uses it. Not a screen. Every cycle. |
+| 📓 **Reflection** | The failure-lesson, written in the [iteration log](iteration-log.md). |
 
 ---
 
-## Week 1 — NOTICE
+## The cadence — 5 iterations in 4 weeks
 
-**Goal:** leave the week with *one* written problem statement the child chose.
+| When | Phase | What ships |
+|---|---|---|
+| **Week 1, days 1–3** | **🎯 Aim** (light) | Pick one problem; talk to 3 people; write one guess. *Don't over-plan — 3 days, max.* |
+| **Week 1, days 4–7** | **Iteration 1** | A *rough* v0.1 (paper, drawing, a sentence) shown to one person. Expect it to flop. |
+| **Week 2** | **Iterations 2 & 3** | Two fast cycles. Fix the biggest failure from last time, show again. |
+| **Week 3** | **Iterations 4 & 5** | Two more. The thing is getting real now. |
+| **Week 4** | **🏁 Best + Retro** | Best version to a real person; family retro: *what worked / failed / changed.* |
 
-- 🧒 **Child activity:** keep a "Problem Hunt" list for the week — write down anything that is
-  *annoying, unfair, expensive, confusing, or missing.* Pick the one that matters most.
-- 👪 **Parent guide:** don't fix the problems for them, and don't judge the list. Your job is
-  to ask "what made that annoying?" and help them choose one, not to choose it for them.
-- 🤖 **AI exercise:** *after* the child names a problem in their own words, ask an AI teammate
-  to "name three other people who might have this same problem." Compare to the child's guess.
-- 🧠 **Independent thinking task:** the child writes the problem as one sentence — *who* has it
-  and *why it hurts* — with no AI help.
-- 🌍 **Real-world action:** notice the problem somewhere real this week and point at it.
-- 📓 **Reflection:** "Whose problem is this, really — and how do I know it's real?"
+That's **5 build-show-learn iterations** plus an aim and a retro. More is fine — *faster is
+better than bigger.* Fewer than 4 means the cycle is too slow; shrink what you build.
 
-## Week 2 — UNDERSTAND
+> **🎯 The Aim phase (keep it short).** Pick one *annoying / unfair / expensive / confusing /
+> missing* problem. Run the **[5W1H grid](../curriculum/critical-thinking/)** on it and **talk to
+> three real people** (an adult is present — see [child-safety](../safety/child-safety.md)).
+> Write one sentence: "The real need is ___" (the child's words, not the AI's). Then **stop
+> planning and start iterating** — you'll learn the rest by shipping.
 
-**Goal:** understand the problem before building anything. Resist the urge to build.
+### What changes across the five iterations
 
-- 🧒 **Child activity:** run the **5W1H grid** on the problem (Who/What/Where/When/Why/How) —
-  see [Critical Thinking](../curriculum/critical-thinking/). Then **talk to three real people**
-  who might have the problem and write down what they actually say.
-- 👪 **Parent guide:** set up the three conversations safely (you are present; see
-  [child-safety](../safety/child-safety.md)). Coach the child to *listen more than talk.*
-- 🤖 **AI exercise:** ask the AI to suggest five questions to ask a person with this problem —
-  then the child picks the two best and explains *why*, rejecting the weak ones.
-- 🧠 **Independent thinking task:** after the three conversations, the child writes one
-  sentence: "The real need is ___" — in their own words, not the AI's.
-- 🌍 **Real-world action:** the three real conversations.
-- 📓 **Reflection:** "What did a real person say that surprised me?"
+You don't restart each time — each iteration builds on the last failure:
 
-## Week 3 — BUILD
+1. **v0.1 — the roughest thing that shows the idea.** A drawing, a paper mock, one sentence.
+2. **v0.2 — fix the #1 thing that confused people.** Still rough.
+3. **v0.3 — make it actually usable** by one person without you explaining it.
+4. **v0.4 — polish the part people liked**, cut the part they ignored.
+5. **v1.0 — the best small version**, handed to a real person for real.
 
-**Goal:** the *smallest useful thing.* A sign, a list, a kit, a one-page site, a drawing.
+Each version is a **hypothesis** ("I think people will ___"), tested against a real reaction.
+Use the AI as a teammate at any step — first human attempt, then verify what it changed (find
+one mistake it made and say how you checked).
 
-- 🧒 **Child activity:** make the smallest version that could actually help one person.
-  Finished and tiny beats big and abandoned.
-- 👪 **Parent guide:** hold the line on *small.* If it can't be done this week, it's too big —
-  cut it down together.
-- 🤖 **AI exercise:** the child makes a **first human attempt**, *then* asks the AI to improve
-  it — and must **independently reproduce or explain** the key part the AI changed. (If they
-  can't explain it, they don't ship it.)
-- 🧠 **Independent thinking task:** find **one mistake the AI made** and explain how they
-  checked. (AI is a teammate, not an oracle.)
-- 🌍 **Real-world action:** show the rough version to one person and watch their face.
-- 📓 **Reflection:** "What did I make myself, and what did the AI help with — honestly?"
+---
 
-## Week 4 — SERVE
+## Infrastructure that keeps you iterating
 
-**Goal:** one real person is genuinely helped, and the child tells the truth about it.
+The hard part isn't ideas — it's *keeping the cycles fast and logged.* So we give you scaffolding:
 
-- 🧒 **Child activity:** give the thing to **one real person.** Ask them: what helped? what
-  failed? what should change? Write down all three answers.
-- 👪 **Parent guide:** make sure the "customer" is safe and appropriate, and that any money,
-  if involved, follows the [venture guardrails](../../ventures/kc-matchday-basecamp/SPEC.md).
-- 🤖 **AI exercise:** ask the AI to summarize the feedback into "keep / change / drop" — then
-  the child decides which advice to take and which to reject, with a reason.
-- 🧠 **Independent thinking task:** apply the **[4-Question Test](../principles/values.md)** to
-  the finished thing: *Is it true? Is it legal and is my word kept? Does it serve someone?
-  Would I be proud to explain it?*
-- 🌍 **Real-world action:** the real hand-off to a real person.
-- 📓 **Reflection:** "Did I really help someone — and what would I do differently next loop?"
+- 📋 **[Iteration log](iteration-log.md)** — copy it once per child/loop. One block per cycle:
+  *hypothesis · what I built · who I showed it to · what failed · the lesson · decide next.*
+  Filling a block is how an iteration "counts."
+- 🖨️ **[Printable sheet](printable.md)** — the whole loop with five iteration tick-boxes; print
+  and stick it on the fridge.
+- 🛠️ **`./scripts/builder-loop-log.sh "<child>"`** — for the developer layer: appends a fresh,
+  dated iteration block to `builder-loop-log-<child>.md` so logging takes ten seconds. Run it at
+  the start of every cycle.
+
+### The failing-forward ritual (this is how you *encourage* it)
+
+Make failure safe and even fun, or kids will hide it and the loop dies:
+
+- **Name the flop out loud.** Each cycle, the child says "this time, ___ didn't work" — and gets
+  a high-five for finding it. (You're rewarding *honesty + learning*, not the mistake.)
+- **One lesson per cycle, written down.** No lesson logged = the iteration isn't done.
+- **Keep a "Best Flop" of the loop.** At the retro, celebrate the failure that taught the most.
+- **Parents model it:** share one of *your* week's flops at dinner. Failing-forward is caught,
+  not taught.
 
 ---
 
 ## How we know it worked (measurable outcomes)
 
-The loop is not graded on participation. For each child, after the loop, we look for
-**Independent Builder Evidence** — see the [Theory of Change](../vision/theory-of-change.md).
-A loop "counts" when the child can independently do at least **four** of these:
+The loop is graded on **iterations and lessons**, not polish. A loop "counts" when:
+
+- ✅ the child completed **≥ 5 build-show-learn iterations** (each shown to a real person), and
+- ✅ each iteration logged **≥ 1 failure-lesson**, and
+- ✅ the child can independently do at least **four** of the capabilities below.
+
+These roll up into the project's North Star — *Independent Builder Evidence per child per
+month* — see the [Theory of Change](../vision/theory-of-change.md).
 
 | Capability | What "done" looks like |
 |---|---|
 | Explain | State the problem and the solution in their own words. |
 | Question | Find one unsupported claim and say what evidence would change their mind. |
 | Interview | Run one real conversation and summarize the person's true need. |
-| Test | Show their thing to a real person and report honest feedback. |
-| Build | Point to an artifact they made. |
-| Revise | Name one thing they changed *because* of feedback. |
+| Test | Show their thing to a real person and report honest feedback — *every cycle.* |
+| Build | Point to the series of versions they made (v0.1 → v1.0). |
+| Revise | Name what they changed *because* of a specific failure. |
 | Verify AI | Show one AI mistake they caught and how they checked. |
 | Choose honesty | Name one shortcut they refused, and why. |
 
-> **For parents/mentors:** the [curriculum tracks](../curriculum/) give age-tuned versions of
-> each week — [Daniel (11)](../curriculum/daniel-age-11/) goes deeper on pricing and code;
-> [David (6)](../curriculum/david-age-6/) does the same loop with drawings, counting, and
+> **The science:** shipping fast and learning from each try is the documented way real things
+> get built. Eric Ries's **Build–Measure–Learn** loop (*The Lean Startup*, 2011) is exactly
+> this: smallest testable version → real feedback → learn → repeat. And learning research shows
+> students who **struggle and fail first** understand more deeply than those taught up front
+> (Kapur, 2008, *Productive Failure*) — see the [story](../marketing/the-daniel-and-david-story.md)
+> for the full citations.
+
+> **For parents/mentors:** the [curriculum tracks](../curriculum/) give age-tuned versions —
+> [Daniel (11)](../curriculum/daniel-age-11/) iterates on pricing and code;
+> [David (6)](../curriculum/david-age-6/) does the same cycles with drawings, counting, and
 > greeting the customer.
 
-> **Safety first.** Every real-world and AI step in this loop assumes adult supervision and the
-> rules in [`docs/safety/`](../safety/). Read those before you run the loop with a child.
+> **Safety first.** Every real-world and AI step assumes adult supervision and the rules in
+> [`docs/safety/`](../safety/). Read those before you run the loop with a child.

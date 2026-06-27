@@ -24,7 +24,7 @@ I'm raising my two sons — Daniel (11) and David (6) — to be wise, creative, 
 
 AI may change work dramatically. My kids don't need to fear it — they need to become *wiser* than it. So the ladder we actually climb has no dollar signs on it: notice a real problem → ask good questions → make something useful → serve one real person → learn → work with a team → use what you build to bless others.
 
-The whole thing runs on one repeatable unit: a four-week **Builder Loop** any family can run (notice → understand → build → serve). It's an actual open-source repo: age-tracked curriculum, a real first business in design (rain ponchos at football matches — don't laugh, the margins are 76%), and an AI toolkit the kids learn to *direct*, not fear.
+The whole thing runs on one repeatable unit: a four-week **Builder Loop** — and it's *not* one big reveal. It's **5 fast build-show-learn cycles** (fast · frequent · failing-forward): ship something tiny, show a real person, learn what failed, repeat. It's an actual open-source repo: age-tracked curriculum, a real first business in design (rain ponchos at football matches — don't laugh, the margins are 76%), and an AI toolkit the kids learn to *direct*, not fear.
 
 The thesis, in one line: **money is the world saying "thank you" for solving a real problem.** Earning is step four, not step one — and capability, not cash, is the score.
 

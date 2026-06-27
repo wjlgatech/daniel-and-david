@@ -36,3 +36,6 @@ Thumbs.db
 *.log
 tmp/
 .cache/
+
+# Builder Loop — a child's private iteration log (keep local; see docs/safety/privacy-by-design.md)
+builder-loop-log-*.md

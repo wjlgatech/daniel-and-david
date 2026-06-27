@@ -6,7 +6,22 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **Builder Loop redesigned from one-shot to iterative — 5 fast cycles, not one big reveal.**
+  `docs/builder-loop/README.md` now teaches **fast · frequent · failing-forward**: a repeating
+  ~4–5 day micro-cycle (PICK → BUILD → SHOW to a real person → LEARN the failure → DECIDE), run
+  **≥5 times in 4 weeks** (a short "aim" up front, then ship v0.1→v1.0). A loop now "counts" at
+  ≥5 iterations, each shown to a real person, each with a logged failure-lesson. Why: the prior
+  design front-loaded 3 weeks of planning and served once at the end — the opposite of what it
+  preaches. Downstream mentions (README, story, LinkedIn, curriculum tracks, ventures) updated to
+  match; `printable.md` rewritten to a 5-iteration tracker; `builder-loop-4week.svg` redesigned
+  to show the repeating cycle + cadence.
+
 ### Added
+- **Builder Loop infrastructure** that keeps cycles fast and logged: `docs/builder-loop/iteration-log.md`
+  (one block per cycle) and `scripts/builder-loop-log.sh` (appends a dated iteration block to a
+  per-child `builder-loop-log-<child>.md`, shows `--status` progress toward the 5-cycle target).
+  The per-child log is git-ignored (may contain a child's notes — see `docs/safety/privacy-by-design.md`).
 - **Hosted landing page (GitHub Pages).** New `.github/workflows/pages.yml` publishes
   `apps/web/public` to `https://wjlgatech.github.io/daniel-and-david/` on every push to `main`,
   so a non-technical parent gets a clickable URL — no `git clone`. (One-time: Settings → Pages →
