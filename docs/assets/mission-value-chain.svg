@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="460" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="38" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="82" font-size="33" font-weight="bold" fill="#29261F">What a Wealth Creator Really Does</text>
+  <text x="62" y="112" font-size="17" fill="#6B6258">Money is just the world saying &quot;thank you&quot; for solving a real problem.</text>
+
+  <!-- Arrows between boxes (at y=275) -->
+  <g fill="#D97757" stroke="#D97757">
+    <line x1="241" y1="275" x2="281" y2="275" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="281,275 270,269 270,281" stroke="none"/>
+    <line x1="466" y1="275" x2="506" y2="275" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="506,275 495,269 495,281" stroke="none"/>
+    <line x1="691" y1="275" x2="731" y2="275" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="731,275 720,269 720,281" stroke="none"/>
+    <line x1="916" y1="275" x2="956" y2="275" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="956,275 945,269 945,281" stroke="none"/>
+  </g>
+
+  <!-- 1. SEE -->
+  <rect x="60" y="200" width="180" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+  <g transform="translate(150,236)">
+    <circle cx="-3" cy="-2" r="11" fill="none" stroke="#5F574C" stroke-width="3"/>
+    <line x1="5" y1="6" x2="12" y2="13" stroke="#5F574C" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="150" y="300" font-size="19" font-weight="bold" fill="#D97757" text-anchor="middle">SEE</text>
+  <text x="150" y="324" font-size="13" fill="#5F574C" text-anchor="middle">a real problem</text>
+  <text x="150" y="342" font-size="13" fill="#5F574C" text-anchor="middle">people have</text>
+
+  <!-- 2. BUILD -->
+  <rect x="285" y="200" width="180" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+  <g transform="translate(375,238)">
+    <rect x="-10" y="-10" width="20" height="8" rx="2" fill="#6B6258"/>
+    <rect x="-2" y="-2" width="4" height="18" fill="#9A7B5C"/>
+  </g>
+  <text x="375" y="300" font-size="19" font-weight="bold" fill="#D97757" text-anchor="middle">BUILD</text>
+  <text x="375" y="324" font-size="13" fill="#5F574C" text-anchor="middle">an honest</text>
+  <text x="375" y="342" font-size="13" fill="#5F574C" text-anchor="middle">solution</text>
+
+  <!-- 3. SERVE -->
+  <rect x="510" y="200" width="180" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+  <g transform="translate(600,236)">
+    <path d="M0,9 C-13,-4 -7,-15 0,-7 C7,-15 13,-4 0,9 Z" fill="#D97757"/>
+  </g>
+  <text x="600" y="300" font-size="19" font-weight="bold" fill="#D97757" text-anchor="middle">SERVE</text>
+  <text x="600" y="324" font-size="13" fill="#5F574C" text-anchor="middle">real people,</text>
+  <text x="600" y="342" font-size="13" fill="#5F574C" text-anchor="middle">really well</text>
+
+  <!-- 4. EARN -->
+  <rect x="735" y="200" width="180" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+  <g transform="translate(825,236)">
+    <circle cx="0" cy="0" r="15" fill="#E8B84B" stroke="#C9982F" stroke-width="2"/>
+    <text x="0" y="6" font-size="17" font-weight="bold" fill="#8A6A1F" text-anchor="middle">$</text>
+  </g>
+  <text x="825" y="300" font-size="19" font-weight="bold" fill="#D97757" text-anchor="middle">EARN</text>
+  <text x="825" y="324" font-size="13" fill="#5F574C" text-anchor="middle">money is the</text>
+  <text x="825" y="342" font-size="13" fill="#5F574C" text-anchor="middle">world&apos;s thank-you</text>
+
+  <!-- 5. BLESS -->
+  <rect x="960" y="200" width="180" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+  <g transform="translate(1050,238)">
+    <rect x="-13" y="-2" width="26" height="18" rx="2" fill="#7DA060"/>
+    <rect x="-15" y="-9" width="30" height="8" rx="2" fill="#6E9457"/>
+    <line x1="0" y1="-9" x2="0" y2="16" stroke="#FAF9F5" stroke-width="3"/>
+    <circle cx="-5" cy="-12" r="4" fill="none" stroke="#6E9457" stroke-width="2.5"/>
+    <circle cx="5" cy="-12" r="4" fill="none" stroke="#6E9457" stroke-width="2.5"/>
+  </g>
+  <text x="1050" y="300" font-size="19" font-weight="bold" fill="#D97757" text-anchor="middle">BLESS</text>
+  <text x="1050" y="324" font-size="13" fill="#5F574C" text-anchor="middle">steward it;</text>
+  <text x="1050" y="342" font-size="13" fill="#5F574C" text-anchor="middle">give as you grow</text>
+
+  <!-- Caption -->
+  <text x="600" y="418" font-size="16" font-style="italic" fill="#8A8175" text-anchor="middle">Solve bigger problems for more people → create more value. Then give as you grow.</text>
+</svg>

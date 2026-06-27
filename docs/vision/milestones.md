@@ -4,6 +4,8 @@ A compass, not a promise. Each rung is less about the number and more about the 
 the number forces you to learn.** You cannot fake your way up — each level requires a real
 capability the last one didn't.
 
+<p align="center"><img src="../assets/ladder.svg" alt="The Climb — the milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain" width="100%"></p>
+
 | # | Rung | Target | Horizon | The skill it forces | The question it answers |
 |---|---|---:|---|---|---|
 | 1 | 🌱 Seed | **$1,000,000** | Year 1 | Ship *one* real product people pay for | "Can I create value at all?" |
@@ -22,6 +24,8 @@ capability the last one didn't.
 - **Cash is the scoreboard; capability is the score.** A venture can generate $1M and teach
   you almost nothing if it was luck. A $10k venture can teach you everything if you
   understand exactly *why* every dollar came in.
+
+<p align="center"><img src="../assets/milestones-games.svg" alt="Each rung is a different game: rung 1 ($1M) forces you to ship one real thing and answers 'Can I create value at all?'; rung 2 ($10M) make it repeatable; rung 3 ($100M) build through people; rung 4 ($1B) build to last; rung 5 ($10B) move a market and answers 'Can I bend the world toward good?'" width="100%"></p>
 
 ## Rung 1 starts now — and it's real
 

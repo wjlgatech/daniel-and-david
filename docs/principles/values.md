@@ -13,6 +13,8 @@ states the *why* honestly, because a builder should always know what they're bui
 
 ## The non-negotiables
 
+<p align="center"><img src="../assets/values-non-negotiables.svg" alt="The 7 non-negotiables: tell the truth; keep your word and obey the law; serve, don't exploit; protect the vulnerable; give as you grow; stay humble; honor people over profit." width="100%"></p>
+
 1. **Tell the truth.** No false claims, no fake affiliations, no inflated numbers, no
    tricks. Venture #1's "do-not" branding list exists because we'd rather make less money
    honestly than more money by deceiving people. A reputation is built over years and lost
@@ -43,6 +45,8 @@ states the *why* honestly, because a builder should always know what they're bui
    people. The money is replaceable; trust and relationships are not.
 
 ## The test for any decision
+
+<p align="center"><img src="../assets/four-question-test.svg" alt="The 4-Question Test: Is it true? Is it legal and is my word kept? Does it really serve someone? Would I be proud to explain it? If any answer is no, we find another way." width="100%"></p>
 
 Before any big move — a price, a product, a marketing claim, a partnership — ask:
 

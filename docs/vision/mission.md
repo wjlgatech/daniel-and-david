@@ -12,6 +12,8 @@ greater than yourself.**
 That's what a **wealth creator** is. Not someone who is handed money. Someone who **makes
 something people genuinely need, does it honestly, and stewards what comes back well.**
 
+<p align="center"><img src="../assets/mission-value-chain.svg" alt="What a wealth creator really does: SEE a real problem, BUILD an honest solution, SERVE people well, EARN (money is the world's thank-you), then BLESS — steward it and give as you grow." width="100%"></p>
+
 ## What we believe
 
 1. **Value comes from serving people.** Money is just the world saying *thank you* for

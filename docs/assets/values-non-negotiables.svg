@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 730" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1100" height="730" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="33" font-weight="bold" fill="#29261F">The 7 Non-Negotiables</text>
+  <text x="62" y="114" font-size="17" fill="#6B6258">Skills make you capable. Values make you trustworthy — and trust is the real moat.</text>
+
+  <!-- Card -->
+  <rect x="60" y="146" width="980" height="512" rx="22" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+
+  <!-- Row separators -->
+  <g stroke="#EFE9DD" stroke-width="1.5">
+    <line x1="92" y1="216" x2="1008" y2="216"/>
+    <line x1="92" y1="286" x2="1008" y2="286"/>
+    <line x1="92" y1="356" x2="1008" y2="356"/>
+    <line x1="92" y1="426" x2="1008" y2="426"/>
+    <line x1="92" y1="496" x2="1008" y2="496"/>
+    <line x1="92" y1="566" x2="1008" y2="566"/>
+  </g>
+
+  <!-- ROW 1 — Tell the truth (y 181) -->
+  <rect x="104" y="159" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <path d="M114,181 L122,189 L138,173" transform="translate(0,0)" fill="none" stroke="#D97757" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="172" y="178" font-size="21" font-weight="bold" fill="#29261F">Tell the truth</text>
+  <text x="172" y="200" font-size="14" fill="#6F665A">No tricks, no fake claims, no pretending.</text>
+
+  <!-- ROW 2 — Keep your word (y 251) -->
+  <rect x="104" y="229" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <g transform="translate(126,251)" stroke="#D97757" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <line x1="-11" y1="-7" x2="11" y2="-7"/>
+    <line x1="0" y1="-7" x2="0" y2="9"/>
+    <line x1="-7" y1="9" x2="7" y2="9"/>
+    <path d="M-15,-7 Q-11,-1 -7,-7"/>
+    <path d="M7,-7 Q11,-1 15,-7"/>
+  </g>
+  <text x="172" y="248" font-size="21" font-weight="bold" fill="#29261F">Keep your word &amp; obey the law</text>
+  <text x="172" y="270" font-size="14" fill="#6F665A">Follow the rules. A promise made is a debt owed.</text>
+
+  <!-- ROW 3 — Serve, don't exploit (y 321) -->
+  <rect x="104" y="299" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <path d="M126,331 C112,318 119,306 126,314 C133,306 140,318 126,331 Z" fill="#D97757"/>
+  <text x="172" y="318" font-size="21" font-weight="bold" fill="#29261F">Serve, don&apos;t exploit</text>
+  <text x="172" y="340" font-size="14" fill="#6F665A">Sell what truly helps. Never prey on fear or need.</text>
+
+  <!-- ROW 4 — Protect the vulnerable (y 391) -->
+  <rect x="104" y="369" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <path d="M126,380 L137,385 L137,393 Q137,401 126,405 Q115,401 115,393 L115,385 Z" fill="none" stroke="#D97757" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="172" y="388" font-size="21" font-weight="bold" fill="#29261F">Protect the vulnerable</text>
+  <text x="172" y="410" font-size="14" fill="#6F665A">Guard children, data, and anyone weaker than you.</text>
+
+  <!-- ROW 5 — Give as you grow (y 461) -->
+  <rect x="104" y="439" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <g transform="translate(126,462)" stroke="#D97757" stroke-width="2.5" fill="none">
+    <rect x="-10" y="-2" width="20" height="13" rx="1.5"/>
+    <line x1="-12" y1="-2" x2="12" y2="-2"/>
+    <line x1="0" y1="-2" x2="0" y2="11"/>
+    <circle cx="-4" cy="-7" r="3.5"/>
+    <circle cx="4" cy="-7" r="3.5"/>
+  </g>
+  <text x="172" y="458" font-size="21" font-weight="bold" fill="#29261F">Give as you grow</text>
+  <text x="172" y="480" font-size="14" fill="#6F665A">Generosity from day one — not &quot;someday when I&apos;m rich.&quot;</text>
+
+  <!-- ROW 6 — Stay humble (y 531) -->
+  <rect x="104" y="509" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <g transform="translate(126,531)" stroke="#D97757" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-9,-5 L0,3 L9,-5"/>
+    <path d="M-9,2 L0,10 L9,2"/>
+  </g>
+  <text x="172" y="528" font-size="21" font-weight="bold" fill="#29261F">Stay humble</text>
+  <text x="172" y="550" font-size="14" fill="#6F665A">Stay teachable. Credit others; blame yourself first.</text>
+
+  <!-- ROW 7 — Honor people over profit (y 601) -->
+  <rect x="104" y="579" width="44" height="44" rx="12" fill="#F6E3D8"/>
+  <g transform="translate(126,601)">
+    <circle cx="0" cy="-6" r="4.5" fill="#D97757"/>
+    <path d="M-9,11 C-9,1 9,1 9,11 Z" fill="#D97757"/>
+  </g>
+  <text x="172" y="598" font-size="21" font-weight="bold" fill="#29261F">Honor people over profit</text>
+  <text x="172" y="620" font-size="14" fill="#6F665A">Customers and teammates are humans, never just numbers.</text>
+
+  <!-- Footer caption -->
+  <text x="550" y="694" font-size="16" font-style="italic" fill="#C2613F" text-anchor="middle">Trust compounds. Over a long enough time, doing it right IS the engine of success.</text>
+</svg>

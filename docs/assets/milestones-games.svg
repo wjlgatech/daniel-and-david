@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="650" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="33" font-weight="bold" fill="#29261F">Each Rung Is a Different Game</text>
+  <text x="62" y="114" font-size="17" fill="#6B6258">The cash is the scoreboard. The real score is the new skill — and the question you can finally answer.</text>
+
+  <!-- Card -->
+  <rect x="60" y="146" width="1080" height="462" rx="22" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+
+  <!-- Column headers -->
+  <text x="120" y="184" font-size="12.5" font-weight="bold" fill="#A89E8E" text-anchor="middle" letter-spacing="1">RUNG</text>
+  <text x="300" y="184" font-size="12.5" font-weight="bold" fill="#A89E8E" letter-spacing="1">MILESTONE</text>
+  <text x="470" y="184" font-size="12.5" font-weight="bold" fill="#A89E8E" letter-spacing="1">FORCES A NEW SKILL</text>
+  <text x="800" y="184" font-size="12.5" font-weight="bold" fill="#A89E8E" letter-spacing="1">...SO YOU CAN ANSWER</text>
+  <line x1="90" y1="198" x2="1110" y2="198" stroke="#EDE6D8" stroke-width="1.5"/>
+
+  <!-- Row separators -->
+  <g stroke="#EFE9DD" stroke-width="1.5">
+    <line x1="90" y1="276" x2="1110" y2="276"/>
+    <line x1="90" y1="354" x2="1110" y2="354"/>
+    <line x1="90" y1="432" x2="1110" y2="432"/>
+    <line x1="90" y1="510" x2="1110" y2="510"/>
+  </g>
+
+  <!-- ROW 1 (y 237) -->
+  <circle cx="120" cy="237" r="25" fill="#8FB36B"/>
+  <text x="120" y="245" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="230" y="232" font-size="23" font-weight="bold" fill="#D97757">$1M</text>
+  <text x="230" y="252" font-size="13" fill="#9A9081">Year 1</text>
+  <text x="470" y="244" font-size="17" font-weight="bold" fill="#3F3A32">Ship one real thing</text>
+  <text x="800" y="244" font-size="16" font-style="italic" fill="#C2613F">&quot;Can I create value at all?&quot;</text>
+
+  <!-- ROW 2 (y 315) -->
+  <circle cx="120" cy="315" r="25" fill="#7DA060"/>
+  <text x="120" y="323" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="230" y="310" font-size="23" font-weight="bold" fill="#D97757">$10M</text>
+  <text x="230" y="330" font-size="13" fill="#9A9081">Year 2</text>
+  <text x="470" y="322" font-size="17" font-weight="bold" fill="#3F3A32">Make it repeatable</text>
+  <text x="800" y="322" font-size="16" font-style="italic" fill="#C2613F">&quot;Can I do it on purpose, again?&quot;</text>
+
+  <!-- ROW 3 (y 393) -->
+  <circle cx="120" cy="393" r="25" fill="#6E9457"/>
+  <text x="120" y="401" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="230" y="388" font-size="23" font-weight="bold" fill="#D97757">$100M</text>
+  <text x="230" y="408" font-size="13" fill="#9A9081">Year 3</text>
+  <text x="470" y="400" font-size="17" font-weight="bold" fill="#3F3A32">Build through people</text>
+  <text x="800" y="400" font-size="16" font-style="italic" fill="#C2613F">&quot;Can I build through others?&quot;</text>
+
+  <!-- ROW 4 (y 471) -->
+  <circle cx="120" cy="471" r="25" fill="#5F8A77"/>
+  <text x="120" y="479" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="230" y="466" font-size="23" font-weight="bold" fill="#D97757">$1B</text>
+  <text x="230" y="486" font-size="13" fill="#9A9081">Year 5</text>
+  <text x="470" y="478" font-size="17" font-weight="bold" fill="#3F3A32">Build to last</text>
+  <text x="800" y="478" font-size="16" font-style="italic" fill="#C2613F">&quot;Can I create something durable?&quot;</text>
+
+  <!-- ROW 5 (y 549) -->
+  <circle cx="120" cy="549" r="25" fill="#6B89A8"/>
+  <text x="120" y="557" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="230" y="544" font-size="23" font-weight="bold" fill="#D97757">$10B</text>
+  <text x="230" y="564" font-size="13" fill="#9A9081">Year 7</text>
+  <text x="470" y="556" font-size="17" font-weight="bold" fill="#3F3A32">Move a market</text>
+  <text x="800" y="556" font-size="16" font-style="italic" fill="#C2613F">&quot;Can I bend the world toward good?&quot;</text>
+
+  <!-- Footer caption -->
+  <text x="600" y="636" font-size="15" font-style="italic" fill="#8A8175" text-anchor="middle">Climbing the right way matters more than the calendar — the horizon is a compass, not a deadline.</text>
+</svg>
