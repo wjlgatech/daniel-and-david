@@ -1,8 +1,17 @@
 # LinkedIn Short Posts
 
 Ready-to-paste posts (150–200 words each) that introduce the [long-form article](the-daniel-and-david-story.md)
-and the [repo](https://github.com/wjlgatech/daniel-and-david). Each notes the **infographic to
-attach** (download the SVG from `docs/assets/`, or screenshot it).
+and the [repo](https://github.com/wjlgatech/daniel-and-david). Each notes the **infographic to attach**.
+
+**Launch images (LinkedIn-ready PNGs, 2400px wide):** rendered to the Desktop as
+`dd-launch-ladder.png` · `dd-launch-builder-loop.png` · `dd-launch-agent-loop.png` ·
+`dd-launch-critical-thinking.png` · `dd-launch-mission-value-chain.png`. Re-render any with
+`qlmanage -t -s 2400 -o ~/Desktop docs/assets/<name>.svg` then trim the square padding with
+`magick ~/Desktop/<name>.svg.png -trim +repage ~/Desktop/dd-launch-<name>.png`.
+
+**Reach tip:** LinkedIn throttles posts with outbound links. For best reach, put the URL in the
+**first comment** (end the post with "link in comments 👇"), and/or publish the long-form as a
+**native LinkedIn Article** and point the link there.
 
 ---
 
@@ -21,7 +30,7 @@ It's free. It's open. Your kids can contribute to it.
 
 Read it 👇 and tell me where I'm wrong.
 
-🔗 [link to article]
+🔗 github.com/wjlgatech/daniel-and-david
 
 #Education #AI #Parenting #Entrepreneurship #FutureOfWork
 
@@ -42,7 +51,7 @@ Come add a lesson. Fix an explanation. Translate a page into your language. Or j
 
 The curriculum gets better every time a real child bumps into it. Yours included.
 
-🔗 [link to repo]
+🔗 github.com/wjlgatech/daniel-and-david
 
 #Education #Parenting #Homeschool #STEM #OpenSource
 
@@ -66,7 +75,7 @@ You become a builder by *building*. So let's build something good.
 
 (Grown-ups: it's all free and open here 👇)
 
-🔗 [link to repo]
+🔗 github.com/wjlgatech/daniel-and-david
 
 #KidsWhoCode #STEM #Education #Parenting
 
@@ -87,7 +96,7 @@ The bet behind opening it up: distributed, networked collaboration outbuilds clo
 
 If you're an engineer, designer, educator, founder, or an AI agent with an idea — come find your unfair contribution. Bring a problem worth solving.
 
-🔗 [link to repo] · Discussions are open.
+🔗 github.com/wjlgatech/daniel-and-david · Discussions are open.
 
 #AI #OpenSource #Startups #FutureOfWork #Collaboration
 
@@ -108,6 +117,6 @@ I open-sourced the whole thing — curriculum, a real first business, an AI tool
 
 Honest, generous, courageous builders. That's the product. The billion dollars would just be the receipt.
 
-🔗 [link to repo]
+🔗 github.com/wjlgatech/daniel-and-david
 
 #Entrepreneurship #Education #AI #Parenting

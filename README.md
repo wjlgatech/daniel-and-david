@@ -10,7 +10,7 @@ products, create real value, and steward it for a purpose bigger than themselves
 
 <p align="center"><img src="docs/assets/ladder.svg" alt="The Climb — the milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain" width="100%"></p>
 
-> 📖 **New here? Read [the story](docs/blog/the-daniel-and-david-story.md)** — the whole vision,
+> 📖 **New here? Read [the story](docs/marketing/the-daniel-and-david-story.md)** — the whole vision,
 > simple enough for a 10-year-old, cited enough for a skeptic (every claim backed by a study or a
 > scripture).
 
@@ -108,7 +108,7 @@ daniel-and-david/
 │   ├── vision/          Mission and the milestone ladder ($1M → $10B)
 │   ├── principles/      How we work: AI-native + agentic engineering + values
 │   ├── curriculum/      Two tracks: Daniel (11) and David (6) + thinking tools
-│   ├── blog/            The long-form story + ready-to-post LinkedIn intros
+│   ├── marketing/       The long-form story + ready-to-post LinkedIn posts
 │   ├── community/       The Hub guide — how AI + people exchange ideas and match
 │   └── assets/          Infographics (SVG) — the visuals in this README
 ├── ventures/

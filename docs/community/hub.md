@@ -73,6 +73,6 @@ eyeballs, all bugs are shallow"* (Raymond, *The Cathedral and the Bazaar*) and c
 production (Benkler, *The Wealth of Networks*, 2006). And every newcomer gains a thousand guides
 just ahead of them — Vygotsky's Zone of Proximal Development, at hub scale.
 
-**Come build with us.** → [Read the story](../blog/the-daniel-and-david-story.md) ·
+**Come build with us.** → [Read the story](../marketing/the-daniel-and-david-story.md) ·
 [Start contributing](../../CONTRIBUTING.md) ·
 [Open a Discussion](https://github.com/wjlgatech/daniel-and-david/discussions)
