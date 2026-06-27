@@ -41,3 +41,7 @@ Keep each capability small, readable, and documented. Prefer a **skill** first (
 ceremony); reach for a **workflow** only when the work genuinely needs many agents; add a
 **hook** only to enforce something that must not be skipped; **bundle a plugin** when others
 should be able to install it. Update this table when you add one.
+
+Everything here is checked by CI (`scripts/validate-toolkit.sh`, run locally too): JSON parses,
+workflows pass `node --check`, skills/commands have valid frontmatter, hooks pass `bash -n`, and
+plugin hook references resolve. Run it before you open a PR.

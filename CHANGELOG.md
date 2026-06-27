@@ -39,6 +39,11 @@ this project aims for [Semantic Versioning](https://semver.org/).
     in a new repo `.claude-plugin/marketplace.json`.
   - `.claude/README.md` documents the five ways to extend an AI teammate (skill / command / hook
     / workflow / plugin) as a teaching artifact.
+- **CI now validates the agent toolkit.** New `scripts/validate-toolkit.sh` (run locally too) and
+  a `toolkit-validate` CI job check that every plugin/marketplace/hooks JSON parses, every
+  `.claude/workflows/*.js` passes `node --check`, every `SKILL.md`/command has valid frontmatter,
+  hook scripts pass `bash -n`, and plugin `hooks.json` references resolve — so a malformed
+  toolkit artifact can't merge.
 
 ### Investigated / Rejected
 - **Single-app repo (just the KC web app).** Rejected: the goal is a *durable studio* that

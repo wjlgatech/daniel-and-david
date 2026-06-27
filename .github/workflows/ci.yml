@@ -50,3 +50,14 @@ jobs:
         run: |
           python3 agents/hello-agent/agent.py --price 29 --cost 7
           echo "OK — hello-agent runs."
+
+  toolkit-validate:
+    name: Agent toolkit valid
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate skills, workflows, hooks, and plugins
+        run: bash scripts/validate-toolkit.sh
