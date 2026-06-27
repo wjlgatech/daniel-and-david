@@ -45,6 +45,14 @@ this project aims for [Semantic Versioning](https://semver.org/).
   hook scripts pass `bash -n`, and plugin `hooks.json` references resolve — so a malformed
   toolkit artifact can't merge.
 
+- **Storytelling + hub repositioning.** Added a long-form, kid-simple-but-expert-deep article
+  (`docs/blog/the-daniel-and-david-story.md`) with one infographic per section and every main
+  claim cited to a seminal study *or* scripture; ready-to-post LinkedIn intros
+  (`docs/blog/linkedin-posts.md`); a Hub guide (`docs/community/hub.md`) framing the project as
+  three hubs (living learning · agent tools · AI+people collaboration-matching) with a lightweight
+  on-GitHub matching flow; an **💡 Idea / 🤝 Collaboration** issue template; and a README "What
+  this is becoming: a hub" section.
+
 ### Investigated / Rejected
 - **Single-app repo (just the KC web app).** Rejected: the goal is a *durable studio* that
   hosts many ventures over years, plus a teaching layer — a monorepo serves both.

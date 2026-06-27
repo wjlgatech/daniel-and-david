@@ -10,6 +10,23 @@ products, create real value, and steward it for a purpose bigger than themselves
 
 <p align="center"><img src="docs/assets/ladder.svg" alt="The Climb — the milestone ladder from $1M in Year 1 to $10B in Year 7, drawn as a plant growing from a seed to a mountain" width="100%"></p>
 
+> 📖 **New here? Read [the story](docs/blog/the-daniel-and-david-story.md)** — the whole vision,
+> simple enough for a 10-year-old, cited enough for a skeptic (every claim backed by a study or a
+> scripture).
+
+### What this is becoming: a hub 🌍
+
+This is growing from a curriculum into a **[hub](docs/community/hub.md)** — three in one:
+
+1. 📚 **A living learning hub** — open curriculum that improves every time a real child uses it.
+2. 🧰 **A tools hub** — every capability we teach a human, we teach our AIs too (skills, plugins,
+   workflows, hooks), all open and installable.
+3. 🤝 **A collaboration hub** — where AI and people exchange ideas, *match into teams,* and launch
+   ventures that solve foundational problems.
+
+**Parents, kids, engineers, designers, founders, and AI agents are all invited.** Bring a problem
+worth solving — see **[the Hub guide](docs/community/hub.md)** and [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ---
 
 ## Why this exists
@@ -90,7 +107,9 @@ daniel-and-david/
 ├── docs/
 │   ├── vision/          Mission and the milestone ladder ($1M → $10B)
 │   ├── principles/      How we work: AI-native + agentic engineering + values
-│   ├── curriculum/      Two tracks: Daniel (11) and David (6)
+│   ├── curriculum/      Two tracks: Daniel (11) and David (6) + thinking tools
+│   ├── blog/            The long-form story + ready-to-post LinkedIn intros
+│   ├── community/       The Hub guide — how AI + people exchange ideas and match
 │   └── assets/          Infographics (SVG) — the visuals in this README
 ├── ventures/
 │   └── kc-matchday-basecamp/   Venture #1 — full spec, economics, app PRD
