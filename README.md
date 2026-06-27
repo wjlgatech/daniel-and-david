@@ -8,9 +8,10 @@
 > create real value, and serve real people.**
 
 We do that one small loop at a time. The atomic unit is the **[Builder Loop](docs/builder-loop/)** —
-a four-week family experiment: *notice a real problem → understand it → build the smallest
-useful thing → serve one real person → tell the truth about what happened.* AI is the child's
-teammate; the child stays **the mind and the conscience.**
+a four-week family experiment run as **5 fast build-show-learn cycles** (not one big reveal):
+*pick the smallest next thing → build it rough → show one real person → learn what failed →
+repeat.* The principle is **fast · frequent · failing-forward.** AI is the child's teammate; the
+child stays **the mind and the conscience.**
 
 > 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** · 📖 New to the whole vision?
 > [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for a 10-year-old,
@@ -20,11 +21,7 @@ teammate; the child stays **the mind and the conscience.**
 
 We measure **capability**, not dollars. The public ladder is what a child can *do*:
 
-```text
-1 Notice a real problem   2 Ask good questions   3 Make something useful
-4 Serve one real person   5 Learn from feedback   6 Work with a team
-7 Use resources to bless others
-```
+<p align="center"><img src="docs/assets/capability-ladder.svg" alt="The Capability Ladder we climb: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others. The money ladder is a later venture track." width="100%"></p>
 
 *The game is who you become while you climb.* (There's an advanced venture/money track too —
 it lives lower down, on purpose. See [the ladders](docs/vision/milestones.md).)
@@ -142,20 +139,34 @@ daniel-and-david/
 
 ---
 
-## Quick start (for a kid, a parent, or a contributor anywhere on Earth)
+## Start here — pick your path
+
+### 👪 For families (no code, no install)
+
+You don't need GitHub, git, or any setup. Just:
+
+1. **Open the home page:** **[daniel-and-david on the web →](https://wjlgatech.github.io/daniel-and-david/)** (a normal link — opens in any browser).
+2. **Read the [Builder Loop](docs/builder-loop/)** — the four-week loop (5 fast build-show-learn cycles) you'll run with your child. A [one-page printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md) are there too.
+3. **Read the [safety rules](docs/safety/)** before you start (consent, privacy, AI boundaries).
+4. **Open your child's track:** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/).
+
+That's the whole on-ramp. Everything a parent needs is a plain web link or a markdown page.
+
+### 🛠️ For developers & contributors
 
 ```bash
 # 1. Get the code
 git clone https://github.com/wjlgatech/daniel-and-david.git
 cd daniel-and-david
 
-# 2. Open the academy's home page — no install needed
+# 2. Open the landing page locally (no install needed)
 open apps/web/public/index.html      # macOS  (Linux: xdg-open, Windows: start)
 
-# 3. Read the mission, then the first venture
-#    docs/vision/mission.md   →   ventures/kc-matchday-basecamp/README.md
+# 3. Read the agent guide + toolkit, then run the checks
+#    AGENTS.md  ·  .claude/README.md
+./scripts/check.sh                   # friendly pre-PR checks (links, toolkit, status-truth)
 
-# 4. Find a "good first issue" and make your first contribution
+# 4. Find a "good first issue" and open a small, reviewable PR
 #    https://github.com/wjlgatech/daniel-and-david/contribute
 ```
 

@@ -20,6 +20,8 @@ what a [Builder Loop](../builder-loop/) is designed to grow.
 | 6 | **Work** with a team |
 | 7 | **Use resources to bless** others |
 
+<p align="center"><img src="../assets/capability-ladder.svg" alt="The Capability Ladder: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others — the public ladder we measure, above the later money/venture track." width="100%"></p>
+
 > A child who can climb to Level 4 — *served one real person with something they made* — has
 > learned more than most adults are ever taught. That is the win we chase first.
 

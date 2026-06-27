@@ -1,0 +1,44 @@
+name: Deploy landing page (GitHub Pages)
+
+# Publishes the dependency-free landing page (apps/web/public) so anyone — including a
+# non-technical parent — can open it at a real URL, no git clone required:
+#   https://wjlgatech.github.io/daniel-and-david/
+#
+# One-time manual step: repo Settings → Pages → Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/web/public/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build & deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload landing page
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/public
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

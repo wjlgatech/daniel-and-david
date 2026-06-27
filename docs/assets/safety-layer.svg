@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="560" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="34" font-weight="bold" fill="#29261F">Safety Is Part of the Product</text>
+  <text x="62" y="114" font-size="18" fill="#6B6258">Children read, use, and contribute here — so the trust rules are designed, not implied. They bind humans <tspan font-style="italic">and</tspan> AI.</text>
+
+  <!-- shield -->
+  <g transform="translate(150,300)">
+    <path d="M0,-110 C50,-78 92,-72 110,-70 C110,10 78,78 0,120 C-78,78 -110,10 -110,-70 C-92,-72 -50,-78 0,-110 Z" fill="#FAF9F5" stroke="#D97757" stroke-width="3"/>
+    <path d="M-46,4 L-14,40 L52,-40" fill="none" stroke="#D97757" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- rule chips -->
+  <g font-size="14" fill="#5F574C">
+    <rect x="320" y="166" width="820" height="44" rx="22" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="346" y="194">🚫 No child personal data — no full names, location, school, or schedule.</text>
+
+    <rect x="320" y="222" width="820" height="44" rx="22" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="346" y="250">🙅 No public child profiles · no private adult–child messages · no unmediated matching.</text>
+
+    <rect x="320" y="278" width="820" height="44" rx="22" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="346" y="306">👀 Every public child contribution is reviewed before it appears.</text>
+
+    <rect x="320" y="334" width="820" height="44" rx="22" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="346" y="362">🤖 AI never replaces the child's own thinking, and never collects their data by default.</text>
+
+    <rect x="320" y="390" width="820" height="44" rx="22" fill="#D97757" stroke="#C2613F" stroke-width="2"/>
+    <text x="346" y="418" fill="#FFFFFF" font-weight="bold">⚖️ When a safety rule and a feature conflict — the rule wins and the feature waits.</text>
+  </g>
+
+  <text x="320" y="470" font-size="14" font-style="italic" fill="#8A8175">Five docs: child-safety · privacy-by-design · parent-consent · community-moderation · ai-use-boundaries.</text>
+</svg>

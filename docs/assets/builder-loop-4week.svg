@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="580" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="36" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="80" font-size="32" font-weight="bold" fill="#29261F">The Builder Loop — 5 Fast Iterations in 4 Weeks</text>
+  <text x="62" y="108" font-size="18" fill="#6B6258">Not one big reveal. Ship something tiny, show a real person, learn what failed, repeat.</text>
+
+  <!-- principle banner -->
+  <g>
+    <rect x="60" y="126" width="430" height="34" rx="17" fill="#FDEDE6" stroke="#D97757" stroke-width="1.5"/>
+    <text x="80" y="149" font-size="15" font-weight="bold" fill="#C2613F">⚡ fast   ·   🔁 frequent   ·   💪 failing-forward</text>
+  </g>
+
+  <!-- ===== the micro-cycle: 5 chips ===== -->
+  <!-- arrows between chips (y center ~ 248) -->
+  <g stroke="#D97757" stroke-width="5" stroke-linecap="round" fill="#D97757">
+    <line x1="252" y1="248" x2="286" y2="248"/><path d="M286,248 L274,241 L274,255 Z"/>
+    <line x1="470" y1="248" x2="504" y2="248"/><path d="M504,248 L492,241 L492,255 Z"/>
+    <line x1="688" y1="248" x2="722" y2="248"/><path d="M722,248 L710,241 L710,255 Z"/>
+    <line x1="906" y1="248" x2="940" y2="248"/><path d="M940,248 L928,241 L928,255 Z"/>
+  </g>
+
+  <!-- chip helper: number circle + label + sub -->
+  <!-- 1 PICK -->
+  <g transform="translate(52,196)">
+    <rect width="200" height="104" rx="18" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="34" cy="34" r="17" fill="#D97757"/><text x="34" y="40" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="62" y="40" font-size="20" font-weight="bold" fill="#29261F">PICK</text>
+    <text x="20" y="72" font-size="13" fill="#5F574C">the one smallest</text>
+    <text x="20" y="90" font-size="13" fill="#5F574C">thing to test</text>
+  </g>
+  <!-- 2 BUILD -->
+  <g transform="translate(270,196)">
+    <rect width="200" height="104" rx="18" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="34" cy="34" r="17" fill="#D97757"/><text x="34" y="40" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="62" y="40" font-size="20" font-weight="bold" fill="#29261F">BUILD</text>
+    <text x="20" y="72" font-size="13" fill="#5F574C">make it fast</text>
+    <text x="20" y="90" font-size="13" fill="#5F574C">&amp; rough (v0.1)</text>
+  </g>
+  <!-- 3 SHOW (highlighted) -->
+  <g transform="translate(488,196)">
+    <rect width="200" height="104" rx="18" fill="#D97757" stroke="#C2613F" stroke-width="2.5"/>
+    <circle cx="34" cy="34" r="17" fill="#FAF9F5"/><text x="34" y="40" font-size="16" font-weight="bold" fill="#D97757" text-anchor="middle">3</text>
+    <text x="62" y="40" font-size="20" font-weight="bold" fill="#FFFFFF">SHOW</text>
+    <text x="20" y="72" font-size="13" fill="#FDEDE6">to ONE real person</text>
+    <text x="20" y="90" font-size="13" fill="#FDEDE6">— today, every cycle</text>
+  </g>
+  <!-- 4 LEARN -->
+  <g transform="translate(706,196)">
+    <rect width="200" height="104" rx="18" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="34" cy="34" r="17" fill="#D97757"/><text x="34" y="40" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="62" y="40" font-size="20" font-weight="bold" fill="#29261F">LEARN</text>
+    <text x="20" y="72" font-size="13" fill="#5F574C">write what failed —</text>
+    <text x="20" y="90" font-size="13" fill="#5F574C">the lesson is the gold</text>
+  </g>
+  <!-- 5 DECIDE -->
+  <g transform="translate(924,196)">
+    <rect width="200" height="104" rx="18" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="34" cy="34" r="17" fill="#D97757"/><text x="34" y="40" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="62" y="40" font-size="20" font-weight="bold" fill="#29261F">DECIDE</text>
+    <text x="20" y="72" font-size="13" fill="#5F574C">keep / change / drop</text>
+    <text x="20" y="90" font-size="13" fill="#5F574C">→ next PICK</text>
+  </g>
+
+  <!-- loop-back arrow DECIDE -> PICK -->
+  <path d="M1024,304 C1024,372 152,372 152,308" fill="none" stroke="#C9A98E" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/>
+  <path d="M152,308 L145,322 L159,322 Z" fill="#C9A98E"/>
+  <text x="600" y="360" font-size="16" font-style="italic" fill="#8A8175" text-anchor="middle">repeat ×5 — a new cycle every 4–5 days</text>
+
+  <!-- ===== 4-week cadence strip ===== -->
+  <text x="60" y="430" font-size="15" font-weight="bold" fill="#29261F">Across 4 weeks:</text>
+  <g font-size="13">
+    <rect x="60" y="446" width="262" height="72" rx="14" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="78" y="472" font-weight="bold" fill="#C2613F">Week 1</text>
+    <text x="78" y="494" fill="#5F574C">🎯 Aim (≤3 days, talk to 3</text>
+    <text x="78" y="510" fill="#5F574C">people) + Iteration 1</text>
+
+    <rect x="334" y="446" width="262" height="72" rx="14" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="352" y="472" font-weight="bold" fill="#C2613F">Week 2</text>
+    <text x="352" y="494" fill="#5F574C">Iterations 2 &amp; 3 —</text>
+    <text x="352" y="510" fill="#5F574C">fix the biggest flop, reshow</text>
+
+    <rect x="608" y="446" width="262" height="72" rx="14" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2"/>
+    <text x="626" y="472" font-weight="bold" fill="#C2613F">Week 3</text>
+    <text x="626" y="494" fill="#5F574C">Iterations 4 &amp; 5 —</text>
+    <text x="626" y="510" fill="#5F574C">it's getting real now</text>
+
+    <rect x="882" y="446" width="258" height="72" rx="14" fill="#D97757" stroke="#C2613F" stroke-width="2"/>
+    <text x="900" y="472" font-weight="bold" fill="#FFFFFF">Week 4</text>
+    <text x="900" y="494" fill="#FDEDE6">🏁 Best version to a real</text>
+    <text x="900" y="510" fill="#FDEDE6">person + family retro</text>
+  </g>
+
+  <text x="60" y="552" font-size="14" font-style="italic" fill="#8A8175">A loop "counts" at ≥5 iterations, each shown to a real person, each with one failure-lesson logged.</text>
+</svg>

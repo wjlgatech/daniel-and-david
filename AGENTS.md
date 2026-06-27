@@ -11,14 +11,20 @@ A **family field lab** for raising wise, creative, AI-ready builders — anchore
 **capability** (think clearly, use AI responsibly, create value, serve people), *not* the money
 ladder (which is a deliberately-demoted "venture track"). It holds:
 
-- `docs/builder-loop/` — **the atomic unit**: the four-week family Builder Loop. Start here.
+- `docs/builder-loop/` — **the atomic unit**: the four-week family Builder Loop, run as **5 fast
+  build-show-learn iterations** (fast · frequent · failing-forward), *not* one big reveal. Includes
+  an `iteration-log.md` template and `scripts/builder-loop-log.sh` (a per-child log scaffolder;
+  output `builder-loop-log-*.md` is git-ignored — it can hold a child's notes). Start here.
 - `docs/vision/` — mission, the **Theory of Change + North Star metric**, and the two ladders
   (Capability Ladder = public/measured; money ladder = advanced venture track).
 - `docs/safety/` — **child-safety governance** (read before any community/account/upload feature).
 - `docs/` — principles and a two-track curriculum (now written against measurable outcomes).
 - `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
-- `apps/web/` — the academy's own static landing page.
+- `apps/web/` — the academy's own static landing page, **hosted on GitHub Pages**
+  (`https://wjlgatech.github.io/daniel-and-david/`) via `.github/workflows/pages.yml`. Its
+  outbound links use **absolute** GitHub URLs (so they work hosted *and* from a local file) —
+  keep that convention if you edit it.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, and hooks you can use here.
 - `tools/` — installable plugins.

@@ -13,6 +13,8 @@ the [mission](mission.md).
 
 ## The causal model
 
+<p align="center"><img src="../assets/theory-of-change.svg" alt="Theory of Change flow: INPUTS (family guides, real mini-ventures, AI scaffolds, values, the 5W1H grid) lead to BEHAVIORS (notice problems, try first then use AI, test on real people, reflect honestly), which lead to NEAR-TERM outcomes (more curiosity, clearer explanations, better AI-checking) and then LONG-TERM outcomes (agency, judgment, capability, service, responsible tech use). The North Star metric is Independent Builder Evidence per child per month." width="100%"></p>
+
 ```text
 INPUTS  (what we provide)
    Family guides · real mini-ventures · AI scaffolds · the values framework · the 5W1H grid

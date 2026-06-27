@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="560" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="34" font-weight="bold" fill="#29261F">Theory of Change</text>
+  <text x="62" y="114" font-size="18" fill="#6B6258">How the work causes the outcome — and the one thing we measure. Each arrow is a bet.</text>
+
+  <!-- flow boxes -->
+  <!-- Inputs -->
+  <g transform="translate(60,170)">
+    <rect width="250" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="125" y="40" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">INPUTS</text>
+    <text x="125" y="70" font-size="13" fill="#5F574C" text-anchor="middle">Family guides ·</text>
+    <text x="125" y="90" font-size="13" fill="#5F574C" text-anchor="middle">real mini-ventures ·</text>
+    <text x="125" y="110" font-size="13" fill="#5F574C" text-anchor="middle">AI scaffolds · values ·</text>
+    <text x="125" y="130" font-size="13" fill="#5F574C" text-anchor="middle">the 5W1H grid</text>
+  </g>
+  <line x1="312" y1="245" x2="350" y2="245" stroke="#D97757" stroke-width="5" stroke-linecap="round"/>
+  <path d="M350,245 L338,238 L338,252 Z" fill="#D97757"/>
+  <!-- Behaviors -->
+  <g transform="translate(352,170)">
+    <rect width="250" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="125" y="40" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">BEHAVIORS</text>
+    <text x="125" y="70" font-size="13" fill="#5F574C" text-anchor="middle">Notice problems ·</text>
+    <text x="125" y="90" font-size="13" fill="#5F574C" text-anchor="middle">try first, then use AI ·</text>
+    <text x="125" y="110" font-size="13" fill="#5F574C" text-anchor="middle">test on real people ·</text>
+    <text x="125" y="130" font-size="13" fill="#5F574C" text-anchor="middle">reflect honestly</text>
+  </g>
+  <line x1="604" y1="245" x2="642" y2="245" stroke="#D97757" stroke-width="5" stroke-linecap="round"/>
+  <path d="M642,245 L630,238 L630,252 Z" fill="#D97757"/>
+  <!-- Near-term -->
+  <g transform="translate(644,170)">
+    <rect width="250" height="150" rx="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="125" y="38" font-size="18" font-weight="bold" fill="#D97757" text-anchor="middle">NEAR-TERM</text>
+    <text x="125" y="56" font-size="12" fill="#8A8175" text-anchor="middle">weeks to months</text>
+    <text x="125" y="82" font-size="13" fill="#5F574C" text-anchor="middle">More curiosity ·</text>
+    <text x="125" y="102" font-size="13" fill="#5F574C" text-anchor="middle">clearer explanations ·</text>
+    <text x="125" y="122" font-size="13" fill="#5F574C" text-anchor="middle">better AI-checking</text>
+  </g>
+  <line x1="896" y1="245" x2="934" y2="245" stroke="#D97757" stroke-width="5" stroke-linecap="round"/>
+  <path d="M934,245 L922,238 L922,252 Z" fill="#D97757"/>
+  <!-- Long-term -->
+  <g transform="translate(936,170)">
+    <rect width="250" height="150" rx="20" fill="#D97757" stroke="#C2613F" stroke-width="2.5"/>
+    <text x="125" y="38" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">LONG-TERM</text>
+    <text x="125" y="56" font-size="12" fill="#FDEDE6" text-anchor="middle">years — who they become</text>
+    <text x="125" y="82" font-size="13" fill="#FDEDE6" text-anchor="middle">Agency · judgment ·</text>
+    <text x="125" y="102" font-size="13" fill="#FDEDE6" text-anchor="middle">capability · service ·</text>
+    <text x="125" y="122" font-size="13" fill="#FDEDE6" text-anchor="middle">responsible tech use</text>
+  </g>
+
+  <!-- North Star callout -->
+  <g transform="translate(60,372)">
+    <rect width="1126" height="118" rx="20" fill="#FAF9F5" stroke="#E6E0D2" stroke-width="2.5"/>
+    <path d="M70,59 l9,18 l20,3 l-15,14 l4,20 l-18,-10 l-18,10 l4,-20 l-15,-14 l20,-3 Z" fill="#E8B84B"/>
+    <text x="130" y="48" font-size="20" font-weight="bold" fill="#29261F">North Star — Independent Builder Evidence / child / month</text>
+    <text x="130" y="78" font-size="14" fill="#5F574C">A point each time a child <tspan font-weight="bold">independently</tspan> does one: explain it · spot a weak claim · interview · test ·</text>
+    <text x="130" y="100" font-size="14" fill="#5F574C">build · revise after feedback · verify the AI · choose honesty. Capability — not stars, dollars, or volume.</text>
+  </g>
+  <text x="60" y="524" font-size="14" font-style="italic" fill="#8A8175">First real milestone: ten families finish one Builder Loop, and their children can explain what they learned.</text>
+</svg>

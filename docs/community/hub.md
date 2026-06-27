@@ -1,5 +1,9 @@
 # Daniel & David — the Hub
 
+> **First time here?** Don't start with the hub — start with the **[Builder Loop](../builder-loop/)**
+> (the four-week family loop) and the **[safety rules](../safety/)**. The hub is the *later*
+> stage; we [prove the loop before we scale the hub](../vision/theory-of-change.md).
+
 This started as a father's curriculum for two boys. It's growing into a **hub**: a living
 place that gets better the more people (and agents) show up. Three hubs in one.
 

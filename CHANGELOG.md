@@ -7,6 +7,45 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Changed
+- **Builder Loop redesigned from one-shot to iterative — 5 fast cycles, not one big reveal.**
+  `docs/builder-loop/README.md` now teaches **fast · frequent · failing-forward**: a repeating
+  ~4–5 day micro-cycle (PICK → BUILD → SHOW to a real person → LEARN the failure → DECIDE), run
+  **≥5 times in 4 weeks** (a short "aim" up front, then ship v0.1→v1.0). A loop now "counts" at
+  ≥5 iterations, each shown to a real person, each with a logged failure-lesson. Why: the prior
+  design front-loaded 3 weeks of planning and served once at the end — the opposite of what it
+  preaches. Downstream mentions (README, story, LinkedIn, curriculum tracks, ventures) updated to
+  match; `printable.md` rewritten to a 5-iteration tracker; `builder-loop-4week.svg` redesigned
+  to show the repeating cycle + cadence.
+
+### Added
+- **Builder Loop infrastructure** that keeps cycles fast and logged: `docs/builder-loop/iteration-log.md`
+  (one block per cycle) and `scripts/builder-loop-log.sh` (appends a dated iteration block to a
+  per-child `builder-loop-log-<child>.md`, shows `--status` progress toward the 5-cycle target).
+  The per-child log is git-ignored (may contain a child's notes — see `docs/safety/privacy-by-design.md`).
+- **Hosted landing page (GitHub Pages).** New `.github/workflows/pages.yml` publishes
+  `apps/web/public` to `https://wjlgatech.github.io/daniel-and-david/` on every push to `main`,
+  so a non-technical parent gets a clickable URL — no `git clone`. (One-time: Settings → Pages →
+  Source: GitHub Actions.) Landing-page doc links rewritten to absolute GitHub URLs so they work
+  from both the hosted page and a local file.
+- **Printable Builder Loop** (`docs/builder-loop/printable.md`) — a one-page, tick-box family
+  sheet a parent can print and run.
+- **Four new infographics** (Anthropic style) for the new developments:
+  `capability-ladder.svg`, `builder-loop-4week.svg`, `theory-of-change.svg`, `safety-layer.svg`
+  — embedded in the README, milestones, builder-loop, theory-of-change, and safety docs.
+
+### Changed
+- **Onboarding split into two clear paths.** README now has **"For families (no code)"** (just a
+  web link → Builder Loop → safety → child's track) and **"For developers & contributors"**
+  (clone, run `./scripts/check.sh`, open a PR). Closes the gap where the only on-ramp was
+  `git clone` + opening a file path.
+- **Marketing realigned to the new positioning.** `docs/marketing/the-daniel-and-david-story.md`
+  now leads with capability/builders (not the billion-dollar headline), shows the Capability
+  Ladder as the hero (money ladder moved into a "venture track" section), introduces the 4-week
+  Builder Loop, and sequences the hub *after* the loop with a safety note. `linkedin-posts.md`
+  reframed to match (capability-first hooks, Builder Loop, new launch images).
+- **Discoverability:** curriculum tracks (Daniel/David), `docs/community/hub.md`, and
+  `ventures/README.md` now link the Builder Loop + safety layer and stop overclaiming venture
+  status ("Live ventures" → "Current ventures"; venture #1 marked "pilot in design").
 - **Repositioned the public wedge to "a family field lab for raising wise, creative, AI-ready
   builders."** The README hero and the landing page (`apps/web/`) now lead with a **Capability
   Ladder** (Notice→Ask→Make→Serve→Learn→Team→Bless) instead of the $1M→$10B money ladder. Why:

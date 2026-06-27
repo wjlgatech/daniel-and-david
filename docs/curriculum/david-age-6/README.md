@@ -7,6 +7,10 @@ secret that grown-up builders use.
 *Grown-up helper: read each adventure out loud and do it together. Keep it playful. The goal
 is joy + one big idea per adventure.*
 
+> 👪 **Grown-ups:** these adventures fit inside the [Builder Loop](../../builder-loop/) — four
+> weeks of short, repeated build-show-learn cycles (try a little, show someone, learn, try again).
+> Please read the [safety rules](../../safety/) first; every adventure here assumes you're together.
+
 ---
 
 ## ⭐ Adventure 1 — Count the Treasure

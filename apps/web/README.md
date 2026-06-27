@@ -4,7 +4,17 @@ The home page for the Daniel &amp; David academy. Deliberately **dependency-free
 HTML file with inline CSS, so a 6-year-old (or anyone) can open it instantly — no install, no
 build, no Node.
 
-## Run it
+## See it live (no install)
+
+It's hosted on GitHub Pages so a non-technical parent can just click a link:
+
+**→ https://wjlgatech.github.io/daniel-and-david/**
+
+Published automatically by [`.github/workflows/pages.yml`](../../.github/workflows/pages.yml)
+on every push to `main` that touches `apps/web/public/`. (One-time setup: repo **Settings →
+Pages → Source: GitHub Actions**.)
+
+## Run it locally
 
 ```bash
 open public/index.html        # macOS
@@ -14,6 +24,13 @@ start public/index.html       # Windows
 
 That's it. Edit `public/index.html`, refresh the browser, see your change live. It's the
 perfect [first build quest](../../docs/curriculum/daniel-age-11/README.md) for Daniel.
+
+## A note on links
+
+The page links to the repo's docs with **absolute GitHub URLs**
+(`https://github.com/wjlgatech/daniel-and-david/blob/main/…`) rather than relative paths, so
+every "Read more →" works identically whether the page is opened from a local file or the
+hosted Pages URL (where relative `../../docs` paths would fall outside the site root).
 
 ## Why no framework (yet)
 
