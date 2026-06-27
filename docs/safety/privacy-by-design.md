@@ -30,6 +30,18 @@ No AI teammate may **collect, retain, or expose** a child's personal data by def
 that processes a contribution works on the *content*, not the child's identity. See
 [ai-use-boundaries](ai-use-boundaries.md).
 
+## The Founding Families application (adults only)
+
+The [founding-cohort application](../founding-families.md) is the one place we collect contact
+data — and it is **for parents, guardians, and educators (18+) only.** It collects an adult's
+first name/alias, email, city/region, the children's **age range** (a range only — never names or
+birthdates), and one short answer. **No child personal data, ever.** It carries a honeypot, a
+required consent checkbox, and links to a plain-language
+[privacy notice](../../apps/web/public/privacy.html). The form posts through a single swappable
+endpoint (provider chosen at go-live), and `scripts/check-registration-safety.sh` fails the build
+if any of those guardrails go missing. Accepted families appear in
+[`FOUNDERS.md`](../../FOUNDERS.md) **by alias, with consent.**
+
 ## Right to remove
 
 A parent or guardian can ask to remove a child's contribution at any time, for any reason, with

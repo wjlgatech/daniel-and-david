@@ -18,6 +18,12 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
 - `docs/vision/` — mission, the **Theory of Change + North Star metric**, and the two ladders
   (Capability Ladder = public/measured; money ladder = advanced venture track).
 - `docs/safety/` — **child-safety governance** (read before any community/account/upload feature).
+- `docs/founding-families.md` + `FOUNDERS.md` — **The Halving**: the founding-cohort program (honor
+  halves each epoch, cohort doubles; Genesis = 8) and its public, consent-based ledger. The
+  application form lives in `apps/web/public/index.html` and posts through one swappable
+  `FORM` endpoint (mailto fallback). It is **adults-only** — never collect a child's identity;
+  `scripts/check-registration-safety.sh` (in CI) enforces the honeypot/consent/adults-only/privacy
+  guardrails. Privacy notice: `apps/web/public/privacy.html`.
 - `docs/` — principles and a two-track curriculum (now written against measurable outcomes).
 - `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").

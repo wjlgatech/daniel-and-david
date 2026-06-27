@@ -38,7 +38,14 @@ else
   warn "A public surface claims venture #1 is live/shipping but its README says 'build not started'. Run: scripts/check-status-truth.sh"
 fi
 
-# 4. Big-PR nudge
+# 4. Registration-safety — the signup form must stay adults-only & privacy-safe
+if bash "$(dirname "$0")/check-registration-safety.sh" >/dev/null 2>&1; then
+  pass "Signup form is adults-only and privacy-safe (or no form yet)."
+else
+  warn "The founding-cohort form is missing a child-safety guardrail. Run: scripts/check-registration-safety.sh"
+fi
+
+# 5. Big-PR nudge
 count=$(echo "$changed" | grep -c . )
 if [ "${count:-0}" -gt 40 ]; then
   warn "This PR touches $count files — that's large. Consider splitting it. Small PRs merge faster."
