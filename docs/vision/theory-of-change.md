@@ -85,10 +85,14 @@ Before scaling anything, we want a small, honest proof that the loop changes beh
 
 The first real milestone is **not** "100 contributions a day." It is:
 
-> **"Ten families completed one real Builder Loop, and their children can independently explain
-> what they learned."**
+> **"The ⛏️ Genesis founding families (8) completed one real Builder Loop, and their children can
+> independently explain what they learned."**
 
-That is the evidence that earns the next stage.
+That is the evidence that earns the next stage. The pilot cohort is run as
+[**Founding Families — The Halving**](../founding-families.md): a fixed, public, fairly-issued
+schedule (Genesis 8 → 16 → 32 → 64 → open at #121) where the founder's honor halves each epoch.
+It's honest scarcity (real caps, real selection) and doubles as a living lesson in how scarce,
+fairly-issued value works.
 
 See the [Builder Loop](../builder-loop/), the [curriculum](../curriculum/), and the
 [safety layer](../safety/) for how the inputs are actually delivered.

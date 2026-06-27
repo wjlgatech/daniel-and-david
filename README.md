@@ -13,9 +13,15 @@ a four-week family experiment run as **5 fast build-show-learn cycles** (not one
 repeat.* The principle is **fast · frequent · failing-forward.** AI is the child's teammate; the
 child stays **the mind and the conscience.**
 
-> 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** · 📖 New to the whole vision?
-> [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for a 10-year-old,
-> cited enough for a skeptic.
+> 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** (free, for everyone) · 📖 New to the
+> whole vision? [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for
+> a 10-year-old, cited enough for a skeptic.
+
+> 🧱 **Want in deeper? [Apply to be a Founding Family](docs/founding-families.md).** A rare
+> privilege on a fair, fixed schedule: like Bitcoin, the founder's reward **halves** each epoch
+> while the cohort **doubles** (Genesis = 8 families, then 16, 32, 64 → open to all at #121).
+> Earliest = most honor, because earliest = most risk. **Currently open: ⛏️ Genesis · 8 spots.**
+> Apply on the **[live site](https://wjlgatech.github.io/daniel-and-david/)**.
 
 ### The ladder we actually climb
 
@@ -117,6 +123,7 @@ workflow, hook, and plugin — so humans and agents think the same way.
 daniel-and-david/
 ├── docs/
 │   ├── builder-loop/    ⭐ The 4-week family Builder Loop — the atomic unit. Start here.
+│   ├── founding-families.md  🧱 The Halving — apply to the founding cohort (rare, fair, fixed)
 │   ├── vision/          Mission, Theory of Change + North Star, and the two ladders
 │   ├── safety/          Child-safety, privacy, consent, moderation, AI-use boundaries
 │   ├── principles/      How we work: AI-native + agentic engineering + values
@@ -124,10 +131,11 @@ daniel-and-david/
 │   ├── marketing/       The long-form story + ready-to-post LinkedIn posts
 │   ├── community/       The Hub guide — how AI + people exchange ideas and match
 │   └── assets/          Infographics (SVG) — the visuals in this README
+├── FOUNDERS.md          The public ledger of founding families (by alias, with consent)
 ├── ventures/
 │   └── kc-matchday-basecamp/   Venture #1 — full spec, economics, app PRD
 ├── apps/
-│   └── web/             The academy's own landing page (open it in a browser)
+│   └── web/             Landing page + privacy.html — hosted, with the founding-cohort form
 ├── agents/
 │   └── hello-agent/     A tiny, readable starter agent — your first AI teammate
 ├── .claude/             Agent toolkit — skills, workflows, hooks (capabilities for AI teammates)
@@ -149,6 +157,8 @@ You don't need GitHub, git, or any setup. Just:
 2. **Read the [Builder Loop](docs/builder-loop/)** — the four-week loop (5 fast build-show-learn cycles) you'll run with your child. A [one-page printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md) are there too.
 3. **Read the [safety rules](docs/safety/)** before you start (consent, privacy, AI boundaries).
 4. **Open your child's track:** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/).
+5. **Want in deeper?** [Apply to be a Founding Family](docs/founding-families.md) — currently
+   ⛏️ Genesis (8 spots). The honor halves at each epoch; apply before the next halving.
 
 That's the whole on-ramp. Everything a parent needs is a plain web link or a markdown page.
 

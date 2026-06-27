@@ -77,6 +77,36 @@
     footer { text-align: center; padding: 40px 20px 56px; color: #64748b; font-size: 14px; }
     footer strong { color: var(--ink); }
     .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700; color: var(--gold); }
+
+    /* Founding cohort */
+    .cta-btn { display:inline-block; background:#fff; color:#1e3a8a; font-weight:800; font-size:17px; padding:14px 26px; border-radius:999px; text-decoration:none; box-shadow:0 6px 20px rgba(0,0,0,.18); }
+    .cta-btn:hover { transform:translateY(-1px); }
+    .cta-sub { display:block; margin-top:12px; font-size:14px; opacity:.92; }
+    .scarcity { display:inline-block; margin-top:22px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.34); border-radius:999px; padding:8px 16px; font-size:14px; font-weight:700; backdrop-filter:blur(4px); }
+    .founding { background:linear-gradient(135deg,#0f172a,#1e3a8a); color:#fff; }
+    .founding .wrap { padding:54px 20px; }
+    .founding h2 { color:#fff; }
+    .founding .lead { color:#cbd5e1; }
+    .epochs { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:22px; }
+    .epoch { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius:14px; padding:16px; }
+    .epoch.genesis { background:rgba(245,158,11,.16); border-color:rgba(245,158,11,.5); }
+    .epoch .ep-name { font-weight:800; font-size:15px; }
+    .epoch .ep-reward { font-size:26px; font-weight:800; margin:6px 0 2px; }
+    .epoch .ep-meta { font-size:13px; color:#cbd5e1; }
+    /* Application form */
+    .apply { background:#fff; color:var(--ink); border:1px solid #e7e3d8; border-radius:18px; padding:26px; margin-top:24px; box-shadow:0 1px 3px rgba(17,32,58,.06); }
+    .apply label { color:var(--ink); }
+    .apply .adults { background:#fff7ed; border:1px solid #fed7aa; border-radius:10px; padding:10px 14px; font-size:14px; color:#9a3412; margin:0 0 18px; }
+    .apply label { display:block; font-weight:700; font-size:14px; margin:14px 0 5px; }
+    .apply input[type=text], .apply input[type=email], .apply select, .apply textarea {
+      width:100%; padding:11px 13px; border:1px solid #cbd5e1; border-radius:10px; font-size:15px; font-family:inherit; }
+    .apply textarea { min-height:74px; resize:vertical; }
+    .apply .consent { display:flex; gap:10px; align-items:flex-start; margin-top:16px; font-weight:400; font-size:14px; color:#475569; }
+    .apply .consent input { margin-top:3px; }
+    .apply button { margin-top:18px; background:var(--grow); color:#fff; font-weight:800; font-size:16px; border:0; border-radius:999px; padding:13px 28px; cursor:pointer; }
+    .apply button:hover { filter:brightness(1.05); }
+    .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+    .form-msg { margin-top:14px; font-size:14px; font-weight:600; }
   </style>
 </head>
 <body>
@@ -93,6 +123,9 @@
       <span class="rung">6 · Team</span>
       <span class="rung">7 · Bless</span>
     </div>
+    <p style="margin:30px 0 0;"><a class="cta-btn" href="#apply">Apply to the founding cohort →</a></p>
+    <span class="scarcity">⛏️ Genesis epoch · <span id="spots-left">8</span> of 8 founding spots — the honor halves at the next epoch</span>
+    <span class="cta-sub"><a href="#halving" style="color:#fff;text-decoration:underline;">What's the Halving?</a> · or <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/README.md" style="color:#fff;text-decoration:underline;">just run the free Builder Loop ↓</a></span>
   </header>
 
   <section class="wrap">
@@ -119,11 +152,89 @@
     </div>
   </section>
 
+  <section class="founding" id="halving">
+    <div class="wrap">
+      <p class="kicker" style="color:#fbbf24">A rare privilege, on a fair schedule</p>
+      <h2>Founding Families — The Halving 🧱</h2>
+      <p class="lead">We open the field lab to a small number of <strong>founding families</strong>. Like Bitcoin's issuance, the founder's reward <strong>halves</strong> at each epoch while the cohort <strong>doubles</strong>. The earliest families take the most risk and do the most work — so they earn the most honor. The schedule is fixed and public, and <strong>we really do stop each epoch at its cap.</strong></p>
+
+      <div class="epochs">
+        <div class="epoch genesis">
+          <div class="ep-name">⛏️ Genesis</div>
+          <div class="ep-reward">1×</div>
+          <div class="ep-meta">8 families · #1–8<br>co-design · lifetime · office hours</div>
+        </div>
+        <div class="epoch">
+          <div class="ep-name">Epoch 1</div>
+          <div class="ep-reward">½×</div>
+          <div class="ep-meta">16 families · #9–24<br>named · early access · a vote</div>
+        </div>
+        <div class="epoch">
+          <div class="ep-name">Epoch 2</div>
+          <div class="ep-reward">¼×</div>
+          <div class="ep-meta">32 families · #25–56<br>named · early access</div>
+        </div>
+        <div class="epoch">
+          <div class="ep-name">Epoch 3</div>
+          <div class="ep-reward">⅛×</div>
+          <div class="ep-meta">64 families · #57–120<br>named · early access</div>
+        </div>
+        <div class="epoch">
+          <div class="ep-name">🌍 Open</div>
+          <div class="ep-reward">free</div>
+          <div class="ep-meta">#121+ · everyone<br>the public program</div>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:22px;"><strong>Why so few?</strong> Because "founding" should mean something. Eight Genesis families means everyone knows each other's names — depth, not scale. It's also the most honest lesson we can give our boys about how scarce, fairly-issued value actually works. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" style="color:#93c5fd;">Read the full Halving →</a></p>
+
+      <!-- ===== APPLICATION ===== -->
+      <div class="apply" id="apply">
+        <h3 style="margin:0 0 4px;color:#11203a;">Apply to the founding cohort</h3>
+        <p style="margin:0 0 14px;color:#475569;font-size:15px;">Currently open: <strong>⛏️ Genesis</strong> · <span id="spots-left-2">8</span> of 8 spots. We read every application and reply within ~2 weeks. It's a mutual fit — we're choosing each other.</p>
+        <p class="adults">👪 <strong>For parents, guardians &amp; educators only (18+).</strong> Children should not fill this out. We collect adult contact info only — never a child's name, photo, school, or location. <a href="./privacy.html" target="_blank" rel="noopener">Privacy notice</a>.</p>
+
+        <form id="apply-form" novalidate>
+          <!-- honeypot: real people never fill this -->
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+          <label for="f-name">Your first name or alias *</label>
+          <input id="f-name" name="parent_name" type="text" required autocomplete="given-name" />
+
+          <label for="f-email">Email *</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email" />
+
+          <label for="f-region">City / region (not a full address)</label>
+          <input id="f-region" name="region" type="text" autocomplete="off" placeholder="e.g. Kansas City, MO" />
+
+          <label for="f-ages">Your children's age range (a range only — no names)</label>
+          <select id="f-ages" name="child_age_range">
+            <option value="">Choose…</option>
+            <option>Under 6</option>
+            <option>6–8</option>
+            <option>9–12</option>
+            <option>Mixed (6–12)</option>
+            <option>13+</option>
+          </select>
+
+          <label for="f-why">What's one thing you want your child to be better at in 5 years?</label>
+          <textarea id="f-why" name="hope" placeholder="One or two honest sentences."></textarea>
+
+          <label class="consent"><input type="checkbox" name="consent" required />
+            I am 18 or older and I’ve read the <a href="./privacy.html" target="_blank" rel="noopener">privacy notice</a> and agree to be contacted about the founding cohort.</label>
+
+          <button type="submit">Apply for a founding spot →</button>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="wrap">
-    <p class="kicker">Start here</p>
+    <p class="kicker">Free for everyone — start anytime</p>
     <div class="venture">
-      <h3>🛠️ The Builder Loop <span class="pill">START HERE</span></h3>
-      <p class="lead">A four-week family experiment: <strong>notice</strong> a real problem → <strong>understand</strong> it (talk to three real people) → <strong>build</strong> the smallest useful thing → <strong>serve</strong> one real person and tell the truth. AI is the teammate; the child stays the mind and the conscience. This is the atomic unit — finish one loop before anything else.</p>
+      <h3>🛠️ The Builder Loop <span class="pill">FREE · START HERE</span></h3>
+      <p class="lead">You don't need a founding spot to begin. The Builder Loop is free and open: a four-week family experiment run as <strong>5 fast build-show-learn cycles</strong> (not one big reveal) — pick the smallest next thing → build it rough → show one real person → learn what failed → repeat. Fast · frequent · failing-forward. AI is the teammate; the child stays the mind and the conscience.</p>
       <p><a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/README.md" style="color:#16a34a;font-weight:700;text-decoration:none;">Run the Builder Loop →</a></p>
     </div>
   </section>
@@ -181,5 +292,53 @@
     <p class="verse">"Build something good. Make it pay. Use it to bless."</p>
     <p><strong>Daniel &amp; David</strong> — built in the open · <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/README.md" style="color:var(--sky);">README</a> · <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/vision/mission.md" style="color:var(--sky);">Mission</a></p>
   </footer>
+
+  <script>
+    /* ===== CONFIG — the only things to edit to go live ===== */
+    // The email-capture SEAM: to GO LIVE, paste ONE endpoint below — nothing else changes.
+    //   1. Create a free form at https://formspree.io (New form → use email wjlgatech@gmail.com).
+    //   2. Copy its endpoint (looks like https://formspree.io/f/abcdwxyz) into FORM.endpoint.
+    // Until an endpoint is set, the form safely falls back to a mailto: so no application is lost.
+    // (Formspree keeps this custom form + the CI registration-safety guard intact, and has a GDPR
+    //  DPA. To use Tally/another provider instead, see docs/founding-families.md.)
+    const FORM = { provider: "formspree", endpoint: "", fallbackEmail: "wjlgatech@gmail.com" };
+    // Honest scarcity: update as Genesis families are accepted.
+    const SPOTS = { epoch: "Genesis", remaining: 8, total: 8 };
+
+    // Render the spots counter from one source of truth.
+    document.querySelectorAll('#spots-left, #spots-left-2').forEach(function (el) { el.textContent = SPOTS.remaining; });
+
+    var form = document.getElementById('apply-form');
+    var msg = document.getElementById('form-msg');
+    function say(text, ok) { msg.textContent = text; msg.style.color = ok ? '#16a34a' : '#b91c1c'; }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Honeypot: if a bot filled the hidden field, silently stop.
+      if (form.elements['_gotcha'] && form.elements['_gotcha'].value) return;
+      var data = Object.fromEntries(new FormData(form).entries());
+      if (!data.parent_name || !data.email) { say('Please add your name and email.', false); return; }
+      if (!data.consent) { say('Please confirm you are 18+ and agree to the privacy notice.', false); return; }
+      delete data._gotcha;
+
+      if (FORM.provider === 'none' || !FORM.endpoint) {
+        // Fallback so no application is ever lost before a provider is wired.
+        var body = Object.keys(data).map(function (k) { return k + ': ' + data[k]; }).join('%0D%0A');
+        say('Opening your email app to send your application…', true);
+        window.location.href = 'mailto:' + FORM.fallbackEmail
+          + '?subject=' + encodeURIComponent('Founding cohort application — ' + (data.parent_name || ''))
+          + '&body=' + body;
+        return;
+      }
+
+      say('Sending…', true);
+      fetch(FORM.endpoint, {
+        method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form)
+      }).then(function (r) {
+        if (r.ok) { form.reset(); say('🎉 Application received. We read every one and will reply within ~2 weeks.', true); }
+        else { say('Something went wrong — please email ' + FORM.fallbackEmail + '.', false); }
+      }).catch(function () { say('Network error — please email ' + FORM.fallbackEmail + '.', false); });
+    });
+  </script>
 </body>
 </html>

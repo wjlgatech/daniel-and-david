@@ -67,3 +67,6 @@ jobs:
 
       - name: Status-truth (no overclaiming venture status)
         run: bash scripts/check-status-truth.sh
+
+      - name: Registration-safety (adults-only, privacy-safe signup)
+        run: bash scripts/check-registration-safety.sh

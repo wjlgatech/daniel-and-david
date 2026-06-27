@@ -6,7 +6,32 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **Founding Families — "The Halving"** (`docs/founding-families.md`, `FOUNDERS.md`): an authentic,
+  honor-based exclusivity model for the pilot cohort. Like Bitcoin issuance, the founder's reward
+  **halves** each epoch while the cohort **doubles** (Genesis 8 → 16 → 32 → 64 → open at #121).
+  Honest scarcity — fixed public schedule, real caps, real selection — and a living scarcity
+  lesson for the boys. Replaces the vague "ten pilot families" line in the Theory of Change.
+- **Email registration on the landing page** (`apps/web/public/index.html`): a founding-cohort
+  **application** form (name, email, region, child **age-range only**, one question) wired through a
+  single swappable `FORM` endpoint (the email-capture **seam**) with a **mailto: fallback** so no
+  application is lost before a provider is chosen. Includes a honeypot, a required 18+ consent
+  checkbox, an adults-only notice, and an honest "spots remaining" counter from one config value.
+  New hosted **privacy notice** (`apps/web/public/privacy.html`). **Recommended provider: Formspree**
+  (posts into the custom safety-checked form, GDPR DPA, free tier covers the 120-family cap) — go
+  live by pasting one endpoint; Tally documented as an alternative in `docs/founding-families.md`.
+- **`scripts/check-registration-safety.sh`** + a CI step + a `check.sh` check — fails the build if
+  the signup form loses its honeypot, consent, adults-only notice, or privacy link, or if it ever
+  collects a child's identity. Closed-loop guard on the child-safety promise; self-disables if no
+  form exists.
+- **Founding Halving infographic** (`docs/assets/founding-halving.svg`), embedded in the founding
+  doc — rendered & visually verified.
+
 ### Changed
+- Landing-page hero now leads with **"Apply to the founding cohort"** + an honest Genesis scarcity
+  badge; the Builder Loop is reframed as the **free** path for everyone (and updated to the
+  iterative "5 fast cycles" wording). README, Theory of Change, and privacy-by-design updated to
+  reference the Founding Halving.
 - **Builder Loop redesigned from one-shot to iterative — 5 fast cycles, not one big reveal.**
   `docs/builder-loop/README.md` now teaches **fast · frequent · failing-forward**: a repeating
   ~4–5 day micro-cycle (PICK → BUILD → SHOW to a real person → LEARN the failure → DECIDE), run

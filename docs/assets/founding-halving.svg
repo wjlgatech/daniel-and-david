@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="560" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="36" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="80" font-size="32" font-weight="bold" fill="#29261F">Founding Families — The Halving</text>
+  <text x="62" y="108" font-size="18" fill="#6B6258">Like Bitcoin: the founder's reward halves each epoch while the cohort doubles. Earliest = most honor.</text>
+
+  <!-- baseline -->
+  <line x1="70" y1="430" x2="1140" y2="430" stroke="#C9A98E" stroke-width="2"/>
+
+  <!-- Epoch columns: reward bars halving, cohort doubling -->
+  <!-- Genesis: reward 1.0 (bar 240 tall), 8 families -->
+  <g transform="translate(90,0)">
+    <rect x="0" y="190" width="150" height="240" rx="10" fill="#E8B84B" stroke="#C2613F" stroke-width="2"/>
+    <text x="75" y="226" font-size="15" font-weight="bold" fill="#5A4422" text-anchor="middle">⛏️ Genesis</text>
+    <text x="75" y="270" font-size="34" font-weight="bold" fill="#5A4422" text-anchor="middle">1×</text>
+    <text x="75" y="300" font-size="13" fill="#6B5526" text-anchor="middle">full founder</text>
+    <text x="75" y="360" font-size="13" fill="#6B5526" text-anchor="middle">co-design ·</text>
+    <text x="75" y="378" font-size="13" fill="#6B5526" text-anchor="middle">lifetime ·</text>
+    <text x="75" y="396" font-size="13" fill="#6B5526" text-anchor="middle">office hours</text>
+    <text x="75" y="456" font-size="14" font-weight="bold" fill="#29261F" text-anchor="middle">8 families</text>
+    <text x="75" y="474" font-size="12" fill="#8A8175" text-anchor="middle">#1–8</text>
+  </g>
+  <!-- Epoch 1: reward 0.5 (bar 120), 16 families -->
+  <g transform="translate(270,0)">
+    <rect x="0" y="310" width="180" height="120" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="90" y="340" font-size="15" font-weight="bold" fill="#D97757" text-anchor="middle">Epoch 1</text>
+    <text x="90" y="375" font-size="26" font-weight="bold" fill="#D97757" text-anchor="middle">½×</text>
+    <text x="90" y="402" font-size="12" fill="#5F574C" text-anchor="middle">named · early · vote</text>
+    <text x="90" y="456" font-size="14" font-weight="bold" fill="#29261F" text-anchor="middle">16 families</text>
+    <text x="90" y="474" font-size="12" fill="#8A8175" text-anchor="middle">#9–24</text>
+  </g>
+  <!-- Epoch 2: reward 0.25 (bar 64), 32 families -->
+  <g transform="translate(480,0)">
+    <rect x="0" y="366" width="210" height="64" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="105" y="390" font-size="15" font-weight="bold" fill="#D97757" text-anchor="middle">Epoch 2</text>
+    <text x="105" y="418" font-size="20" font-weight="bold" fill="#D97757" text-anchor="middle">¼×</text>
+    <text x="105" y="456" font-size="14" font-weight="bold" fill="#29261F" text-anchor="middle">32 families</text>
+    <text x="105" y="474" font-size="12" fill="#8A8175" text-anchor="middle">#25–56 · named · early</text>
+  </g>
+  <!-- Epoch 3: reward 0.125 (bar 34), 64 families -->
+  <g transform="translate(720,0)">
+    <rect x="0" y="396" width="250" height="34" rx="9" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="125" y="419" font-size="15" font-weight="bold" fill="#D97757" text-anchor="middle">Epoch 3 · ⅛×</text>
+    <text x="125" y="456" font-size="14" font-weight="bold" fill="#29261F" text-anchor="middle">64 families</text>
+    <text x="125" y="474" font-size="12" fill="#8A8175" text-anchor="middle">#57–120 · named · early</text>
+  </g>
+  <!-- Open -->
+  <g transform="translate(1000,0)">
+    <rect x="0" y="414" width="140" height="16" rx="8" fill="#7DA060"/>
+    <text x="70" y="404" font-size="15" font-weight="bold" fill="#5C7A45" text-anchor="middle">🌍 Open</text>
+    <text x="70" y="456" font-size="14" font-weight="bold" fill="#29261F" text-anchor="middle">#121+ · free</text>
+    <text x="70" y="474" font-size="12" fill="#8A8175" text-anchor="middle">everyone</text>
+  </g>
+
+  <!-- footnote -->
+  <text x="60" y="520" font-size="14" fill="#5F574C">120 founding families in all (8 + 16 + 32 + 64), then the field lab opens free to everyone.</text>
+  <text x="60" y="542" font-size="14" font-style="italic" fill="#8A8175">Honest scarcity: the schedule is fixed and public, and each epoch really stops at its cap. Apply before the next halving.</text>
+</svg>
