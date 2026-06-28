@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Builder Loop — Daniel &amp; David</title>
+  <meta name="description" content="Run a 4-week Builder Loop with your child: 5 fast cycles of notice, build, show, learn. Works offline; your notes stay on this device." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Builder Loop" />
+  <style>
+    :root{
+      --ink:#11203a; --muted:#475569; --sky:#2563eb; --navy:#1e3a8a; --grow:#16a34a;
+      --gold:#f59e0b; --clay:#d97757; --paper:#fbfaf6; --card:#fff; --line:#e7e3d8;
+      --r:16px; --tap:52px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;overflow-x:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.55; -webkit-text-size-adjust:100%;}
+    .wrap{max-width:680px;margin:0 auto;padding:0 16px 96px;}
+    /* top bar */
+    header{position:sticky;top:0;z-index:5;background:rgba(251,250,246,.92);backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);}
+    .bar{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:10px 16px;}
+    .brand{font-weight:800;font-size:16px;display:flex;align-items:center;gap:8px;margin-right:auto}
+    .brand .seed{font-size:20px}
+    .modebtn,.iconbtn{border:1px solid var(--line);background:var(--card);border-radius:999px;
+      padding:8px 12px;font-size:14px;font-weight:700;cursor:pointer;color:var(--ink)}
+    .modebtn[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+    #installBtn{display:none;background:var(--grow);color:#fff;border-color:var(--grow)}
+    /* privacy ribbon */
+    .privacy{font-size:12.5px;color:var(--muted);text-align:center;padding:8px 16px;background:#ecfdf5;border-bottom:1px solid #bbf7d0}
+    /* generic */
+    h1{font-size:clamp(24px,6vw,32px);margin:18px 0 4px;letter-spacing:-.3px}
+    h2{font-size:21px;margin:24px 0 6px}
+    p.lead{color:var(--muted);margin:0 0 12px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin:14px 0;box-shadow:0 1px 3px rgba(17,32,58,.05)}
+    label{display:block;font-weight:700;font-size:14px;margin:14px 0 5px}
+    input[type=text],textarea,select{width:100%;padding:12px 13px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff}
+    textarea{min-height:80px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--tap);
+      padding:12px 22px;border:0;border-radius:999px;font-size:17px;font-weight:800;cursor:pointer;
+      background:var(--grow);color:#fff;text-decoration:none}
+    .btn:hover{filter:brightness(1.05)}
+    .btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--line)}
+    .btn.big{width:100%;font-size:19px;min-height:60px}
+    .btn.ghost{background:transparent;color:var(--muted);font-weight:700;border:0}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700}
+    /* progress ring */
+    .ring-wrap{display:flex;align-items:center;gap:16px}
+    .ring{--p:0;width:96px;height:96px;border-radius:50%;flex:none;
+      background:conic-gradient(var(--grow) calc(var(--p)*1%), #e6efe9 0);display:grid;place-items:center}
+    .ring i{width:74px;height:74px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:18px;text-align:center;line-height:1.1}
+    /* steps (kid wizard) */
+    .step-emoji{font-size:64px;text-align:center;margin:8px 0 0}
+    .step-name{text-align:center;font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--clay)}
+    .step-q{text-align:center;font-size:23px;font-weight:800;margin:6px 0 4px}
+    .step-hint{text-align:center;color:var(--muted);margin:0 auto 8px;max-width:34ch}
+    .dots{display:flex;gap:8px;justify-content:center;margin:14px 0}
+    .dots b{width:12px;height:12px;border-radius:50%;background:#d8dee9;display:inline-block}
+    .dots b.on{background:var(--clay)}
+    .dots b.done{background:var(--grow)}
+    /* decide buttons */
+    .decide3{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:6px}
+    .dbtn{flex:1;min-width:96px;min-height:56px;border:2px solid var(--dc);background:#fff;color:var(--dc);border-radius:14px;font-weight:800;font-size:16px;cursor:pointer}
+    .dbtn.sel{background:var(--dc);color:#fff}
+    /* large-text mode for emerging readers */
+    body.bigtext{font-size:19px}
+    body.bigtext .step-q{font-size:26px}
+    body.bigtext input,body.bigtext textarea,body.bigtext select{font-size:18px}
+    /* iteration list */
+    .iter{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+    .iter .v{font-weight:800;color:var(--navy);flex:none;width:46px}
+    .iter .x{color:var(--muted);font-size:14px}
+    /* evidence */
+    .ev{display:flex;align-items:center;gap:10px;padding:9px 0;font-size:15px}
+    .ev input{width:22px;height:22px;flex:none}
+    /* celebrate overlay */
+    .cele{position:fixed;inset:0;background:rgba(17,32,58,.55);display:none;place-items:center;z-index:20;padding:20px}
+    .cele.show{display:grid}
+    .cele .box{background:#fff;border-radius:22px;padding:28px 24px;max-width:380px;text-align:center;animation:pop .25s ease}
+    .cele .big{font-size:58px}
+    @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+    .confetti{position:fixed;top:-10px;font-size:22px;animation:fall 2.2s linear forwards;z-index:21;pointer-events:none}
+    @keyframes fall{to{transform:translateY(105vh) rotate(360deg);opacity:.9}}
+    .hidden{display:none!important}
+    footer{max-width:680px;margin:0 auto;padding:8px 16px 30px;color:var(--muted);font-size:13px;text-align:center}
+    a{color:var(--sky)}
+    @media print{header,footer,.privacy,.btn,.iconbtn,.modebtn,#installBtn,.no-print{display:none!important}
+      body{background:#fff} .card{box-shadow:none;border-color:#ccc}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand"><span class="seed">🌱</span> Builder Loop</div>
+      <button class="modebtn" id="modeKid" aria-pressed="true" onclick="setMode('kid')">🧒 Kid</button>
+      <button class="modebtn" id="modeParent" aria-pressed="false" onclick="setMode('parent')">👪 Parent</button>
+      <button class="iconbtn" id="installBtn" onclick="doInstall()">⬇️ Install</button>
+    </div>
+  </header>
+  <div class="privacy">🔒 Everything you type stays on <strong>this device only</strong>. Nothing is sent anywhere — no account, no internet needed.</div>
+
+  <main class="wrap" id="app"><!-- rendered by JS --></main>
+
+  <footer>
+    <span id="iosHint" class="hidden">On iPhone/iPad: tap <strong>Share</strong> → <strong>Add to Home Screen</strong> to install. </span>
+    Part of <a href="./index.html">Daniel &amp; David</a> · the
+    <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/README.md">Builder Loop guide</a> ·
+    <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/safety/">safety</a>
+  </footer>
+
+  <div class="cele" id="cele" onclick="this.classList.remove('show')">
+    <div class="box" onclick="event.stopPropagation()">
+      <div class="big">🎉</div>
+      <h2 style="margin:6px 0">You found a lesson!</h2>
+      <p class="muted" id="celeMsg">A failure with a lesson is a win. That's how builders grow.</p>
+      <button class="btn" onclick="document.getElementById('cele').classList.remove('show')">Keep going →</button>
+    </div>
+  </div>
+
+  <script>
+  /* ============ Storage SEAM ============
+     All persistence goes through Store so it can later be swapped for a synced backend
+     without touching the UI. Today it's localStorage (on-device, private by design). */
+  const Store = (function () {
+    const KEY = "dd.builderloop.v1";
+    let mem = null; // fallback if localStorage is blocked
+    function read() {
+      try { return JSON.parse(localStorage.getItem(KEY)) || fresh(); }
+      catch (e) { return mem || fresh(); }
+    }
+    function write(s) {
+      try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { mem = s; }
+    }
+    function fresh() { return { mode: "kid", activeId: null, loops: [] }; }
+    return { read, write };
+  })();
+
+  const STEPS = [
+    { key:"pick",  emoji:"🔭", name:"Pick",   color:"#ca8a04", q:"What's the smallest thing to try next?",
+      hint:"One tiny idea you can test in a few days. Smaller is better.", field:"pick", ph:"e.g. a paper sign that says…" },
+    { key:"build", emoji:"🛠️", name:"Build",  color:"#ea580c", q:"Build it — fast and rough.",
+      hint:"It's meant to be rough. A drawing, a paper version, one sentence. Try it yourself first, then you can ask an AI.", field:"built", ph:"What did you make?" },
+    { key:"show",  emoji:"🧑‍🤝‍🧑", name:"Show", color:"#0d9488", q:"Show it to ONE real person — today.",
+      hint:"A grown-up helps. Watch their face. Don't explain too much.", field:"shownTo", ph:"Who did you show? (first name)" },
+    { key:"learn", emoji:"💡", name:"Learn",  color:"#e11d48", q:"What didn't work? (this is the gold!)",
+      hint:"Finding what failed is a WIN. Write the one lesson it taught you.", field:"failed", ph:"What confused them / what flopped?" },
+    { key:"decide",emoji:"🧭", name:"Decide", color:"#16a34a", q:"Keep, change, or drop — what's next?",
+      hint:"Decide your next tiny step.", field:"decide", ph:"Next time I will…" },
+  ];
+  const EVIDENCE = [
+    ["explain","Explain it in my own words"],
+    ["weakClaim","Spot a claim that needs proof"],
+    ["interview","Ask a real person a good question"],
+    ["test","Test an idea on a real person"],
+    ["build","Build something I can point to"],
+    ["revise","Change something because of feedback"],
+    ["verifyAI","Catch an AI mistake and check it"],
+    ["honesty","Choose honesty over a shortcut"],
+  ];
+  const TARGET = 5;
+
+  let state = Store.read();
+  function save(){ Store.write(state); }
+  function active(){ return state.loops.find(l => l.id === state.activeId) || null; }
+  function uid(){ return "loop-" + Math.abs(Date.now()).toString(36) + Math.floor(Math.random()*1e4).toString(36); }
+  function esc(s){ return (s||"").replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+  function vlabel(n){ return n >= TARGET ? "v1.0" : ("v0." + n); }
+
+  /* ---------- mode ---------- */
+  function setMode(m){ state.mode = m; save(); render(); }
+  function syncModeButtons(){
+    document.getElementById("modeKid").setAttribute("aria-pressed", state.mode==="kid");
+    document.getElementById("modeParent").setAttribute("aria-pressed", state.mode==="parent");
+  }
+
+  /* ---------- actions ---------- */
+  function startLoop(){
+    const l = { id:uid(), child:"", startedAt:new Date().toISOString().slice(0,10),
+      aim:{problem:"",talked:"",need:""}, iterations:[], evidence:{}, retro:{},
+      view:"aim", cycleStep:0 };
+    state.loops.push(l); state.activeId = l.id; save(); render();
+  }
+  function go(view){ const l=active(); if(l){ l.view=view; save(); } render(); window.scrollTo(0,0); }
+  function field(path, val){ const l=active(); if(!l) return; const seg=path.split("."); let o=l;
+    for(let i=0;i<seg.length-1;i++) o=o[seg[i]]; o[seg[seg.length-1]]=val; save(); }
+
+  function startCycle(){
+    const l=active(); const n=l.iterations.length+1;
+    l.iterations.push({ n, pick:"",built:"",shownTo:"",failed:"",lesson:"",aiHelped:"",aiMistake:"",decide:"",done:false });
+    l.cycleStep=0; l.view="cycle"; save(); render(); window.scrollTo(0,0);
+  }
+  function curIter(){ const l=active(); return l.iterations[l.iterations.length-1]; }
+  function cycleNext(){
+    const l=active(); const it=curIter();
+    if(l.cycleStep < STEPS.length-1){
+      // celebrate the flop right after the LEARN step
+      if(STEPS[l.cycleStep].key==="learn" && (it.failed||"").trim()){
+        celebrate("“"+ it.failed.trim().slice(0,80) +"” — that's your lesson. 💪");
+      }
+      l.cycleStep++; save(); render(); window.scrollTo(0,0);
+    } else {
+      it.done=true; l.view="home"; save(); render(); window.scrollTo(0,0);
+    }
+  }
+  function cycleBack(){ const l=active(); if(l.cycleStep>0){ l.cycleStep--; save(); render(); } else { go("home"); } }
+  function setDecide(k){ const it=curIter(); it.decideChoice=k; save(); render(); }
+  function speak(t){ try{ if(!("speechSynthesis" in window))return; const u=new SpeechSynthesisUtterance(t); u.rate=0.95; speechSynthesis.cancel(); speechSynthesis.speak(u);}catch(e){} }
+  function applyTextSize(){ document.body.classList.toggle("bigtext",(state.settings&&state.settings.textSize)==="big"); }
+  function toggleTextSize(){ state.settings=state.settings||{}; state.settings.textSize = state.settings.textSize==="big"?"normal":"big"; save(); applyTextSize(); render(); }
+
+  function toggleEv(k, v){ const l=active(); l.evidence[k]=v; save(); }
+  function celebrate(msg){
+    document.getElementById("celeMsg").textContent = msg || "A failure with a lesson is a win.";
+    document.getElementById("cele").classList.add("show");
+    for(let i=0;i<16;i++){ const c=document.createElement("div"); c.className="confetti";
+      c.textContent=["🎉","✨","🌱","⭐","💡"][i%5]; c.style.left=(Math.random()*100)+"vw";
+      c.style.animationDelay=(Math.random()*0.5)+"s"; document.body.appendChild(c);
+      setTimeout(()=>c.remove(),2600); }
+  }
+  function resetAll(){ if(confirm("Erase this device's Builder Loop data? This can't be undone.")){ state={mode:state.mode,activeId:null,loops:[]}; save(); render(); } }
+  function newLoop(){ if(confirm("Start a fresh loop? Your current one stays saved in history.")){ startLoop(); } }
+  function exportJSON(){
+    const blob=new Blob([JSON.stringify(active(),null,2)],{type:"application/json"});
+    const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+    a.download="builder-loop-"+(active().child||"loop")+".json"; a.click();
+  }
+
+  /* ============ RENDER ============ */
+  function render(){
+    syncModeButtons(); applyTextSize();
+    const app=document.getElementById("app"); const l=active();
+    if(!l){ app.innerHTML = viewWelcome(); return; }
+    const v=l.view||"home";
+    if(v==="aim") app.innerHTML = viewAim(l);
+    else if(v==="cycle") app.innerHTML = viewCycle(l);
+    else if(v==="retro") app.innerHTML = viewRetro(l);
+    else app.innerHTML = viewHome(l);
+  }
+
+  function viewWelcome(){
+    return `
+      <h1>Build something real — together 🌱</h1>
+      <p class="lead">The Builder Loop is a four-week family adventure, run as <strong>5 fast cycles</strong>:
+      notice a real problem, build something small, show a real person, learn what to fix — and do it again, a little better each time.</p>
+      <div class="card">
+        <p style="margin-top:0"><strong>How it works:</strong> each cycle is just five steps —
+        🔭 Pick · 🛠️ Build · 🧑‍🤝‍🧑 Show · 💡 Learn · 🧭 Decide. Finding what <em>failed</em> is the win.</p>
+        <button class="btn big" onclick="startLoop()">Start a Builder Loop →</button>
+      </div>
+      <p class="muted" style="text-align:center">A grown-up and a child do this together. Your notes stay on this device.</p>`;
+  }
+
+  function viewAim(l){
+    return `
+      <h1>🎯 Aim</h1>
+      <p class="lead">Spend just a few days here, then start building. Pick one real problem and learn a little about it.</p>
+      <div class="card">
+        <label>Who is doing this loop? (first name or nickname)</label>
+        <input type="text" value="${esc(l.child)}" oninput="field('child',this.value)" placeholder="e.g. Daniel" />
+        <label>One real problem worth solving</label>
+        <input type="text" value="${esc(l.aim.problem)}" oninput="field('aim.problem',this.value)" placeholder="Something annoying, unfair, confusing, or missing" />
+        <label>Talk to 3 real people — what surprised you?</label>
+        <textarea oninput="field('aim.talked',this.value)" placeholder="What did real people say?">${esc(l.aim.talked)}</textarea>
+        <label>So… the real need is:</label>
+        <input type="text" value="${esc(l.aim.need)}" oninput="field('aim.need',this.value)" placeholder="In your own words" />
+        <div class="row" style="margin-top:18px">
+          <button class="btn big" onclick="go('home')">Done aiming — let's build →</button>
+        </div>
+      </div>
+      <p class="muted no-print"><a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/safety/" >Read the safety rules</a> before talking to people or using AI — a grown-up is always present.</p>`;
+  }
+
+  function viewHome(l){
+    const done = l.iterations.filter(i=>i.done).length;
+    const pct = Math.min(100, Math.round(done/TARGET*100));
+    const mid = l.iterations.length && !l.iterations[l.iterations.length-1].done;
+    const evCount = EVIDENCE.filter(([k])=>l.evidence[k]).length;
+    const itersHtml = l.iterations.map(it=>`
+      <div class="iter">
+        <div class="v">${vlabel(it.n)}</div>
+        <div>
+          <div>${it.done?"✅":"⏳"} <strong>${esc(it.pick)||"(cycle "+it.n+")"}</strong></div>
+          ${it.failed?`<div class="x">💡 lesson: ${esc(it.lesson||it.failed)}</div>`:""}
+          ${it.shownTo?`<div class="x">shown to ${esc(it.shownTo)}</div>`:""}
+        </div>
+      </div>`).join("") || `<p class="muted">No cycles yet — start your first one below.</p>`;
+
+    const bigBtn = done>=TARGET
+      ? `<button class="btn big" onclick="go('retro')">🏁 You did ${done} cycles — finish with a retro →</button>`
+      : mid
+        ? `<button class="btn big" onclick="go('cycle')">▶️ Continue cycle ${l.iterations.length} (${vlabel(l.iterations.length)})</button>`
+        : `<button class="btn big" onclick="startCycle()">${done===0?"Start cycle 1":"Start cycle "+(done+1)} →</button>`;
+
+    const parentExtras = state.mode==="parent" ? `
+      <div class="card no-print">
+        <h2 style="margin-top:0">Parent tools</h2>
+        <div class="row">
+          <button class="btn secondary" onclick="go('aim')">✏️ Edit the aim</button>
+          <button class="btn secondary" onclick="exportJSON()">⬇️ Export (JSON)</button>
+          <button class="btn secondary" onclick="window.print()">🖨️ Print</button>
+          <button class="btn secondary" onclick="newLoop()">＋ New loop</button>
+          <button class="btn secondary" onclick="toggleTextSize()">🔠 Bigger text</button>
+        </div>
+        <p class="muted" style="margin:14px 0 0">Tip: the goal is <strong>5 cycles, each shown to a real person, each with one lesson</strong> — not a perfect product. Celebrate the flops. <button class="btn ghost" onclick="resetAll()" style="padding:0">Erase all data</button></p>
+      </div>` : "";
+
+    return `
+      <h1>${esc(l.child)? esc(l.child)+"'s loop" : "Your Builder Loop"}</h1>
+      <p class="lead">${esc(l.aim.problem)||"Set your aim to begin."} ${l.aim.problem?`<span class="pill">need: ${esc(l.aim.need||"?")}</span>`:""}</p>
+      <div class="card">
+        <div class="ring-wrap">
+          <div class="ring" style="--p:${pct}"><i>${done}/${TARGET}<br><span class="muted" style="font-size:12px">cycles</span></i></div>
+          <div>
+            <strong>${done>=TARGET?"Goal reached! 🎉":"Keep going — fast &amp; frequent."}</strong>
+            <div class="muted" style="font-size:14px">${done>=TARGET?"You ran the whole loop.":"Each cycle: show a real person, learn one thing."}</div>
+          </div>
+        </div>
+        <div style="margin-top:16px">${bigBtn}</div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0">Your cycles</h2>
+        ${itersHtml}
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0">What ${esc(l.child)||"you"} can do (${evCount}/8)</h2>
+        <p class="muted" style="margin-top:0;font-size:14px">Tick what they did <em>independently</em>. This is the real score.</p>
+        ${EVIDENCE.map(([k,t])=>`<label class="ev"><input type="checkbox" ${l.evidence[k]?"checked":""} onchange="toggleEv('${k}',this.checked)"> ${t}</label>`).join("")}
+      </div>
+      ${parentExtras}`;
+  }
+
+  function viewCycle(l){
+    const it=curIter(); const i=l.cycleStep; const s=STEPS[i];
+    const dots = STEPS.map((_,j)=>`<b class="${j<i?'done':(j===i?'on':'')}"></b>`).join("");
+    const val = esc(it[s.field]||"");
+    // Kid mode = one big step per screen. Parent mode = all fields on one card.
+    if(state.mode==="parent"){
+      return `
+        <h1>${vlabel(it.n)} · cycle ${it.n}</h1>
+        <p class="lead">Fill what you can; the kid leads. Finding the flop is the point.</p>
+        <div class="card">
+          ${STEPS.map(st=>`<label>${st.emoji} ${st.name} — ${st.q}</label>
+            <textarea oninput="field('iterations.${l.iterations.length-1}.${st.field}',this.value)" placeholder="${st.ph}">${esc(it[st.field]||"")}</textarea>`).join("")}
+          <label>💡 The one lesson</label>
+          <input type="text" value="${esc(it.lesson)}" oninput="field('iterations.${l.iterations.length-1}.lesson',this.value)" placeholder="What did this cycle teach?" />
+          <label>🤖 AI helped with… / a mistake I caught</label>
+          <input type="text" value="${esc(it.aiHelped)}" oninput="field('iterations.${l.iterations.length-1}.aiHelped',this.value)" placeholder="optional" />
+          <div class="row" style="margin-top:16px">
+            <button class="btn" onclick="finishCycleFromParent()">✅ Finish cycle ${it.n}</button>
+            <button class="btn secondary" onclick="go('home')">Save &amp; back</button>
+          </div>
+        </div>`;
+    }
+    const idx = l.iterations.length-1;
+    const isDecide = s.key==="decide";
+    const body = isDecide ? `
+        <p class="muted" style="text-align:center;margin:0 0 10px">Pick one:</p>
+        <div class="decide3">
+          ${[["keep","✅ Keep","#16a34a"],["change","✏️ Change","#ea580c"],["drop","🗑️ Drop","#64748b"]]
+            .map(([k,t,c])=>`<button class="dbtn ${it.decideChoice===k?'sel':''}" style="--dc:${c}" onclick="setDecide('${k}')">${t}</button>`).join("")}
+        </div>
+        <label>Next time I will…</label>
+        <textarea oninput="field('iterations.${idx}.decide',this.value)" placeholder="Your next tiny step">${esc(it.decide)}</textarea>`
+      : `
+        <textarea autofocus oninput="field('iterations.${idx}.${s.field}',this.value)" placeholder="${s.ph}">${val}</textarea>
+        ${s.key==="learn"?`<label>💡 So the one lesson is:</label><input type="text" value="${esc(it.lesson)}" oninput="field('iterations.${idx}.lesson',this.value)" placeholder="In a few words" />`:""}
+        ${s.key==="build"?`<label class="muted" style="font-weight:400">🤖 Did an AI help? What mistake did you catch?</label><input type="text" value="${esc(it.aiMistake)}" oninput="field('iterations.${idx}.aiMistake',this.value)" placeholder="optional — and how you checked it" />`:""}`;
+    return `
+      <div class="dots">${dots}</div>
+      <div class="step-emoji">${s.emoji}</div>
+      <div class="step-name" style="color:${s.color}">${s.name} · cycle ${it.n} (${vlabel(it.n)})</div>
+      <div class="step-q">${s.q}
+        <button class="iconbtn" title="Read aloud" aria-label="Read this aloud" onclick="speak('${esc(s.q).replace(/'/g,"")} . ${esc(s.hint).replace(/'/g,"")}')" style="vertical-align:middle;padding:4px 8px;font-size:15px">🔊</button>
+      </div>
+      <p class="step-hint">${s.hint}</p>
+      <div class="card">${body}</div>
+      <button class="btn big" onclick="cycleNext()" style="background:${s.color}">${i<STEPS.length-1?"Next →":"✅ Finish this cycle"}</button>
+      <button class="btn ghost" onclick="cycleBack()" style="width:100%;margin-top:6px">← Back</button>`;
+  }
+  function finishCycleFromParent(){ const it=curIter(); it.done=true; if((it.failed||"").trim()) celebrate("“"+it.failed.trim().slice(0,80)+"” — lesson logged. 💪"); go("home"); }
+
+  function viewRetro(l){
+    const done=l.iterations.filter(i=>i.done).length;
+    const r=l.retro;
+    return `
+      <h1>🏁 Retro</h1>
+      <p class="lead">You ran <strong>${done} cycles</strong>. Look back honestly — that's how builders compound.</p>
+      <div class="card">
+        <label>🏆 Our "Best Flop" — the failure that taught the most</label>
+        <input type="text" value="${esc(r.bestFlop||"")}" oninput="field('retro.bestFlop',this.value)" placeholder="Which flop helped most?" />
+        <label>What worked?</label>
+        <textarea oninput="field('retro.worked',this.value)" placeholder="">${esc(r.worked||"")}</textarea>
+        <label>What did we change because of feedback?</label>
+        <textarea oninput="field('retro.changed',this.value)" placeholder="">${esc(r.changed||"")}</textarea>
+        <p class="muted" style="margin-bottom:4px">The 4-Question Test on the final thing:</p>
+        ${[["t","Is it true?"],["legal","Is it legal &amp; is my word kept?"],["serves","Does it really serve someone?"],["proud","Would I be proud to explain it?"]]
+          .map(([k,q])=>`<label class="ev"><input type="checkbox" ${r[k]?"checked":""} onchange="field('retro.${k}',this.checked); "> ${q}</label>`).join("")}
+        <div class="row" style="margin-top:16px">
+          <button class="btn" onclick="go('home')">Save &amp; back</button>
+          <button class="btn secondary" onclick="window.print()">🖨️ Print our loop</button>
+          <button class="btn secondary" onclick="exportJSON()">⬇️ Export</button>
+        </div>
+      </div>
+      <p class="muted" style="text-align:center">Proud of you. Ready for the next problem? <button class="btn ghost" onclick="newLoop()">Start a new loop →</button></p>`;
+  }
+
+  /* ---------- PWA: install + offline ---------- */
+  let deferredPrompt=null;
+  window.addEventListener("beforeinstallprompt",(e)=>{ e.preventDefault(); deferredPrompt=e;
+    document.getElementById("installBtn").style.display="inline-block"; });
+  function doInstall(){ if(deferredPrompt){ deferredPrompt.prompt(); deferredPrompt=null;
+    document.getElementById("installBtn").style.display="none"; } }
+  // iOS has no beforeinstallprompt — show a hint instead.
+  (function(){ const iOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+    const standalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+    if(iOS && !standalone) document.getElementById("iosHint").classList.remove("hidden"); })();
+  if("serviceWorker" in navigator){ window.addEventListener("load",()=>{ navigator.serviceWorker.register("./sw.js").catch(()=>{}); }); }
+
+  render();
+  </script>
+</body>
+</html>

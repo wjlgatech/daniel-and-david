@@ -154,7 +154,7 @@ daniel-and-david/
 You don't need GitHub, git, or any setup. Just:
 
 1. **Open the home page:** **[daniel-and-david on the web →](https://wjlgatech.github.io/daniel-and-david/)** (a normal link — opens in any browser).
-2. **Read the [Builder Loop](docs/builder-loop/)** — the four-week loop (5 fast build-show-learn cycles) you'll run with your child. A [one-page printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md) are there too.
+2. **Open the free [Builder Loop app](https://wjlgatech.github.io/daniel-and-david/app.html)** — a **1-click, no-signup** web app that walks your family through the 5 cycles, tracks progress, and **installs to your home screen** (works offline; everything stays on your device). Prefer paper? There's a [printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md), and the full [Builder Loop guide](docs/builder-loop/).
 3. **Read the [safety rules](docs/safety/)** before you start (consent, privacy, AI boundaries).
 4. **Open your child's track:** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/).
 5. **Want in deeper?** [Apply to be a Founding Family](docs/founding-families.md) — currently

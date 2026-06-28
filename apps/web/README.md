@@ -1,8 +1,23 @@
-# apps/web — The Academy Landing Page
+# apps/web — Landing Page + Builder Loop App
 
-The home page for the Daniel &amp; David academy. Deliberately **dependency-free**: a single
-HTML file with inline CSS, so a 6-year-old (or anyone) can open it instantly — no install, no
-build, no Node.
+Two dependency-free pages, no build step, no framework:
+
+- **`public/index.html`** — the academy home page (capability ladder, Founding Halving, application).
+- **`public/app.html`** — the **Builder Loop app**: an installable, offline **PWA** that walks a
+  family through the 5-cycle loop, tracks progress, and **stores everything on-device**
+  (localStorage; no account, no network calls for user data). Backed by
+  `manifest.webmanifest`, `sw.js` (cache-first app shell), and `icons/`.
+
+> **Why a PWA?** Non-technical parents can't navigate a GitHub repo — but they can tap a link,
+> **"Add to Home Screen,"** and run the loop like a native app. The persistence layer is behind a
+> small `Store` seam so it can later sync to a backend without rewriting the UI.
+>
+> **Privacy:** the app makes **no external requests for user data** and has **no third-party
+> scripts** — a family's loop notes never leave their device. `scripts/check-webapp.sh` (in CI)
+> guards the PWA shell; the on-device promise is part of the design.
+
+The home page is deliberately **dependency-free**: a single HTML file with inline CSS, so a
+6-year-old (or anyone) can open it instantly — no install, no build, no Node.
 
 ## See it live (no install)
 

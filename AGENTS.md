@@ -27,10 +27,14 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
 - `docs/` — principles and a two-track curriculum (now written against measurable outcomes).
 - `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
-- `apps/web/` — the academy's own static landing page, **hosted on GitHub Pages**
-  (`https://wjlgatech.github.io/daniel-and-david/`) via `.github/workflows/pages.yml`. Its
-  outbound links use **absolute** GitHub URLs (so they work hosted *and* from a local file) —
-  keep that convention if you edit it.
+- `apps/web/` — the static site, **hosted on GitHub Pages**
+  (`https://wjlgatech.github.io/daniel-and-david/`) via `.github/workflows/pages.yml`:
+  - `public/index.html` — landing page. Outbound doc links use **absolute** GitHub URLs (so they
+    work hosted *and* from a local file) — keep that convention.
+  - `public/app.html` — the **Builder Loop PWA** (installable, offline, dual-mode kid/parent). All
+    family data is **on-device** (localStorage behind a `Store` seam); **no external scripts or
+    network calls for user data** — never add analytics/CDN/fetch of user data here. Backed by
+    `manifest.webmanifest`, `sw.js`, `icons/`. `scripts/check-webapp.sh` (in CI) guards the shell.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, and hooks you can use here.
 - `tools/` — installable plugins.
