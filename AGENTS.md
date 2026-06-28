@@ -39,7 +39,9 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
     data, and photos must stay on-device (never uploaded). Backed by `manifest.webmanifest`,
     `sw.js`, `icons/`. `scripts/check-webapp.sh` (in CI) enforces all of this.
 - `agents/` — small, readable starter agents.
-- `.claude/` — the **agent toolkit**: skills, workflows, and hooks you can use here.
+- `.claude/` — the **agent toolkit**: skills, workflows, hooks, and **project commands**
+  (`commands/goal-10x.md` — a repo-tuned objective driver wired to the five checks; `commands/check.md`
+  — run every guardrail). 1-click setup: `./scripts/setup.sh`.
 - `tools/` — installable plugins.
 
 ## Your toolkit
