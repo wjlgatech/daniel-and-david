@@ -1,0 +1,47 @@
+{
+  "_comment": "The fast index the apps gallery reads. One object per card in cards/<slug>.md. Kept in sync by scripts/check-cards.sh. See docs/agentic-app-card.md.",
+  "apps": [
+    {
+      "name": "Builder Loop App",
+      "slug": "builder-loop",
+      "app_type": "tool",
+      "pain_solved": "Walks a family through 5 fast build cycles — pick, build, show a real person, learn, decide — and celebrates every flop.",
+      "host": "static",
+      "status": "live",
+      "emoji": "🛠️",
+      "tags": ["family", "builder-loop", "ages-5-15", "pwa"],
+      "llm": "none (on-device)",
+      "framework": "static-html",
+      "demo_url": "./app.html",
+      "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/app.html"
+    },
+    {
+      "name": "Conversation Spark",
+      "slug": "conversation-spark",
+      "app_type": "demo",
+      "pain_solved": "Get your 6- or 11-year-old talking tonight — one good question, on demand.",
+      "host": "static",
+      "status": "live",
+      "emoji": "💬",
+      "tags": ["parents", "conversation", "ages-5-15"],
+      "llm": "optional · free-llm seam",
+      "framework": "static-html",
+      "demo_url": "./demos/conversation-spark.html",
+      "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/conversation-spark.html"
+    },
+    {
+      "name": "KC Matchday Basecamp",
+      "slug": "kc-matchday-basecamp",
+      "app_type": "agent",
+      "pain_solved": "Helps fans find legal, venue-partnered local spots and utilities around Kansas City's football summer.",
+      "host": "concept",
+      "status": "concept",
+      "emoji": "🏕️",
+      "tags": ["venture", "kansas-city", "football"],
+      "llm": "planned",
+      "framework": "static-html",
+      "demo_url": "",
+      "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/ventures/kc-matchday-basecamp/README.md"
+    }
+  ]
+}

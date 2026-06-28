@@ -17,6 +17,7 @@ agent) starts from what we already know instead of re-researching from zero.
 | [Founding-cohort selection](founding-cohort-selection.md) | Select on role-construction · autonomous motivation · conscientiousness · giving — never wealth/credentials | [founding-families](../founding-families.md) |
 | [Kids/family app UX + PWA](kids-family-app-ux.md) | One-thing-per-screen · celebrate-don't-punish (Finch) · on-device · PWA install | [Builder Loop app](../../apps/web/public/app.html) |
 | [OSS landing pages + honest scarcity](oss-landing-pages.md) | Specific-promise hero · proof · one CTA; real caps beat fake urgency | [landing page](../../apps/web/public/index.html), [the Halving](../founding-families.md) |
+| [Agentic app cards + hosting](agentic-app-cards.md) | Model card = one file + YAML that made HF a platform; 10×-simpler app card = 6 fields; host = *mix* (static registry + HF Spaces/proxy per app) | [Agentic App Card](../agentic-app-card.md), [apps gallery](../../apps/web/public/apps.html) |
 
 ## How to use & extend
 - **Reuse:** cite the relevant doc; pull its sources; only research what's genuinely new.

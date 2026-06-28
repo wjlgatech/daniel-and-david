@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apps Gallery · Daniel &amp; David</title>
+  <meta name="description" content="A gallery of small agentic apps a family can play with — each described by a tiny Agentic App Card. Built in the Builder Loop, hosted anywhere, mixed in one place." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>" />
+  <style>
+    :root{
+      --ink:#29261F; --muted:#6B6457;
+      --paper:#FAF9F5; --paper2:#F0EEE6;
+      --clay:#CC785C; --clay-dk:#B05730;
+      --gold:#C7822E; --sage:#5B8C7B; --line:#E6E0D2;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:var(--ink);background:var(--paper);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spacing:-.01em;margin:0}
+    a{color:var(--clay-dk)}
+    .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+    /* header */
+    header{text-align:center;padding:54px 22px 30px}
+    .seed{font-size:40px}
+    .kicker{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700;color:var(--gold);margin:8px 0 6px}
+    header h1{font-size:40px;margin:2px 0 10px}
+    header p{max-width:680px;margin:0 auto;color:var(--muted);font-size:17px}
+    .toplinks{margin-top:16px;font-size:14px}
+    .toplinks a{margin:0 10px;text-decoration:none;font-weight:600}
+    /* tabs */
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:26px 0 30px}
+    .tab{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;
+      padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer;transition:.15s}
+    .tab:hover{border-color:var(--clay)}
+    .tab[aria-pressed="true"]{background:var(--clay);border-color:var(--clay);color:#fff}
+    /* grid + cards */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;padding-bottom:18px}
+    .appcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+      border-radius:18px;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease}
+    .appcard:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(41,38,31,.12)}
+    .iconband{display:flex;align-items:center;justify-content:center;height:118px;
+      background:var(--paper2);font-size:52px;border-bottom:1px solid var(--line)}
+    .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+    .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+    .badge{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;
+      padding:3px 9px;border-radius:999px;color:#fff}
+    .b-agent{background:var(--clay)} .b-tool{background:var(--gold)}
+    .b-demo{background:var(--sage)} .b-pipeline{background:var(--ink)}
+    .status{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;
+      padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:#fff}
+    .status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
+    .appcard h3{font-size:19px;margin:0 0 6px}
+    .pain{color:var(--muted);font-size:14px;margin:0 0 14px;
+      display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;margin-bottom:14px}
+    .chip{font-size:11px;color:var(--muted);background:var(--paper2);border:1px solid var(--line);
+      border-radius:8px;padding:3px 8px;white-space:nowrap}
+    .chip b{color:var(--ink);font-weight:700}
+    .ctas{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{font-size:13px;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px}
+    .btn-go{background:var(--clay);color:#fff}
+    .btn-go:hover{background:var(--clay-dk)}
+    .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+    .btn-ghost:hover{border-color:var(--clay)}
+    .btn[aria-disabled="true"]{background:var(--paper2);color:var(--muted);pointer-events:none}
+    /* add-your-app empty-state */
+    .addcard{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+      border:2px dashed var(--line);border-radius:18px;background:transparent;color:var(--muted);
+      padding:26px;min-height:230px;text-decoration:none;transition:.16s}
+    .addcard:hover{border-color:var(--clay);color:var(--clay-dk);background:#fff}
+    .addcard .plus{font-size:38px;line-height:1}
+    .addcard b{display:block;margin:10px 0 4px;font-size:16px;color:var(--ink)}
+    /* host legend */
+    .legend{background:var(--paper2);border:1px solid var(--line);border-radius:16px;
+      padding:20px 22px;margin:34px 0 10px}
+    .legend h2{font-size:20px;margin:0 0 6px}
+    .legend p{color:var(--muted);font-size:14px;margin:0 0 12px}
+    .legend ul{margin:0;padding-left:18px;color:var(--ink);font-size:14px}
+    .legend li{margin:4px 0}
+    .legend code{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13px}
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 22px 50px}
+    .note{text-align:center;color:var(--muted);padding:40px 22px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="seed">🃏</div>
+    <p class="kicker">The Apps Gallery</p>
+    <h1>Small apps you can actually play with</h1>
+    <p>Every app here is described by a tiny <strong>Agentic App Card</strong> — like a HuggingFace
+      model card, but ~10× simpler. Some run in your browser, some on a server; the gallery mixes
+      them all in one place.</p>
+    <div class="toplinks">
+      <a href="./index.html">← Home</a>
+      <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/agentic-app-card.md">What's an App Card? →</a>
+      <a href="./app.html">Open the Builder Loop app →</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="tabs" id="tabs">
+      <button class="tab" data-filter="all" aria-pressed="true">All</button>
+      <button class="tab" data-filter="agent" aria-pressed="false">🤖 Agents</button>
+      <button class="tab" data-filter="tool" aria-pressed="false">🛠️ Tools</button>
+      <button class="tab" data-filter="demo" aria-pressed="false">🧪 Demos</button>
+    </div>
+
+    <div class="grid" id="grid"><p class="note">Loading apps…</p></div>
+
+    <section class="legend">
+      <h2>One gallery, mixed homes 🏡</h2>
+      <p>The card's <code>host</code> field is what lets us mix — we don't have to choose between
+        hosting on HuggingFace or hosting ourselves. We do both:</p>
+      <ul>
+        <li><code>static</code> — runs in your browser, offline, on your device <em>(our default)</em></li>
+        <li><code>space</code> — runs on a HuggingFace Space (for apps that need a live backend)</li>
+        <li><code>proxy</code> — runs behind our own serverless function (keeps an LLM key safe)</li>
+        <li><code>cli</code> — a builder tool you run on your own machine</li>
+        <li><code>concept</code> — designed, not built yet (shown honestly, never faked)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Built kind, honest, and on-device. Cards live in
+    <code style="background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:1px 6px">apps/web/public/cards/</code>.
+    <br />🌱 Daniel &amp; David — a family field lab.
+  </footer>
+
+  <script>
+    var REGISTRY = "./cards/registry.json";
+    var hostLabel = { static:"on-device", space:"HF Space", proxy:"server", cli:"your machine", concept:"not built yet" };
+    var statusColor = { live:"#2E7D55", wip:"var(--gold)", concept:"#9A9486" };
+    var current = "all";
+    var APPS = [];
+
+    function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+    function cardHTML(a){
+      var type = a.app_type || "demo";
+      var live = a.status === "live" && a.demo_url;
+      var go = live
+        ? '<a class="btn btn-go" href="'+esc(a.demo_url)+'">Open ▶</a>'
+        : '<span class="btn btn-go" aria-disabled="true">'+(a.status==="concept"?"Concept":"Soon")+'</span>';
+      var cardLink = '<a class="btn btn-ghost" href="./cards/'+esc(a.slug)+'.md">Card ↗</a>';
+      var code = a.repo_url ? '<a class="btn btn-ghost" href="'+esc(a.repo_url)+'">Code ↗</a>' : "";
+      var chips = '<span class="chip">'+esc(hostLabel[a.host]||a.host)+'</span>';
+      if (a.llm) chips += '<span class="chip"><b>LLM</b> '+esc(a.llm)+'</span>';
+      if (a.framework) chips += '<span class="chip">'+esc(a.framework)+'</span>';
+      return '<article class="appcard">'
+        + '<div class="iconband">'+esc(a.emoji||"✨")+'</div>'
+        + '<div class="body">'
+          + '<div class="badges">'
+            + '<span class="badge b-'+esc(type)+'">'+esc(type)+'</span>'
+            + '<span class="status"><span class="dot" style="background:'+(statusColor[a.status]||"#9A9486")+'"></span>'+esc(a.status||"")+'</span>'
+          + '</div>'
+          + '<h3>'+esc(a.name)+'</h3>'
+          + '<p class="pain">'+esc(a.pain_solved)+'</p>'
+          + '<div class="meta">'+chips+'</div>'
+          + '<div class="ctas">'+go+cardLink+code+'</div>'
+        + '</div></article>';
+    }
+
+    function render(){
+      var grid = document.getElementById("grid");
+      var list = APPS.filter(function(a){ return current==="all" || a.app_type===current; });
+      var html = list.map(cardHTML).join("");
+      html += '<a class="addcard" href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/agentic-app-card.md">'
+            + '<span class="plus">＋</span><b>Add your app</b>'
+            + '<span>Copy the card template, fill 6 fields, open a PR.</span></a>';
+      grid.innerHTML = html;
+    }
+
+    document.getElementById("tabs").addEventListener("click", function(e){
+      var b = e.target.closest(".tab"); if(!b) return;
+      current = b.getAttribute("data-filter");
+      [].forEach.call(this.querySelectorAll(".tab"), function(t){
+        t.setAttribute("aria-pressed", t===b ? "true" : "false"); });
+      render();
+    });
+
+    fetch(REGISTRY).then(function(r){ return r.json(); }).then(function(d){
+      APPS = (d && d.apps) || [];
+      render();
+    }).catch(function(){
+      document.getElementById("grid").innerHTML =
+        '<p class="note">Couldn\'t load the app registry here. Browse the cards directly in '
+        + '<a href="https://github.com/wjlgatech/daniel-and-david/tree/main/apps/web/public/cards">apps/web/public/cards/</a>.</p>';
+    });
+  </script>
+</body>
+</html>

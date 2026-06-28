@@ -76,3 +76,6 @@ jobs:
 
       - name: i18n sync (all language tags in step with the source)
         run: bash scripts/check-i18n.sh
+
+      - name: App cards (gallery + card standard coherent)
+        run: bash scripts/check-cards.sh
