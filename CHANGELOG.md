@@ -7,6 +7,13 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop app v2·2 — photo evidence + AR/glasses readiness.** On-device **photo/drawing
+  evidence** for the build/show steps via a new IndexedDB `Media` seam (thumbnails on the dashboard;
+  photos **never leave the device** — excluded from export/share). **AR / AI-glasses prep:**
+  **🎤 voice dictation** (Web Speech recognition) on the cycle steps, a documented **input + render
+  seam**, and a **WebXR capability probe** that shows an "✦ AR-ready" chip where supported (the
+  immersive view itself is future work — see `docs/builder-loop-app-xr.md`). `check-webapp.sh` now
+  also asserts no external scripts, IndexedDB-only photos, and the "never uploaded" promise.
 - **Builder Loop app v2·1** (`apps/web/public/app.html`): **multiple children & loops** (a child/
   loop switcher + a "📚 All loops" history with open/delete), a **"🏆 Best Flops"** gallery that
   aggregates every lesson across loops, **delight polish** (Web-Audio chime + richer confetti +

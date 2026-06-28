@@ -47,6 +47,13 @@ grep -q 'rel="manifest"' "$APP"        && echo "  ✅ app.html links the manifes
 grep -q 'serviceWorker.register' "$APP" && echo "  ✅ app.html registers the service worker" || { echo "  ❌ app.html does not register sw.js"; fail=1; }
 # privacy promise: on-device, no external script/fetch of user data
 grep -qi 'this device' "$APP"          && echo "  ✅ app states data stays on-device"      || { echo "  ❌ app.html missing on-device privacy note"; fail=1; }
+# no external scripts / CDNs in the app (would break the on-device guarantee)
+if grep -qE '<script[^>]+src=' "$APP"; then echo "  ❌ app.html loads an external script (breaks on-device privacy)"; fail=1; else echo "  ✅ no external <script src> (on-device privacy intact)"; fi
+# photo evidence (if present) must be on-device IndexedDB + carry the never-uploaded promise
+if grep -q 'addPhoto' "$APP"; then
+  grep -q 'indexedDB' "$APP"            && echo "  ✅ photos use on-device IndexedDB"        || { echo "  ❌ photo feature must use IndexedDB (on-device)"; fail=1; }
+  grep -qi 'never uploaded' "$APP"      && echo "  ✅ photos carry 'never uploaded' notice"  || { echo "  ❌ photo feature missing 'never uploaded' notice"; fail=1; }
+fi
 
 # JS parses (only if node is available — CI has it; local may not)
 if command -v node >/dev/null 2>&1; then
