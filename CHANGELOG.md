@@ -7,6 +7,14 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop app UI — multilingual core.** The app (`apps/web/public/app.html`) now translates
+  its **welcome screen + the cycle wizard + chrome** (privacy ribbon, Kid/Parent, the 5 steps'
+  names/questions/hints/placeholders, Next/Back/Finish/Voice/Add-a-photo, the photo notice, the
+  celebrate modal) into 中文/Español/한국어/日本語 via a `t()` dictionary + a 🌐 selector — **reusing the
+  landing page's `dd.lang` choice** so language carries over. English is the source/fallback.
+  `check-i18n.sh` now also verifies the app's `STR` dictionary (39 keys × 4 langs) stays in sync.
+  (Secondary screens — dashboard, retro, history, Best-Flops, parent tools, aim — remain English
+  for a follow-up.)
 - **"Translation may lag" banner + opt-in auto-retranslation.** The landing page now shows an honest
   amber banner *only for non-English* — "English is the authoritative version, and translations may
   lag behind it" (translated into all 4 languages). And the optional fully-automatic path is wired:

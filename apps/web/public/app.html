@@ -105,11 +105,14 @@
       <div class="brand"><span class="seed">🌱</span> Builder Loop</div>
       <button class="modebtn" id="modeKid" aria-pressed="true" onclick="setMode('kid')">🧒 Kid</button>
       <button class="modebtn" id="modeParent" aria-pressed="false" onclick="setMode('parent')">👪 Parent</button>
+      <select class="iconbtn" id="appLang" aria-label="Language" onchange="setLangApp(this.value)" style="padding:7px 10px">
+        <option value="en">🌐 EN</option><option value="zh">🌐 中文</option><option value="es">🌐 ES</option><option value="ko">🌐 한국어</option><option value="ja">🌐 日本語</option>
+      </select>
       <button class="iconbtn" id="xrChip" onclick="enterAR()" style="display:none" title="This device supports AR">✦ AR-ready</button>
       <button class="iconbtn" id="installBtn" onclick="doInstall()">⬇️ Install</button>
     </div>
   </header>
-  <div class="privacy">🔒 Everything you type stays on <strong>this device only</strong>. Nothing is sent anywhere — no account, no internet needed.</div>
+  <div class="privacy" id="privacyRibbon">🔒 Everything you type stays on <strong>this device only</strong>. Nothing is sent anywhere — no account, no internet needed.</div>
 
   <main class="wrap" id="app"><!-- rendered by JS --></main>
 
@@ -123,9 +126,9 @@
   <div class="cele" id="cele" onclick="this.classList.remove('show')">
     <div class="box" onclick="event.stopPropagation()">
       <div class="big">🎉</div>
-      <h2 style="margin:6px 0">You found a lesson!</h2>
+      <h2 style="margin:6px 0" id="celeTitle">You found a lesson!</h2>
       <p class="muted" id="celeMsg">A failure with a lesson is a win. That's how builders grow.</p>
-      <button class="btn" onclick="document.getElementById('cele').classList.remove('show')">Keep going →</button>
+      <button class="btn" id="celeKeep" onclick="document.getElementById('cele').classList.remove('show')">Keep going →</button>
     </div>
   </div>
 
@@ -199,6 +202,103 @@
   ];
   const TARGET = 5;
 
+  /* ===== i18n: the app reuses the landing page's language choice (localStorage "dd.lang").
+     English is the source/fallback; t(k) resolves the current language. Covers the screens a
+     family actively uses (welcome + the cycle wizard + chrome). ===== */
+  const STR = {
+    en: {
+      "privacy":"🔒 Everything you type stays on <strong>this device only</strong>. Nothing is sent anywhere — no account, no internet needed.",
+      "modeKid":"🧒 Kid","modeParent":"👪 Parent","install":"⬇️ Install",
+      "welcome.h1":"Build something real — together 🌱",
+      "welcome.lead":"The Builder Loop is a four-week family adventure, run as <strong>5 fast cycles</strong>: notice a real problem, build something small, show a real person, learn what to fix — and do it again, a little better each time.",
+      "welcome.how":"<strong>How it works:</strong> each cycle is just five steps — 🔭 Pick · 🛠️ Build · 🧑‍🤝‍🧑 Show · 💡 Learn · 🧭 Decide. Finding what <em>failed</em> is the win.",
+      "welcome.start":"Start a Builder Loop →",
+      "welcome.note":"A grown-up and a child do this together. Your notes stay on this device.",
+      "step.pick.name":"Pick","step.pick.q":"What's the smallest thing to try next?","step.pick.hint":"One tiny idea you can test in a few days. Smaller is better.","step.pick.ph":"e.g. a paper sign that says…",
+      "step.build.name":"Build","step.build.q":"Build it — fast and rough.","step.build.hint":"It's meant to be rough. A drawing, a paper version, one sentence. Try it yourself first, then you can ask an AI.","step.build.ph":"What did you make?",
+      "step.show.name":"Show","step.show.q":"Show it to ONE real person — today.","step.show.hint":"A grown-up helps. Watch their face. Don't explain too much.","step.show.ph":"Who did you show? (first name)",
+      "step.learn.name":"Learn","step.learn.q":"What didn't work? (this is the gold!)","step.learn.hint":"Finding what failed is a WIN. Write the one lesson it taught you.","step.learn.ph":"What confused them / what flopped?",
+      "step.decide.name":"Decide","step.decide.q":"Keep, change, or drop — what's next?","step.decide.hint":"Decide your next tiny step.","step.decide.ph":"Next time I will…",
+      "cyc.next":"Next →","cyc.finish":"✅ Finish this cycle","cyc.back":"← Back","cyc.voice":"🎤 Voice","cyc.photo":"📷 Add a photo","cyc.photoNote":"📷 Photos stay on this device — never uploaded.","cyc.lesson":"💡 So the one lesson is:","cyc.lessonPh":"In a few words",
+      "cele.title":"You found a lesson!","cele.keep":"Keep going →"
+    },
+    zh:{
+      "privacy":"🔒 你输入的一切只保存在<strong>本设备上</strong>。不会发送到任何地方 — 无需账号，无需联网。",
+      "modeKid":"🧒 孩子","modeParent":"👪 家长","install":"⬇️ 安装",
+      "welcome.h1":"一起做出真实的东西 🌱",
+      "welcome.lead":"Builder Loop 是为期四周的家庭冒险，分为 <strong>5 个快速循环</strong>：发现一个真实问题、做一个小东西、给真人看、学到要改什么 — 然后再来一次，每次都好一点点。",
+      "welcome.how":"<strong>怎么进行：</strong>每个循环只有五步 — 🔭 选定 · 🛠️ 制作 · 🧑‍🤝‍🧑 展示 · 💡 学习 · 🧭 决定。找出哪里<em>失败</em>就是胜利。",
+      "welcome.start":"开始一个 Builder Loop →",
+      "welcome.note":"由一位大人和一个孩子一起完成。你的记录只留在本设备上。",
+      "step.pick.name":"选定","step.pick.q":"下一个最小的尝试是什么？","step.pick.hint":"一个几天内就能试的小点子。越小越好。","step.pick.ph":"例如：一张写着……的纸牌",
+      "step.build.name":"制作","step.build.q":"动手做 — 又快又粗糙。","step.build.hint":"本来就该粗糙。一张画、一个纸做的版本、一句话。先自己试，再问 AI。","step.build.ph":"你做了什么？",
+      "step.show.name":"展示","step.show.q":"今天就拿给一个真人看。","step.show.hint":"请大人协助。观察对方的表情。别解释太多。","step.show.ph":"你给谁看了？（名字）",
+      "step.learn.name":"学习","step.learn.q":"哪里没成功？（这才是宝藏！）","step.learn.hint":"找出失败之处就是胜利。写下它教给你的那一课。","step.learn.ph":"他们哪里没看懂 / 哪里没成？",
+      "step.decide.name":"决定","step.decide.q":"保留、修改，还是放弃 — 下一步？","step.decide.hint":"决定你下一个小步骤。","step.decide.ph":"下次我会……",
+      "cyc.next":"下一步 →","cyc.finish":"✅ 完成本循环","cyc.back":"← 返回","cyc.voice":"🎤 语音","cyc.photo":"📷 添加照片","cyc.photoNote":"📷 照片只留在本设备 — 绝不上传。","cyc.lesson":"💡 那一课是：","cyc.lessonPh":"用几个字写下",
+      "cele.title":"你找到了一课！","cele.keep":"继续 →"
+    },
+    es:{
+      "privacy":"🔒 Todo lo que escribes se queda <strong>solo en este dispositivo</strong>. No se envía a ningún lado — sin cuenta, sin internet.",
+      "modeKid":"🧒 Niño","modeParent":"👪 Madre/Padre","install":"⬇️ Instalar",
+      "welcome.h1":"Construyan algo real — juntos 🌱",
+      "welcome.lead":"El Builder Loop es una aventura familiar de cuatro semanas, en <strong>5 ciclos rápidos</strong>: nota un problema real, construye algo pequeño, muéstralo a una persona real, aprende qué arreglar — y hazlo de nuevo, un poco mejor cada vez.",
+      "welcome.how":"<strong>Cómo funciona:</strong> cada ciclo son solo cinco pasos — 🔭 Elegir · 🛠️ Construir · 🧑‍🤝‍🧑 Mostrar · 💡 Aprender · 🧭 Decidir. Descubrir qué <em>falló</em> es la victoria.",
+      "welcome.start":"Empezar un Builder Loop →",
+      "welcome.note":"Un adulto y un niño lo hacen juntos. Tus notas se quedan en este dispositivo.",
+      "step.pick.name":"Elegir","step.pick.q":"¿Cuál es lo más pequeño para probar ahora?","step.pick.hint":"Una idea diminuta que puedas probar en pocos días. Cuanto más pequeña, mejor.","step.pick.ph":"p. ej., un cartel de papel que diga…",
+      "step.build.name":"Construir","step.build.q":"Constrúyelo — rápido y tosco.","step.build.hint":"Debe ser tosco. Un dibujo, una versión en papel, una frase. Inténtalo tú primero, luego pregunta a una IA.","step.build.ph":"¿Qué hiciste?",
+      "step.show.name":"Mostrar","step.show.q":"Muéstralo a UNA persona real — hoy.","step.show.hint":"Un adulto ayuda. Observa su cara. No expliques demasiado.","step.show.ph":"¿A quién se lo mostraste? (nombre)",
+      "step.learn.name":"Aprender","step.learn.q":"¿Qué no funcionó? (¡esto es el oro!)","step.learn.hint":"Descubrir qué falló es GANAR. Escribe la lección que te enseñó.","step.learn.ph":"¿Qué los confundió / qué fracasó?",
+      "step.decide.name":"Decidir","step.decide.q":"Mantener, cambiar o descartar — ¿qué sigue?","step.decide.hint":"Decide tu próximo pasito.","step.decide.ph":"La próxima vez voy a…",
+      "cyc.next":"Siguiente →","cyc.finish":"✅ Terminar este ciclo","cyc.back":"← Atrás","cyc.voice":"🎤 Voz","cyc.photo":"📷 Añadir una foto","cyc.photoNote":"📷 Las fotos se quedan en este dispositivo — nunca se suben.","cyc.lesson":"💡 Así que la lección es:","cyc.lessonPh":"En pocas palabras",
+      "cele.title":"¡Encontraste una lección!","cele.keep":"Seguir →"
+    },
+    ko:{
+      "privacy":"🔒 입력한 모든 것은 <strong>이 기기에만</strong> 저장됩니다. 어디로도 전송되지 않습니다 — 계정도, 인터넷도 필요 없습니다.",
+      "modeKid":"🧒 아이","modeParent":"👪 보호자","install":"⬇️ 설치",
+      "welcome.h1":"함께 진짜를 만들어요 🌱",
+      "welcome.lead":"Builder Loop는 4주간의 가족 모험으로, <strong>5번의 빠른 사이클</strong>로 진행됩니다: 진짜 문제를 발견하고, 작은 것을 만들고, 실제 사람에게 보여주고, 무엇을 고칠지 배우고 — 매번 조금씩 더 낫게 다시 합니다.",
+      "welcome.how":"<strong>진행 방법:</strong> 각 사이클은 단 다섯 단계 — 🔭 고르기 · 🛠️ 만들기 · 🧑‍🤝‍🧑 보여주기 · 💡 배우기 · 🧭 결정하기. 무엇이 <em>실패</em>했는지 찾는 것이 승리입니다.",
+      "welcome.start":"Builder Loop 시작하기 →",
+      "welcome.note":"어른과 아이가 함께 합니다. 기록은 이 기기에만 남습니다.",
+      "step.pick.name":"고르기","step.pick.q":"다음에 시도할 가장 작은 것은?","step.pick.hint":"며칠 안에 시험할 수 있는 작은 아이디어. 작을수록 좋아요.","step.pick.ph":"예: ……라고 적힌 종이 표지판",
+      "step.build.name":"만들기","step.build.q":"빠르고 거칠게 만들어요.","step.build.hint":"거친 게 정상입니다. 그림, 종이 버전, 한 문장. 먼저 직접 해보고, 그다음 AI에 물어보세요.","step.build.ph":"무엇을 만들었나요?",
+      "step.show.name":"보여주기","step.show.q":"오늘, 실제 사람 한 명에게 보여주세요.","step.show.hint":"어른이 돕습니다. 상대의 표정을 보세요. 너무 많이 설명하지 마세요.","step.show.ph":"누구에게 보여줬나요? (이름)",
+      "step.learn.name":"배우기","step.learn.q":"무엇이 안 됐나요? (이게 보물이에요!)","step.learn.hint":"실패를 찾는 것이 승리입니다. 그것이 가르쳐 준 한 가지 교훈을 적으세요.","step.learn.ph":"무엇이 헷갈렸나요 / 무엇이 실패했나요?",
+      "step.decide.name":"결정하기","step.decide.q":"유지·변경·중단 — 다음은?","step.decide.hint":"다음 작은 한 걸음을 정하세요.","step.decide.ph":"다음엔 이렇게 할 거예요…",
+      "cyc.next":"다음 →","cyc.finish":"✅ 이 사이클 끝내기","cyc.back":"← 뒤로","cyc.voice":"🎤 음성","cyc.photo":"📷 사진 추가","cyc.photoNote":"📷 사진은 이 기기에만 남고 — 절대 업로드되지 않습니다.","cyc.lesson":"💡 그래서 교훈은:","cyc.lessonPh":"몇 단어로",
+      "cele.title":"교훈을 찾았어요!","cele.keep":"계속하기 →"
+    },
+    ja:{
+      "privacy":"🔒 入力したものはすべて<strong>この端末内だけ</strong>に保存されます。どこにも送信されません — アカウント不要、ネット不要。",
+      "modeKid":"🧒 こども","modeParent":"👪 保護者","install":"⬇️ インストール",
+      "welcome.h1":"いっしょに本物を作ろう 🌱",
+      "welcome.lead":"Builder Loop は4週間の家族の冒険で、<strong>5つの素早いサイクル</strong>で進めます：本物の問題に気づき、小さなものを作り、実在の人に見せ、何を直すか学ぶ — そしてまた、毎回少しずつ良くしていきます。",
+      "welcome.how":"<strong>進め方：</strong>各サイクルはたった5ステップ — 🔭 選ぶ · 🛠️ 作る · 🧑‍🤝‍🧑 見せる · 💡 学ぶ · 🧭 決める。何が<em>失敗</em>したかを見つけることが勝ちです。",
+      "welcome.start":"Builder Loop を始める →",
+      "welcome.note":"大人と子どもが一緒に行います。記録はこの端末に残ります。",
+      "step.pick.name":"選ぶ","step.pick.q":"次に試す一番小さなことは？","step.pick.hint":"数日で試せる小さなアイデア。小さいほど良いです。","step.pick.ph":"例：「……」と書いた紙の看板",
+      "step.build.name":"作る","step.build.q":"作ろう — 速く、ざっくりと。","step.build.hint":"ざっくりで大丈夫。絵、紙の試作、一文でも。まず自分で試し、それからAIに聞きましょう。","step.build.ph":"何を作りましたか？",
+      "step.show.name":"見せる","step.show.q":"今日、実在の人ひとりに見せましょう。","step.show.hint":"大人が手伝います。相手の表情を見て。説明しすぎないこと。","step.show.ph":"だれに見せましたか？（名前）",
+      "step.learn.name":"学ぶ","step.learn.q":"何がうまくいかなかった？（これが宝です！）","step.learn.hint":"失敗を見つけることが勝ち。それが教えてくれた一つの教訓を書きましょう。","step.learn.ph":"何が伝わらなかった / 何が失敗した？",
+      "step.decide.name":"決める","step.decide.q":"続ける・変える・やめる — 次は？","step.decide.hint":"次の小さな一歩を決めましょう。","step.decide.ph":"次はこうします…",
+      "cyc.next":"次へ →","cyc.finish":"✅ このサイクルを終える","cyc.back":"← 戻る","cyc.voice":"🎤 音声","cyc.photo":"📷 写真を追加","cyc.photoNote":"📷 写真はこの端末内だけ — 決してアップロードしません。","cyc.lesson":"💡 つまり教訓は：","cyc.lessonPh":"短い言葉で",
+      "cele.title":"教訓を見つけたね！","cele.keep":"続ける →"
+    }
+  };
+  let curLang = (function(){ try{ var l=localStorage.getItem("dd.lang"); if(["en","zh","es","ko","ja"].indexOf(l)>=0) return l;
+    var n=(navigator.language||"en").slice(0,2).toLowerCase(); return ["zh","es","ko","ja"].indexOf(n)>=0?n:"en"; }catch(e){ return "en"; } })();
+  function t(k){ var d=STR[curLang]||STR.en; return (d&&d[k]!=null)?d[k]:(STR.en[k]!=null?STR.en[k]:k); }
+  function stepT(s,f){ return t("step."+s.key+"."+f); }
+  function setLangApp(code){ curLang=code; try{ localStorage.setItem("dd.lang",code); }catch(e){} document.documentElement.lang=code; applyChrome(); render(); }
+  function applyChrome(){
+    var set=function(id,v){ var el=document.getElementById(id); if(el){ if(id==="privacyRibbon") el.innerHTML=v; else el.textContent=v; } };
+    set("privacyRibbon",t("privacy")); set("modeKid",t("modeKid")); set("modeParent",t("modeParent")); set("installBtn",t("install"));
+    set("celeTitle",t("cele.title")); set("celeKeep",t("cele.keep"));
+    var ls=document.getElementById("appLang"); if(ls) ls.value=curLang;
+  }
+
   let state = Store.read();
   function save(){ Store.write(state); }
   function active(){ return state.loops.find(l => l.id === state.activeId) || null; }
@@ -260,12 +360,12 @@
     return `<div class="photo no-print" data-pkey="${key}">
       <img class="thumb" data-pkey="${key}" alt="photo of the build" style="display:none">
       <div class="row" style="align-items:center;margin-top:8px">
-        <label class="btn secondary" style="cursor:pointer">📷 Add a photo
+        <label class="btn secondary" style="cursor:pointer">${t('cyc.photo')}
           <input type="file" accept="image/*" capture="environment" style="display:none" onchange="addPhoto('${key}',this)">
         </label>
         <button class="btn ghost photo-del" data-pkey="${key}" onclick="delPhoto('${key}')" style="display:none">Remove</button>
       </div>
-      <p class="muted" style="font-size:12px;margin:6px 0 0">📷 Photos stay on this device — never uploaded.</p>
+      <p class="muted" style="font-size:12px;margin:6px 0 0">${t('cyc.photoNote')}</p>
     </div>`;
   }
   function addPhoto(key,input){ const f=input.files&&input.files[0]; if(!f) return;
@@ -387,15 +487,13 @@
 
   function viewWelcome(){
     return `
-      <h1>Build something real — together 🌱</h1>
-      <p class="lead">The Builder Loop is a four-week family adventure, run as <strong>5 fast cycles</strong>:
-      notice a real problem, build something small, show a real person, learn what to fix — and do it again, a little better each time.</p>
+      <h1>${t("welcome.h1")}</h1>
+      <p class="lead">${t("welcome.lead")}</p>
       <div class="card">
-        <p style="margin-top:0"><strong>How it works:</strong> each cycle is just five steps —
-        🔭 Pick · 🛠️ Build · 🧑‍🤝‍🧑 Show · 💡 Learn · 🧭 Decide. Finding what <em>failed</em> is the win.</p>
-        <button class="btn big" onclick="startLoop()">Start a Builder Loop →</button>
+        <p style="margin-top:0">${t("welcome.how")}</p>
+        <button class="btn big" onclick="startLoop()">${t("welcome.start")}</button>
       </div>
-      <p class="muted" style="text-align:center">A grown-up and a child do this together. Your notes stay on this device.</p>`;
+      <p class="muted" style="text-align:center">${t("welcome.note")}</p>`;
   }
 
   function viewAim(l){
@@ -527,22 +625,22 @@
         <label>Next time I will…</label>
         <textarea oninput="field('iterations.${idx}.decide',this.value)" placeholder="Your next tiny step">${esc(it.decide)}</textarea>`
       : `
-        <textarea id="stepField" autofocus oninput="field('iterations.${idx}.${s.field}',this.value)" placeholder="${s.ph}">${val}</textarea>
-        <div class="row" style="margin-top:8px"><button class="btn ghost" id="micBtn" type="button" onclick="dictate()" title="Voice typing — speak instead of type">🎤 Voice</button></div>
-        ${s.key==="learn"?`<label>💡 So the one lesson is:</label><input type="text" value="${esc(it.lesson)}" oninput="field('iterations.${idx}.lesson',this.value)" placeholder="In a few words" />`:""}
+        <textarea id="stepField" autofocus oninput="field('iterations.${idx}.${s.field}',this.value)" placeholder="${stepT(s,'ph')}">${val}</textarea>
+        <div class="row" style="margin-top:8px"><button class="btn ghost" id="micBtn" type="button" onclick="dictate()" title="Voice typing — speak instead of type">${t('cyc.voice')}</button></div>
+        ${s.key==="learn"?`<label>${t('cyc.lesson')}</label><input type="text" value="${esc(it.lesson)}" oninput="field('iterations.${idx}.lesson',this.value)" placeholder="${t('cyc.lessonPh')}" />`:""}
         ${s.key==="build"?`<label class="muted" style="font-weight:400">🤖 Did an AI help? What mistake did you catch?</label><input type="text" value="${esc(it.aiMistake)}" oninput="field('iterations.${idx}.aiMistake',this.value)" placeholder="optional — and how you checked it" />`:""}
         ${(s.key==="build"||s.key==="show")?photoControl(photoKey(l,it.n)):""}`;
     return `
       <div class="dots">${dots}</div>
       <div class="step-emoji">${s.emoji}</div>
-      <div class="step-name" style="color:${s.color}">${s.name} · cycle ${it.n} (${vlabel(it.n)})</div>
-      <div class="step-q">${s.q}
-        <button class="iconbtn" title="Read aloud" aria-label="Read this aloud" onclick="speak('${esc(s.q).replace(/'/g,"")} . ${esc(s.hint).replace(/'/g,"")}')" style="vertical-align:middle;padding:4px 8px;font-size:15px">🔊</button>
+      <div class="step-name" style="color:${s.color}">${stepT(s,'name')} · ${vlabel(it.n)}</div>
+      <div class="step-q">${stepT(s,'q')}
+        <button class="iconbtn" title="Read aloud" aria-label="Read this aloud" onclick="speak('${esc(stepT(s,'q')).replace(/'/g,"")} . ${esc(stepT(s,'hint')).replace(/'/g,"")}')" style="vertical-align:middle;padding:4px 8px;font-size:15px">🔊</button>
       </div>
-      <p class="step-hint">${s.hint}</p>
+      <p class="step-hint">${stepT(s,'hint')}</p>
       <div class="card">${body}</div>
-      <button class="btn big" onclick="cycleNext()" style="background:${s.color}">${i<STEPS.length-1?"Next →":"✅ Finish this cycle"}</button>
-      <button class="btn ghost" onclick="cycleBack()" style="width:100%;margin-top:6px">← Back</button>`;
+      <button class="btn big" onclick="cycleNext()" style="background:${s.color}">${i<STEPS.length-1?t('cyc.next'):t('cyc.finish')}</button>
+      <button class="btn ghost" onclick="cycleBack()" style="width:100%;margin-top:6px">${t('cyc.back')}</button>`;
   }
   function finishCycleFromParent(){ const it=curIter(); it.done=true; if((it.failed||"").trim()) celebrate("“"+it.failed.trim().slice(0,80)+"” — lesson logged. 💪"); go("home"); }
 
@@ -623,6 +721,7 @@
     if(iOS && !standalone) document.getElementById("iosHint").classList.remove("hidden"); })();
   if("serviceWorker" in navigator){ window.addEventListener("load",()=>{ navigator.serviceWorker.register("./sw.js").catch(()=>{}); }); }
   probeXR();
+  applyChrome();
 
   render();
   </script>

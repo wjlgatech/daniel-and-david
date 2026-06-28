@@ -64,9 +64,42 @@ if fail:
     print("translations to the I18N dictionary in apps/web/public/index.html (or run the")
     print("regenerate workflow in docs/i18n/README.md).")
     sys.exit(1)
-print("\n🎉 Every language tag is in sync with the source.")
+print("\n🎉 Landing page: every language tag is in sync with the source.")
 PY
 rc=$?
+
+# Also check the Builder Loop app's STR dictionary (English is the source key-set).
+APP="apps/web/public/app.html"
+if [ -f "$APP" ] && grep -q 'const STR' "$APP"; then
+  python3 - "$APP" <<'PY2'
+import re, sys
+html = open(sys.argv[1], encoding="utf-8").read()
+m = re.search(r'const STR\s*=\s*\{(.*?)\n  \};', html, re.S)
+if not m:
+    print("  ⚠️  app STR found but could not be parsed — skipping."); sys.exit(0)
+body = m.group(1)
+marks = [(mm.group(1), mm.start()) for mm in re.finditer(r'\n    ([a-z]{2})\s*:\s*\{', body)]
+blocks = {}
+for i,(lang,start) in enumerate(marks):
+    end = marks[i+1][1] if i+1 < len(marks) else len(body)
+    blocks[lang] = set(re.findall(r'"([A-Za-z0-9_.]+)"\s*:', body[start:end]))
+src = blocks.get("en", set())
+fail = 0
+print(f"\n  App (Builder Loop) — source keys: {len(src)}")
+for lang in [l for l,_ in marks if l != "en"]:
+    missing = sorted(src - blocks.get(lang, set()))
+    if missing:
+        print(f"  ❌ app {lang}: missing {len(missing)}: {', '.join(missing)}"); fail = 1
+    else:
+        print(f"  ✅ app {lang}: all {len(src)} strings translated.")
+if fail:
+    print("\n::error::The app's STR dictionary is out of sync. Add the missing keys in apps/web/public/app.html.")
+    sys.exit(1)
+print("  🎉 App: every language tag is in sync.")
+PY2
+  rc2=$?
+  [ "$rc" -eq 0 ] && rc=$rc2
+fi
 echo "-----------------------------------------------------------"
 echo ""
 exit $rc
