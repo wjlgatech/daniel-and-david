@@ -40,14 +40,25 @@ Add an `<option>` to the `<select id="lang">`, add a matching block to `I18N`, a
 
 ---
 
-## Optional: fully-automatic re-translation (opt-in)
+## Optional: fully-automatic re-translation (opt-in, already wired)
 
-The check above keeps languages **in sync by gating**; if you also want the machine to **draft the
-new translations for you** whenever English changes, wire a translation step using a free LLM
-endpoint (e.g. the NVIDIA NIM / free-LLM setup) in a GitHub Action that runs on changes to
-`apps/web/public/index.html`, fills missing `I18N` keys, and opens a PR for human review. It needs
-an API key (a repo secret), so it's **off by default** — the parity guard is the safety net either
-way. Ask a maintainer to enable it.
+The check above keeps languages **in sync by gating**. If you also want the machine to **draft the
+missing translations for you** whenever English changes, that's wired and ready — just **off until
+you add a key**:
 
-> Whatever drafts a translation — a person or a model — the rule holds: **English is canonical, and
-> `check-i18n.sh` must be green before merge.**
+- **`scripts/i18n-translate.py`** — finds keys present on the page but missing from a language,
+  asks an OpenAI-compatible LLM to translate *only those* (never overwriting existing/human-edited
+  translations, never touching English), and writes them back into `index.html`.
+  - `python3 scripts/i18n-translate.py --list` — show what's missing (no network).
+  - `python3 scripts/i18n-translate.py --translate` — fill it (needs the key; no-ops without).
+- **`.github/workflows/i18n-translate.yml`** — runs the above automatically when
+  `apps/web/public/index.html` changes on `main` (and on manual dispatch), then **opens a review
+  PR** with the drafted translations.
+
+**To turn it on:** add a repo **secret `I18N_LLM_KEY`** (an OpenAI-compatible key — e.g. the free
+[NVIDIA NIM](https://build.nvidia.com) tier). Optional repo **variables**: `I18N_LLM_BASE_URL`
+(default `https://integrate.api.nvidia.com/v1`) and `I18N_LLM_MODEL`. Without the secret it stays
+inert and harmless.
+
+> Whatever drafts a translation — a person or a model — the rule holds: **English is canonical, the
+> machine drafts are always reviewed in a PR, and `check-i18n.sh` must be green before merge.**
