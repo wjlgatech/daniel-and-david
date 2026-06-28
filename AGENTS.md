@@ -53,7 +53,7 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
     fields, allowed vocab, honest status, and card↔registry sync. To add an app: copy the template,
     fill 6 fields, add a registry line, run the check.
   - `public/demos/` — small, playable on-device demo apps (e.g. `conversation-spark.html`,
-    `transition-timer.html`), each grounded in `docs/pain-analysis.md`. **Every demo must:** stay
+    `transition-timer.html`, `homework-chunker.html`), each grounded in `docs/pain-analysis.md`. **Every demo must:** stay
     on-device (the privacy banner + no `<script src>`), collect **no child name/data**, and ship a
     matching card in `public/cards/` so it appears in the gallery. `check-webapp.sh` scans every demo
     for the on-device note + no child-name field + JS parse.

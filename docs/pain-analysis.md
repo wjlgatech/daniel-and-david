@@ -2,8 +2,9 @@
 
 A worked example of [Pain2Gain](principles/pain2gain.md): we ran the depth ladder + dimensions +
 burden on real, evidence-based family pains, then turned the top ones into **small, safe, on-device
-app concepts**. **Two are built and playable** — Conversation Spark and the Transition Timer (see
-*The demos* below) — and surfaced in the [apps gallery](../apps/web/public/apps.html); the rest are scoped.
+app concepts**. **Three are built and playable** — Conversation Spark, the Transition Timer, and the
+Homework Chunker (see *The demos* below) — all surfaced in the
+[apps gallery](../apps/web/public/apps.html); the rest stay scoped.
 
 > **Honesty about depth:** these sit at **rung 2–4** of the [depth ladder](principles/pain2gain.md)
 > — backed by developmental research (prevalence + mechanism), not just a survey. Before building
@@ -122,4 +123,22 @@ the [safety line](#the-child-safety-line--what-we-will-not-build) prescribes ove
 psychological; parent-set, on-device, no child name or data. **Evidence:** Zelazo/IES on executive
 function; Eisenberg on co-regulation.
 
-*Next demo (scoped, same safety rules): the 11-year-old homework task-chunker.*
+## The third demo — 📚 Homework Chunker
+
+**The pain:** *homework overwhelm / avoidance* — the #1 daily pain of an eleven-year-old, carrying
+high anxiety (11 is the median onset age for anxiety). The mechanism (rung-4): a big undifferentiated
+pile reads as threat → avoidance; early-adolescent psychology makes **external control aversive** and
+**competence** fragile, so "just do your homework" backfires.
+
+**The solution:** the kid (not a parent) dumps in everything due, tags each as Quick/Medium/Big/Huge
+(→ 15-minute blocks), then Focus mode runs **one block at a time** — a 15:00 timer with "done early"
+and "+5 min", and a progress bar that fills as blocks clear. **They choose the order.** It's calm and
+un-babyish (no confetti), ends with a quiet "Plan cleared. 💪". On-device, no LLM, no data.
+
+> ▶️ **Play it:** [Homework Chunker](https://wjlgatech.github.io/daniel-and-david/demos/homework-chunker.html)
+
+**Why it clears the safety line:** kid-facing → **LLM-free** (no AI companion/profiling for a minor);
+on-device, no name/account/data; a behavioral scaffold built on **autonomy** (kid-owned) + **competence**
+(small finishable wins). **Evidence:** Ryan & Deci (SDT autonomy/competence); chunking & task-initiation.
+
+*All three top demos are now built. Further pains in the tables above remain scoped (same safety rules).*

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Homework Chunker — Daniel &amp; David</title>
+  <meta name="description" content="Turn a scary pile of homework into small 15-minute wins. You pick the order, one block at a time. On-device, private, no signup, no data." />
+  <meta name="theme-color" content="#29261F" />
+  <style>
+    :root{ --ink:#29261F; --muted:#6F665A; --paper:#FAF9F5; --paper2:#F0EEE6; --card:#fff;
+      --clay:#CC785C; --clay-dk:#B05730; --gold:#C7822E; --sage:#4F8A74; --sage-dk:#3C6E5B; --line:#E6E0D2; }
+    *{box-sizing:border-box} html,body{margin:0;overflow-x:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.55;}
+    h1,h2{font-family:"Tiempos Text",ui-serif,"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.3px;}
+    input,select,button{accent-color:var(--clay);font-family:inherit}
+    .wrap{max-width:660px;margin:0 auto;padding:0 18px 80px;}
+    header{background:linear-gradient(160deg,#23201b,#2f2a23 60%,#3b4a42 140%);color:#FAF9F5;text-align:center;padding:40px 18px 32px;}
+    header .em{font-size:38px}
+    header h1{font-size:clamp(26px,6vw,36px);margin:8px 0 6px}
+    header p{margin:0 auto;max-width:520px;opacity:.93;font-size:15.5px}
+    .privacy{font-size:12.5px;color:#3C6E5B;text-align:center;padding:9px 16px;background:#F1F6F3;border-bottom:1px solid #D9E7E0}
+    .tabs{display:flex;gap:8px;justify-content:center;margin:18px 0 6px}
+    .tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-size:15px;font-weight:700;cursor:pointer;color:var(--ink)}
+    .tab[aria-pressed="true"]{background:var(--ink);color:#FAF9F5;border-color:var(--ink)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 1px 2px rgba(41,38,31,.05)}
+    .lab{font-weight:700;font-size:14px;margin:0 0 8px;display:block}
+    .muted{color:var(--muted);font-size:14px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    input[type=text]{flex:1;min-width:140px;font-size:16px;padding:13px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+    .sizes{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+    .size{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:9px 13px;font-size:13.5px;font-weight:700;cursor:pointer;color:var(--ink)}
+    .size.on{background:var(--clay);color:#fff;border-color:var(--clay)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 22px;border:0;border-radius:999px;font-size:16px;font-weight:800;cursor:pointer;background:var(--clay);color:#FAF9F5}
+    .btn:hover{background:var(--clay-dk)} .btn.big{width:100%}
+    .btn.dark{background:var(--ink)} .btn.dark:hover{background:#000}
+    .btn.secondary{background:#fff;color:var(--ink);border:1.5px solid var(--line);font-size:15px;min-height:46px}
+    .btn.ghost{background:transparent;color:var(--muted);font-weight:700;border:0;min-height:auto;padding:8px}
+    /* task list */
+    .task{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0;background:#fff}
+    .task.full{border-color:var(--sage);background:#F4FAF7}
+    .task .top{display:flex;align-items:center;gap:10px}
+    .task .nm{flex:1;font-weight:700}
+    .task.full .nm{color:var(--sage-dk);text-decoration:line-through}
+    .blocks{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
+    .blk{width:26px;height:10px;border-radius:5px;background:#E7E0D2}
+    .blk.done{background:var(--sage)}
+    .iconbtn{border:1px solid var(--line);background:#fff;border-radius:10px;min-height:36px;min-width:36px;font-size:14px;cursor:pointer;color:var(--ink)}
+    .summary{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-top:6px}
+    /* focus */
+    .stage{text-align:center}
+    .blockof{font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.4px;text-transform:uppercase}
+    .nowtask{font-size:24px;font-weight:800;margin:4px 0 2px}
+    .ring{position:relative;width:230px;height:230px;margin:10px auto 2px}
+    .ring svg{transform:rotate(-90deg)}
+    .ring .face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .ring .clock{font-size:44px;font-weight:800}
+    .ring .small{font-size:13px;color:var(--muted)}
+    .prog{height:10px;background:#EFE9DC;border-radius:6px;overflow:hidden;margin:16px 0 6px}
+    .prog > i{display:block;height:100%;background:var(--sage);width:0;transition:width .4s}
+    .breakbox{background:#F1F6F3;border:1px solid #D9E7E0;border-radius:12px;padding:14px;margin-top:10px;color:var(--sage-dk);font-weight:600}
+    footer{max-width:660px;margin:0 auto;padding:12px 18px 30px;color:var(--muted);font-size:13px;text-align:center}
+    a{color:var(--clay-dk)}
+    .hidden{display:none!important}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="em">📚</div>
+    <h1>Homework Chunker</h1>
+    <p>A big pile is scary. Small blocks aren't. Dump everything in, and do it <em>one 15-minute block at a time</em> — in whatever order you want. This is yours; no one else sees it.</p>
+  </header>
+  <div class="privacy">🔒 Private and on your device. Nothing is stored online or sent anywhere — <strong>no name, no account, no data</strong>.</div>
+
+  <main class="wrap">
+    <div class="tabs">
+      <button class="tab" id="tab-plan"  aria-pressed="true"  onclick="show('plan')">📝 Plan</button>
+      <button class="tab" id="tab-focus" aria-pressed="false" onclick="show('focus')">🎯 Focus</button>
+    </div>
+
+    <!-- PLAN -->
+    <section id="plan">
+      <div class="card">
+        <span class="lab">What do you have to do?</span>
+        <div class="row"><input type="text" id="tname" placeholder="e.g. Math worksheet" maxlength="40" onkeydown="if(event.key==='Enter')addTask()" /></div>
+        <span class="lab" style="margin-top:14px">How big is it?</span>
+        <div class="sizes" id="sizes"></div>
+        <div style="margin-top:6px"><button class="btn secondary" onclick="addTask()">＋ Add to my plan</button></div>
+        <p class="muted" style="margin:10px 0 0">Not sure? Guess. You can split or finish early — you're the boss of your plan.</p>
+      </div>
+
+      <div class="card">
+        <span class="lab">Today's plan</span>
+        <div id="tasks"></div>
+        <p class="muted" id="empty">Nothing yet. Add your first thing above — even a tiny one, just to start.</p>
+        <div class="summary" id="summary" style="display:none"></div>
+      </div>
+
+      <button class="btn big dark" onclick="show('focus')">🎯 Start focusing →</button>
+    </section>
+
+    <!-- FOCUS -->
+    <section id="focus" class="hidden">
+      <div class="card stage">
+        <div id="focusEmpty" class="muted hidden" style="padding:30px 0">Add something in <b>Plan</b> first 🙂</div>
+        <div id="focusDone" class="hidden" style="padding:24px 0">
+          <div style="font-size:46px">💪</div>
+          <h2 style="margin:6px 0">Plan cleared.</h2>
+          <p class="muted">Every block done. That pile didn't stand a chance.</p>
+          <button class="btn secondary" onclick="show('plan')">Back to plan</button>
+        </div>
+        <div id="focusLive">
+          <div class="blockof" id="blockof">Block 1 of 1</div>
+          <div class="nowtask" id="nowtask">Task</div>
+          <div class="ring">
+            <svg width="230" height="230" viewBox="0 0 230 230">
+              <circle cx="115" cy="115" r="104" fill="none" stroke="#EFE9DC" stroke-width="15"/>
+              <circle id="arc" cx="115" cy="115" r="104" fill="none" stroke="#CC785C" stroke-width="15" stroke-linecap="round"/>
+            </svg>
+            <div class="face"><div class="clock" id="clock">15:00</div><div class="small">one block</div></div>
+          </div>
+          <div class="row" style="justify-content:center;margin-top:6px">
+            <button class="btn" id="startbtn" onclick="toggle()">▶ Start block</button>
+            <button class="btn secondary" onclick="finishBlock()">✓ Done early</button>
+          </div>
+          <div style="margin-top:4px"><button class="btn ghost" onclick="extend()">+5 min</button></div>
+          <div class="breakbox hidden" id="breakbox"></div>
+          <div class="prog"><i id="bar"></i></div>
+          <div class="muted" id="count">0 of 0 blocks done</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Why 15-minute blocks? Starting is the hard part — a small, finishable block beats a vague "do
+    homework," and each one you check off rebuilds the feeling that you <em>can</em>. Built with
+    <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md">Pain2Gain</a>.
+    🌱 <a href="../apps.html">More apps</a> · <a href="../index.html">Daniel &amp; David</a>
+  </footer>
+
+  <script>
+    // ---- on-device store (Store seam: localStorage; nothing leaves the device) ----
+    var KEY = "dd.homework.plan.v1";
+    var SIZES = [["Quick",1],["Medium",2],["Big",3],["Huge",4]];   // label -> 15-min blocks
+    var pickBlocks = 1;
+    var tasks = load();        // [{name, blocks, done}]
+
+    function load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || []; }catch(e){ return []; } }
+    function save(){ try{ localStorage.setItem(KEY, JSON.stringify(tasks)); }catch(e){} }
+    function escapeHtml(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+    // ---- plan ----
+    function renderSizes(){
+      document.getElementById("sizes").innerHTML = SIZES.map(function(s){
+        return '<button class="size'+(s[1]===pickBlocks?' on':'')+'" onclick="pickSize('+s[1]+')">'
+          + s[0]+' <span class="muted" style="font-weight:600">· '+(s[1]*15)+'m</span></button>';
+      }).join("");
+    }
+    function pickSize(n){ pickBlocks = n; renderSizes(); }
+    function addTask(){
+      var name = document.getElementById("tname").value.trim();
+      if(!name) return;
+      tasks.push({name:name, blocks:pickBlocks, done:0});
+      document.getElementById("tname").value = "";
+      save(); renderTasks();
+    }
+    function delTask(i){ tasks.splice(i,1); save(); renderTasks(); }
+    function bump(i,d){ var t=tasks[i]; t.blocks=Math.max(t.done||1, Math.min(8, t.blocks+d)); if(t.blocks<1)t.blocks=1; save(); renderTasks(); }
+    function renderTasks(){
+      var el = document.getElementById("tasks");
+      document.getElementById("empty").style.display = tasks.length ? "none" : "block";
+      el.innerHTML = tasks.map(function(t,i){
+        var full = t.done>=t.blocks;
+        var blks = "";
+        for(var b=0;b<t.blocks;b++) blks += '<span class="blk'+(b<t.done?' done':'')+'"></span>';
+        return '<div class="task'+(full?' full':'')+'"><div class="top">'
+          + '<span class="nm">'+escapeHtml(t.name)+(full?' ✓':'')+'</span>'
+          + '<button class="iconbtn" onclick="bump('+i+',-1)" aria-label="fewer blocks">−</button>'
+          + '<span class="muted" style="min-width:64px;text-align:center">'+t.blocks+'×15m</span>'
+          + '<button class="iconbtn" onclick="bump('+i+',1)" aria-label="more blocks">＋</button>'
+          + '<button class="iconbtn" onclick="delTask('+i+')" aria-label="remove">✕</button></div>'
+          + '<div class="blocks">'+blks+'</div></div>';
+      }).join("");
+      var tot = totalBlocks(), done = doneBlocks();
+      var s = document.getElementById("summary");
+      s.style.display = tasks.length ? "flex" : "none";
+      s.innerHTML = '<span>'+tot+' blocks (~'+(tot*15)+' min)</span><span class="muted">'+done+' done</span>';
+    }
+    function totalBlocks(){ return tasks.reduce(function(a,t){return a+t.blocks;},0); }
+    function doneBlocks(){ return tasks.reduce(function(a,t){return a+Math.min(t.done,t.blocks);},0); }
+    function currentTask(){ for(var i=0;i<tasks.length;i++){ if(tasks[i].done<tasks[i].blocks) return i; } return -1; }
+
+    // ---- tabs ----
+    function show(which){
+      var plan = which==="plan";
+      document.getElementById("plan").classList.toggle("hidden", !plan);
+      document.getElementById("focus").classList.toggle("hidden", plan);
+      document.getElementById("tab-plan").setAttribute("aria-pressed", plan);
+      document.getElementById("tab-focus").setAttribute("aria-pressed", !plan);
+      if(plan){ stopTimer(); renderTasks(); } else startFocus();
+    }
+
+    // ---- focus timer ----
+    var BLOCK = 15*60, C = 2*Math.PI*104;
+    document.getElementById("arc").setAttribute("stroke-dasharray", C);
+    var remaining = BLOCK, total = BLOCK, running = false, tick = null, ci = -1;
+
+    function startFocus(){
+      var has = totalBlocks()>0;
+      ci = currentTask();
+      document.getElementById("focusEmpty").classList.toggle("hidden", has);
+      document.getElementById("focusDone").classList.toggle("hidden", !(has && ci===-1));
+      document.getElementById("focusLive").classList.toggle("hidden", !(has && ci!==-1));
+      if(has && ci!==-1) loadBlock();
+    }
+    function loadBlock(){
+      stopTimer();
+      hideBreak();
+      var t = tasks[ci];
+      remaining = BLOCK; total = BLOCK;
+      document.getElementById("nowtask").textContent = t.name;
+      document.getElementById("blockof").textContent = "Block "+(t.done+1)+" of "+t.blocks;
+      document.getElementById("arc").setAttribute("stroke", "#CC785C");
+      paint(); updateProgress(); setStart(false);
+    }
+    function paint(){
+      var m=Math.floor(remaining/60), s=remaining%60;
+      document.getElementById("clock").textContent = m+":"+(s<10?"0":"")+s;
+      var frac = total ? (total-remaining)/total : 0;
+      document.getElementById("arc").setAttribute("stroke-dashoffset", -C*frac);
+    }
+    function updateProgress(){
+      var tot=totalBlocks(), dn=doneBlocks();
+      document.getElementById("bar").style.width = (tot? (dn/tot*100):0)+"%";
+      document.getElementById("count").textContent = dn+" of "+tot+" blocks done";
+    }
+    function setStart(go){ running=go; document.getElementById("startbtn").textContent = go?"⏸ Pause":(remaining<total?"▶ Resume":"▶ Start block"); }
+    function toggle(){ if(running) stopTimer(); else run(); }
+    function run(){
+      if(remaining<=0) return;
+      try{ beep(523,0.06); }catch(e){}
+      setStart(true);
+      var end = Date.now()+remaining*1000;
+      tick = setInterval(function(){
+        remaining = Math.max(0, Math.round((end-Date.now())/1000));
+        paint();
+        if(remaining<=0){ stopTimer(); finishBlock(); }
+      },250);
+    }
+    function stopTimer(){ if(tick){clearInterval(tick);tick=null;} setStart(false); }
+    function extend(){ remaining += 5*60; total = Math.max(total, remaining); paint(); }
+    function finishBlock(){
+      stopTimer();
+      try{ beep(660,0.1); setTimeout(function(){beep(784,0.12);},130); }catch(e){}
+      tasks[ci].done = Math.min(tasks[ci].blocks, tasks[ci].done+1);
+      save(); updateProgress();
+      var next = currentTask();
+      if(next===-1){ // all done
+        document.getElementById("focusLive").classList.add("hidden");
+        document.getElementById("focusDone").classList.remove("hidden");
+        try{ beep(880,0.16); }catch(e){}
+        return;
+      }
+      showBreak(next);
+    }
+    function showBreak(next){
+      var box = document.getElementById("breakbox");
+      box.classList.remove("hidden");
+      var nextName = tasks[next].name;
+      box.innerHTML = '✅ Block done — nice. Take a 3-minute breather, then: <b>'+escapeHtml(nextName)+'</b>'
+        + '<div style="margin-top:10px"><button class="btn dark" onclick="goNext()">Next block →</button></div>';
+    }
+    function hideBreak(){ document.getElementById("breakbox").classList.add("hidden"); }
+    function goNext(){ ci = currentTask(); if(ci===-1){ startFocus(); } else loadBlock(); }
+
+    function beep(freq,dur){
+      var actx = beep.ctx || (beep.ctx = new (window.AudioContext||window.webkitAudioContext)());
+      var o=actx.createOscillator(), g=actx.createGain();
+      o.frequency.value=freq; o.type="sine"; o.connect(g); g.connect(actx.destination);
+      g.gain.setValueAtTime(0.0001,actx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.16,actx.currentTime+0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001,actx.currentTime+dur);
+      o.start(); o.stop(actx.currentTime+dur+0.02);
+    }
+
+    // init
+    renderSizes(); renderTasks();
+  </script>
+</body>
+</html>

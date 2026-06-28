@@ -44,6 +44,20 @@
       "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/transition-timer.html"
     },
     {
+      "name": "Homework Chunker",
+      "slug": "homework-chunker",
+      "app_type": "tool",
+      "pain_solved": "Turn an 11-year-old's scary homework pile into small 15-minute wins they choose the order of.",
+      "host": "static",
+      "status": "live",
+      "emoji": "📚",
+      "tags": ["kids", "ages-10-13", "homework", "focus"],
+      "llm": "none (on-device)",
+      "framework": "static-html",
+      "demo_url": "./demos/homework-chunker.html",
+      "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/homework-chunker.html"
+    },
+    {
       "name": "KC Matchday Basecamp",
       "slug": "kc-matchday-basecamp",
       "app_type": "agent",
