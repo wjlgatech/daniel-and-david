@@ -92,7 +92,7 @@ Earliest = most honor, because earliest = most risk and most work (see the
 
 This is a *fit*, not a competition you "win." We're choosing each other. A good founding family:
 
-- has children roughly **ages 6–12**;
+- has children roughly **ages 5–15**;
 - will run at least one **[Builder Loop](builder-loop/)** (4 weeks, 5 fast cycles) and **share what
   they learned** — the honest "what worked / what failed" is the gift;
 - is comfortable with the project's **faith-informed** values ([values](principles/values.md));

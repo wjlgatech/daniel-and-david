@@ -34,6 +34,7 @@ run validate-toolkit.sh          "Agent toolkit valid"
 run check-status-truth.sh        "Status claims are true"
 run check-registration-safety.sh "Signup is adults-only & private"
 run check-webapp.sh              "Builder Loop app is installable & on-device"
+run check-i18n.sh                "Language tags (中文 / ES / 한국어 / 日本語) in sync"
 
 echo ""
 echo "👉 Next:"

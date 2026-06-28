@@ -29,8 +29,11 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
 - `apps/web/` — the static site, **hosted on GitHub Pages**
   (`https://wjlgatech.github.io/daniel-and-david/`) via `.github/workflows/pages.yml`:
-  - `public/index.html` — landing page. Outbound doc links use **absolute** GitHub URLs (so they
-    work hosted *and* from a local file) — keep that convention.
+  - `public/index.html` — landing page, **multilingual** (EN/中文/ES/한국어/日本語 via a `data-i18n`
+    system + `I18N` dict + a 🌐 selector). **English is the source and the in-HTML default**; when you
+    add/edit a `data-i18n` string you MUST update all 4 other languages — `scripts/check-i18n.sh`
+    (in CI) fails otherwise. See `docs/i18n/`. Outbound doc links use **absolute** GitHub URLs (so
+    they work hosted *and* from a local file) — keep that convention.
   - `public/app.html` — the **Builder Loop PWA** (installable, offline, dual-mode kid/parent;
     multiple children + history + Best-Flops; on-device **photo evidence** via an IndexedDB `Media`
     seam; **🎤 voice dictation** + a **WebXR AR-readiness** probe — see `docs/builder-loop-app-xr.md`).

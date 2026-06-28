@@ -107,133 +107,149 @@
     .apply button:hover { filter:brightness(1.05); }
     .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
     .form-msg { margin-top:14px; font-size:14px; font-weight:600; }
+    /* language selector */
+    .langbar { position:absolute; top:12px; right:14px; }
+    .langbar select { background:rgba(255,255,255,.16); color:#fff; border:1px solid rgba(255,255,255,.4);
+      border-radius:999px; padding:6px 12px; font-size:14px; font-weight:600; cursor:pointer; }
+    .langbar select option { color:#11203a; }
+    header { position:relative; }
   </style>
 </head>
 <body>
   <header>
+    <div class="langbar">
+      <select id="lang" aria-label="Language" onchange="setLang(this.value)">
+        <option value="en">🌐 English</option>
+        <option value="zh">🌐 中文</option>
+        <option value="es">🌐 Español</option>
+        <option value="ko">🌐 한국어</option>
+        <option value="ja">🌐 日本語</option>
+      </select>
+    </div>
     <div class="seed">🌱</div>
     <h1>Daniel &amp; David</h1>
-    <p class="tag">A family field lab for raising wise, creative, AI-ready builders. Help your child think clearly, use AI responsibly, create real value, and serve real people.</p>
+    <p class="tag" data-i18n="tag">A family field lab for raising wise, creative, AI-ready builders. Help your child think clearly, use AI responsibly, create real value, and serve real people.</p>
     <div class="ladder">
-      <span class="rung">1 · Notice</span>
-      <span class="rung">2 · Ask</span>
-      <span class="rung">3 · Make</span>
-      <span class="rung">4 · Serve</span>
-      <span class="rung">5 · Learn</span>
-      <span class="rung">6 · Team</span>
-      <span class="rung">7 · Bless</span>
+      <span class="rung" data-i18n="rung1">1 · Notice</span>
+      <span class="rung" data-i18n="rung2">2 · Ask</span>
+      <span class="rung" data-i18n="rung3">3 · Make</span>
+      <span class="rung" data-i18n="rung4">4 · Serve</span>
+      <span class="rung" data-i18n="rung5">5 · Learn</span>
+      <span class="rung" data-i18n="rung6">6 · Team</span>
+      <span class="rung" data-i18n="rung7">7 · Bless</span>
     </div>
-    <p style="margin:30px 0 0;"><a class="cta-btn" href="#apply">Apply to the founding cohort →</a></p>
-    <span class="scarcity">⛏️ Genesis epoch · <span id="spots-left">8</span> of 8 founding spots — the honor halves at the next epoch</span>
-    <span class="cta-sub"><a href="#halving" style="color:#fff;text-decoration:underline;">What's the Halving?</a> · or <a href="./app.html" style="color:#fff;text-decoration:underline;">open the free Builder Loop app →</a></span>
+    <p style="margin:30px 0 0;"><a class="cta-btn" href="#apply" data-i18n="hero.apply">Apply to the founding cohort →</a></p>
+    <span class="scarcity" data-i18n="hero.scarcity">⛏️ Genesis epoch · <span id="spots-left">8</span> of 8 founding spots — the honor halves at the next epoch</span>
+    <span class="cta-sub" data-i18n="hero.sub"><a href="#halving" style="color:#fff;text-decoration:underline;">What's the Halving?</a> · or <a href="./app.html" style="color:#fff;text-decoration:underline;">open the free Builder Loop app →</a></span>
   </header>
 
   <section class="wrap">
-    <p class="kicker">The idea</p>
-    <h2>We don't find jobs. We create value.</h2>
-    <p class="lead">A wealth creator makes something people genuinely need, does it honestly, and stewards what comes back well. You learn it by building one real thing, end to end — with an AI team at your side.</p>
+    <p class="kicker" data-i18n="idea.kicker">The idea</p>
+    <h2 data-i18n="idea.h2">We don't find jobs. We create value.</h2>
+    <p class="lead" data-i18n="idea.lead">A wealth creator makes something people genuinely need, does it honestly, and stewards what comes back well. You learn it by building one real thing, end to end — with an AI team at your side.</p>
 
     <div class="cards">
       <div class="card">
         <div class="emoji">🤖</div>
-        <h3>AI-Native</h3>
-        <p>Agents are teammates, not features. One kid + a few AI agents can run a real business. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/ai-native-company.md">Read more →</a></p>
+        <h3 data-i18n="card1.h">AI-Native</h3>
+        <p data-i18n="card1.p">Agents are teammates, not features. One kid + a few AI agents can run a real business. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/ai-native-company.md">Read more →</a></p>
       </div>
       <div class="card">
         <div class="emoji">🛠️</div>
-        <h3>Agentic Engineering</h3>
-        <p>Small, reversible steps. Evals over vibes. The human stays the editor. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/agentic-engineering.md">Read more →</a></p>
+        <h3 data-i18n="card2.h">Agentic Engineering</h3>
+        <p data-i18n="card2.p">Small, reversible steps. Evals over vibes. The human stays the editor. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/agentic-engineering.md">Read more →</a></p>
       </div>
       <div class="card">
         <div class="emoji">✝️</div>
-        <h3>Built to Bless</h3>
-        <p>Money is a tool and a test. We make it well and give it well. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/values.md">Read more →</a></p>
+        <h3 data-i18n="card3.h">Built to Bless</h3>
+        <p data-i18n="card3.p">Money is a tool and a test. We make it well and give it well. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/values.md">Read more →</a></p>
       </div>
     </div>
   </section>
 
   <section class="founding" id="halving">
     <div class="wrap">
-      <p class="kicker" style="color:#fbbf24">A rare privilege, on a fair schedule</p>
-      <h2>Founding Families — The Halving 🧱</h2>
-      <p class="lead">We open the field lab to a small number of <strong>founding families</strong>. Like Bitcoin's issuance, the founder's reward <strong>halves</strong> at each epoch while the cohort <strong>doubles</strong>. The earliest families take the most risk and do the most work — so they earn the most honor. The schedule is fixed and public, and <strong>we really do stop each epoch at its cap.</strong></p>
+      <p class="kicker" style="color:#fbbf24" data-i18n="founding.kicker">A rare privilege, on a fair schedule</p>
+      <h2 data-i18n="founding.h2">Founding Families — The Halving 🧱</h2>
+      <p class="lead" data-i18n="founding.lead">We open the field lab to a small number of <strong>founding families</strong>. Like Bitcoin's issuance, the founder's reward <strong>halves</strong> at each epoch while the cohort <strong>doubles</strong>. The earliest families take the most risk and do the most work — so they earn the most honor. The schedule is fixed and public, and <strong>we really do stop each epoch at its cap.</strong></p>
 
       <div class="epochs">
         <div class="epoch genesis">
           <div class="ep-name">⛏️ Genesis</div>
           <div class="ep-reward">1×</div>
-          <div class="ep-meta">8 families · #1–8<br>co-design · lifetime · office hours</div>
+          <div class="ep-meta" data-i18n="ep1">8 families · #1–8<br>co-design · lifetime · office hours</div>
         </div>
         <div class="epoch">
           <div class="ep-name">Epoch 1</div>
           <div class="ep-reward">½×</div>
-          <div class="ep-meta">16 families · #9–24<br>named · early access · a vote</div>
+          <div class="ep-meta" data-i18n="ep2">16 families · #9–24<br>named · early access · a vote</div>
         </div>
         <div class="epoch">
           <div class="ep-name">Epoch 2</div>
           <div class="ep-reward">¼×</div>
-          <div class="ep-meta">32 families · #25–56<br>named · early access</div>
+          <div class="ep-meta" data-i18n="ep3">32 families · #25–56<br>named · early access</div>
         </div>
         <div class="epoch">
           <div class="ep-name">Epoch 3</div>
           <div class="ep-reward">⅛×</div>
-          <div class="ep-meta">64 families · #57–120<br>named · early access</div>
+          <div class="ep-meta" data-i18n="ep4">64 families · #57–120<br>named · early access</div>
         </div>
         <div class="epoch">
           <div class="ep-name">🌍 Open</div>
           <div class="ep-reward">free</div>
-          <div class="ep-meta">#121+ · everyone<br>the public program</div>
+          <div class="ep-meta" data-i18n="ep5">#121+ · everyone<br>the public program</div>
         </div>
       </div>
 
-      <p class="lead" style="margin-top:22px;"><strong>Why so few?</strong> Because "founding" should mean something. Eight Genesis families means everyone knows each other's names — depth, not scale. It's also the most honest lesson we can give our boys about how scarce, fairly-issued value actually works.</p>
-      <p class="lead"><strong>What founding families get:</strong> co-design the curriculum, a permanent "Genesis" name, direct office hours — and <strong>private early access to the studio's own AI workshop</strong> (AnyAgent, Super U, DreamMakeTrue): the same tools we build with, so your kid stops just *using* AI and starts building, growing, and creating with it. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" style="color:#93c5fd;">The Halving + the perks + how we choose →</a></p>
-      <p class="lead" style="font-size:15px;color:#93c5fd;">Selection is by application and <strong>mutual fit</strong> — based on research, not wealth, credentials, or how impressive you sound. We never ask your income, your degrees, or your child's grades, school, or name.</p>
+      <p class="lead" style="margin-top:22px;" data-i18n="founding.whyfew"><strong>Why so few?</strong> Because "founding" should mean something. Eight Genesis families means everyone knows each other's names — depth, not scale. It's also the most honest lesson we can give our boys about how scarce, fairly-issued value actually works.</p>
+      <p class="lead" data-i18n="founding.getwhat"><strong>What founding families get:</strong> co-design the curriculum, a permanent "Genesis" name, direct office hours — and <strong>private early access to the studio's own AI workshop</strong> (AnyAgent, Super U, DreamMakeTrue): the same tools we build with, so your kid stops just *using* AI and starts building, growing, and creating with it. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" style="color:#93c5fd;">The Halving + the perks + how we choose →</a></p>
+      <p class="lead" style="font-size:15px;color:#93c5fd;" data-i18n="founding.select">Selection is by application and <strong>mutual fit</strong> — based on research, not wealth, credentials, or how impressive you sound. We never ask your income, your degrees, or your child's grades, school, or name.</p>
 
       <!-- ===== APPLICATION ===== -->
       <div class="apply" id="apply">
-        <h3 style="margin:0 0 4px;color:#11203a;">Apply to the founding cohort</h3>
-        <p style="margin:0 0 14px;color:#475569;font-size:15px;">Currently open: <strong>⛏️ Genesis</strong> · <span id="spots-left-2">8</span> of 8 spots. We read every application and reply within ~2 weeks. It's a mutual fit — we're choosing each other.</p>
-        <p class="adults">👪 <strong>For parents, guardians &amp; educators only (18+).</strong> Children should not fill this out. We collect adult contact info only — never a child's name, photo, school, or location. <a href="./privacy.html" target="_blank" rel="noopener">Privacy notice</a>.</p>
+        <h3 style="margin:0 0 4px;color:#11203a;" data-i18n="apply.h3">Apply to the founding cohort</h3>
+        <p style="margin:0 0 14px;color:#475569;font-size:15px;" data-i18n="apply.currently">Currently open: <strong>⛏️ Genesis</strong> · <span id="spots-left-2">8</span> of 8 spots. We read every application and reply within ~2 weeks. It's a mutual fit — we're choosing each other.</p>
+        <p class="adults" data-i18n="apply.adults">👪 <strong>For parents, guardians &amp; educators only (18+).</strong> Children should not fill this out. We collect adult contact info only — never a child's name, photo, school, or location. <a href="./privacy.html" target="_blank" rel="noopener">Privacy notice</a>.</p>
 
         <form id="apply-form" novalidate>
           <!-- honeypot: real people never fill this -->
           <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
 
-          <label for="f-name">Your first name or alias *</label>
+          <label for="f-name" data-i18n="form.name">Your first name or alias *</label>
           <input id="f-name" name="parent_name" type="text" required autocomplete="given-name" />
 
-          <label for="f-email">Email *</label>
+          <label for="f-email" data-i18n="form.email">Email *</label>
           <input id="f-email" name="email" type="email" required autocomplete="email" />
 
-          <label for="f-region">City / region (not a full address)</label>
-          <input id="f-region" name="region" type="text" autocomplete="off" placeholder="e.g. Kansas City, MO" />
+          <label for="f-region" data-i18n="form.region">City / region (not a full address)</label>
+          <input id="f-region" name="region" type="text" autocomplete="off" placeholder="e.g. Kansas City, MO" data-i18n-ph="form.region.ph" />
 
-          <label for="f-ages">Your children's age range (a range only — no names)</label>
+          <label for="f-ages" data-i18n="form.ages">Your children's age range (a range only — no names)</label>
           <select id="f-ages" name="child_age_range">
-            <option value="">Choose…</option>
-            <option>Under 6</option>
-            <option>6–8</option>
-            <option>9–12</option>
-            <option>Mixed (6–12)</option>
-            <option>13+</option>
+            <option value="" data-i18n="form.choose">Choose…</option>
+            <option>Under 5</option>
+            <option>5–7</option>
+            <option>8–11</option>
+            <option>12–15</option>
+            <option>Mixed (5–15)</option>
+            <option>16+</option>
           </select>
 
-          <label for="f-why">What's pulling you toward this now — and what about the 4-week commitment are you unsure of?</label>
-          <textarea id="f-why" name="motivation" placeholder="Honest is better than impressive. Uncertainty is welcome."></textarea>
+          <label for="f-why" data-i18n="form.motivation">What's pulling you toward this now — and what about the 4-week commitment are you unsure of?</label>
+          <textarea id="f-why" name="motivation" placeholder="Honest is better than impressive. Uncertainty is welcome." data-i18n-ph="form.motivation.ph"></textarea>
 
-          <label for="f-role">How do you see your <em>own</em> part in how your child grows — not school, you?</label>
-          <textarea id="f-role" name="role" placeholder="One short paragraph."></textarea>
+          <label for="f-role" data-i18n="form.role">How do you see your <em>own</em> part in how your child grows — not school, you?</label>
+          <textarea id="f-role" name="role" placeholder="One short paragraph." data-i18n-ph="form.role.ph"></textarea>
 
-          <label for="f-grit">A commitment you kept longer than 4 weeks and almost quit — what kept you going? <span style="font-weight:400;color:#64748b">(optional)</span></label>
-          <textarea id="f-grit" name="follow_through" placeholder="Optional, but it helps us know you."></textarea>
+          <label for="f-grit" data-i18n="form.grit">A commitment you kept longer than 4 weeks and almost quit — what kept you going? <span style="font-weight:400;color:#64748b">(optional)</span></label>
+          <textarea id="f-grit" name="follow_through" placeholder="Optional, but it helps us know you." data-i18n-ph="form.grit.ph"></textarea>
 
-          <p class="adults" style="background:#eff6ff;border-color:#bfdbfe;color:#1e40af">🤝 This is a <strong>mutual fit</strong>, not a contest. We read every word and reply within ~2 weeks. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" target="_blank" rel="noopener">How we choose</a>.</p>
+          <p class="adults" style="background:#eff6ff;border-color:#bfdbfe;color:#1e40af" data-i18n="form.mutual">🤝 This is a <strong>mutual fit</strong>, not a contest. We read every word and reply within ~2 weeks. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" target="_blank" rel="noopener">How we choose</a>.</p>
 
-          <label class="consent"><input type="checkbox" name="consent" required />
+          <label class="consent" data-i18n="form.consent"><input type="checkbox" name="consent" required />
             I am 18 or older and I’ve read the <a href="./privacy.html" target="_blank" rel="noopener">privacy notice</a> and agree to be contacted about the founding cohort.</label>
 
-          <button type="submit">Apply for a founding spot →</button>
+          <button type="submit" data-i18n="form.submit">Apply for a founding spot →</button>
           <p class="form-msg" id="form-msg" role="status"></p>
         </form>
       </div>
@@ -241,13 +257,13 @@
   </section>
 
   <section class="wrap">
-    <p class="kicker">Free for everyone — start anytime</p>
+    <p class="kicker" data-i18n="free.kicker">Free for everyone — start anytime</p>
     <div class="venture">
-      <h3>🛠️ The Builder Loop App <span class="pill">FREE · 1-CLICK · NO SIGNUP</span></h3>
-      <p class="lead">You don't need a founding spot — or GitHub — to begin. Open the free <strong>Builder Loop app</strong>: it walks your family through the <strong>5 fast cycles</strong> (pick → build → show a real person → learn → decide), tracks your progress, and celebrates every flop. It <strong>installs to your home screen</strong>, works offline, and <strong>keeps everything on your device</strong> — no account, nothing sent anywhere.</p>
+      <h3 data-i18n="free.h3">🛠️ The Builder Loop App <span class="pill">FREE · 1-CLICK · NO SIGNUP</span></h3>
+      <p class="lead" data-i18n="free.lead">You don't need a founding spot — or GitHub — to begin. Open the free <strong>Builder Loop app</strong>: it walks your family through the <strong>5 fast cycles</strong> (pick → build → show a real person → learn → decide), tracks your progress, and celebrates every flop. It <strong>installs to your home screen</strong>, works offline, and <strong>keeps everything on your device</strong> — no account, nothing sent anywhere.</p>
       <p>
-        <a class="cta-btn" href="./app.html" style="color:#11203a">▶️ Open the Builder Loop app</a>
-        <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/README.md" style="display:inline-block;margin-left:14px;color:#16a34a;font-weight:700;text-decoration:none;">or read the guide →</a>
+        <a class="cta-btn" href="./app.html" style="color:#11203a" data-i18n="free.cta">▶️ Open the Builder Loop app</a>
+        <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/builder-loop/README.md" style="display:inline-block;margin-left:14px;color:#16a34a;font-weight:700;text-decoration:none;" data-i18n="free.guide">or read the guide →</a>
       </p>
     </div>
   </section>
@@ -302,8 +318,9 @@
   </section>
 
   <footer>
-    <p class="verse">"Build something good. Make it pay. Use it to bless."</p>
+    <p class="verse" data-i18n="footer.verse">"Build something good. Make it pay. Use it to bless."</p>
     <p><strong>Daniel &amp; David</strong> — built in the open · <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/README.md" style="color:var(--sky);">README</a> · <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/vision/mission.md" style="color:var(--sky);">Mission</a></p>
+    <p style="font-size:12px;opacity:.8" data-i18n="footer.i18n">English is the original. Other languages are AI-assisted translations — corrections welcome.</p>
   </footer>
 
   <script>
@@ -317,9 +334,183 @@
     const FORM = { provider: "formspree", endpoint: "", fallbackEmail: "wjlgatech@gmail.com" };
     // Honest scarcity: update as Genesis families are accepted.
     const SPOTS = { epoch: "Genesis", remaining: 8, total: 8 };
+    function applySpots(){ document.querySelectorAll('#spots-left, #spots-left-2').forEach(function (el){ el.textContent = SPOTS.remaining; }); }
 
-    // Render the spots counter from one source of truth.
-    document.querySelectorAll('#spots-left, #spots-left-2').forEach(function (el) { el.textContent = SPOTS.remaining; });
+    /* ===== i18n: live language switch. English is the source in the HTML; other languages are
+       AI-assisted translations layered on top. The signup's English safety strings stay in the
+       page source (default), so the registration-safety check still passes. ===== */
+    const I18N = {
+      zh: {
+        "rung1":"1 · 发现","rung2":"2 · 提问","rung3":"3 · 制作","rung4":"4 · 服务","rung5":"5 · 学习","rung6":"6 · 协作","rung7":"7 · 祝福",
+        "ep1":"8 个家庭 · #1–8<br>共同设计 · 终身 · 答疑时间","ep2":"16 个家庭 · #9–24<br>署名 · 抢先体验 · 投票权","ep3":"32 个家庭 · #25–56<br>署名 · 抢先体验","ep4":"64 个家庭 · #57–120<br>署名 · 抢先体验","ep5":"#121+ · 所有人<br>公开项目",
+        "tag": "一个面向家庭的「实践工坊」，培养有智慧、有创造力、懂 AI 的建造者。帮助孩子清晰思考、负责任地使用 AI、创造真实价值、服务真实的人。",
+        "hero.apply": "申请成为创始家庭 →",
+        "hero.scarcity": "⛏️ 创世纪 · 共 <span id=\"spots-left\">8</span> / 8 个创始名额 — 到下一阶段荣誉减半",
+        "hero.sub": "<a href=\"#halving\" style=\"color:#fff;text-decoration:underline;\">什么是「减半」？</a> · 或 <a href=\"./app.html\" style=\"color:#fff;text-decoration:underline;\">打开免费的 Builder Loop 应用 →</a>",
+        "idea.kicker": "理念", "idea.h2": "我们不去「找工作」，我们「创造价值」。",
+        "idea.lead": "财富创造者做出别人真正需要的东西，诚实地去做，并妥善管理回报。你通过亲手从头到尾做出一件真实的东西来学会它 — 身边有一支 AI 团队相助。",
+        "card1.h": "AI 原生", "card1.p": "智能体是队友，而非功能。一个孩子加上几个 AI 智能体就能经营一门真实的生意。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/ai-native-company.md\">了解更多 →</a>",
+        "card2.h": "智能体工程", "card2.p": "小步、可回退。用「评测」而非「感觉」。人始终是主编。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/agentic-engineering.md\">了解更多 →</a>",
+        "card3.h": "为祝福而建", "card3.p": "金钱是工具，也是考验。我们好好赚，也好好给。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/values.md\">了解更多 →</a>",
+        "founding.kicker": "稀有的荣誉，公开公平的机制",
+        "founding.h2": "创始家庭 — 减半机制 🧱",
+        "founding.lead": "我们只向少数<strong>创始家庭</strong>开放。如同比特币的发行，创始者的回报在每个阶段<strong>减半</strong>，而名额<strong>翻倍</strong>。最早加入的家庭承担最大风险、付出最多，因此获得最高的荣誉。机制固定且公开，<strong>每个阶段满额即止。</strong>",
+        "founding.whyfew": "<strong>为何如此之少？</strong>因为「创始」应当有分量。8 个创世纪家庭意味着彼此都叫得出名字 — 是深度，而非规模。这也是我们能给孩子们最诚实的一课：稀缺而公平发行的价值，究竟如何运作。",
+        "founding.getwhat": "<strong>创始家庭能得到什么：</strong>共同设计课程、永久的「创世纪」署名、与创始人直接交流的答疑时间 — 以及<strong>私享、抢先体验工作室自研的 AI 工具</strong>（AnyAgent、Super U、DreamMakeTrue）：与我们建造时所用相同的工具，让孩子不只是「使用」AI，而是用它去建造、成长、创造。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" style=\"color:#93c5fd;\">减半机制 + 权益 + 我们如何挑选 →</a>",
+        "founding.select": "通过申请并以<strong>双向契合</strong>为准 — 依据研究，而非财富、文凭或你听起来多厉害。我们绝不询问你的收入、学历，或孩子的成绩、学校、姓名。",
+        "apply.h3": "申请成为创始家庭",
+        "apply.currently": "当前开放：<strong>⛏️ 创世纪</strong> · 共 <span id=\"spots-left-2\">8</span> / 8 个名额。我们会阅读每一份申请，约两周内回复。这是双向契合 — 我们在彼此选择。",
+        "apply.adults": "👪 <strong>仅限父母、监护人及教育者（18 岁以上）。</strong>请勿让孩子填写。我们只收集成年人的联系方式 — 绝不收集孩子的姓名、照片、学校或位置。 <a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">隐私声明</a>。",
+        "form.name": "你的名字或昵称 *", "form.email": "电子邮箱 *",
+        "form.region": "城市 / 地区（无需完整地址）", "form.region.ph": "例如：美国堪萨斯城",
+        "form.ages": "孩子的年龄范围（只填范围 — 不要姓名）", "form.choose": "请选择…",
+        "form.motivation": "是什么吸引你此刻加入 — 对这四周的投入，你有什么不确定？", "form.motivation.ph": "真诚胜过漂亮。不确定也欢迎写下。",
+        "form.role": "在孩子的成长中，你如何看待<em>你自己</em>的角色 — 不是学校，而是你？", "form.role.ph": "一小段话即可。",
+        "form.grit": "一件你坚持超过四周、几乎想放弃的事 — 是什么让你坚持下来？ <span style=\"font-weight:400;color:#64748b\">（选填）</span>", "form.grit.ph": "选填，但有助于我们了解你。",
+        "form.mutual": "🤝 这是<strong>双向契合</strong>，不是比赛。我们会读每一个字，约两周内回复。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" target=\"_blank\" rel=\"noopener\">我们如何挑选</a>。",
+        "form.consent": "<input type=\"checkbox\" name=\"consent\" required> 我已年满 18 岁，已阅读<a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">隐私声明</a>，并同意就创始家庭事宜与我联系。",
+        "form.submit": "申请一个创始名额 →",
+        "free.kicker": "人人免费 — 随时开始",
+        "free.h3": "🛠️ Builder Loop 应用 <span class=\"pill\">免费 · 一键 · 无需注册</span>",
+        "free.lead": "你无需创始名额、也无需 GitHub 即可开始。打开免费的 <strong>Builder Loop 应用</strong>：它带你的家庭走过<strong>5 个快速循环</strong>（选定 → 制作 → 给真人看 → 学习 → 决定），记录进度，并为每一次失败喝彩。它可<strong>添加到主屏幕</strong>、离线可用，并<strong>把一切都留在你的设备上</strong> — 无需账号，不向任何地方发送数据。",
+        "free.cta": "▶️ 打开 Builder Loop 应用", "free.guide": "或阅读指南 →",
+        "footer.verse": "「建造美好之物。让它带来收益。用它去祝福。」",
+        "footer.i18n": "英文为原文。其他语言为 AI 辅助翻译 — 欢迎指正。"
+      },
+      es: {
+        "rung1":"1 · Notar","rung2":"2 · Preguntar","rung3":"3 · Crear","rung4":"4 · Servir","rung5":"5 · Aprender","rung6":"6 · Equipo","rung7":"7 · Bendecir",
+        "ep1":"8 familias · #1–8<br>co-diseño · de por vida · horas de oficina","ep2":"16 familias · #9–24<br>con nombre · acceso anticipado · voto","ep3":"32 familias · #25–56<br>con nombre · acceso anticipado","ep4":"64 familias · #57–120<br>con nombre · acceso anticipado","ep5":"#121+ · todos<br>el programa público",
+        "tag": "Un laboratorio de campo familiar para criar constructores sabios, creativos y preparados para la IA. Ayuda a tu hijo a pensar con claridad, usar la IA con responsabilidad, crear valor real y servir a personas reales.",
+        "hero.apply": "Postula a la cohorte fundadora →",
+        "hero.scarcity": "⛏️ Génesis · <span id=\"spots-left\">8</span> de 8 lugares fundadores — el honor se reduce a la mitad en la próxima época",
+        "hero.sub": "<a href=\"#halving\" style=\"color:#fff;text-decoration:underline;\">¿Qué es el «Halving»?</a> · o <a href=\"./app.html\" style=\"color:#fff;text-decoration:underline;\">abre la app gratuita Builder Loop →</a>",
+        "idea.kicker": "La idea", "idea.h2": "No buscamos empleos. Creamos valor.",
+        "idea.lead": "Quien crea riqueza hace algo que la gente realmente necesita, lo hace con honestidad y administra bien lo que recibe. Se aprende construyendo una cosa real, de principio a fin — con un equipo de IA a tu lado.",
+        "card1.h": "Nativo en IA", "card1.p": "Los agentes son compañeros, no funciones. Un niño + unos agentes de IA pueden llevar un negocio real. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/ai-native-company.md\">Leer más →</a>",
+        "card2.h": "Ingeniería agéntica", "card2.p": "Pasos pequeños y reversibles. Evaluaciones, no corazonadas. El humano sigue siendo el editor. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/agentic-engineering.md\">Leer más →</a>",
+        "card3.h": "Construido para bendecir", "card3.p": "El dinero es herramienta y prueba. Lo ganamos bien y lo damos bien. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/values.md\">Leer más →</a>",
+        "founding.kicker": "Un privilegio raro, con reglas justas",
+        "founding.h2": "Familias fundadoras — El Halving 🧱",
+        "founding.lead": "Abrimos el laboratorio a un número pequeño de <strong>familias fundadoras</strong>. Como la emisión de Bitcoin, la recompensa del fundador se <strong>reduce a la mitad</strong> en cada época mientras la cohorte se <strong>duplica</strong>. Las primeras familias asumen más riesgo y trabajan más — por eso reciben más honor. El calendario es fijo y público, y <strong>de verdad cerramos cada época en su tope.</strong>",
+        "founding.whyfew": "<strong>¿Por qué tan pocas?</strong> Porque «fundadora» debe significar algo. Ocho familias Génesis significa que todos se conocen por su nombre — profundidad, no escala. Es también la lección más honesta que podemos darles a nuestros hijos sobre cómo funciona el valor escaso y emitido con justicia.",
+        "founding.getwhat": "<strong>Lo que reciben las familias fundadoras:</strong> co-diseñar el currículo, un nombre «Génesis» permanente, horas de oficina directas — y <strong>acceso anticipado privado al taller de IA del estudio</strong> (AnyAgent, Super U, DreamMakeTrue): las mismas herramientas con las que construimos, para que tu hijo deje de solo «usar» la IA y empiece a construir, crecer y crear con ella. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" style=\"color:#93c5fd;\">El Halving + los beneficios + cómo elegimos →</a>",
+        "founding.select": "La selección es por postulación y <strong>ajuste mutuo</strong> — basada en investigación, no en riqueza, credenciales o lo impresionante que suenes. Nunca preguntamos tus ingresos, tus títulos, ni las notas, escuela o nombre de tu hijo.",
+        "apply.h3": "Postula a la cohorte fundadora",
+        "apply.currently": "Abierto ahora: <strong>⛏️ Génesis</strong> · <span id=\"spots-left-2\">8</span> de 8 lugares. Leemos cada postulación y respondemos en ~2 semanas. Es un ajuste mutuo — nos elegimos mutuamente.",
+        "apply.adults": "👪 <strong>Solo para padres, tutores y educadores (mayores de 18).</strong> Los niños no deben llenar esto. Solo recogemos datos de contacto de adultos — nunca el nombre, foto, escuela o ubicación de un niño. <a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">Aviso de privacidad</a>.",
+        "form.name": "Tu nombre o alias *", "form.email": "Correo electrónico *",
+        "form.region": "Ciudad / región (no la dirección completa)", "form.region.ph": "p. ej., Kansas City, MO",
+        "form.ages": "Rango de edad de tus hijos (solo el rango — sin nombres)", "form.choose": "Elige…",
+        "form.motivation": "¿Qué te atrae a esto ahora — y de qué no estás seguro sobre el compromiso de 4 semanas?", "form.motivation.ph": "Mejor honesto que impresionante. La incertidumbre es bienvenida.",
+        "form.role": "¿Cómo ves <em>tu propia</em> parte en cómo crece tu hijo — no la escuela, tú?", "form.role.ph": "Un párrafo breve.",
+        "form.grit": "Un compromiso que mantuviste más de 4 semanas y casi abandonas — ¿qué te hizo seguir? <span style=\"font-weight:400;color:#64748b\">(opcional)</span>", "form.grit.ph": "Opcional, pero nos ayuda a conocerte.",
+        "form.mutual": "🤝 Esto es un <strong>ajuste mutuo</strong>, no un concurso. Leemos cada palabra y respondemos en ~2 semanas. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" target=\"_blank\" rel=\"noopener\">Cómo elegimos</a>.",
+        "form.consent": "<input type=\"checkbox\" name=\"consent\" required> Tengo 18 años o más y he leído el <a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">aviso de privacidad</a> y acepto ser contactado sobre la cohorte fundadora.",
+        "form.submit": "Postular a un lugar fundador →",
+        "free.kicker": "Gratis para todos — empieza cuando quieras",
+        "free.h3": "🛠️ La app Builder Loop <span class=\"pill\">GRATIS · 1 CLIC · SIN REGISTRO</span>",
+        "free.lead": "No necesitas un lugar fundador — ni GitHub — para empezar. Abre la app gratuita <strong>Builder Loop</strong>: guía a tu familia por los <strong>5 ciclos rápidos</strong> (elegir → construir → mostrar a una persona real → aprender → decidir), registra tu progreso y celebra cada fracaso. Se <strong>instala en tu pantalla de inicio</strong>, funciona sin conexión y <strong>guarda todo en tu dispositivo</strong> — sin cuenta, sin enviar nada a ningún lado.",
+        "free.cta": "▶️ Abrir la app Builder Loop", "free.guide": "o lee la guía →",
+        "footer.verse": "«Construye algo bueno. Haz que rinda. Úsalo para bendecir.»",
+        "footer.i18n": "El inglés es el original. Los otros idiomas son traducciones asistidas por IA — se agradecen correcciones."
+      },
+      ko: {
+        "rung1":"1 · 발견","rung2":"2 · 질문","rung3":"3 · 제작","rung4":"4 · 섬김","rung5":"5 · 학습","rung6":"6 · 팀","rung7":"7 · 축복",
+        "ep1":"8가족 · #1–8<br>공동 설계 · 평생 · 상담 시간","ep2":"16가족 · #9–24<br>이름 등재 · 선행 접근 · 투표권","ep3":"32가족 · #25–56<br>이름 등재 · 선행 접근","ep4":"64가족 · #57–120<br>이름 등재 · 선행 접근","ep5":"#121+ · 모두<br>공개 프로그램",
+        "tag": "지혜롭고 창의적이며 AI를 다룰 줄 아는 ‘만드는 사람’으로 아이를 키우는 가족 실습실입니다. 아이가 명확히 사고하고, AI를 책임감 있게 쓰고, 진짜 가치를 만들며, 실제 사람을 섬기도록 돕습니다.",
+        "hero.apply": "창립 가족으로 지원하기 →",
+        "hero.scarcity": "⛏️ 제네시스 · 창립 자리 <span id=\"spots-left\">8</span> / 8 — 다음 단계에서 명예는 절반으로",
+        "hero.sub": "<a href=\"#halving\" style=\"color:#fff;text-decoration:underline;\">‘반감기’란?</a> · 또는 <a href=\"./app.html\" style=\"color:#fff;text-decoration:underline;\">무료 Builder Loop 앱 열기 →</a>",
+        "idea.kicker": "핵심 생각", "idea.h2": "우리는 일자리를 ‘찾지’ 않습니다. 가치를 ‘만듭니다’.",
+        "idea.lead": "가치를 만드는 사람은 사람들이 진짜로 필요로 하는 것을 정직하게 만들고, 돌아온 것을 잘 관리합니다. 그것은 진짜 한 가지를 처음부터 끝까지 만들어 보며 배웁니다 — 곁에 AI 팀과 함께요.",
+        "card1.h": "AI 네이티브", "card1.p": "에이전트는 기능이 아니라 동료입니다. 아이 한 명 + 몇 개의 AI 에이전트가 진짜 사업을 운영할 수 있습니다. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/ai-native-company.md\">더 보기 →</a>",
+        "card2.h": "에이전트 엔지니어링", "card2.p": "작고 되돌릴 수 있는 단계로. 느낌이 아니라 평가로. 사람이 끝까지 편집자입니다. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/agentic-engineering.md\">더 보기 →</a>",
+        "card3.h": "축복을 위해 짓다", "card3.p": "돈은 도구이자 시험입니다. 잘 벌고, 잘 나눕니다. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/values.md\">더 보기 →</a>",
+        "founding.kicker": "공정한 규칙 위의 귀한 특권",
+        "founding.h2": "창립 가족 — 반감기 🧱",
+        "founding.lead": "소수의 <strong>창립 가족</strong>에게만 엽니다. 비트코인 발행처럼, 창립자의 보상은 각 단계마다 <strong>절반</strong>이 되고 모집 인원은 <strong>두 배</strong>가 됩니다. 가장 먼저 합류한 가족이 가장 큰 위험과 수고를 감당하므로 — 가장 큰 명예를 얻습니다. 일정은 고정·공개되며, <strong>각 단계는 정원에서 정확히 마감합니다.</strong>",
+        "founding.whyfew": "<strong>왜 이렇게 적나요?</strong> ‘창립’에는 무게가 있어야 하기 때문입니다. 제네시스 8가족이면 서로의 이름을 다 압니다 — 규모가 아니라 깊이입니다. 또한 희소하고 공정하게 발행된 가치가 실제로 어떻게 작동하는지, 아이들에게 줄 수 있는 가장 정직한 수업이기도 합니다.",
+        "founding.getwhat": "<strong>창립 가족이 받는 것:</strong> 커리큘럼 공동 설계, 영구적인 ‘제네시스’ 이름, 창립자와의 직접 상담 시간 — 그리고 <strong>스튜디오 자체 AI 작업실에 대한 비공개 선행 접근</strong>(AnyAgent, Super U, DreamMakeTrue). 우리가 만들 때 쓰는 바로 그 도구로, 아이가 AI를 그저 ‘쓰는’ 데서 나아가 그것으로 만들고 성장하고 창조하게 합니다. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" style=\"color:#93c5fd;\">반감기 + 혜택 + 선정 방식 →</a>",
+        "founding.select": "지원과 <strong>상호 적합성</strong>으로 선정합니다 — 재산·학벌·인상적인 말솜씨가 아니라 연구에 근거합니다. 소득, 학위, 아이의 성적·학교·이름은 결코 묻지 않습니다.",
+        "apply.h3": "창립 가족으로 지원하기",
+        "apply.currently": "현재 모집: <strong>⛏️ 제네시스</strong> · <span id=\"spots-left-2\">8</span> / 8 자리. 모든 지원을 읽고 약 2주 내에 답합니다. 서로를 고르는 상호 적합의 과정입니다.",
+        "apply.adults": "👪 <strong>부모·보호자·교육자(만 18세 이상)만 해당.</strong> 아이는 작성하지 마세요. 성인의 연락처만 수집하며 — 아이의 이름·사진·학교·위치는 결코 수집하지 않습니다. <a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">개인정보 안내</a>.",
+        "form.name": "이름 또는 별칭 *", "form.email": "이메일 *",
+        "form.region": "도시 / 지역 (전체 주소 아님)", "form.region.ph": "예: 서울",
+        "form.ages": "아이의 연령대 (범위만 — 이름 없이)", "form.choose": "선택…",
+        "form.motivation": "지금 무엇이 당신을 이끌고 있나요 — 그리고 4주 약속에서 무엇이 망설여지나요?", "form.motivation.ph": "인상적이기보다 정직한 편이 좋습니다. 망설임도 환영합니다.",
+        "form.role": "아이의 성장에서 <em>당신 자신</em>의 몫을 어떻게 보나요 — 학교가 아니라 당신?", "form.role.ph": "짧은 한 단락이면 됩니다.",
+        "form.grit": "4주 넘게 지키며 거의 그만둘 뻔한 약속 — 무엇이 당신을 버티게 했나요? <span style=\"font-weight:400;color:#64748b\">(선택)</span>", "form.grit.ph": "선택이지만, 당신을 아는 데 도움이 됩니다.",
+        "form.mutual": "🤝 이것은 <strong>상호 적합</strong>이지 경쟁이 아닙니다. 한 글자도 빠짐없이 읽고 약 2주 내에 답합니다. <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" target=\"_blank\" rel=\"noopener\">선정 방식</a>.",
+        "form.consent": "<input type=\"checkbox\" name=\"consent\" required> 저는 만 18세 이상이며 <a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">개인정보 안내</a>를 읽었고 창립 가족 관련 연락에 동의합니다.",
+        "form.submit": "창립 자리에 지원하기 →",
+        "free.kicker": "모두에게 무료 — 언제든 시작",
+        "free.h3": "🛠️ Builder Loop 앱 <span class=\"pill\">무료 · 원클릭 · 가입 불필요</span>",
+        "free.lead": "시작하는 데 창립 자리나 GitHub은 필요 없습니다. 무료 <strong>Builder Loop 앱</strong>을 여세요: 가족이 <strong>5번의 빠른 사이클</strong>(고르기 → 만들기 → 실제 사람에게 보여주기 → 배우기 → 결정하기)을 거치도록 안내하고, 진행을 기록하며, 모든 실패를 축하합니다. <strong>홈 화면에 설치</strong>되고 오프라인에서 작동하며 <strong>모든 것을 당신의 기기에만</strong> 보관합니다 — 계정 없이, 어디로도 전송하지 않습니다.",
+        "free.cta": "▶️ Builder Loop 앱 열기", "free.guide": "또는 가이드 읽기 →",
+        "footer.verse": "“좋은 것을 지어라. 값을 치르게 하라. 그것으로 축복하라.”",
+        "footer.i18n": "영어가 원문입니다. 다른 언어는 AI 보조 번역이며 — 수정 제안을 환영합니다."
+      },
+      ja: {
+        "rung1":"1 · 気づく","rung2":"2 · 問う","rung3":"3 · 作る","rung4":"4 · 仕える","rung5":"5 · 学ぶ","rung6":"6 · チーム","rung7":"7 · 祝福",
+        "ep1":"8家族 · #1–8<br>共同設計 · 生涯 · 相談時間","ep2":"16家族 · #9–24<br>記名 · 先行アクセス · 投票権","ep3":"32家族 · #25–56<br>記名 · 先行アクセス","ep4":"64家族 · #57–120<br>記名 · 先行アクセス","ep5":"#121+ · 全員<br>公開プログラム",
+        "tag": "賢く、創造的で、AIを使いこなす「つくる人」へと子どもを育てる、家族のためのフィールドラボ。子どもが明晰に考え、AIを責任を持って使い、本物の価値を生み、実在の人に仕える力を育みます。",
+        "hero.apply": "創設ファミリーに応募する →",
+        "hero.scarcity": "⛏️ ジェネシス · 創設枠 <span id=\"spots-left\">8</span> / 8 — 次のエポックで名誉は半分に",
+        "hero.sub": "<a href=\"#halving\" style=\"color:#fff;text-decoration:underline;\">「半減期」とは？</a> · または <a href=\"./app.html\" style=\"color:#fff;text-decoration:underline;\">無料の Builder Loop アプリを開く →</a>",
+        "idea.kicker": "考え方", "idea.h2": "私たちは仕事を「探さない」。価値を「生み出す」。",
+        "idea.lead": "価値を生む人は、人が本当に必要とするものを正直につくり、戻ってきたものをよく管理します。それは本物のものを一つ、最初から最後までつくることで学べます — そばにAIチームを携えて。",
+        "card1.h": "AIネイティブ", "card1.p": "エージェントは機能ではなく仲間です。子ども一人と数体のAIエージェントで本物の事業を回せます。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/ai-native-company.md\">もっと読む →</a>",
+        "card2.h": "エージェント工学", "card2.p": "小さく、戻せる一歩で。勘ではなく評価で。人が最後まで編集者です。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/agentic-engineering.md\">もっと読む →</a>",
+        "card3.h": "祝福のために築く", "card3.p": "お金は道具であり試金石。よく稼ぎ、よく分かち合います。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/values.md\">もっと読む →</a>",
+        "founding.kicker": "公正な仕組みの上の、稀な栄誉",
+        "founding.h2": "創設ファミリー — 半減期 🧱",
+        "founding.lead": "ごく少数の<strong>創設ファミリー</strong>にだけ開きます。ビットコインの発行のように、創設者の報酬は各エポックで<strong>半分</strong>になり、定員は<strong>倍</strong>になります。最も早く加わる家族が最大のリスクと労力を担うため — 最大の栄誉を得ます。日程は固定・公開で、<strong>各エポックは定員で確実に締め切ります。</strong>",
+        "founding.whyfew": "<strong>なぜこんなに少ないのか？</strong>「創設」には重みがあるべきだからです。ジェネシスの8家族なら、互いの名前を呼び合えます — 規模ではなく深さです。希少で公正に発行された価値が実際どう働くか、子どもたちに示せる最も正直な学びでもあります。",
+        "founding.getwhat": "<strong>創設ファミリーが得るもの：</strong>カリキュラムの共同設計、永久の「ジェネシス」名、創設者との直接の相談時間 — そして<strong>スタジオ自製のAIワークショップへの非公開・先行アクセス</strong>（AnyAgent、Super U、DreamMakeTrue）。私たちが作るのと同じ道具で、子どもがAIを「使う」だけでなく、それで作り、育ち、創るようになります。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" style=\"color:#93c5fd;\">半減期 + 特典 + 選び方 →</a>",
+        "founding.select": "応募と<strong>相互の相性</strong>で選びます — 富や肩書き、聞こえの良さではなく、研究に基づいて。収入、学歴、子どもの成績・学校・名前は決して尋ねません。",
+        "apply.h3": "創設ファミリーに応募する",
+        "apply.currently": "現在募集中：<strong>⛏️ ジェネシス</strong> · <span id=\"spots-left-2\">8</span> / 8 枠。すべての応募を読み、約2週間以内に返信します。互いに選び合う、相互の相性です。",
+        "apply.adults": "👪 <strong>保護者・教育者（18歳以上）のみ。</strong>子どもは記入しないでください。大人の連絡先のみを収集し — 子どもの名前・写真・学校・所在地は決して収集しません。 <a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">プライバシー通知</a>。",
+        "form.name": "お名前またはニックネーム *", "form.email": "メールアドレス *",
+        "form.region": "市区町村 / 地域（住所全体は不要）", "form.region.ph": "例：東京",
+        "form.ages": "お子さんの年齢層（範囲のみ — 名前は不要）", "form.choose": "選択…",
+        "form.motivation": "いま何があなたを惹きつけていますか — そして4週間の取り組みで不安な点は？", "form.motivation.ph": "立派さより正直さを。迷いも歓迎します。",
+        "form.role": "子どもの成長において<em>あなた自身</em>の役割をどう捉えていますか — 学校ではなく、あなた？", "form.role.ph": "短い一段落で結構です。",
+        "form.grit": "4週間以上続けて、あやうく辞めかけた約束 — 何が続けさせましたか？ <span style=\"font-weight:400;color:#64748b\">（任意）</span>", "form.grit.ph": "任意ですが、あなたを知る助けになります。",
+        "form.mutual": "🤝 これは<strong>相互の相性</strong>であり、競争ではありません。一字一句読み、約2週間以内に返信します。 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md\" target=\"_blank\" rel=\"noopener\">選び方</a>。",
+        "form.consent": "<input type=\"checkbox\" name=\"consent\" required> 私は18歳以上で、<a href=\"./privacy.html\" target=\"_blank\" rel=\"noopener\">プライバシー通知</a>を読み、創設ファミリーに関する連絡を受けることに同意します。",
+        "form.submit": "創設枠に応募する →",
+        "free.kicker": "誰でも無料 — いつでも開始",
+        "free.h3": "🛠️ Builder Loop アプリ <span class=\"pill\">無料 · ワンクリック · 登録不要</span>",
+        "free.lead": "始めるのに創設枠もGitHubも要りません。無料の <strong>Builder Loop アプリ</strong>を開いてください：家族で<strong>5つの素早いサイクル</strong>（選ぶ → 作る → 実在の人に見せる → 学ぶ → 決める）を進め、進捗を記録し、すべての失敗を称えます。<strong>ホーム画面に追加</strong>でき、オフラインで動き、<strong>すべてを端末内に</strong>保存します — アカウント不要、どこにも送信しません。",
+        "free.cta": "▶️ Builder Loop アプリを開く", "free.guide": "またはガイドを読む →",
+        "footer.verse": "「良いものを築け。それで稼げ。それで祝福せよ。」",
+        "footer.i18n": "英語が原文です。他の言語はAI支援による翻訳で — ご指摘を歓迎します。"
+      }
+    };
+    const _orig = {};
+    function captureOriginals(){
+      document.querySelectorAll('[data-i18n]').forEach(function(el){ _orig[el.getAttribute('data-i18n')] = el.innerHTML; });
+      document.querySelectorAll('[data-i18n-ph]').forEach(function(el){ _orig['__ph__'+el.getAttribute('data-i18n-ph')] = el.getAttribute('placeholder'); });
+    }
+    function setLang(code){
+      var dict = (code === 'en') ? null : I18N[code];
+      document.querySelectorAll('[data-i18n]').forEach(function(el){ var k=el.getAttribute('data-i18n');
+        var v = (dict && dict[k]!=null) ? dict[k] : _orig[k]; if(v!=null) el.innerHTML = v; });
+      document.querySelectorAll('[data-i18n-ph]').forEach(function(el){ var k=el.getAttribute('data-i18n-ph');
+        var v = (dict && dict[k]!=null) ? dict[k] : _orig['__ph__'+k]; if(v!=null) el.setAttribute('placeholder', v); });
+      document.documentElement.lang = code;
+      try{ localStorage.setItem('dd.lang', code); }catch(e){}
+      var sel=document.getElementById('lang'); if(sel) sel.value=code;
+      applySpots();
+    }
+    captureOriginals();
+    (function(){ var saved=null; try{ saved=localStorage.getItem('dd.lang'); }catch(e){}
+      var nav=(navigator.language||'en').slice(0,2).toLowerCase();
+      var supported=['en','zh','es','ko','ja'];
+      setLang(saved || (supported.indexOf(nav)>=0 ? nav : 'en'));
+    })();
 
     var form = document.getElementById('apply-form');
     var msg = document.getElementById('form-msg');

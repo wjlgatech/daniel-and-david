@@ -2,9 +2,13 @@
 
 ### A family field lab for raising wise, creative, AI-ready builders.
 
+🌐 **The [live site](https://wjlgatech.github.io/daniel-and-david/) speaks your language** — switch
+with the selector: **English · 中文 · Español · 한국어 · 日本語**. (English is canonical; the rest are
+AI-assisted — corrections welcome. See [`docs/i18n/`](docs/i18n/).)
+
 > **AI may change work dramatically. Your child doesn't need to be afraid of it — your child
 > needs to become wiser than it.** This is a practical, faith-informed learning system for
-> families who want to help children (roughly ages 6–12) **think clearly, use AI responsibly,
+> families who want to help children (roughly ages 5–15) **think clearly, use AI responsibly,
 > create real value, and serve real people.**
 
 We do that one small loop at a time. The atomic unit is the **[Builder Loop](docs/builder-loop/)** —

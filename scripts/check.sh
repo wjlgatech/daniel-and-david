@@ -52,7 +52,14 @@ else
   warn "The Builder Loop web app shell is broken. Run: scripts/check-webapp.sh"
 fi
 
-# 6. Big-PR nudge
+# 6. i18n — every language tag stays in sync with the English source
+if bash "$(dirname "$0")/check-i18n.sh" >/dev/null 2>&1; then
+  pass "All language tags are in sync (or no i18n yet)."
+else
+  warn "A language tag is out of sync with English. Run: scripts/check-i18n.sh"
+fi
+
+# 7. Big-PR nudge
 count=$(echo "$changed" | grep -c . )
 if [ "${count:-0}" -gt 40 ]; then
   warn "This PR touches $count files — that's large. Consider splitting it. Small PRs merge faster."
