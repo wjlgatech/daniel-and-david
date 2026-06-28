@@ -29,7 +29,9 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
 - `apps/web/` — the static site, **hosted on GitHub Pages**
   (`https://wjlgatech.github.io/daniel-and-david/`) via `.github/workflows/pages.yml`:
-  - `public/index.html` — landing page, **multilingual** (EN/中文/ES/한국어/日本語 via a `data-i18n`
+  - `public/index.html` — landing page (bold hero + a full-width **"See it work" showcase** that
+    runs the three demos **live in inline phone-frame iframes**, plus an honest "AI, the safe way"
+    note for the free-LLM seam). **Multilingual** (EN/中文/ES/한국어/日本語 via a `data-i18n`
     system + `I18N` dict + a 🌐 selector). **English is the source and the in-HTML default**; when you
     add/edit a `data-i18n` string you MUST update all 4 other languages — `scripts/check-i18n.sh`
     (in CI) fails otherwise. See `docs/i18n/`. Outbound doc links use **absolute** GitHub URLs (so

@@ -159,7 +159,7 @@ daniel-and-david/
 
 You don't need GitHub, git, or any setup. Just:
 
-1. **Open the home page:** **[daniel-and-david on the web →](https://wjlgatech.github.io/daniel-and-david/)** (a normal link — opens in any browser).
+1. **Open the home page:** **[daniel-and-david on the web →](https://wjlgatech.github.io/daniel-and-david/)** (a normal link — opens in any browser). The **"See it work"** section runs all three demos *live, right on the page* — try one before you read another word.
 2. **Open the free [Builder Loop app](https://wjlgatech.github.io/daniel-and-david/app.html)** — a **1-click, no-signup** web app that walks your family through the 5 cycles, tracks progress, and **installs to your home screen** (works offline; everything stays on your device). Prefer paper? There's a [printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md), and the full [Builder Loop guide](docs/builder-loop/).
 3. **Browse the [Apps Gallery](https://wjlgatech.github.io/daniel-and-david/apps.html)** — every small app in one place, each described by a tiny [Agentic App Card](docs/agentic-app-card.md) (like a HuggingFace model card, ~10× simpler). Play [Conversation Spark](https://wjlgatech.github.io/daniel-and-david/demos/conversation-spark.html), the [Transition Timer](https://wjlgatech.github.io/daniel-and-david/demos/transition-timer.html), or the [Homework Chunker](https://wjlgatech.github.io/daniel-and-david/demos/homework-chunker.html) — or build your own and add a card.
 4. **Read the [safety rules](docs/safety/)** before you start (consent, privacy, AI boundaries).
