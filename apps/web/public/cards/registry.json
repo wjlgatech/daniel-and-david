@@ -30,6 +30,20 @@
       "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/conversation-spark.html"
     },
     {
+      "name": "Transition Timer",
+      "slug": "transition-timer",
+      "app_type": "demo",
+      "pain_solved": "Help your 6-year-old stop one thing and start the next — without the 20-minute meltdown.",
+      "host": "static",
+      "status": "live",
+      "emoji": "⏳",
+      "tags": ["parents", "ages-5-7", "transitions"],
+      "llm": "none (on-device)",
+      "framework": "static-html",
+      "demo_url": "./demos/transition-timer.html",
+      "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/transition-timer.html"
+    },
+    {
       "name": "KC Matchday Basecamp",
       "slug": "kc-matchday-basecamp",
       "app_type": "agent",

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Transition Timer — Daniel &amp; David</title>
+  <meta name="description" content="Help your 6-year-old switch activities without the meltdown: a visual countdown that always shows what's now and what's next. On-device, no signup, no child data." />
+  <meta name="theme-color" content="#CC785C" />
+  <style>
+    :root{ --ink:#29261F; --muted:#6F665A; --paper:#FAF9F5; --paper2:#F0EEE6; --card:#fff;
+      --clay:#CC785C; --clay-dk:#B05730; --gold:#C7822E; --sage:#5B8C7B; --line:#E6E0D2; }
+    *{box-sizing:border-box} html,body{margin:0;overflow-x:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.55;}
+    h1,h2{font-family:"Tiempos Text",ui-serif,"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.3px;}
+    input,select,button{accent-color:var(--clay);font-family:inherit}
+    .wrap{max-width:680px;margin:0 auto;padding:0 18px 80px;}
+    header{background:linear-gradient(158deg,#2b2620,#43342a 55%,#7c4a33 135%);color:#FAF9F5;text-align:center;padding:42px 18px 36px;}
+    header .em{font-size:44px}
+    header h1{font-size:clamp(26px,6vw,38px);margin:8px 0 6px}
+    header p{margin:0 auto;max-width:540px;opacity:.94}
+    .privacy{font-size:12.5px;color:#7a5230;text-align:center;padding:9px 16px;background:#FBF6EE;border-bottom:1px solid #E6D8C3}
+    .tabs{display:flex;gap:8px;justify-content:center;margin:18px 0 6px}
+    .tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-size:15px;font-weight:700;cursor:pointer;color:var(--ink)}
+    .tab[aria-pressed="true"]{background:var(--clay);color:#FAF9F5;border-color:var(--clay)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 1px 2px rgba(41,38,31,.05)}
+    .lab{font-weight:700;font-size:14px;margin:14px 0 8px;display:block}
+    .lab:first-child{margin-top:0}
+    .muted{color:var(--muted);font-size:14px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .echip{font-size:24px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--line);background:#fff;border-radius:12px;cursor:pointer}
+    .echip.on{border-color:var(--clay);background:#FBF1EC;transform:scale(1.05)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:12px 22px;border:0;border-radius:999px;font-size:17px;font-weight:800;cursor:pointer;background:var(--clay);color:#FAF9F5}
+    .btn:hover{background:var(--clay-dk)} .btn.big{width:100%}
+    .btn.secondary{background:#fff;color:var(--clay-dk);border:1.5px solid var(--line);font-size:15px;min-height:48px}
+    .btn.ghost{background:transparent;color:var(--muted);font-weight:700;border:0;min-height:auto;padding:8px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    input[type=text]{flex:1;min-width:120px;font-size:16px;padding:12px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+    input[type=number]{width:78px;font-size:16px;padding:12px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);text-align:center}
+    /* step list */
+    .step{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:8px 0;background:#fff}
+    .step .se{font-size:30px;width:42px;text-align:center}
+    .step .sl{flex:1;font-weight:600}
+    .step .smin{font-size:13px;color:var(--muted)}
+    .iconbtn{border:1px solid var(--line);background:#fff;border-radius:10px;min-height:40px;min-width:40px;font-size:16px;cursor:pointer;color:var(--ink)}
+    .iconbtn:disabled{opacity:.3;cursor:default}
+    .presets{display:flex;gap:8px;flex-wrap:wrap}
+    .preset{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700;cursor:pointer;color:var(--ink)}
+    /* play */
+    .stage{text-align:center;padding:6px 0 4px}
+    .ring{position:relative;width:240px;height:240px;margin:6px auto 4px}
+    .ring svg{transform:rotate(-90deg)}
+    .ring .face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .ring .nowem{font-size:74px;line-height:1}
+    .ring .clock{font-size:30px;font-weight:800;margin-top:2px}
+    .nowlabel{font-size:24px;font-weight:800;margin:6px 0 2px}
+    .next{display:inline-flex;align-items:center;gap:8px;background:var(--paper2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:16px;font-weight:700;margin:8px 0}
+    .next .ne{font-size:22px}
+    .warn{color:var(--clay-dk);font-weight:800;min-height:22px}
+    .pulse{animation:pulse 1s ease-in-out infinite}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+    .done .nowem{animation:pop .5s ease}
+    @keyframes pop{0%{transform:scale(.5)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+    .burst{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+    .burst span{position:absolute;top:-20px;font-size:22px;animation:fall linear forwards}
+    @keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.2}}
+    footer{max-width:680px;margin:0 auto;padding:12px 18px 30px;color:var(--muted);font-size:13px;text-align:center}
+    a{color:var(--clay-dk)}
+    .hidden{display:none!important}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="em">⏳</div>
+    <h1>Transition Timer</h1>
+    <p>The hardest part of being six is <em>stopping</em>. This shows your child — in pictures — what's happening now, how much time is left, and what comes next. (A grown-up sets it up.)</p>
+  </header>
+  <div class="privacy">🔒 Everything stays on your device. Nothing is stored online or sent anywhere. <strong>No child's name or data</strong> — it's just pictures and a timer.</div>
+
+  <main class="wrap">
+    <div class="tabs">
+      <button class="tab" id="tab-setup" aria-pressed="true" onclick="show('setup')">🛠️ Set up</button>
+      <button class="tab" id="tab-play"  aria-pressed="false" onclick="show('play')">▶️ Play</button>
+    </div>
+
+    <!-- SETUP -->
+    <section id="setup">
+      <div class="card">
+        <span class="lab">Start from a routine (tap to load)</span>
+        <div class="presets" id="presets"></div>
+      </div>
+
+      <div class="card">
+        <span class="lab">Your routine</span>
+        <div id="steps"></div>
+        <p class="muted" id="empty">No steps yet — load a routine above, or add one below.</p>
+      </div>
+
+      <div class="card">
+        <span class="lab">Add a step</span>
+        <span class="muted">Pick a picture</span>
+        <div class="chips" id="emojis" style="margin:8px 0 12px"></div>
+        <div class="row">
+          <input type="text" id="newlabel" placeholder="What is it? (e.g. Dinner)" maxlength="24" />
+          <input type="number" id="newmin" value="5" min="1" max="120" aria-label="minutes" />
+          <span class="muted">min</span>
+        </div>
+        <div style="margin-top:14px"><button class="btn secondary" onclick="addStep()">＋ Add step</button></div>
+      </div>
+
+      <button class="btn big" onclick="show('play')">▶️ Start the routine →</button>
+    </section>
+
+    <!-- PLAY -->
+    <section id="play" class="hidden">
+      <div class="card stage">
+        <div id="playEmpty" class="muted hidden" style="padding:30px 0">Add a step in <b>Set up</b> first 🙂</div>
+        <div id="playLive">
+          <div class="ring" id="ring">
+            <svg width="240" height="240" viewBox="0 0 240 240">
+              <circle cx="120" cy="120" r="110" fill="none" stroke="#EFE9DC" stroke-width="16"/>
+              <circle id="arc" cx="120" cy="120" r="110" fill="none" stroke="#CC785C" stroke-width="16" stroke-linecap="round"/>
+            </svg>
+            <div class="face"><div class="nowem" id="nowem">🧩</div><div class="clock" id="clock">5:00</div></div>
+          </div>
+          <div class="nowlabel" id="nowlabel">Now</div>
+          <div class="warn" id="warn"></div>
+          <div><span class="next" id="nextpill">Next: <span class="ne">🍽️</span> Dinner</span></div>
+          <div class="row" style="justify-content:center;margin-top:12px">
+            <button class="btn" id="startbtn" onclick="toggle()">▶ Start</button>
+            <button class="btn secondary" onclick="resetStep()">↺ Restart step</button>
+          </div>
+          <div style="margin-top:6px"><button class="btn ghost" onclick="prevStep()">‹ back</button>
+            <button class="btn ghost" id="nextbtn" onclick="advance(true)">skip ›</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    A behavioral scaffold, not a tracker — it gives a child a heads-up and a choice, the two things
+    that prevent most transition meltdowns. Built with
+    <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md">Pain2Gain</a>.
+    🌱 <a href="../apps.html">More apps</a> · <a href="../index.html">Daniel &amp; David</a>
+  </footer>
+
+  <script>
+    // ---- on-device store (the Store seam: localStorage; nothing leaves the device) ----
+    var KEY = "dd.transition.steps.v1";
+    var EMOJIS = ["🧩","🍳","🍽️","🛁","🪥","👕","🧦","🎒","📖","🧸","📺","🎨","⚽","🧹","😴","🚗","🧼","🥪","💧","🚽","🧴","🎵"];
+    var PRESETS = {
+      "🌅 Morning": [["🍳","Breakfast",15],["👕","Get dressed",10],["🪥","Brush teeth",3],["🎒","Shoes & bag",5]],
+      "🛁 Wind-down": [["🛁","Bath",10],["👕","Pajamas",5],["📖","Story",10],["😴","Lights out",1]],
+      "📺 Screen time": [["📺","Screen time",20],["🧹","Tidy up",2],["🧸","Free play",15]]
+    };
+    var steps = load();
+    var pickEmoji = "🧩";
+
+    function load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || []; }catch(e){ return []; } }
+    function save(){ try{ localStorage.setItem(KEY, JSON.stringify(steps)); }catch(e){} }
+
+    // ---- setup UI ----
+    function renderPresets(){
+      var h = "";
+      for (var name in PRESETS) h += '<button class="preset" onclick="loadPreset(\''+name+'\')">'+name+'</button>';
+      document.getElementById("presets").innerHTML = h;
+    }
+    function loadPreset(name){
+      steps = PRESETS[name].map(function(s){ return {emoji:s[0], label:s[1], min:s[2]}; });
+      save(); renderSteps();
+    }
+    function renderEmojis(){
+      document.getElementById("emojis").innerHTML = EMOJIS.map(function(e){
+        return '<button class="echip'+(e===pickEmoji?' on':'')+'" onclick="pick(\''+e+'\')">'+e+'</button>';
+      }).join("");
+    }
+    function pick(e){ pickEmoji = e; renderEmojis(); }
+    function addStep(){
+      var label = document.getElementById("newlabel").value.trim();
+      var min = Math.max(1, Math.min(120, parseInt(document.getElementById("newmin").value,10) || 5));
+      steps.push({emoji:pickEmoji, label:label || "Next thing", min:min});
+      document.getElementById("newlabel").value = "";
+      save(); renderSteps();
+    }
+    function delStep(i){ steps.splice(i,1); save(); renderSteps(); }
+    function move(i,d){ var j=i+d; if(j<0||j>=steps.length) return; var t=steps[i]; steps[i]=steps[j]; steps[j]=t; save(); renderSteps(); }
+    function renderSteps(){
+      var el = document.getElementById("steps");
+      document.getElementById("empty").style.display = steps.length ? "none" : "block";
+      el.innerHTML = steps.map(function(s,i){
+        return '<div class="step"><span class="se">'+s.emoji+'</span>'
+          + '<span class="sl">'+escapeHtml(s.label)+' <span class="smin">· '+s.min+' min</span></span>'
+          + '<button class="iconbtn" '+(i===0?'disabled':'')+' onclick="move('+i+',-1)" aria-label="up">↑</button>'
+          + '<button class="iconbtn" '+(i===steps.length-1?'disabled':'')+' onclick="move('+i+',1)" aria-label="down">↓</button>'
+          + '<button class="iconbtn" onclick="delStep('+i+')" aria-label="remove">✕</button></div>';
+      }).join("");
+    }
+    function escapeHtml(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+    // ---- tabs ----
+    function show(which){
+      var setup = which==="setup";
+      document.getElementById("setup").classList.toggle("hidden", !setup);
+      document.getElementById("play").classList.toggle("hidden", setup);
+      document.getElementById("tab-setup").setAttribute("aria-pressed", setup);
+      document.getElementById("tab-play").setAttribute("aria-pressed", !setup);
+      if(!setup) startPlay();
+      else stopTimer();
+    }
+
+    // ---- play / timer ----
+    var C = 2 * Math.PI * 110;          // ring circumference
+    document.getElementById("arc").setAttribute("stroke-dasharray", C);
+    var idx = 0, remaining = 0, total = 0, running = false, tick = null, warned = false;
+
+    function startPlay(){
+      var has = steps.length > 0;
+      document.getElementById("playLive").classList.toggle("hidden", !has);
+      document.getElementById("playEmpty").classList.toggle("hidden", has);
+      if(!has) return;
+      if(idx >= steps.length) idx = 0;
+      loadStep(idx);
+    }
+    function loadStep(i){
+      stopTimer();
+      idx = i; warned = false;
+      var s = steps[i];
+      total = s.min * 60; remaining = total;
+      document.getElementById("nowem").textContent = s.emoji;
+      document.getElementById("nowlabel").textContent = s.label;
+      document.getElementById("arc").setAttribute("stroke", "#CC785C");
+      document.getElementById("ring").classList.remove("done");
+      document.getElementById("warn").textContent = "";
+      var nx = steps[i+1];
+      document.getElementById("nextpill").innerHTML = nx
+        ? 'Next: <span class="ne">'+nx.emoji+'</span> '+escapeHtml(nx.label)
+        : '🎉 Last one — then all done!';
+      paint();
+      setStart(false);
+    }
+    function paint(){
+      var m = Math.floor(remaining/60), sec = remaining%60;
+      document.getElementById("clock").textContent = m + ":" + (sec<10?"0":"") + sec;
+      var frac = total ? (total - remaining)/total : 0;
+      document.getElementById("arc").setAttribute("stroke-dashoffset", -C * frac);
+    }
+    function setStart(go){
+      running = go;
+      document.getElementById("startbtn").textContent = go ? "⏸ Pause" : (remaining<total ? "▶ Resume" : "▶ Start");
+    }
+    function toggle(){ if(running) stopTimer(); else run(); }
+    function run(){
+      if(remaining<=0) return;
+      try{ beep(440,0.07); }catch(e){}
+      setStart(true);
+      var end = Date.now() + remaining*1000;
+      tick = setInterval(function(){
+        remaining = Math.max(0, Math.round((end - Date.now())/1000));
+        if(remaining<=60 && !warned){ warned=true; warn(); }
+        paint();
+        if(remaining<=0){ stopTimer(); finishStep(); }
+      }, 250);
+    }
+    function stopTimer(){ if(tick){ clearInterval(tick); tick=null; } setStart(false); }
+    function resetStep(){ loadStep(idx); }
+    function prevStep(){ if(idx>0) loadStep(idx-1); }
+    function advance(skip){ if(idx < steps.length-1) loadStep(idx+1); else finishAll(); }
+    function warn(){
+      document.getElementById("warn").textContent = "⏰ Almost time to switch!";
+      document.getElementById("ring").classList.add("pulse");
+      document.getElementById("arc").setAttribute("stroke", "#C7822E");
+      setTimeout(function(){ document.getElementById("ring").classList.remove("pulse"); }, 4000);
+    }
+    function finishStep(){
+      try{ beep(660,0.12); setTimeout(function(){beep(880,0.14);},140); }catch(e){}
+      document.getElementById("ring").classList.add("done");
+      document.getElementById("arc").setAttribute("stroke", "#5B8C7B");
+      var last = idx >= steps.length-1;
+      document.getElementById("warn").textContent = last ? "🎉 You finished everything!" : "🎉 You did it! Ready for what's next?";
+      confetti();
+      // child-paced: we DON'T auto-jump — show a big Next, let them choose (agency reduces refusal)
+      document.getElementById("startbtn").textContent = last ? "🎉 All done" : "Next: " + steps[idx+1].emoji + " →";
+      document.getElementById("startbtn").onclick = last ? finishAll : function(){ resetClick(); advance(); };
+    }
+    function resetClick(){ document.getElementById("startbtn").onclick = toggle; }
+    function finishAll(){ resetClick(); document.getElementById("warn").textContent = "🌟 Whole routine done — high five!"; confetti(); }
+
+    // gentle sound (only after a user taps Start, so browsers allow it)
+    var actx = null;
+    function beep(freq, dur){
+      actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+      var o = actx.createOscillator(), g = actx.createGain();
+      o.frequency.value = freq; o.type = "sine"; o.connect(g); g.connect(actx.destination);
+      g.gain.setValueAtTime(0.0001, actx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.18, actx.currentTime+0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, actx.currentTime+dur);
+      o.start(); o.stop(actx.currentTime+dur+0.02);
+    }
+    function confetti(){
+      var b = document.createElement("div"); b.className = "burst";
+      var bits = ["⭐","🎉","✨","🌟","💛"];
+      for(var i=0;i<22;i++){
+        var s = document.createElement("span");
+        s.textContent = bits[i%bits.length];
+        s.style.left = (5 + (i*4.3)%92) + "%";
+        s.style.animationDuration = (1.6 + (i%5)*0.25) + "s";
+        s.style.fontSize = (16 + (i%4)*7) + "px";
+        b.appendChild(s);
+      }
+      document.body.appendChild(b);
+      setTimeout(function(){ b.remove(); }, 2600);
+    }
+
+    // init
+    renderPresets(); renderEmojis(); renderSteps();
+  </script>
+</body>
+</html>

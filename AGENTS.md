@@ -52,6 +52,11 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
     documented in `docs/agentic-app-card.md`; `scripts/check-cards.sh` (in CI) enforces required
     fields, allowed vocab, honest status, and card↔registry sync. To add an app: copy the template,
     fill 6 fields, add a registry line, run the check.
+  - `public/demos/` — small, playable on-device demo apps (e.g. `conversation-spark.html`,
+    `transition-timer.html`), each grounded in `docs/pain-analysis.md`. **Every demo must:** stay
+    on-device (the privacy banner + no `<script src>`), collect **no child name/data**, and ship a
+    matching card in `public/cards/` so it appears in the gallery. `check-webapp.sh` scans every demo
+    for the on-device note + no child-name field + JS parse.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, hooks, and **project commands**
   (`commands/goal-10x.md` — a repo-tuned objective driver wired to the five checks; `commands/check.md`

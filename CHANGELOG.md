@@ -7,6 +7,16 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Transition Timer — second demo app** (`apps/web/public/demos/transition-timer.html`). Targets the
+  #1 daily pain of a six-year-old (*transition refusal*, ~20-min meltdowns). A grown-up taps a preset
+  routine (Morning / Wind-down / Screen-time) or builds one from picture-steps + minutes; the child
+  then sees a big picture, a **shrinking countdown ring**, a **1-minute warning**, and an
+  always-visible **"Next:"** preview, and chooses when to advance (predictability + agency are what
+  prevent meltdowns). Celebrates finishing, never punishes. **On-device, no LLM, no network, no child
+  data** — a pure behavioral scaffold per the safety line. Ships with an Agentic App Card
+  (`cards/transition-timer.md` + registry entry) so it auto-appears in the gallery; linked from the
+  README on-ramp; analysed in `docs/pain-analysis.md`. Guards: `check-webapp.sh` (demo scan) +
+  `check-cards.sh` green.
 - **Agentic App Card + apps gallery.** A tiny, portable standard for describing the small apps we
   build — like a HuggingFace **model card** but **~10× simpler** (6 required fields + a one-line
   pitch + "How to run", vs. HF's 7+ metadata fields and 14 prose sections). Spec +
