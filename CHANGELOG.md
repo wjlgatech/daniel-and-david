@@ -7,6 +7,16 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Homework Chunker — third demo app** (`apps/web/public/demos/homework-chunker.html`). Targets the
+  #1 daily pain of an eleven-year-old (*homework overwhelm/avoidance*, high anxiety). **Kid-facing and
+  kid-owned** (deliberately not parent-set): the kid dumps in everything due, tags each Quick/Medium/
+  Big/Huge (→ 15-minute blocks), then Focus mode runs **one block at a time** (a 15:00 timer with
+  "done early" + "+5 min" and a progress bar that fills as blocks clear) — **they choose the order**.
+  Calm, un-babyish tone (no confetti); ends with a quiet "Plan cleared. 💪". Designed around early-
+  adolescent psychology: **autonomy** + **competence** (SDT). **On-device, no LLM** (kid-facing →
+  LLM-free per the safety line), no name/account/data. Ships an Agentic App Card
+  (`cards/homework-chunker.md` + registry entry) → auto-appears in the gallery; linked from the README;
+  written up in `docs/pain-analysis.md` (all three top demos now built). Guards green.
 - **Transition Timer — second demo app** (`apps/web/public/demos/transition-timer.html`). Targets the
   #1 daily pain of a six-year-old (*transition refusal*, ~20-min meltdowns). A grown-up taps a preset
   routine (Morning / Wind-down / Screen-time) or builds one from picture-steps + minutes; the child
