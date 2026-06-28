@@ -6,12 +6,19 @@
   <title>Daniel &amp; David — Builders in Training</title>
   <style>
     :root {
-      --ink: #11203a;
-      --sky: #2563eb;
-      --grow: #16a34a;
-      --gold: #f59e0b;
-      --paper: #fbfaf6;
-      --card: #ffffff;
+      /* Anthropic-style warm "clay on paper" palette (matches the repo's infographics) */
+      --ink: #29261F;
+      --muted: #6F665A;
+      --paper: #FAF9F5;
+      --paper2: #F0EEE6;
+      --card: #FFFFFF;
+      --clay: #CC785C;
+      --clay-dk: #B05730;
+      --gold: #C7822E;
+      --line: #E6E0D2;
+      /* legacy var names remapped to clay so existing usages restyle in place */
+      --sky: #B05730;
+      --grow: #CC785C;
     }
     * { box-sizing: border-box; }
     body {
@@ -21,20 +28,22 @@
       background: var(--paper);
       line-height: 1.6;
     }
+    h1, h2, .venture h3 { font-family: "Tiempos Text", ui-serif, "Iowan Old Style", Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: -0.2px; }
+    input, select, textarea, button { accent-color: var(--clay); }
     .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
     header {
-      background: linear-gradient(160deg, #1e3a8a 0%, #2563eb 55%, #16a34a 130%);
-      color: #fff;
+      background: linear-gradient(158deg, #2b2620 0%, #43342a 55%, #7c4a33 135%);
+      color: #FAF9F5;
       text-align: center;
       padding: 72px 20px 64px;
     }
     header .seed { font-size: 54px; line-height: 1; }
     header h1 { font-size: clamp(34px, 6vw, 52px); margin: 14px 0 6px; letter-spacing: -0.5px; }
-    header p.tag { font-size: clamp(16px, 2.6vw, 20px); opacity: 0.95; margin: 0 auto; max-width: 620px; }
+    header p.tag { font-size: clamp(16px, 2.6vw, 20px); opacity: 0.94; margin: 0 auto; max-width: 620px; }
     .ladder { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 28px; }
     .rung {
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(250,249,245,0.10);
+      border: 1px solid rgba(250,249,245,0.28);
       border-radius: 999px;
       padding: 7px 15px;
       font-size: 14px;
@@ -42,57 +51,59 @@
       backdrop-filter: blur(4px);
     }
     section { padding: 48px 0; }
+    section:nth-of-type(even):not(.founding) { background: var(--paper2); }
     h2 { font-size: clamp(24px, 4vw, 32px); margin: 0 0 6px; }
-    .lead { color: #475569; margin-top: 0; }
+    .lead { color: var(--muted); margin-top: 0; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 24px; }
     .card {
       background: var(--card);
-      border: 1px solid #e7e3d8;
+      border: 1px solid var(--line);
       border-radius: 16px;
       padding: 22px;
-      box-shadow: 0 1px 3px rgba(17,32,58,0.06);
+      box-shadow: 0 1px 2px rgba(41,38,31,0.05);
     }
     .card .emoji { font-size: 30px; }
     .card h3 { margin: 10px 0 6px; font-size: 19px; }
-    .card p { margin: 0; color: #475569; font-size: 15px; }
-    .card a { color: var(--sky); font-weight: 600; text-decoration: none; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .card a { color: var(--clay-dk); font-weight: 600; text-decoration: none; }
     .card a:hover { text-decoration: underline; }
     .venture {
-      background: linear-gradient(135deg, #ecfdf5, #eff6ff);
-      border: 1px solid #bbf7d0;
+      background: linear-gradient(135deg, #FBF6EE, #F2E9DA);
+      border: 1px solid #E6D8C3;
       border-radius: 18px;
       padding: 28px;
       margin-top: 24px;
     }
     .venture h3 { margin: 0 0 8px; font-size: 22px; }
     .pill {
-      display: inline-block; background: var(--grow); color: #fff;
+      display: inline-block; background: var(--clay); color: #FAF9F5;
       font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
       vertical-align: middle; margin-left: 8px;
     }
     .verse {
-      text-align: center; font-style: italic; color: #475569;
+      text-align: center; font-style: italic; color: var(--muted);
       max-width: 600px; margin: 8px auto 0;
     }
-    footer { text-align: center; padding: 40px 20px 56px; color: #64748b; font-size: 14px; }
+    footer { text-align: center; padding: 40px 20px 56px; color: var(--muted); font-size: 14px; }
     footer strong { color: var(--ink); }
     .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700; color: var(--gold); }
 
     /* Founding cohort */
-    .cta-btn { display:inline-block; background:#fff; color:#1e3a8a; font-weight:800; font-size:17px; padding:14px 26px; border-radius:999px; text-decoration:none; box-shadow:0 6px 20px rgba(0,0,0,.18); }
-    .cta-btn:hover { transform:translateY(-1px); }
+    .cta-btn { display:inline-block; background:var(--clay); color:#FAF9F5; font-weight:800; font-size:17px; padding:14px 26px; border-radius:999px; text-decoration:none; box-shadow:0 6px 18px rgba(176,87,48,.35); }
+    .cta-btn:hover { transform:translateY(-1px); background:var(--clay-dk); }
     .cta-sub { display:block; margin-top:12px; font-size:14px; opacity:.92; }
-    .scarcity { display:inline-block; margin-top:22px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.34); border-radius:999px; padding:8px 16px; font-size:14px; font-weight:700; backdrop-filter:blur(4px); }
-    .founding { background:linear-gradient(135deg,#0f172a,#1e3a8a); color:#fff; }
+    .scarcity { display:inline-block; margin-top:22px; background:rgba(250,249,245,.14); border:1px solid rgba(250,249,245,.32); border-radius:999px; padding:8px 16px; font-size:14px; font-weight:700; backdrop-filter:blur(4px); }
+    .founding { background:linear-gradient(150deg,#29261F 0%,#3b2a20 60%,#5a3826 130%); color:#FAF9F5; }
     .founding .wrap { padding:54px 20px; }
-    .founding h2 { color:#fff; }
-    .founding .lead { color:#cbd5e1; }
+    .founding h2 { color:#FAF9F5; }
+    .founding .lead { color:#d8cfc2; }
+    .founding a { color:#E8B84B !important; }
     .epochs { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:22px; }
-    .epoch { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius:14px; padding:16px; }
-    .epoch.genesis { background:rgba(245,158,11,.16); border-color:rgba(245,158,11,.5); }
+    .epoch { background:rgba(250,249,245,.06); border:1px solid rgba(250,249,245,.15); border-radius:14px; padding:16px; }
+    .epoch.genesis { background:rgba(232,184,75,.16); border-color:rgba(232,184,75,.5); }
     .epoch .ep-name { font-weight:800; font-size:15px; }
     .epoch .ep-reward { font-size:26px; font-weight:800; margin:6px 0 2px; }
-    .epoch .ep-meta { font-size:13px; color:#cbd5e1; }
+    .epoch .ep-meta { font-size:13px; color:#d8cfc2; }
     /* Application form */
     .apply { background:#fff; color:var(--ink); border:1px solid #e7e3d8; border-radius:18px; padding:26px; margin-top:24px; box-shadow:0 1px 3px rgba(17,32,58,.06); }
     .apply label { color:var(--ink); }
@@ -208,7 +219,7 @@
 
       <p class="lead" style="margin-top:22px;" data-i18n="founding.whyfew"><strong>Why so few?</strong> Because "founding" should mean something. Eight Genesis families means everyone knows each other's names — depth, not scale. It's also the most honest lesson we can give our boys about how scarce, fairly-issued value actually works.</p>
       <p class="lead" data-i18n="founding.getwhat"><strong>What founding families get:</strong> co-design the curriculum, a permanent "Genesis" name, direct office hours — and <strong>private early access to the studio's own AI workshop</strong> (AnyAgent, Super U, DreamMakeTrue): the same tools we build with, so your kid stops just *using* AI and starts building, growing, and creating with it. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" style="color:#93c5fd;">The Halving + the perks + how we choose →</a></p>
-      <p class="lead" style="font-size:15px;color:#93c5fd;" data-i18n="founding.select">Selection is by application and <strong>mutual fit</strong> — based on research, not wealth, credentials, or how impressive you sound. We never ask your income, your degrees, or your child's grades, school, or name.</p>
+      <p class="lead" style="font-size:15px;color:#d8cfc2;" data-i18n="founding.select">Selection is by application and <strong>mutual fit</strong> — based on research, not wealth, credentials, or how impressive you sound. We never ask your income, your degrees, or your child's grades, school, or name.</p>
 
       <!-- ===== APPLICATION ===== -->
       <div class="apply" id="apply">
@@ -249,7 +260,7 @@
           <label for="f-grit" data-i18n="form.grit">A commitment you kept longer than 4 weeks and almost quit — what kept you going? <span style="font-weight:400;color:#64748b">(optional)</span></label>
           <textarea id="f-grit" name="follow_through" placeholder="Optional, but it helps us know you." data-i18n-ph="form.grit.ph"></textarea>
 
-          <p class="adults" style="background:#eff6ff;border-color:#bfdbfe;color:#1e40af" data-i18n="form.mutual">🤝 This is a <strong>mutual fit</strong>, not a contest. We read every word and reply within ~2 weeks. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" target="_blank" rel="noopener">How we choose</a>.</p>
+          <p class="adults" style="background:#FBF6EE;border-color:#E6D8C3;color:#7a5230" data-i18n="form.mutual">🤝 This is a <strong>mutual fit</strong>, not a contest. We read every word and reply within ~2 weeks. <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/founding-families.md" target="_blank" rel="noopener">How we choose</a>.</p>
 
           <label class="consent" data-i18n="form.consent"><input type="checkbox" name="consent" required />
             I am 18 or older and I’ve read the <a href="./privacy.html" target="_blank" rel="noopener">privacy notice</a> and agree to be contacted about the founding cohort.</label>

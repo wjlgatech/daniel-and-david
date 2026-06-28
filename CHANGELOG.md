@@ -6,6 +6,14 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **Restyled the whole site to the Anthropic "clay on paper" aesthetic** (matching the repo's own
+  infographics): warm paper backgrounds (`#FAF9F5`/`#F0EEE6`), warm ink (`#29261F`), **clay accent**
+  (`#CC785C`) for buttons/links/pills, warm gold kickers, subtle warm borders, **serif display
+  headings** (Tiempos feel), and warm-dark (not navy/blue) hero + founding sections. Applied across
+  `index.html`, `app.html`, and `privacy.html`. Replaces the old blue/green theme. (Dark sections
+  kept dark-but-warm so the translated white text keeps working.)
+
 ### Added
 - **Builder Loop app UI — multilingual core.** The app (`apps/web/public/app.html`) now translates
   its **welcome screen + the cycle wizard + chrome** (privacy ribbon, Kid/Parent, the 5 steps'

@@ -13,14 +13,17 @@
   <meta name="apple-mobile-web-app-title" content="Builder Loop" />
   <style>
     :root{
-      --ink:#11203a; --muted:#475569; --sky:#2563eb; --navy:#1e3a8a; --grow:#16a34a;
-      --gold:#f59e0b; --clay:#d97757; --paper:#fbfaf6; --card:#fff; --line:#e7e3d8;
+      /* Anthropic-style warm "clay on paper" palette */
+      --ink:#29261F; --muted:#6F665A; --sky:#B05730; --navy:#3b2a20; --grow:#CC785C;
+      --gold:#C7822E; --clay:#CC785C; --paper:#FAF9F5; --card:#FFFFFF; --line:#E6E0D2;
       --r:16px; --tap:52px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;overflow-x:hidden}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
       color:var(--ink); background:var(--paper); line-height:1.55; -webkit-text-size-adjust:100%;}
+    h1,h2{font-family:"Tiempos Text",ui-serif,"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.2px;}
+    input,select,textarea,button{accent-color:var(--clay)}
     .wrap{max-width:680px;margin:0 auto;padding:0 16px 96px;}
     /* top bar */
     header{position:sticky;top:0;z-index:5;background:rgba(251,250,246,.92);backdrop-filter:blur(8px);
@@ -33,7 +36,7 @@
     .modebtn[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
     #installBtn{display:none;background:var(--grow);color:#fff;border-color:var(--grow)}
     /* privacy ribbon */
-    .privacy{font-size:12.5px;color:var(--muted);text-align:center;padding:8px 16px;background:#ecfdf5;border-bottom:1px solid #bbf7d0}
+    .privacy{font-size:12.5px;color:#7a5230;text-align:center;padding:8px 16px;background:#FBF6EE;border-bottom:1px solid #E6D8C3}
     /* generic */
     h1{font-size:clamp(24px,6vw,32px);margin:18px 0 4px;letter-spacing:-.3px}
     h2{font-size:21px;margin:24px 0 6px}
