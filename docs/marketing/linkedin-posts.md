@@ -1,10 +1,13 @@
 # LinkedIn Short Posts
 
+> 🚀 **Launching today?** The dated, it's-live announcement set (site + free app + open Genesis
+> cohort) is in **[launch.md](launch.md)**. The posts below are the evergreen intro series.
+
 Ready-to-paste posts (150–200 words each) that introduce the [long-form article](the-daniel-and-david-story.md)
 and the [repo](https://github.com/wjlgatech/daniel-and-david). Each notes the **infographic to attach**.
 
 **Launch images (LinkedIn-ready PNGs, 2400px wide):** rendered to the Desktop as
-`dd-launch-capability-ladder.png` · `dd-launch-builder-loop-4week.png` ·
+`dd-launch-capability-ladder.png` · `dd-launch-builder-loop-4week.png` · `dd-launch-founding-halving.png` ·
 `dd-launch-theory-of-change.png` · `dd-launch-safety-layer.png` · `dd-launch-ladder.png` ·
 `dd-launch-builder-loop.png` · `dd-launch-agent-loop.png` · `dd-launch-critical-thinking.png` ·
 `dd-launch-mission-value-chain.png`. Re-render any with
