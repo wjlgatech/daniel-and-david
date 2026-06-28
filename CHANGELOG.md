@@ -7,6 +7,12 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Launch package** (`docs/marketing/launch.md`) — the dated "it's live" announcement set:
+  a primary LinkedIn post (free installable app), a Founding-Families "Halving" post (honest
+  Genesis-cohort scarcity), an X short post, a one-liner, and a pre-post checklist. Every claim
+  is true as of launch (live site + installable app + open Genesis cohort; venture #1 still
+  "pilot in design"). Linked from `linkedin-posts.md`; added `founding-halving` to the launch-image
+  manifest. Drafts only — publishing is a human action.
 - **Builder Loop app v2·2 — photo evidence + AR/glasses readiness.** On-device **photo/drawing
   evidence** for the build/show steps via a new IndexedDB `Media` seam (thumbnails on the dashboard;
   photos **never leave the device** — excluded from export/share). **AR / AI-glasses prep:**
