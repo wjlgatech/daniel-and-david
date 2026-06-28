@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Conversation Spark — Daniel &amp; David</title>
+  <meta name="description" content="Get your 6- or 11-year-old talking tonight: 3 warm, open-ended opener questions, picked for their age + interests. On-device, no signup, no child data." />
+  <meta name="theme-color" content="#CC785C" />
+  <style>
+    :root{ --ink:#29261F; --muted:#6F665A; --paper:#FAF9F5; --paper2:#F0EEE6; --card:#fff;
+      --clay:#CC785C; --clay-dk:#B05730; --gold:#C7822E; --line:#E6E0D2; }
+    *{box-sizing:border-box} html,body{margin:0;overflow-x:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.55;}
+    h1,h2{font-family:"Tiempos Text",ui-serif,"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.3px;}
+    input,select,textarea,button{accent-color:var(--clay)}
+    .wrap{max-width:640px;margin:0 auto;padding:0 18px 80px;}
+    header{background:linear-gradient(158deg,#2b2620,#43342a 55%,#7c4a33 135%);color:#FAF9F5;text-align:center;padding:46px 18px 40px;}
+    header .em{font-size:44px}
+    header h1{font-size:clamp(28px,6vw,40px);margin:8px 0 6px}
+    header p{margin:0 auto;max-width:520px;opacity:.94}
+    .privacy{font-size:12.5px;color:#7a5230;text-align:center;padding:9px 16px;background:#FBF6EE;border-bottom:1px solid #E6D8C3}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 1px 2px rgba(41,38,31,.05)}
+    .lab{font-weight:700;font-size:14px;margin:16px 0 8px;display:block}
+    .lab:first-child{margin-top:0}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;color:var(--ink)}
+    .chip.on{background:var(--clay);color:#FAF9F5;border-color:var(--clay)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 22px;border:0;border-radius:999px;font-size:17px;font-weight:800;cursor:pointer;background:var(--clay);color:#FAF9F5}
+    .btn:hover{background:var(--clay-dk)} .btn.big{width:100%}
+    .btn.secondary{background:#fff;color:var(--clay-dk);border:1.5px solid var(--line);font-size:15px;min-height:46px}
+    .btn.ghost{background:transparent;color:var(--muted);font-weight:700;border:0;min-height:auto;padding:6px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .spark{border-left:4px solid var(--clay);background:#FBF6EE;border-radius:10px;padding:14px 16px;margin:10px 0;font-size:17px}
+    .muted{color:var(--muted);font-size:14px}
+    .note{background:#FFF7ED;border:1px solid #FED7AA;color:#9a3412;border-radius:10px;padding:10px 14px;font-size:13.5px;margin-top:12px}
+    footer{max-width:640px;margin:0 auto;padding:12px 18px 30px;color:var(--muted);font-size:13px;text-align:center}
+    a{color:var(--clay-dk)}
+    @media print{header,.privacy,footer,.btn,.chip,.lab,#controls{display:none!important} .spark{border:1px solid #ccc}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="em">💬</div>
+    <h1>Conversation Spark</h1>
+    <p>Get your child talking <em>tonight</em>. Pick their age and a few interests — get three warm, open questions worth asking. (A grown-up's tool.)</p>
+  </header>
+  <div class="privacy">🔒 On your device only. Nothing is stored or sent. <strong>No child's name or data</strong> — the optional ✨ button sends only the age + interest tags you tap.</div>
+
+  <main class="wrap">
+    <div class="card" id="controls">
+      <span class="lab">How old is your child?</span>
+      <div class="chips" id="age"></div>
+      <span class="lab">A few of their interests (tap any)</span>
+      <div class="chips" id="interests"></div>
+      <span class="lab">The moment</span>
+      <div class="chips" id="moment"></div>
+      <div style="margin-top:20px"><button class="btn big" onclick="spark()">✨ Get 3 sparks →</button></div>
+    </div>
+
+    <div id="out"></div>
+  </main>
+
+  <footer>
+    Built with <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md">Pain2Gain</a> ·
+    grounded in <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/docs/safety/">child-safe design</a> ·
+    part of <a href="../index.html">Daniel &amp; David</a>
+  </footer>
+
+  <script>
+  /* ===== LLM seam: optional, parent-facing only. Off until a maintainer deploys the free-LLM
+     proxy and pastes its URL here (see apps/web/DEPLOY.md). The request carries ONLY the age +
+     interest tags the parent picked — never a child's name or any data. ===== */
+  const SPARK = { endpoint: "" };  // e.g. "https://your-deploy.vercel.app/api/spark"
+
+  const AGES = [["6","6 & under"],["11","9–12"],["teen","teen"],["any","any age"]];
+  const INTERESTS = ["animals","sports","building / Lego","drawing / art","games","books","music","space / science","nature","food / cooking","friends"];
+  const MOMENTS = [["dinner","🍽️ dinner"],["car","🚗 in the car"],["bedtime","🌙 bedtime"],["feelings","💛 big feelings"]];
+
+  // Curated, Gottman-flavored openers. {x} = an interest; tagged by moment + age band.
+  const BANK = {
+    dinner: [
+      "What was the best part of today — and the trickiest part?",
+      "If today were a color, what color would it be? Why?",
+      "Tell me one thing that made you laugh today.",
+      "Who did you sit with / play with today? What was that like?",
+      "What's something you're looking forward to tomorrow?",
+      "If you could change one thing about today, what would it be?"
+    ],
+    car: [
+      "If you could design the perfect weekend, what would we do?",
+      "What's a question you've been wondering about lately?",
+      "Would you rather be able to fly or be invisible — and why?",
+      "What's something you're really good at that I might not know?",
+      "If you ran the world for a day, what's the first rule you'd make?"
+    ],
+    bedtime: [
+      "What's one thing you're proud of from today — even something small?",
+      "Was there a moment today you wished had gone differently?",
+      "What's something kind you saw, did, or received today?",
+      "If your day were a story, what would the title be?",
+      "What's one thing you're grateful for tonight?"
+    ],
+    feelings: [
+      "It looks like today had some big feelings in it. Want to tell me about one?",
+      "Where in your body did you feel that the most?",
+      "What would have helped in that moment?",
+      "You don't have to fix it — I just want to understand. What happened first?",
+      "If that feeling could talk, what would it say it needed?"
+    ],
+    interest: [
+      "What's the coolest thing about {x} that most grown-ups don't know?",
+      "If you could ask anyone in the world one question about {x}, who and what?",
+      "What's something you wish you could do with {x} but can't yet?",
+      "Teach me one thing about {x} I probably get wrong.",
+      "If you made up your own {x} thing, what would it be?"
+    ],
+    age6: [
+      "If you could be any animal at dinner, which one — and how would you eat?",
+      "What was your favorite sound you heard today?",
+      "Tell me about a time you were brave (even a tiny bit) today."
+    ],
+    age11: [
+      "What's something you've changed your mind about lately?",
+      "What's a small thing that's been bugging you that I might not have noticed?",
+      "If you could teach our family one new rule, what would it be — and why?"
+    ]
+  };
+
+  const state = { age:"any", interests:[], moment:"dinner" };
+
+  function chipRow(id, items, multi){
+    const el = document.getElementById(id);
+    el.innerHTML = items.map(it=>{ const v = Array.isArray(it)?it[0]:it, t = Array.isArray(it)?it[1]:it;
+      const on = multi ? state[id].includes(v) : state[id]===v;
+      return `<button class="chip ${on?'on':''}" onclick="pick('${id}','${v.replace(/'/g,"")}',${!!multi})">${t}</button>`; }).join("");
+  }
+  function pick(group, v, multi){
+    if(multi){ const i=state[group].indexOf(v); if(i>=0) state[group].splice(i,1); else state[group].push(v); }
+    else state[group]=v;
+    chipRow(group==='age'?'age':group, group==='age'?AGES:group==='interests'?INTERESTS:MOMENTS, multi);
+  }
+  // wire ids -> data
+  function render(){ chipRow('age',AGES,false); chipRow('interests',INTERESTS,true); chipRow('moment',MOMENTS,false); }
+
+  function pickN(arr,n){ const a=arr.slice(); const out=[]; while(a.length && out.length<n){ out.push(a.splice(Math.floor(seed()*a.length),1)[0]); } return out; }
+  let _s = 1; function seed(){ _s=(_s*9301+49297)%233280; return _s/233280; }
+  function reseed(){ _s = (Math.floor((performance.now()+1)*1000) % 233280) + 1; }
+
+  function buildLocal(){
+    reseed();
+    const pool = [];
+    // interest-flavored first (if any chosen)
+    if(state.interests.length){
+      const its = pickN(state.interests, Math.min(2, state.interests.length));
+      its.forEach(x=> pool.push(pickN(BANK.interest,1)[0].replace(/\{x\}/g, x)) );
+    }
+    // age-tuned spice
+    if(state.age==="6") pool.push(...pickN(BANK.age6,1));
+    if(state.age==="11") pool.push(...pickN(BANK.age11,1));
+    // fill from the moment bank
+    pool.push(...pickN(BANK[state.moment]||BANK.dinner, 4));
+    // unique, take 3
+    const seen=new Set(), q=[];
+    for(const x of pool){ if(!seen.has(x)){ seen.add(x); q.push(x); } if(q.length>=3) break; }
+    while(q.length<3){ const x=pickN(BANK[state.moment]||BANK.dinner,1)[0]; if(!seen.has(x)){seen.add(x);q.push(x);} }
+    return q;
+  }
+
+  function show(questions, aiUsed){
+    document.getElementById('out').innerHTML = `
+      <div class="card">
+        <h2 style="margin-top:0">Three sparks to try ${aiUsed?'✨':''}</h2>
+        ${questions.map(q=>`<div class="spark">${q}</div>`).join("")}
+        <p class="muted" style="margin:10px 0 0">Ask one. Then <strong>listen</strong> — don't fix. A follow-up "tell me more?" is worth more than advice.</p>
+        <div class="row" style="margin-top:14px">
+          <button class="btn secondary" onclick="spark()">🔀 Shuffle</button>
+          <button class="btn secondary" onclick="freshAI()">✨ Fresh ideas (AI)</button>
+          <button class="btn secondary" onclick="copyOut()">📋 Copy</button>
+          <button class="btn secondary" onclick="window.print()">🖨️ Print</button>
+        </div>
+        <div id="aimsg"></div>
+      </div>`;
+    window._last = questions;
+  }
+  function spark(){ show(buildLocal(), false); document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'}); }
+  function copyOut(){ const t=(window._last||[]).map((q,i)=>(i+1)+". "+q).join("\n"); if(navigator.clipboard){navigator.clipboard.writeText(t).then(()=>alert("Copied!"));} else prompt("Copy:",t); }
+
+  function freshAI(){
+    const msg=document.getElementById('aimsg');
+    if(!SPARK.endpoint){
+      msg.innerHTML = `<div class="note">✨ The AI button is wired but not switched on. The built-in questions already work great offline. To enable fresh AI-generated ideas, a maintainer deploys the free-LLM proxy — see <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/DEPLOY.md">DEPLOY.md</a>. (When on, it sends only your age + interest tags — never a child's name or data.)</div>`;
+      return;
+    }
+    msg.innerHTML = `<p class="muted">Thinking of fresh sparks…</p>`;
+    fetch(SPARK.endpoint, { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ age: state.age, interests: state.interests, moment: state.moment }) })
+      .then(r=>r.json())
+      .then(d=>{ const qs=(d && d.questions||[]).slice(0,3); if(qs.length){ show(qs,true); document.getElementById('out').scrollIntoView({behavior:'smooth'});} else throw 0; })
+      .catch(()=>{ msg.innerHTML = `<div class="note">Couldn't reach the AI just now — the built-in sparks above still work great. 🔀 Shuffle for more.</div>`; });
+  }
+
+  render();
+  </script>
+</body>
+</html>
