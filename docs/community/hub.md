@@ -4,6 +4,10 @@
 > (the four-week family loop) and the **[safety rules](../safety/)**. The hub is the *later*
 > stage; we [prove the loop before we scale the hub](../vision/theory-of-change.md).
 
+> 🧪 **Play the demos.** Real apps built from a [Pain2Gain](../principles/pain2gain.md) analysis of
+> [family pains](../pain-analysis.md) — e.g. [Conversation Spark](https://wjlgatech.github.io/daniel-and-david/demos/conversation-spark.html)
+> (get your kid talking tonight). On-device, no signup, no child data.
+
 This started as a father's curriculum for two boys. It's growing into a **hub**: a living
 place that gets better the more people (and agents) show up. Three hubs in one.
 

@@ -55,6 +55,21 @@ if grep -q 'addPhoto' "$APP"; then
   grep -qi 'never uploaded' "$APP"      && echo "  ✅ photos carry 'never uploaded' notice"  || { echo "  ❌ photo feature missing 'never uploaded' notice"; fail=1; }
 fi
 
+# Demos (hub mini-apps) must be on-device + collect NO child identity
+for d in "$DIR"/demos/*.html; do
+  [ -e "$d" ] || continue
+  nm=$(basename "$d")
+  if grep -qiE 'this device|on your device|on-device' "$d"; then echo "  ✅ demo $nm states on-device"; else echo "  ❌ demo $nm missing on-device note"; fail=1; fi
+  if grep -qiE 'name="(child_name|kid_name|child_first|child_fullname)"' "$d"; then echo "  ❌ demo $nm collects a child name"; fail=1; else echo "  ✅ demo $nm collects no child name"; fi
+  if command -v node >/dev/null 2>&1; then
+    python3 - "$d" > /tmp/_demojs.js <<'PY'
+import re,sys
+print("\n".join(re.findall(r'<script>(.*?)</script>', open(sys.argv[1]).read(), re.S)))
+PY
+    node --check /tmp/_demojs.js && echo "  ✅ demo $nm JS parses" || { echo "  ❌ demo $nm JS syntax error"; fail=1; }
+  fi
+done
+
 # JS parses (only if node is available — CI has it; local may not)
 if command -v node >/dev/null 2>&1; then
   node --check "$DIR/sw.js" && echo "  ✅ sw.js parses" || { echo "  ❌ sw.js syntax error"; fail=1; }

@@ -7,6 +7,17 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Pain2Gain applied + the first demo app.** `docs/pain-analysis.md` runs Pain2Gain on real,
+  evidence-based pains of a 6-year-old, an 11-year-old, and their parents (top 3–5 each, with
+  burden + dimension + depth rung + app concept), plus the explicit child-safety "what we will NOT
+  build" rules (COPPA 2026 / SB-243). Shipped the first playable demo — **Conversation Spark**
+  (`apps/web/public/demos/conversation-spark.html`): a *parent* tool that gives 3 warm opener
+  questions for their 6/11-year-old, **on-device, no signup, no child data**, with a curated offline
+  bank. The optional ✨ "fresh ideas" button is an **LLM seam** to a parent-facing free-LLM proxy
+  (`apps/web/api/spark.js` + `vercel.json` + `DEPLOY.md`) — off until a maintainer adds an
+  `NIM_API_KEY` and deploys (Vercel/Netlify/fly); sends only age + interest tags, never child data.
+  `check-webapp.sh` now also guards demos (on-device note + no child-name field). Linked from the
+  hub, the landing page (all 5 languages), and Pain2Gain.
 - **Pain2Gain — a deep-pain investigation methodology** (`docs/principles/pain2gain.md` +
   `docs/principles/pain-dossier.md` worksheet + `docs/assets/pain-depth-ladder.svg`). The rigorous
   front end to the Builder Loop's *Understand* phase and companion to 5W1H: a **depth ladder**
