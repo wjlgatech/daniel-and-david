@@ -21,6 +21,7 @@
       --grow: #CC785C;
     }
     * { box-sizing: border-box; }
+    html, body { overflow-x: hidden; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -128,6 +129,35 @@
     .i18n-note { display:none; background:#fef3c7; color:#92400e; border-bottom:1px solid #fde68a;
       text-align:center; padding:8px 16px; font-size:13px; line-height:1.5; }
     .i18n-note a { color:#92400e; }
+
+    /* ===== Hero amplification — lovable/base44 bold structure on our warm palette ===== */
+    header { padding: 90px 20px 78px; }
+    header h1 { font-size: clamp(40px, 7.5vw, 66px); margin: 16px 0 10px; }
+    .hero-badge { display:inline-block; background:rgba(232,184,75,.16); border:1px solid rgba(232,184,75,.45);
+      color:#F2C14E; font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;
+      padding:6px 14px; border-radius:999px; margin-bottom:6px; }
+    .hero-ctas { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:30px 0 0; }
+    .cta-btn.ghost { background:transparent; color:#FAF9F5; border:1.5px solid rgba(250,249,245,.55); box-shadow:none; }
+    .cta-btn.ghost:hover { background:rgba(250,249,245,.12); }
+
+    /* ===== Live demo showcase — printingpress "show the artifact" + lovable live previews ===== */
+    .showcase { background: var(--paper2); }
+    .demorow { display:grid; grid-template-columns:repeat(auto-fit, minmax(290px,1fr)); gap:26px; margin-top:32px; }
+    .demoframe { display:flex; flex-direction:column; }
+    .demohead { display:flex; align-items:center; gap:8px; margin:0 0 4px; }
+    .demohead h3 { font-size:18px; margin:0; }
+    .aitag { font-size:11px; font-weight:800; color:#fff; background:var(--clay); border-radius:999px; padding:2px 9px; letter-spacing:.3px; }
+    .demoframe .dtag { color:var(--muted); font-size:14px; margin:0 0 14px; }
+    .phone { position:relative; border:9px solid #2b2620; border-radius:32px; overflow:hidden;
+      background:#000; box-shadow:0 24px 46px rgba(41,38,31,.22); height:512px; }
+    .phone::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+      width:42%; height:17px; background:#2b2620; border-radius:0 0 12px 12px; z-index:2; }
+    .phone iframe { width:100%; height:100%; border:0; background:#fff; display:block; }
+    .demoframe .open { margin-top:13px; font-weight:700; text-decoration:none; color:var(--clay-dk); align-self:flex-start; }
+    .demoframe .open:hover { text-decoration:underline; }
+    .ainote { margin-top:32px; background:#fff; border:1px solid var(--line); border-radius:14px;
+      padding:16px 20px; color:var(--muted); font-size:14.5px; line-height:1.6; }
+    .ainote strong { color:var(--ink); } .ainote a { color:var(--clay-dk); font-weight:700; }
   </style>
 </head>
 <body>
@@ -143,6 +173,7 @@
       </select>
     </div>
     <div class="seed">🌱</div>
+    <span class="hero-badge" data-i18n="hero.badge">An AI-native family field lab</span>
     <h1>Daniel &amp; David</h1>
     <p class="tag" data-i18n="tag">A family field lab for raising wise, creative, AI-ready builders. Help your child think clearly, use AI responsibly, create real value, and serve real people.</p>
     <div class="ladder">
@@ -154,10 +185,42 @@
       <span class="rung" data-i18n="rung6">6 · Team</span>
       <span class="rung" data-i18n="rung7">7 · Bless</span>
     </div>
-    <p style="margin:30px 0 0;"><a class="cta-btn" href="#apply" data-i18n="hero.apply">Apply to the founding cohort →</a></p>
+    <div class="hero-ctas">
+      <a class="cta-btn" href="#apply" data-i18n="hero.apply">Apply to the founding cohort →</a>
+      <a class="cta-btn ghost" href="#see" data-i18n="hero.see">▾ See the apps</a>
+    </div>
     <span class="scarcity" data-i18n="hero.scarcity">⛏️ Genesis epoch · <span id="spots-left">8</span> of 8 founding spots — the honor halves at the next epoch</span>
     <span class="cta-sub" data-i18n="hero.sub"><a href="#halving" style="color:#fff;text-decoration:underline;">What's the Halving?</a> · or <a href="./app.html" style="color:#fff;text-decoration:underline;">open the free Builder Loop app →</a></span>
   </header>
+
+  <section class="showcase" id="see">
+    <div class="wrap">
+      <p class="kicker" data-i18n="showcase.kicker">See it work</p>
+      <h2 data-i18n="showcase.h2">Three apps your family can use — right now.</h2>
+      <p class="lead" data-i18n="showcase.lead">Not screenshots — the real apps, running right here. Tap in, or open any one full-screen. All on-device, no signup.</p>
+      <div class="demorow">
+        <div class="demoframe">
+          <div class="demohead"><h3>💬 Conversation Spark</h3><span class="aitag">✨ AI-ready</span></div>
+          <p class="dtag" data-i18n="showcase.spark">Get your 6- or 11-year-old talking tonight — one good question, on demand.</p>
+          <div class="phone"><iframe src="./demos/conversation-spark.html" loading="lazy" title="Conversation Spark — live demo"></iframe></div>
+          <a class="open" href="./demos/conversation-spark.html" data-i18n="showcase.open">Open full ↗</a>
+        </div>
+        <div class="demoframe">
+          <div class="demohead"><h3>⏳ Transition Timer</h3></div>
+          <p class="dtag" data-i18n="showcase.timer">Help your 6-year-old switch activities without the meltdown — pictures + a countdown.</p>
+          <div class="phone"><iframe src="./demos/transition-timer.html" loading="lazy" title="Transition Timer — live demo"></iframe></div>
+          <a class="open" href="./demos/transition-timer.html" data-i18n="showcase.open">Open full ↗</a>
+        </div>
+        <div class="demoframe">
+          <div class="demohead"><h3>📚 Homework Chunker</h3></div>
+          <p class="dtag" data-i18n="showcase.chunk">Turn an 11-year-old's homework pile into small 15-minute wins they choose the order of.</p>
+          <div class="phone"><iframe src="./demos/homework-chunker.html" loading="lazy" title="Homework Chunker — live demo"></iframe></div>
+          <a class="open" href="./demos/homework-chunker.html" data-i18n="showcase.open">Open full ↗</a>
+        </div>
+      </div>
+      <p class="ainote" data-i18n="showcase.ai">✨ <strong>AI, the safe way.</strong> Where AI helps — like Conversation Spark's fresh ideas — it runs through a free, open-model proxy (NVIDIA NIM), <strong>parent-facing only</strong>: it sends just the tags you tap, never a child's name or data, and stays off until a maintainer deploys a key. The kids' apps run fully on-device with no AI. <a href="./apps.html">Browse all apps →</a></p>
+    </div>
+  </section>
 
   <section class="wrap">
     <p class="kicker" data-i18n="idea.kicker">The idea</p>
@@ -394,6 +457,16 @@
         "free.cta": "▶️ 打开 Builder Loop 应用", "free.guide": "或阅读指南 →",
         "free.demo": "🧪 也来玩一个用 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md\">Pain2Gain</a> 做的小应用：<a href=\"./demos/conversation-spark.html\"><strong>对话火花</strong></a> — 今晚就让 6 岁或 11 岁的孩子开口聊。",
         "free.gallery": "🃏 在一个地方浏览所有应用：<a href=\"./apps.html\"><strong>应用展厅</strong></a> — 每个都用一张小小的 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/agentic-app-card.md\">智能体应用卡</a> 来描述。",
+        "hero.badge": "AI 原生的家庭实践工坊",
+        "hero.see": "▾ 看看这些应用",
+        "showcase.kicker": "亲眼看它运行",
+        "showcase.h2": "三个你的家庭现在就能用的应用。",
+        "showcase.lead": "不是截图 — 是真实应用，就在这里运行。点进去玩，或全屏打开任意一个。全部在本地设备运行，无需注册。",
+        "showcase.open": "全屏打开 ↗",
+        "showcase.spark": "今晚就让 6 岁或 11 岁的孩子开口聊 — 随时来一个好问题。",
+        "showcase.timer": "帮 6 岁孩子顺利切换活动，不再崩溃 — 图片 + 倒计时。",
+        "showcase.chunk": "把 11 岁孩子的成堆作业，拆成 15 分钟的小胜利 — 顺序由他们自己定。",
+        "showcase.ai": "✨ <strong>AI，但要安全。</strong>凡是用到 AI 的地方 — 比如「对话火花」的灵感生成 — 都通过一个免费的开源模型代理（NVIDIA NIM）运行，<strong>仅面向家长</strong>：只发送你点选的标签，绝不发送孩子的姓名或数据，并且在维护者部署密钥之前始终关闭。孩子用的应用完全在本地设备运行，不含 AI。 <a href=\"./apps.html\">浏览所有应用 →</a>",
         "footer.verse": "「建造美好之物。让它带来收益。用它去祝福。」",
         "footer.i18n": "英文为原文。其他语言为 AI 辅助翻译 — 欢迎指正。"
       },
@@ -433,6 +506,16 @@
         "free.cta": "▶️ Abrir la app Builder Loop", "free.guide": "o lee la guía →",
         "free.demo": "🧪 O prueba una demo hecha con <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md\">Pain2Gain</a>: <a href=\"./demos/conversation-spark.html\"><strong>Chispa de Conversación</strong></a> — haz que tu hijo de 6 u 11 años hable esta noche.",
         "free.gallery": "🃏 Explora todas las apps en un solo lugar: <a href=\"./apps.html\"><strong>la Galería de Apps</strong></a> — cada una descrita por una pequeña <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/agentic-app-card.md\">Tarjeta de App Agéntica</a>.",
+        "hero.badge": "Un laboratorio de campo familiar nativo en IA",
+        "hero.see": "▾ Ver las apps",
+        "showcase.kicker": "Míralo funcionar",
+        "showcase.h2": "Tres apps que tu familia puede usar — ahora mismo.",
+        "showcase.lead": "No son capturas — son las apps reales, funcionando aquí mismo. Toca para usarlas o abre cualquiera a pantalla completa. Todo en tu dispositivo, sin registro.",
+        "showcase.open": "Abrir completo ↗",
+        "showcase.spark": "Haz que tu hijo de 6 u 11 años hable esta noche — una buena pregunta, cuando quieras.",
+        "showcase.timer": "Ayuda a tu hijo de 6 años a cambiar de actividad sin berrinche — imágenes + cuenta regresiva.",
+        "showcase.chunk": "Convierte la montaña de tareas de un niño de 11 años en pequeñas victorias de 15 minutos, en el orden que él elija.",
+        "showcase.ai": "✨ <strong>IA, de forma segura.</strong> Donde la IA ayuda — como las ideas frescas de Chispa de Conversación — funciona a través de un proxy gratuito de modelos abiertos (NVIDIA NIM), <strong>solo de cara a los padres</strong>: envía solo las etiquetas que tocas, nunca el nombre ni los datos de un niño, y permanece apagada hasta que un responsable despliegue una clave. Las apps de los niños funcionan totalmente en el dispositivo, sin IA. <a href=\"./apps.html\">Ver todas las apps →</a>",
         "footer.verse": "«Construye algo bueno. Haz que rinda. Úsalo para bendecir.»",
         "footer.i18n": "El inglés es el original. Los otros idiomas son traducciones asistidas por IA — se agradecen correcciones."
       },
@@ -472,6 +555,16 @@
         "free.cta": "▶️ Builder Loop 앱 열기", "free.guide": "또는 가이드 읽기 →",
         "free.demo": "🧪 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md\">Pain2Gain</a>으로 만든 데모도 해보세요: <a href=\"./demos/conversation-spark.html\"><strong>대화 스파크</strong></a> — 오늘 밤 6세나 11세 아이가 말문을 열게.",
         "free.gallery": "🃏 모든 앱을 한곳에서 둘러보세요: <a href=\"./apps.html\"><strong>앱 갤러리</strong></a> — 각 앱은 작은 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/agentic-app-card.md\">에이전트 앱 카드</a>로 설명됩니다.",
+        "hero.badge": "AI 네이티브 가족 실습실",
+        "hero.see": "▾ 앱 둘러보기",
+        "showcase.kicker": "직접 확인하세요",
+        "showcase.h2": "지금 바로 쓸 수 있는 세 가지 앱.",
+        "showcase.lead": "스크린샷이 아니라 — 실제 앱이 바로 여기서 돌아갑니다. 눌러서 써 보거나 전체 화면으로 여세요. 모두 기기 안에서, 가입 불필요.",
+        "showcase.open": "전체 화면으로 ↗",
+        "showcase.spark": "오늘 밤 6세나 11세 아이의 말문을 열어요 — 필요할 때 좋은 질문 하나.",
+        "showcase.timer": "6세 아이가 떼쓰지 않고 활동을 바꾸도록 — 그림 + 카운트다운.",
+        "showcase.chunk": "11세 아이의 산더미 같은 숙제를 15분짜리 작은 성취로 — 순서는 아이가 정해요.",
+        "showcase.ai": "✨ <strong>AI, 안전하게.</strong> AI가 도움이 되는 곳 — 예를 들어 대화 스파크의 새 아이디어 — 에서는 무료 오픈 모델 프록시(NVIDIA NIM)를 통해 작동하며, <strong>부모 대상 전용</strong>입니다: 눌러 선택한 태그만 보내고 아이의 이름이나 데이터는 절대 보내지 않으며, 관리자가 키를 배포하기 전까지는 꺼져 있습니다. 아이용 앱은 AI 없이 전적으로 기기 안에서 돌아갑니다. <a href=\"./apps.html\">모든 앱 보기 →</a>",
         "footer.verse": "“좋은 것을 지어라. 값을 치르게 하라. 그것으로 축복하라.”",
         "footer.i18n": "영어가 원문입니다. 다른 언어는 AI 보조 번역이며 — 수정 제안을 환영합니다."
       },
@@ -511,6 +604,16 @@
         "free.cta": "▶️ Builder Loop アプリを開く", "free.guide": "またはガイドを読む →",
         "free.demo": "🧪 <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/principles/pain2gain.md\">Pain2Gain</a> で作ったデモも：<a href=\"./demos/conversation-spark.html\"><strong>会話スパーク</strong></a> — 今夜、6歳や11歳の子が話し出す。",
         "free.gallery": "🃏 すべてのアプリを一か所で見る：<a href=\"./apps.html\"><strong>アプリギャラリー</strong></a> — それぞれ小さな <a href=\"https://github.com/wjlgatech/daniel-and-david/blob/main/docs/agentic-app-card.md\">エージェントアプリカード</a> で説明。",
+        "hero.badge": "AIネイティブな家族のフィールドラボ",
+        "hero.see": "▾ アプリを見る",
+        "showcase.kicker": "動くところを見る",
+        "showcase.h2": "今すぐ家族で使える3つのアプリ。",
+        "showcase.lead": "スクリーンショットではなく — 本物のアプリがここで動いています。触れて試すか、全画面で開けます。すべて端末内で動作、登録不要。",
+        "showcase.open": "全画面で開く ↗",
+        "showcase.spark": "今夜、6歳や11歳の子が話し出す — 必要なときに良い質問を一つ。",
+        "showcase.timer": "6歳の子がかんしゃくなく活動を切り替えられる — 絵 + カウントダウン。",
+        "showcase.chunk": "11歳の子の山積みの宿題を、15分ずつの小さな達成に — 順番は本人が選ぶ。",
+        "showcase.ai": "✨ <strong>AIを、安全に。</strong>AIが役立つところ — 例えば会話スパークの新しいアイデア — では、無料のオープンモデルのプロキシ（NVIDIA NIM）を通して動き、<strong>保護者向けのみ</strong>：タップしたタグだけを送り、子どもの名前やデータは決して送りません。管理者がキーを配備するまではオフのままです。子ども向けアプリはAIなしで完全に端末内で動作します。 <a href=\"./apps.html\">すべてのアプリを見る →</a>",
         "footer.verse": "「良いものを築け。それで稼げ。それで祝福せよ。」",
         "footer.i18n": "英語が原文です。他の言語はAI支援による翻訳で — ご指摘を歓迎します。"
       }

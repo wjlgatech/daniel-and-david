@@ -6,6 +6,20 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **Landing page 10× — bold modern structure + a live demo showcase.** Redesigned the front door
+  along the lovable.com / base44.com / printingpress.dev references while keeping the warm
+  "clay-on-paper" palette + serif (per the design research in `docs/research/agentic-app-cards.md`).
+  Hero is now bolder — an "AI-native family field lab" badge, oversized type, and a two-button CTA
+  (Apply + "See the apps"). New full-width **"See it work" showcase** band runs the **three real demos
+  live, inline, in phone frames** (Conversation Spark · Transition Timer · Homework Chunker) — the
+  printingpress "show the artifact" idea — each tappable and openable full-screen. Added an honest
+  **"AI, the safe way"** note surfacing the free-LLM seam: where AI helps (Conversation Spark's fresh
+  ideas) it runs through a free open-model proxy (NVIDIA NIM), **parent-facing only**, tags-only, and
+  **off until a maintainer deploys a key**; kids' apps stay fully on-device with no AI. 10 new i18n
+  keys (`hero.badge`, `hero.see`, `showcase.*`) translated across all 5 languages; `check-i18n` green
+  (69 keys). `overflow-x:hidden` guard added.
+
 ### Added
 - **Homework Chunker — third demo app** (`apps/web/public/demos/homework-chunker.html`). Targets the
   #1 daily pain of an eleven-year-old (*homework overwhelm/avoidance*, high anxiety). **Kid-facing and
