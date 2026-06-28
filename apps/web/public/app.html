@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Builder Loop — Daniel &amp; David</title>
-  <meta name="description" content="Run a 4-week Builder Loop with your child: 5 fast cycles of notice, build, show, learn. Works offline; your notes stay on this device." />
+  <meta name="description" content="Run a 4-week Builder Loop with your child: 5 fast cycles of notice, build, show, learn. Multiple children, progress badges, Best-Flops gallery. Works offline; your notes stay on this device." />
   <meta name="theme-color" content="#2563eb" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
@@ -183,17 +183,18 @@
 
   /* ---------- actions ---------- */
   function startLoop(){
+    state.route=null;
     const l = { id:uid(), child:"", startedAt:new Date().toISOString().slice(0,10),
       aim:{problem:"",talked:"",need:""}, iterations:[], evidence:{}, retro:{},
       view:"aim", cycleStep:0 };
-    state.loops.push(l); state.activeId = l.id; save(); render();
+    state.loops.push(l); state.activeId = l.id; save(); render(); window.scrollTo(0,0);
   }
-  function go(view){ const l=active(); if(l){ l.view=view; save(); } render(); window.scrollTo(0,0); }
+  function go(view){ state.route=null; const l=active(); if(l){ l.view=view; save(); } render(); window.scrollTo(0,0); }
   function field(path, val){ const l=active(); if(!l) return; const seg=path.split("."); let o=l;
     for(let i=0;i<seg.length-1;i++) o=o[seg[i]]; o[seg[seg.length-1]]=val; save(); }
 
   function startCycle(){
-    const l=active(); const n=l.iterations.length+1;
+    state.route=null; const l=active(); const n=l.iterations.length+1;
     l.iterations.push({ n, pick:"",built:"",shownTo:"",failed:"",lesson:"",aiHelped:"",aiMistake:"",decide:"",done:false });
     l.cycleStep=0; l.view="cycle"; save(); render(); window.scrollTo(0,0);
   }
@@ -207,7 +208,12 @@
       }
       l.cycleStep++; save(); render(); window.scrollTo(0,0);
     } else {
-      it.done=true; l.view="home"; save(); render(); window.scrollTo(0,0);
+      it.done=true; it.completedAt=new Date().toISOString().slice(0,10);
+      const done=l.iterations.filter(i=>i.done).length;
+      l.view="home"; save(); render(); window.scrollTo(0,0);
+      const big = done>=TARGET;
+      celebrate(big ? "🏆 You ran all "+TARGET+" cycles! That's a whole Builder Loop." : "Cycle "+it.n+" done — "+nextCheer());
+      confettiBurst(big?40:22); chime(big?"big":"small");
     }
   }
   function cycleBack(){ const l=active(); if(l.cycleStep>0){ l.cycleStep--; save(); render(); } else { go("home"); } }
@@ -217,13 +223,39 @@
   function toggleTextSize(){ state.settings=state.settings||{}; state.settings.textSize = state.settings.textSize==="big"?"normal":"big"; save(); applyTextSize(); render(); }
 
   function toggleEv(k, v){ const l=active(); l.evidence[k]=v; save(); }
+  const CHEERS = [
+    "A failure with a lesson is a win. That's how builders grow.",
+    "You didn't fail — you found out. That's the whole game.",
+    "Every flop teaches you something a success never could.",
+    "Brave builders test things. You just did.",
+    "That's one more thing you know that you didn't this morning.",
+  ];
+  let cheerI = 0;
+  function nextCheer(){ const c = CHEERS[cheerI % CHEERS.length]; cheerI++; return c; }
+  // Tiny Web Audio chime — no files, offline, respects the sound setting.
+  function chime(kind){
+    if(state.settings && state.settings.sound === false) return;
+    try{
+      const Ctx = window.AudioContext || window.webkitAudioContext; if(!Ctx) return;
+      const ac = new Ctx(); const now = ac.currentTime;
+      const notes = kind === "big" ? [523.25, 659.25, 783.99, 1046.5] : [659.25, 783.99];
+      notes.forEach((f,i)=>{ const o=ac.createOscillator(), g=ac.createGain();
+        o.type="sine"; o.frequency.value=f; o.connect(g); g.connect(ac.destination);
+        const t=now+i*0.12; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.22,t+0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001,t+0.30); o.start(t); o.stop(t+0.32); });
+      setTimeout(()=>ac.close().catch(()=>{}), 1200);
+    }catch(e){}
+  }
+  function confettiBurst(n){
+    for(let i=0;i<(n||16);i++){ const c=document.createElement("div"); c.className="confetti";
+      c.textContent=["🎉","✨","🌱","⭐","💡","🏆"][i%6]; c.style.left=(Math.random()*100)+"vw";
+      c.style.animationDelay=(Math.random()*0.5)+"s"; c.style.fontSize=(18+Math.random()*16)+"px";
+      document.body.appendChild(c); setTimeout(()=>c.remove(),2600); }
+  }
   function celebrate(msg){
-    document.getElementById("celeMsg").textContent = msg || "A failure with a lesson is a win.";
+    document.getElementById("celeMsg").textContent = msg || nextCheer();
     document.getElementById("cele").classList.add("show");
-    for(let i=0;i<16;i++){ const c=document.createElement("div"); c.className="confetti";
-      c.textContent=["🎉","✨","🌱","⭐","💡"][i%5]; c.style.left=(Math.random()*100)+"vw";
-      c.style.animationDelay=(Math.random()*0.5)+"s"; document.body.appendChild(c);
-      setTimeout(()=>c.remove(),2600); }
+    confettiBurst(16); chime("small");
   }
   function resetAll(){ if(confirm("Erase this device's Builder Loop data? This can't be undone.")){ state={mode:state.mode,activeId:null,loops:[]}; save(); render(); } }
   function newLoop(){ if(confirm("Start a fresh loop? Your current one stays saved in history.")){ startLoop(); } }
@@ -232,11 +264,41 @@
     const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
     a.download="builder-loop-"+(active().child||"loop")+".json"; a.click();
   }
+  function toggleSound(){ state.settings=state.settings||{}; state.settings.sound = state.settings.sound===false; save(); render(); }
+  function switchLoop(id){ state.activeId=id; const l=active(); if(l) l.view="home"; save(); render(); window.scrollTo(0,0); }
+  function deleteLoop(id){ if(confirm("Delete this loop forever? This can't be undone.")){
+    state.loops=state.loops.filter(x=>x.id!==id);
+    if(state.activeId===id) state.activeId = state.loops.length ? state.loops[state.loops.length-1].id : null;
+    save(); render(); } }
+  function shareLoop(){
+    const l=active(); if(!l) return;
+    const lines=["Our Builder Loop"+(l.child?" — "+l.child:""), "Problem: "+(l.aim.problem||"(not set)")];
+    l.iterations.filter(i=>i.done).forEach(i=> lines.push(vlabel(i.n)+": "+(i.pick||"")+" → lesson: "+(i.lesson||i.failed||"")));
+    lines.push("(made with the Daniel & David Builder Loop app)");
+    const text=lines.join("\n");
+    // Text only — never shares anything beyond what the family typed (first name/alias).
+    if(navigator.share){ navigator.share({title:"Our Builder Loop", text}).catch(()=>{}); }
+    else if(navigator.clipboard){ navigator.clipboard.writeText(text).then(()=>alert("Summary copied to clipboard!")); }
+    else { prompt("Copy your loop summary:", text); }
+  }
+  function importLoop(){
+    const inp=document.createElement("input"); inp.type="file"; inp.accept="application/json,.json";
+    inp.onchange=()=>{ const f=inp.files&&inp.files[0]; if(!f) return; const r=new FileReader();
+      r.onload=()=>{ try{ const d=JSON.parse(r.result); if(!d || !Array.isArray(d.iterations)) throw 0;
+        d.id=uid(); d.view="home"; state.loops.push(d); state.activeId=d.id; save(); render(); window.scrollTo(0,0);
+      }catch(e){ alert("That file isn't a Builder Loop export."); } };
+      r.readAsText(f); };
+    inp.click();
+  }
 
   /* ============ RENDER ============ */
+  function goRoute(r){ state.route=r; save(); render(); window.scrollTo(0,0); }
   function render(){
     syncModeButtons(); applyTextSize();
-    const app=document.getElementById("app"); const l=active();
+    const app=document.getElementById("app");
+    if(state.route==="history"){ app.innerHTML = viewHistory(); return; }
+    if(state.route==="flops"){ app.innerHTML = viewFlops(); return; }
+    const l=active();
     if(!l){ app.innerHTML = viewWelcome(); return; }
     const v=l.view||"home";
     if(v==="aim") app.innerHTML = viewAim(l);
@@ -299,18 +361,29 @@
         ? `<button class="btn big" onclick="go('cycle')">▶️ Continue cycle ${l.iterations.length} (${vlabel(l.iterations.length)})</button>`
         : `<button class="btn big" onclick="startCycle()">${done===0?"Start cycle 1":"Start cycle "+(done+1)} →</button>`;
 
+    const soundOn = !(state.settings && state.settings.sound===false);
     const parentExtras = state.mode==="parent" ? `
       <div class="card no-print">
         <h2 style="margin-top:0">Parent tools</h2>
         <div class="row">
           <button class="btn secondary" onclick="go('aim')">✏️ Edit the aim</button>
-          <button class="btn secondary" onclick="exportJSON()">⬇️ Export (JSON)</button>
+          <button class="btn secondary" onclick="shareLoop()">📤 Share summary</button>
+          <button class="btn secondary" onclick="exportJSON()">⬇️ Export</button>
+          <button class="btn secondary" onclick="importLoop()">⬆️ Import</button>
           <button class="btn secondary" onclick="window.print()">🖨️ Print</button>
           <button class="btn secondary" onclick="newLoop()">＋ New loop</button>
           <button class="btn secondary" onclick="toggleTextSize()">🔠 Bigger text</button>
+          <button class="btn secondary" onclick="toggleSound()">${soundOn?"🔊 Sound on":"🔇 Sound off"}</button>
         </div>
         <p class="muted" style="margin:14px 0 0">Tip: the goal is <strong>5 cycles, each shown to a real person, each with one lesson</strong> — not a perfect product. Celebrate the flops. <button class="btn ghost" onclick="resetAll()" style="padding:0">Erase all data</button></p>
       </div>` : "";
+
+    const stamps = Array.from({length:TARGET}, (_,k)=> k<done ? "🏅" : "⚪").join(" ");
+    const nav = `
+      <div class="row no-print" style="justify-content:center;margin-top:6px">
+        <button class="btn ghost" onclick="goRoute('history')">📚 All loops${state.loops.length>1?" ("+state.loops.length+")":""}</button>
+        <button class="btn ghost" onclick="goRoute('flops')">🏆 Best Flops</button>
+      </div>`;
 
     return `
       <h1>${esc(l.child)? esc(l.child)+"'s loop" : "Your Builder Loop"}</h1>
@@ -323,7 +396,8 @@
             <div class="muted" style="font-size:14px">${done>=TARGET?"You ran the whole loop.":"Each cycle: show a real person, learn one thing."}</div>
           </div>
         </div>
-        <div style="margin-top:16px">${bigBtn}</div>
+        <div style="font-size:24px;text-align:center;margin:14px 0 2px;letter-spacing:4px">${stamps}</div>
+        <div style="margin-top:14px">${bigBtn}</div>
       </div>
 
       <div class="card">
@@ -336,7 +410,8 @@
         <p class="muted" style="margin-top:0;font-size:14px">Tick what they did <em>independently</em>. This is the real score.</p>
         ${EVIDENCE.map(([k,t])=>`<label class="ev"><input type="checkbox" ${l.evidence[k]?"checked":""} onchange="toggleEv('${k}',this.checked)"> ${t}</label>`).join("")}
       </div>
-      ${parentExtras}`;
+      ${parentExtras}
+      ${nav}`;
   }
 
   function viewCycle(l){
@@ -412,6 +487,46 @@
         </div>
       </div>
       <p class="muted" style="text-align:center">Proud of you. Ready for the next problem? <button class="btn ghost" onclick="newLoop()">Start a new loop →</button></p>`;
+  }
+
+  function viewHistory(){
+    const loops = state.loops.slice().reverse();
+    const rows = loops.map(l=>{
+      const done=l.iterations.filter(i=>i.done).length;
+      return `<div class="iter">
+        <div class="v">${done}/${TARGET}</div>
+        <div style="flex:1">
+          <div><strong>${esc(l.child||"Loop")}</strong> — ${esc(l.aim.problem||"(no problem set)")}</div>
+          <div class="x">${esc(l.startedAt||"")} · ${l.iterations.length} cycle(s)${l.id===state.activeId?' · <strong>active</strong>':''}</div>
+          <div class="row" style="margin-top:6px">
+            <button class="btn secondary" onclick="switchLoop('${l.id}')">Open</button>
+            <button class="btn ghost" onclick="deleteLoop('${l.id}')">Delete</button>
+          </div>
+        </div></div>`;
+    }).join("") || `<p class="muted">No loops yet.</p>`;
+    return `
+      <h1>📚 All loops</h1>
+      <p class="lead">Every Builder Loop on this device — switch between kids and projects here.</p>
+      <div class="card">${rows}</div>
+      <div class="row">
+        <button class="btn" onclick="startLoop()">＋ Start a new loop</button>
+        <button class="btn secondary" onclick="importLoop()">⬆️ Import a loop</button>
+        <button class="btn secondary" onclick="goRoute('flops')">🏆 Best Flops</button>
+        <button class="btn ghost" onclick="goRoute(null)">← Back</button>
+      </div>`;
+  }
+  function viewFlops(){
+    const flops=[];
+    state.loops.forEach(l=> l.iterations.forEach(it=>{ const lesson=(it.lesson||it.failed||"").trim();
+      if(lesson) flops.push({lesson, who:l.child, v:vlabel(it.n), problem:l.aim.problem}); }));
+    const list = flops.reverse().map(f=>`<div class="iter"><div class="v">💡</div>
+       <div><div>${esc(f.lesson)}</div><div class="x">${esc(f.who||"")} · ${f.v}${f.problem?" · "+esc(f.problem):""}</div></div></div>`).join("")
+       || `<p class="muted">No lessons yet — finish a cycle's LEARN step and your lessons collect here.</p>`;
+    return `
+      <h1>🏆 Best Flops</h1>
+      <p class="lead">Your collection of lessons — the most valuable thing a builder owns. A failure with a lesson is a win.</p>
+      <div class="card">${list}</div>
+      <button class="btn ghost" onclick="goRoute(null)">← Back</button>`;
   }
 
   /* ---------- PWA: install + offline ---------- */
