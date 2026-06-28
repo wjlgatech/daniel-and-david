@@ -7,6 +7,21 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Agentic App Card + apps gallery.** A tiny, portable standard for describing the small apps we
+  build — like a HuggingFace **model card** but **~10× simpler** (6 required fields + a one-line
+  pitch + "How to run", vs. HF's 7+ metadata fields and 14 prose sections). Spec +
+  copy-to-start template in [`docs/agentic-app-card.md`](docs/agentic-app-card.md) /
+  `apps/web/public/cards/_template.md`; first cards for the Builder Loop app, Conversation Spark, and
+  the KC Matchday venture (`apps/web/public/cards/*.md` + `registry.json`). New **apps gallery**
+  (`apps/web/public/apps.html`) — warm clay-on-paper palette + modern card patterns (color-coded type
+  badges, host/LLM chips, `pain_solved` as the only prose, filter tabs, hover-lift, an "add your app"
+  empty-state) — reads the registry and is linked from the landing page in all 5 languages
+  (`free.gallery`). **Host strategy = mix, by design:** the card's `host` field (`static` / `space` /
+  `proxy` / `cli` / `concept`) lets the static registry we own list apps that run on GitHub Pages, a
+  HuggingFace Space, or our serverless proxy — so we don't have to choose between *using* HF and
+  *being* a host. New closed-loop guard `scripts/check-cards.sh` (in CI) enforces required fields,
+  allowed vocab, honest status, and card↔registry sync (no drift). Research saved to
+  [`docs/research/agentic-app-cards.md`](docs/research/agentic-app-cards.md).
 - **Research library — compound, don't restart** (`docs/research/`). This session's deep research
   passes are now **saved as distilled, cited syntheses** so future work builds on them instead of
   re-researching from zero: deep-problem-understanding, family-pains (6yo/11yo/parents),

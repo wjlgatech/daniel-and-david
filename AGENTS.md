@@ -43,6 +43,15 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
     `sw.js`, `icons/`. `scripts/check-webapp.sh` (in CI) enforces all of this. **Multilingual**
     core via a `STR` dict + `t()` (reuses `dd.lang`); English is the source — `check-i18n.sh` also
     verifies the app's `STR` stays in sync across all languages.
+  - `public/apps.html` — the **apps gallery**: a static registry that renders an **Agentic App
+    Card** for every small app we build (warm palette + modern card patterns). It reads
+    `public/cards/registry.json`; the portable card standard is one `.md` per app in
+    `public/cards/<slug>.md` (copy `_template.md`). The card's `host` field (`static`/`space`/
+    `proxy`/`cli`/`concept`) is what lets the gallery **mix** apps that run on Pages, a HuggingFace
+    Space, or our proxy. The standard (6 required fields, ~10× simpler than a HF model card) is
+    documented in `docs/agentic-app-card.md`; `scripts/check-cards.sh` (in CI) enforces required
+    fields, allowed vocab, honest status, and card↔registry sync. To add an app: copy the template,
+    fill 6 fields, add a registry line, run the check.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, hooks, and **project commands**
   (`commands/goal-10x.md` — a repo-tuned objective driver wired to the five checks; `commands/check.md`
@@ -102,8 +111,10 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
 
 - Default branch: `main`. Branch names: `name/short-description`.
 - Run `./scripts/check.sh` before opening a PR. CI also runs `validate-toolkit.sh`,
-  `check-links.sh`, and `check-status-truth.sh` (the last fails if a public surface claims
-  venture #1 is live/shipping while its README says "build not started").
+  `check-links.sh`, `check-status-truth.sh` (the last fails if a public surface claims
+  venture #1 is live/shipping while its README says "build not started"),
+  `check-registration-safety.sh`, `check-webapp.sh`, `check-i18n.sh`, and `check-cards.sh`
+  (app cards + gallery coherent).
 - Prefer plain, readable code and prose. If a 6-year-old's parent can't follow the *why*,
   simplify.
 
