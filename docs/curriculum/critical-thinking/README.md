@@ -3,6 +3,10 @@
 A **wealth creator's most important muscle isn't coding or selling — it's *thinking clearly*.**
 Before you build, buy, believe, or sell anything, you interrogate it. This is the tool we use.
 
+> 🔎 **Going deeper on a *pain*?** 5W1H *scopes* a problem; **[Pain2Gain](../../principles/pain2gain.md)**
+> drills it to the **root** — a depth ladder, the 5-Why chain, the six dimensions of a pain, and its
+> distribution — so the solution you build is transformative, not a band-aid.
+
 <p align="center"><img src="../../assets/critical-thinking.svg" alt="Critical Thinking is Key — the 5W1H grid: Who, What, Where, When, Why, How, each with eight probing questions." width="100%"></p>
 
 ## What it is
