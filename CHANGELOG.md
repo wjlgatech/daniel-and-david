@@ -7,6 +7,23 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Multilingual landing page (5 languages, live in-page 🌐 selector).** `apps/web/public/index.html`
+  now speaks **English · 中文 · Español · 한국어 · 日本語**: a `data-i18n` system + an `I18N` dictionary
+  swap all the essential copy (hero, idea, the founding "Halving" section, and the *entire*
+  application form incl. the adults-only/consent/mutual-fit notices) live, persisted in
+  localStorage, auto-detecting the browser language. English stays the in-HTML default (so the
+  registration-safety grep still passes). Fully usable by a non-technical, non-English family.
+- **i18n sync guard** (`scripts/check-i18n.sh` + CI + `check.sh` + `setup.sh`): fails the build if
+  any translated key is missing in any language — so an English change can't ship without all five
+  language tags in step. The dependable, zero-cost "auto-update across all languages." Optional
+  fully-automatic re-translation path documented in `docs/i18n/README.md`. README gained a 🌐
+  language row.
+
+### Changed
+- **Founding-family age range → roughly 5–15** (was 6–12): landing-page application buckets
+  (Under 5 / 5–7 / 8–11 / 12–15 / Mixed / 16+) and `docs/founding-families.md`, README.
+
+### Added
 - **1-click setup + shipped Claude Code commands.** `scripts/setup.sh` now actually sets up
   (makes scripts runnable, detects Claude Code, runs all five guardrails) instead of just printing
   links. New project commands `.claude/commands/goal-10x.md` (a repo-tuned objective driver wired
