@@ -15,7 +15,16 @@ external evidence); this folder holds *our* experience.
 - **i18n'd dark sections** — when restyling, change *hue* but keep light/dark *value* stable, or
   every translation's inline white text breaks at once.
 - **The closed-loop guard pattern** — every promise this repo makes is enforced by a `scripts/check-*.sh`
-  (status-truth · registration-safety · webapp · i18n) in CI: turn an invariant into a check, not a
+  (status-truth · registration-safety · webapp · i18n · cards) in CI: turn an invariant into a check, not a
   hope.
+- **`fetch()` of a local file needs a server to verify** — the apps gallery (`apps.html`) reads
+  `cards/registry.json` via `fetch`, which is **blocked over `file://`** — opening the page directly
+  shows an empty grid even when it's correct. To screenshot-verify, serve it first
+  (`python3 -m http.server` then point headless Chrome at `http://localhost`). Don't conclude "broken"
+  from a `file://` open.
+- **Dual-source kept honest by a check** — the Agentic App Card lives in two places on purpose: the
+  portable `cards/<slug>.md` (the standard) and `cards/registry.json` (the gallery's fast index).
+  Two sources risk drift, so `check-cards.sh` makes them agree (every card ↔ every entry, fields
+  match) — the same move as keeping i18n tags in sync. A second source is fine *if* a guard binds them.
 
 *(Add one entry per non-obvious solve. Keep it short and reusable.)*
