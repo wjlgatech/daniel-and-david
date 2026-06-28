@@ -7,6 +7,13 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **"Translation may lag" banner + opt-in auto-retranslation.** The landing page now shows an honest
+  amber banner *only for non-English* — "English is the authoritative version, and translations may
+  lag behind it" (translated into all 4 languages). And the optional fully-automatic path is wired:
+  `scripts/i18n-translate.py` (fills only *missing* keys from English via an OpenAI-compatible LLM,
+  never overwriting human edits or English) + `.github/workflows/i18n-translate.yml` (runs on
+  English changes, opens a review PR). **Off until you add the `I18N_LLM_KEY` secret** — inert and
+  harmless without it. Policy: **English is ground truth; machine drafts are always reviewed.**
 - **Multilingual landing page (5 languages, live in-page 🌐 selector).** `apps/web/public/index.html`
   now speaks **English · 中文 · Español · 한국어 · 日本語**: a `data-i18n` system + an `I18N` dictionary
   swap all the essential copy (hero, idea, the founding "Halving" section, and the *entire*

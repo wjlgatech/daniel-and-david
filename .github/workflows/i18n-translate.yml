@@ -1,0 +1,53 @@
+name: i18n auto-translate (opt-in)
+
+# Fills MISSING landing-page translations from the English source, then opens a review PR.
+# English is the ground truth; this only adds missing keys (never overwrites human corrections).
+#
+# OFF until you opt in: it no-ops unless the repo secret I18N_LLM_KEY is set (an OpenAI-compatible
+# key — e.g. NVIDIA NIM free tier; see docs/i18n/README.md). Optional repo variables:
+#   I18N_LLM_BASE_URL (default https://integrate.api.nvidia.com/v1) · I18N_LLM_MODEL.
+#
+# Triggers: manual, or automatically when the English source (index.html) changes on main.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["apps/web/public/index.html"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fill missing translations (no-op without the LLM key)
+        env:
+          I18N_LLM_KEY: ${{ secrets.I18N_LLM_KEY }}
+          I18N_LLM_BASE_URL: ${{ vars.I18N_LLM_BASE_URL }}
+          I18N_LLM_MODEL: ${{ vars.I18N_LLM_MODEL }}
+        run: python3 scripts/i18n-translate.py --translate
+
+      - name: Verify language tags are in sync
+        run: bash scripts/check-i18n.sh || true
+
+      - name: Open a review PR if anything changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: i18n/auto-translate
+          title: "i18n: auto-fill missing translations (review needed)"
+          commit-message: "i18n: auto-fill missing translations (machine-drafted)"
+          labels: i18n
+          body: |
+            Machine-drafted translations for keys that were missing from a language tag.
+
+            **English is the source of truth — please review before merging.** This only adds
+            *missing* keys; it never overwrites an existing (possibly human-corrected) translation.
+            CI's `check-i18n` confirms every language is back in sync.
