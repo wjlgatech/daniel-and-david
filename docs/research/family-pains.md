@@ -1,0 +1,12 @@
+# Research — everyday pains of a 6yo, an 11yo, and their parents
+
+*Synthesis behind [pain-analysis](../pain-analysis.md) + [Conversation Spark](../../apps/web/public/demos/conversation-spark.html). Reuse before re-researching childhood/parent pains.*
+
+## Key findings
+- **6-year-old** — PFC under construction; working memory ~2–3 items; emotion regulation still **co-regulated** with a caregiver; language *mediates* regulation. Top pains: transition refusal, meltdowns, bedtime resistance (~32% weekly), morning-routine chaos, "I can't"/fixed-mindset, impulse/interrupting, can't-name-feelings, sibling conflict. Most "misbehavior" is a *capacity* gap, not a choice.
+- **11-year-old** — limbic ahead of PFC; **peer evaluation neurologically salient** (amygdala/insula to exclusion); **autonomy need sharpens** (control feels aversive); **age 11 = median anxiety onset**; growth-mindset most fragile at the 5th–6th grade transition. Top pains: homework overwhelm/avoidance, peer-status fear, autonomy conflict, screen self-regulation, academic-identity threat, emotional shutdown with parents, procrastination→panic, social comparison via screens.
+- **Parents** — 3 daily stress transitions (morning/pickup/evening); **screen-time conflict near-universal** (93% conflict; 37% "almost always a fight" — Pew 2025); **mental load asymmetric** (~71% on mothers); sibling conflict = most-cited "painful experience of parenting"; most parents *emotion-dismiss* under stress for lack of a **protocol** (Gottman). Top: morning battle, screen-time, homework nagging, sibling refereeing, "can't get my kid to open up" (70% struggle; convos <10 min), managing outbursts, mental load, bedtime.
+- **Safe-to-build filter** — favor **on-device, parent-mediated, no-PII, LLM-optional behavioral scaffolds**. Do NOT build for kids: cloud emotion-profiling (COPPA 2026), AI-companions for under-13 (SB-243), peer leaderboards (amplifies the pain), surveillance-as-help, autonomous mental-health handling. Flag distress to the *parent*, never a chatbot.
+
+## Sources
+JESBS 2024 (EF→language→ER); Eisenberg PMC3018741; Zelazo/IES 2025; PMC12025705 / PMC6587181 (sleep); Springer 2015 + Oxford SCAN 2009 (peer exclusion); Ryan & Deci 2020 (SDT); NCS-R (anxiety onset 11); Dweck (mindset); Pew 2025 (screen time); USC/Frontiers 2025 (mental load); Gottman PMC4111247/PMC8554311; Fatherly survey (communication); arXiv 2502.01325 (Homework Wars); COPPA 2026 / CA SB-243.

@@ -17,6 +17,9 @@ Work the loop:
 ## 0. Research & understand (3–4 lines)
 - `git log --oneline -15`, skim `README.md`, `AGENTS.md`, `CHANGELOG.md` (esp. "Investigated /
   Rejected"), and any `memory/`. Know what shipped and what's load-bearing.
+- **Compound, don't restart:** before dispatching any web-research agent, **check
+  [`docs/research/`](../../docs/research/)** — if the topic's covered, build on it and research only
+  the *delta*. After new deep research, **add a distilled, cited doc there** (+ a row in its index).
 - State what you understood: the codebase, recent lessons, and the user's real intent.
 
 ## 1. Absorb
