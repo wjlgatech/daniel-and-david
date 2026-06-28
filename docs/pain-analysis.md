@@ -2,7 +2,8 @@
 
 A worked example of [Pain2Gain](principles/pain2gain.md): we ran the depth ladder + dimensions +
 burden on real, evidence-based family pains, then turned the top ones into **small, safe, on-device
-app concepts**. The first one is **built and playable** (see *The demo* below); the rest are scoped.
+app concepts**. **Two are built and playable** — Conversation Spark and the Transition Timer (see
+*The demos* below) — and surfaced in the [apps gallery](../apps/web/public/apps.html); the rest are scoped.
 
 > **Honesty about depth:** these sit at **rung 2–4** of the [depth ladder](principles/pain2gain.md)
 > — backed by developmental research (prevalence + mechanism), not just a survey. Before building
@@ -79,7 +80,7 @@ LLM use is **parent-facing only** (no child data).
 
 ---
 
-## The demo we built — ⭐ Conversation Spark
+## The demos we built — ⭐ Conversation Spark
 
 **The pain:** *"I can't get my kid to open up."* (Parents; helps with both the 6- and 11-year-old.)
 70% of parents struggle to have a real conversation with their child; the average is under 10
@@ -101,5 +102,24 @@ child's name or any data.
 **Why it clears the safety line:** parent-facing (adults), no child PII, on-device core, LLM-optional
 and parent-only. **Evidence:** Gottman emotion-coaching; SDT *relatedness*.
 
-*Next demos (scoped, same safety rules): the 6-year-old transition timer; the 11-year-old homework
-task-chunker.*
+## The second demo — ⏳ Transition Timer
+
+**The pain:** *transition refusal* — the #1 daily pain of a six-year-old (can't stop one activity to
+start the next), worth ~20-minute meltdowns. The mechanism (rung-4): a 6-year-old's working memory
+holds ~2–3 items and emotion is still *co-regulated*, so an abrupt "we're leaving now" is a genuine
+*capacity* gap, not defiance. Two things prevent the meltdown — **predictability** (what's now /
+what's next, in pictures a pre-reader can read) and **agency** (the child controls *when* to move on).
+
+**The solution:** a grown-up taps a preset routine (Morning / Wind-down / Screen-time) or builds one
+from picture-steps + minutes; the child then sees a big picture, a **shrinking countdown ring**, a
+**1-minute warning**, and an always-visible **"Next:"** preview — and chooses when to advance. It
+celebrates finishing and **never punishes**. No LLM, no network, nothing stored online.
+
+> ▶️ **Play it:** [Transition Timer](https://wjlgatech.github.io/daniel-and-david/demos/transition-timer.html)
+
+**Why it clears the safety line:** a pure **behavioral scaffold** (cue/timer/checklist) — exactly what
+the [safety line](#the-child-safety-line--what-we-will-not-build) prescribes over anything
+psychological; parent-set, on-device, no child name or data. **Evidence:** Zelazo/IES on executive
+function; Eisenberg on co-regulation.
+
+*Next demo (scoped, same safety rules): the 11-year-old homework task-chunker.*
