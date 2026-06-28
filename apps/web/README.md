@@ -13,8 +13,13 @@ Two dependency-free pages, no build step, no framework:
 > small `Store` seam so it can later sync to a backend without rewriting the UI.
 >
 > **Privacy:** the app makes **no external requests for user data** and has **no third-party
-> scripts** — a family's loop notes never leave their device. `scripts/check-webapp.sh` (in CI)
-> guards the PWA shell; the on-device promise is part of the design.
+> scripts** — a family's loop notes (and **photos**, stored in IndexedDB) never leave their device.
+> `scripts/check-webapp.sh` (in CI) guards the PWA shell and these on-device guarantees.
+
+**Features:** multiple children + loop history + a "Best Flops" lessons gallery; per-cycle badges,
+sound, and confetti (ethical — no streak-guilt); share/export/import; on-device **photo evidence**;
+**🎤 voice dictation** and **AR/AI-glasses readiness** (voice in/out + WebXR probe + documented
+input/render seams — see [`docs/builder-loop-app-xr.md`](../../docs/builder-loop-app-xr.md)).
 
 The home page is deliberately **dependency-free**: a single HTML file with inline CSS, so a
 6-year-old (or anyone) can open it instantly — no install, no build, no Node.

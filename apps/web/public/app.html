@@ -74,6 +74,9 @@
     body.bigtext{font-size:19px}
     body.bigtext .step-q{font-size:26px}
     body.bigtext input,body.bigtext textarea,body.bigtext select{font-size:18px}
+    /* photo evidence */
+    .photo img.thumb{max-width:180px;border-radius:12px;border:1px solid var(--line)}
+    #xrChip{background:#0f172a;color:#fff;border-color:#0f172a}
     /* iteration list */
     .iter{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
     .iter .v{font-weight:800;color:var(--navy);flex:none;width:46px}
@@ -102,6 +105,7 @@
       <div class="brand"><span class="seed">🌱</span> Builder Loop</div>
       <button class="modebtn" id="modeKid" aria-pressed="true" onclick="setMode('kid')">🧒 Kid</button>
       <button class="modebtn" id="modeParent" aria-pressed="false" onclick="setMode('parent')">👪 Parent</button>
+      <button class="iconbtn" id="xrChip" onclick="enterAR()" style="display:none" title="This device supports AR">✦ AR-ready</button>
       <button class="iconbtn" id="installBtn" onclick="doInstall()">⬇️ Install</button>
     </div>
   </header>
@@ -142,6 +146,34 @@
     function fresh() { return { mode: "kid", activeId: null, loops: [] }; }
     return { read, write };
   })();
+
+  /* ============ Media SEAM (on-device only) ============
+     Photos/drawings of a child's rough build live in IndexedDB on THIS device and are never
+     uploaded — not in JSON export, not in Web Share. Same swappable-seam idea as Store. */
+  const Media = (function () {
+    const DB = "dd-bl-media", STORE = "photos"; let dbp = null;
+    function open() {
+      if (dbp) return dbp;
+      dbp = new Promise((res, rej) => {
+        try { const r = indexedDB.open(DB, 1);
+          r.onupgradeneeded = () => r.result.createObjectStore(STORE);
+          r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+        } catch (e) { rej(e); }
+      });
+      return dbp;
+    }
+    async function put(key, dataUrl) { const db = await open(); return new Promise((res, rej) => {
+      const t = db.transaction(STORE, "readwrite"); t.objectStore(STORE).put(dataUrl, key);
+      t.oncomplete = () => res(); t.onerror = () => rej(t.error); }); }
+    async function get(key) { const db = await open(); return new Promise((res) => {
+      const t = db.transaction(STORE, "readonly"); const rq = t.objectStore(STORE).get(key);
+      rq.onsuccess = () => res(rq.result || null); rq.onerror = () => res(null); }); }
+    async function del(key) { const db = await open(); return new Promise((res) => {
+      const t = db.transaction(STORE, "readwrite"); t.objectStore(STORE).delete(key);
+      t.oncomplete = () => res(); t.onerror = () => res(); }); }
+    return { put, get, del, available: ("indexedDB" in window) };
+  })();
+  const photoKey = (l, n) => l.id + ":" + n;
 
   const STEPS = [
     { key:"pick",  emoji:"🔭", name:"Pick",   color:"#ca8a04", q:"What's the smallest thing to try next?",
@@ -221,6 +253,51 @@
   function speak(t){ try{ if(!("speechSynthesis" in window))return; const u=new SpeechSynthesisUtterance(t); u.rate=0.95; speechSynthesis.cancel(); speechSynthesis.speak(u);}catch(e){} }
   function applyTextSize(){ document.body.classList.toggle("bigtext",(state.settings&&state.settings.textSize)==="big"); }
   function toggleTextSize(){ state.settings=state.settings||{}; state.settings.textSize = state.settings.textSize==="big"?"normal":"big"; save(); applyTextSize(); render(); }
+
+  /* ---------- on-device photo/drawing evidence ---------- */
+  function photoControl(key){
+    if(!Media.available) return "";
+    return `<div class="photo no-print" data-pkey="${key}">
+      <img class="thumb" data-pkey="${key}" alt="photo of the build" style="display:none">
+      <div class="row" style="align-items:center;margin-top:8px">
+        <label class="btn secondary" style="cursor:pointer">📷 Add a photo
+          <input type="file" accept="image/*" capture="environment" style="display:none" onchange="addPhoto('${key}',this)">
+        </label>
+        <button class="btn ghost photo-del" data-pkey="${key}" onclick="delPhoto('${key}')" style="display:none">Remove</button>
+      </div>
+      <p class="muted" style="font-size:12px;margin:6px 0 0">📷 Photos stay on this device — never uploaded.</p>
+    </div>`;
+  }
+  function addPhoto(key,input){ const f=input.files&&input.files[0]; if(!f) return;
+    const r=new FileReader(); r.onload=()=>{ Media.put(key,r.result).then(hydratePhotos).catch(()=>{}); }; r.readAsDataURL(f); }
+  function delPhoto(key){ if(confirm("Remove this photo from this device?")) Media.del(key).then(hydratePhotos); }
+  function hydratePhotos(){ if(!Media.available) return;
+    document.querySelectorAll("img.thumb[data-pkey]").forEach(img=>{ const k=img.getAttribute("data-pkey");
+      Media.get(k).then(d=>{ if(d){ img.src=d; img.style.display="block"; }
+        const sel='.photo-del[data-pkey="'+(window.CSS&&CSS.escape?CSS.escape(k):k)+'"]';
+        const del=document.querySelector(sel); if(del) del.style.display=d?"inline-block":"none"; }); }); }
+
+  /* ---------- voice dictation (hands-free input — natural for AI glasses) ---------- */
+  function dictate(){
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+    if(!SR){ alert("Voice typing isn't supported in this browser — try Chrome."); return; }
+    const ta=document.getElementById("stepField"); if(!ta) return;
+    try{ const r=new SR(); r.lang="en-US"; r.interimResults=false; r.maxAlternatives=1;
+      const btn=document.getElementById("micBtn"); if(btn) btn.textContent="🎙️…";
+      r.onresult=(e)=>{ const t=Array.from(e.results).map(x=>x[0].transcript).join(" ");
+        ta.value=(ta.value?ta.value.trim()+" ":"")+t; ta.dispatchEvent(new Event("input")); };
+      r.onend=()=>{ if(btn) btn.textContent="🎤"; };
+      r.onerror=()=>{ if(btn) btn.textContent="🎤"; };
+      r.start();
+    }catch(e){}
+  }
+
+  /* ---------- AR / glasses readiness (seam + probe; full immersive view is future work) ---------- */
+  async function probeXR(){ try{
+    if(navigator.xr && navigator.xr.isSessionSupported && await navigator.xr.isSessionSupported("immersive-ar")){
+      const chip=document.getElementById("xrChip"); if(chip) chip.style.display="inline-block"; }
+  }catch(e){} }
+  function enterAR(){ alert("AR mode is on the way. This build is AR-ready: voice input works now (🎤), and the input + render seams are documented so an immersive view can plug in later. See docs/builder-loop-app-xr.md."); }
 
   function toggleEv(k, v){ const l=active(); l.evidence[k]=v; save(); }
   const CHEERS = [
@@ -305,6 +382,7 @@
     else if(v==="cycle") app.innerHTML = viewCycle(l);
     else if(v==="retro") app.innerHTML = viewRetro(l);
     else app.innerHTML = viewHome(l);
+    hydratePhotos();
   }
 
   function viewWelcome(){
@@ -348,11 +426,12 @@
     const itersHtml = l.iterations.map(it=>`
       <div class="iter">
         <div class="v">${vlabel(it.n)}</div>
-        <div>
+        <div style="flex:1">
           <div>${it.done?"✅":"⏳"} <strong>${esc(it.pick)||"(cycle "+it.n+")"}</strong></div>
           ${it.failed?`<div class="x">💡 lesson: ${esc(it.lesson||it.failed)}</div>`:""}
           ${it.shownTo?`<div class="x">shown to ${esc(it.shownTo)}</div>`:""}
         </div>
+        <img class="thumb" data-pkey="${photoKey(l,it.n)}" alt="" style="display:none;max-width:54px;max-height:54px;border-radius:8px;object-fit:cover">
       </div>`).join("") || `<p class="muted">No cycles yet — start your first one below.</p>`;
 
     const bigBtn = done>=TARGET
@@ -430,6 +509,7 @@
           <input type="text" value="${esc(it.lesson)}" oninput="field('iterations.${l.iterations.length-1}.lesson',this.value)" placeholder="What did this cycle teach?" />
           <label>🤖 AI helped with… / a mistake I caught</label>
           <input type="text" value="${esc(it.aiHelped)}" oninput="field('iterations.${l.iterations.length-1}.aiHelped',this.value)" placeholder="optional" />
+          ${photoControl(photoKey(l,it.n))}
           <div class="row" style="margin-top:16px">
             <button class="btn" onclick="finishCycleFromParent()">✅ Finish cycle ${it.n}</button>
             <button class="btn secondary" onclick="go('home')">Save &amp; back</button>
@@ -447,9 +527,11 @@
         <label>Next time I will…</label>
         <textarea oninput="field('iterations.${idx}.decide',this.value)" placeholder="Your next tiny step">${esc(it.decide)}</textarea>`
       : `
-        <textarea autofocus oninput="field('iterations.${idx}.${s.field}',this.value)" placeholder="${s.ph}">${val}</textarea>
+        <textarea id="stepField" autofocus oninput="field('iterations.${idx}.${s.field}',this.value)" placeholder="${s.ph}">${val}</textarea>
+        <div class="row" style="margin-top:8px"><button class="btn ghost" id="micBtn" type="button" onclick="dictate()" title="Voice typing — speak instead of type">🎤 Voice</button></div>
         ${s.key==="learn"?`<label>💡 So the one lesson is:</label><input type="text" value="${esc(it.lesson)}" oninput="field('iterations.${idx}.lesson',this.value)" placeholder="In a few words" />`:""}
-        ${s.key==="build"?`<label class="muted" style="font-weight:400">🤖 Did an AI help? What mistake did you catch?</label><input type="text" value="${esc(it.aiMistake)}" oninput="field('iterations.${idx}.aiMistake',this.value)" placeholder="optional — and how you checked it" />`:""}`;
+        ${s.key==="build"?`<label class="muted" style="font-weight:400">🤖 Did an AI help? What mistake did you catch?</label><input type="text" value="${esc(it.aiMistake)}" oninput="field('iterations.${idx}.aiMistake',this.value)" placeholder="optional — and how you checked it" />`:""}
+        ${(s.key==="build"||s.key==="show")?photoControl(photoKey(l,it.n)):""}`;
     return `
       <div class="dots">${dots}</div>
       <div class="step-emoji">${s.emoji}</div>
@@ -540,6 +622,7 @@
     const standalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
     if(iOS && !standalone) document.getElementById("iosHint").classList.remove("hidden"); })();
   if("serviceWorker" in navigator){ window.addEventListener("load",()=>{ navigator.serviceWorker.register("./sw.js").catch(()=>{}); }); }
+  probeXR();
 
   render();
   </script>
