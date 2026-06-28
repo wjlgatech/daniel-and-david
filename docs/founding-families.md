@@ -50,6 +50,44 @@ whole field lab is free and open — the founders helped build the thing everyon
 
 ---
 
+## What founding families get — the privileges
+
+Everyone gets the free, open layer. **Founding families** also get the studio's private workshop.
+
+### Free for everyone (no application needed)
+- The free, installable **[Builder Loop app](https://wjlgatech.github.io/daniel-and-david/app.html)**
+  and the whole [curriculum](curriculum/).
+- The open **AI toolkit**: the `/goal-10x` objective driver, the `/check` guardrails, and the
+  `critical-thinking` (5W1H) plugin — all installable in
+  [one click](../README.md#-for-developers-contributors--founding-families--1-click-setup).
+
+### Founding-family only — *why it's a real privilege*
+Earliest = most honor, because earliest = most risk and most work (see the
+[Halving](#the-schedule)). Genesis families get:
+
+- **🛠️ Private early access to the studio's own AI workshop** — the same tools we build the
+  project with, granted when your family is accepted (internals stay private):
+  - **AnyAgent** — *build, grade, improve, and accountably ship any AI agent app from one
+    sentence.* Your kid stops just *using* AI and starts **building** real AI tools — with a loop
+    that refuses to ship junk until it's actually good.
+  - **Super U** — *upgrade yourself with AI.* Turn any source or expert into a skill you can
+    actually do; turn consumption into creation; and measure your words and actions against the
+    person you intend to become. It's this project's whole "who you become" thesis, as a tool.
+  - **DreamMakeTrue** — *the Participation Engine: from listener → participant → creator in one
+    session.* Turn any video, podcast, or article into a living knowledge map, learn deeply from
+    the people who shaped a field, and publish your own work. A kid stops watching the big
+    conversations and starts joining them.
+- **Co-design the curriculum** — Genesis families shape what every later family receives.
+- **Permanent "Genesis" name** in [`FOUNDERS.md`](../FOUNDERS.md) (by alias, with consent).
+- **Direct office hours** with the founder, and **first pick** of new ventures.
+
+> **Why it matters:** these tools turn the project's ideas — *direct AI, keep your judgment,
+> create real value, become who you intend to be* — into things your family can actually hold and
+> use. That's the privilege: not a discount, a **head start on the future**, earned by showing up
+> first.
+
+---
+
 ## What a founding family commits to
 
 This is a *fit*, not a competition you "win." We're choosing each other. A good founding family:
@@ -61,6 +99,42 @@ This is a *fit*, not a competition you "win." We're choosing each other. A good 
 - keeps it **safe and kind** ([safety](safety/)).
 
 About **1 hour a week.** Small on purpose.
+
+---
+
+## How we choose — selection, by research (not vibes)
+
+We cap Genesis at 8, so we choose carefully — and *honestly.* The criteria below come from
+research on what actually predicts a family **finishing** and **lifting the group**, not on
+wealth, credentials, or how impressive anyone sounds. It's a **mutual fit**: read this, and if it
+isn't right for your family, that's a fine and friendly outcome.
+
+**How it works (two stages, transparent):** every application is scored against the criteria
+(each 1–3); those clearing a minimum bar form a qualified pool; from that pool we choose 8 with an
+eye to a healthy *mix* (child ages, places, backgrounds) — so fit and diversity never trade off
+against each other. (Method: [Entrofy](https://pmc.ncbi.nlm.nih.gov/articles/PMC7384611/).)
+
+| # | What we look for | Why (the research) | The application question |
+|---|---|---|---|
+| 1 | **Role construction** — you see growing your child as *your* part, not the school's | The #1 predictor of sustained parent involvement (Hoover-Dempsey & Sandler) | "How do you see your *own* part in how your child grows — not school, you?" |
+| 2 | **Autonomous motivation** — a genuine pull toward *this*, not FOMO or a résumé line | Self-Determination Theory: intrinsic motivation predicts finishing; external pressure predicts dropping out | "What's pulling you toward this now — and what about the 4-week commitment are you unsure of?" |
+| 3 | **Follow-through history** — you've kept a hard commitment before | Conscientiousness is the most-replicated predictor of program completion (267-sample meta-analysis) | "Tell us about a commitment past 4 weeks you almost quit — what kept you going?" |
+| 4 | **Giver orientation** — you make a group *better*, not just take from it | One taker degrades an 8-family cohort for everyone (Adam Grant); founding cohorts run on contribution | "What did you share with a community this year, and what prompted you?" |
+| 5 | **Builder comfort** — your family makes things (cardboard counts!) | Families who never make anything stall in week 1 and feel shame — the top early-dropout cause | "Something you and your child made or tried together — what happened?" |
+| 6 | **Honest capacity** — a real plan for ~3–4 hrs/week for 4 weeks | Capacity (time/stability), not motivation, drives most dropout — so we screen it kindly | "Walk us through a typical week — where do those hours fit, and which week might be hard?" |
+| 7 | **Mutual fit** — you're applying to *this* program, not enrichment-in-general | Catches mismatch early and humanely (Deep Springs–style fit framing) | "What about this program's design feels right — and what feels like a stretch?" |
+
+> A single parent with a concrete plan outscores a two-parent household with vague answers.
+> **Honest uncertainty is a *plus*** — it means you read this carefully.
+
+### What we will **never** select on
+Wealth or income · parents' degrees or job titles · your child's grades, test scores, school, or
+name · your religion or denomination · your ZIP code · how many parents are in the home · a polished
+"portfolio." These either proxy for things that have nothing to do with fit, or they'd quietly shut
+out great families. **Faith-informed, not faith-required:** our values shape the program's culture;
+no faith tradition or practice is asked of any family. (This keeps us fair and legal —
+[COPPA](https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy) and
+anti-discrimination both.)
 
 ---
 

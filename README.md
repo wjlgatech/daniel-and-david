@@ -162,23 +162,34 @@ You don't need GitHub, git, or any setup. Just:
 
 That's the whole on-ramp. Everything a parent needs is a plain web link or a markdown page.
 
-### 🛠️ For developers & contributors
+### 🛠️ For developers, contributors & founding families — 1-click setup
 
 ```bash
-# 1. Get the code
-git clone https://github.com/wjlgatech/daniel-and-david.git
-cd daniel-and-david
-
-# 2. Open the landing page locally (no install needed)
-open apps/web/public/index.html      # macOS  (Linux: xdg-open, Windows: start)
-
-# 3. Read the agent guide + toolkit, then run the checks
-#    AGENTS.md  ·  .claude/README.md
-./scripts/check.sh                   # friendly pre-PR checks (links, toolkit, status-truth)
-
-# 4. Find a "good first issue" and open a small, reviewable PR
-#    https://github.com/wjlgatech/daniel-and-david/contribute
+git clone https://github.com/wjlgatech/daniel-and-david.git && cd daniel-and-david
+./scripts/setup.sh        # ← the one command: makes scripts runnable + runs every guardrail
 ```
+
+`setup.sh` is safe to re-run. It detects [Claude Code](https://claude.ai/code) and points you at
+the **AI toolkit this repo ships** — installable in one click, no global setup:
+
+- **`/goal-10x`** — the objective driver: research → drive any goal to green against the repo's
+  own checks → coach → self-improve. Ships as a project command (`.claude/commands/goal-10x.md`),
+  so it just works after you clone.
+- **`/check`** — run all five guardrails (links · toolkit · status-truth · registration-safety ·
+  webapp) the same way CI does.
+- **The `critical-thinking` plugin** (the 5W1H grid as a command + skill + hook). Install it from
+  this repo's own marketplace:
+  ```text
+  /plugin marketplace add wjlgatech/daniel-and-david
+  /plugin install critical-thinking@daniel-and-david
+  ```
+
+Then: open the landing page locally (`open apps/web/public/index.html`), read **[AGENTS.md](AGENTS.md)**
+and **[.claude/README.md](.claude/README.md)**, and run `./scripts/check.sh` before any PR.
+
+> 🧱 **Founding families get more than the open toolkit** — private early access to the studio's
+> own AI workshop (AnyAgent, Super U, DreamMakeTrue). See
+> [**Founding Families**](docs/founding-families.md).
 
 New here? Start with **[CONTRIBUTING.md](CONTRIBUTING.md)**. Contributions open around tightly
 scoped issues — small, clear, reviewable, kind, and **safe** (children are involved — see

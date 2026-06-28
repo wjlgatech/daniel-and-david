@@ -7,6 +7,20 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **1-click setup + shipped Claude Code commands.** `scripts/setup.sh` now actually sets up
+  (makes scripts runnable, detects Claude Code, runs all five guardrails) instead of just printing
+  links. New project commands `.claude/commands/goal-10x.md` (a repo-tuned objective driver wired
+  to this repo's checks) and `.claude/commands/check.md` (run every guardrail) — so `/goal-10x`
+  and `/check` work the moment you clone. README gained a "1-click setup" section (clone →
+  `setup.sh`, plus the marketplace install of the `critical-thinking` plugin).
+- **Founding-family privileges + research-backed selection** in `docs/founding-families.md`:
+  private early access to the studio's AI workshop (**AnyAgent, Super U, DreamMakeTrue** — named
+  with benefit-level descriptions, internals private, granted on acceptance); and a **selection
+  rubric grounded in research** (Hoover-Dempsey role construction · SDT autonomous motivation ·
+  conscientiousness · giver-orientation · builder-comfort · honest capacity · mutual fit), a
+  transparent two-stage (Entrofy) process, and an explicit **do-not-select-on** list (no
+  wealth/credentials/grades/religion/ZIP/child PII — COPPA- and anti-discrimination-safe). The
+  landing-page application added the two highest-signal questions.
 - **Launch package** (`docs/marketing/launch.md`) — the dated "it's live" announcement set:
   a primary LinkedIn post (free installable app), a Founding-Families "Halving" post (honest
   Genesis-cohort scarcity), an X short post, a one-liner, and a pre-post checklist. Every claim
