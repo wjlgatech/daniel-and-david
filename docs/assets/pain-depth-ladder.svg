@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="660" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="40" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="84" font-size="32" font-weight="bold" fill="#29261F">The Pain2Gain Depth Ladder</text>
+  <text x="62" y="113" font-size="17" fill="#6B6258">How well do we actually understand the pain? Don't build before rung 4. Transformative lives at 5–6.</text>
+
+  <!-- dashed climb line -->
+  <path d="M150,572 L1060,210" fill="none" stroke="#C9A98E" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/>
+
+  <!-- Rung 1 -->
+  <g transform="translate(70,546)">
+    <rect width="252" height="50" rx="25" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="30" cy="25" r="17" fill="#D97757"/><text x="30" y="31" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="58" y="25" font-size="16" font-weight="bold" fill="#29261F">Anecdote</text>
+    <text x="58" y="42" font-size="12" fill="#6B6258">one real person's story</text>
+  </g>
+  <!-- Rung 2 -->
+  <g transform="translate(245,474)">
+    <rect width="252" height="50" rx="25" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="30" cy="25" r="17" fill="#D97757"/><text x="30" y="31" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="58" y="25" font-size="16" font-weight="bold" fill="#29261F">Pattern / survey</text>
+    <text x="58" y="42" font-size="12" fill="#6B6258">how common · how bad</text>
+  </g>
+  <!-- Rung 3 -->
+  <g transform="translate(420,402)">
+    <rect width="252" height="50" rx="25" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <circle cx="30" cy="25" r="17" fill="#D97757"/><text x="30" y="31" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="58" y="25" font-size="16" font-weight="bold" fill="#29261F">Correlation</text>
+    <text x="58" y="42" font-size="12" fill="#6B6258">what makes it better/worse</text>
+  </g>
+  <!-- Rung 4 — BUILD line -->
+  <g transform="translate(595,330)">
+    <rect width="262" height="52" rx="26" fill="#FBEAD9" stroke="#C2613F" stroke-width="3"/>
+    <circle cx="32" cy="26" r="18" fill="#C2613F"/><text x="32" y="32" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="62" y="25" font-size="16" font-weight="bold" fill="#29261F">Causal chain</text>
+    <text x="62" y="42" font-size="12" fill="#6B6258">why-chain · evidence each link</text>
+  </g>
+  <text x="872" y="362" font-size="13" font-weight="bold" fill="#C2613F">🔨 build from here →</text>
+
+  <!-- Rung 5 -->
+  <g transform="translate(720,258)">
+    <rect width="262" height="52" rx="26" fill="#FBF1D8" stroke="#C7822E" stroke-width="2.5"/>
+    <circle cx="32" cy="26" r="18" fill="#C7822E"/><text x="32" y="32" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="62" y="25" font-size="16" font-weight="bold" fill="#29261F">Mechanism</text>
+    <text x="62" y="42" font-size="12" fill="#6B6258">the pathway that harms</text>
+  </g>
+  <!-- Rung 6 -->
+  <g transform="translate(845,186)">
+    <rect width="290" height="56" rx="28" fill="#E8B84B" stroke="#C2613F" stroke-width="2.5"/>
+    <circle cx="34" cy="28" r="19" fill="#FAF9F5"/><text x="34" y="34" font-size="16" font-weight="bold" fill="#C7822E" text-anchor="middle">6</text>
+    <text x="64" y="27" font-size="16" font-weight="bold" fill="#29261F">First principle ✨</text>
+    <text x="64" y="44" font-size="12" fill="#6B5526">the irreducible root</text>
+  </g>
+
+  <!-- footnote -->
+  <text x="60" y="636" font-size="14" font-style="italic" fill="#8A8175">First-principle test: would this pain still exist if every current workaround worked perfectly? If yes — you're at a symptom.</text>
+</svg>

@@ -88,6 +88,11 @@ better than bigger.* Fewer than 4 means the cycle is too slow; shrink what you b
 > three real people** (an adult is present — see [child-safety](../safety/child-safety.md)).
 > Write one sentence: "The real need is ___" (the child's words, not the AI's). Then **stop
 > planning and start iterating** — you'll learn the rest by shipping.
+>
+> 🔎 **Want the pain understood deeply, not just noticed?** Run **[Pain2Gain](../principles/pain2gain.md)**
+> on it — the depth ladder, the 5-Why root-cause drill, and which *side* of the pain is really live
+> (psychological · relational · behavioral · organizational · spiritual). Get to **rung 4 (a causal
+> chain), then build** — don't over-analyze. Worksheet: the [Pain Dossier](../principles/pain-dossier.md).
 
 ### What changes across the five iterations
 

@@ -7,6 +7,18 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Pain2Gain — a deep-pain investigation methodology** (`docs/principles/pain2gain.md` +
+  `docs/principles/pain-dossier.md` worksheet + `docs/assets/pain-depth-ladder.svg`). The rigorous
+  front end to the Builder Loop's *Understand* phase and companion to 5W1H: a **depth ladder**
+  (anecdote → survey → correlation → causal → mechanism → first-principle, with a per-rung self-test
+  and "don't build before rung 4"), the **six dimensions** of a pain (physical · psychological ·
+  behavioral · relational · organizational · spiritual — Engel/Sulmasy biopsychosocial-spiritual),
+  **5W1H → Three-Legged 5-Why + fishbone** for root cause, **burden** (prevalence × severity ×
+  duration) + spatial-temporal + one vivid thick-description story, **need-grounding** (JTBD · SDT ·
+  Max-Neef · Kano), and **Meadows leverage** for transformative (not cosmetic) solutions. Kid +
+  venture versions; evidence-based (cited); balances depth against the loop's fast-iteration ethos.
+  Wired into the Builder Loop Aim phase, critical-thinking, README principles, and AGENTS. Replaces
+  the prior surface-level ("single-pass 5W1H") problem understanding.
 - **Builder Loop app — fully translated.** Finished the app's secondary screens (aim, dashboard,
   parent tools, evidence checklist, the decide step, retro, history, Best-Flops) in
   中文/Español/한국어/日本語 — the whole app is now multilingual (125 keys × 4 languages, all gated by

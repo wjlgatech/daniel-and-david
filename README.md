@@ -104,6 +104,8 @@ How we work — the same way the best AI-native companies work:
 - 🤖 [AI-Native Company](docs/principles/ai-native-company.md) — agents are teammates, not features.
 - 🛠️ [Agentic Engineering](docs/principles/agentic-engineering.md) — small reversible changes,
   evals over vibes, docs-as-code, the human stays the editor.
+- 🔎 [Pain2Gain](docs/principles/pain2gain.md) — understand a pain at *root-cause / first-principle*
+  depth (the depth ladder, 5-Why, the 6 dimensions, burden) so the solution is transformative.
 - ✝️ [Values](docs/principles/values.md) — the *why* under all of it.
 
 <p align="center"><img src="docs/assets/agent-loop.svg" alt="Your AI teammate: an agent is a loop — LOOK at the goal, THINK of one step, ACT with a tool, CHECK if it worked. You are the boss; the robot does the busy work." width="78%"></p>
