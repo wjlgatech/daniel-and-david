@@ -6,6 +6,15 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **Builder Loop app — fully translated.** Finished the app's secondary screens (aim, dashboard,
+  parent tools, evidence checklist, the decide step, retro, history, Best-Flops) in
+  中文/Español/한국어/日本語 — the whole app is now multilingual (125 keys × 4 languages, all gated by
+  `check-i18n.sh`). Reuses the landing page's `dd.lang`.
+- **Auto-translate Action — config set.** Repo variables `I18N_LLM_BASE_URL` (NVIDIA NIM free
+  endpoint) and `I18N_LLM_MODEL` are set; the workflow is active. It stays inert until the
+  `I18N_LLM_KEY` secret is added (the one step that needs a human-owned API key).
+
 ### Changed
 - **Restyled the whole site to the Anthropic "clay on paper" aesthetic** (matching the repo's own
   infographics): warm paper backgrounds (`#FAF9F5`/`#F0EEE6`), warm ink (`#29261F`), **clay accent**
