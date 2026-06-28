@@ -7,6 +7,12 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Research library — compound, don't restart** (`docs/research/`). This session's deep research
+  passes are now **saved as distilled, cited syntheses** so future work builds on them instead of
+  re-researching from zero: deep-problem-understanding, family-pains (6yo/11yo/parents),
+  founding-cohort-selection, kids-family-app-ux, oss-landing-pages — plus an index with the rule
+  *"search here before dispatching a research agent; add a doc after."* Wired into `/goal-10x`
+  step 0 and AGENTS. (A synthesis can later be `kgfy`'d into a graph or `skillfy`'d into a skill.)
 - **Pain2Gain applied + the first demo app.** `docs/pain-analysis.md` runs Pain2Gain on real,
   evidence-based pains of a 6-year-old, an 11-year-old, and their parents (top 3–5 each, with
   burden + dimension + depth rung + app concept), plus the explicit child-safety "what we will NOT

@@ -64,6 +64,9 @@ build — don't over-analyze). See
 
 ## How to work here
 
+0. **Compound research — don't restart.** Before any deep web research, check
+   [`docs/research/`](docs/research/) (the cited research library); reuse it and research only the
+   *delta*. After new research, add a distilled, cited doc there. (Wired into `/goal-10x` step 0.)
 1. **Small, reversible changes.** One PR = one focused, complete change. No giant rewrites.
 2. **Docs ship with code.** Behavior change ⇒ update `CHANGELOG.md` + the relevant human doc
    (`README.md` / `docs/**` / `ventures/**`) + this agent guide if agent-facing behavior
