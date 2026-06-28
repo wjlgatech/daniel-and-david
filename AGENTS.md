@@ -40,7 +40,9 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
     All family data is **on-device** (localStorage `Store` seam + IndexedDB `Media` seam); **no
     external scripts and no network calls for user data** — never add analytics/CDN/fetch of user
     data, and photos must stay on-device (never uploaded). Backed by `manifest.webmanifest`,
-    `sw.js`, `icons/`. `scripts/check-webapp.sh` (in CI) enforces all of this.
+    `sw.js`, `icons/`. `scripts/check-webapp.sh` (in CI) enforces all of this. **Multilingual**
+    core via a `STR` dict + `t()` (reuses `dd.lang`); English is the source — `check-i18n.sh` also
+    verifies the app's `STR` stays in sync across all languages.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, hooks, and **project commands**
   (`commands/goal-10x.md` — a repo-tuned objective driver wired to the five checks; `commands/check.md`
