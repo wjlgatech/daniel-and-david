@@ -7,6 +7,12 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop app v2·1** (`apps/web/public/app.html`): **multiple children & loops** (a child/
+  loop switcher + a "📚 All loops" history with open/delete), a **"🏆 Best Flops"** gallery that
+  aggregates every lesson across loops, **delight polish** (Web-Audio chime + richer confetti +
+  per-cycle 🏅 badge stamps + rotating growth-mindset cheers, all behind a sound toggle — no
+  streaks-guilt, no notifications), and **share & portability** (Web Share text summary that
+  carries no child data, JSON export/import to move a loop between devices). All still on-device.
 - **Builder Loop web app (installable PWA)** — `apps/web/public/app.html`, so non-technical
   families can *run* the loop without ever touching GitHub. A dual-mode (kid-playful /
   parent-calm) single-file app that guides the **5 fast cycles** (pick → build → show a real
