@@ -7,6 +7,13 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Live on Vercel.** The agentic webapp is deployed and public at
+  **<https://daniel-and-david.vercel.app/>** (static hub + the `/api/spark` edge function, which is
+  live and returns `NIM_API_KEY not set` until a key is added). Removed the misleading
+  `apps/web/vercel.json` (`outputDirectory: public` isn't honored without a build) — zero-config
+  works once the project's **Root Directory = `apps/web`** (required; the CLI uploads the whole git
+  repo, so a repo-root build 404s). DEPLOY.md + `docs/solutions` updated with the root-directory and
+  SSO-deployment-protection gotchas.
 - **Free-LLM proxy: Netlify host added (the rbit-ai multi-host pattern).** Factored the proxy into a
   host-agnostic core (`apps/web/api/_spark-core.js`) so Vercel (`api/spark.js`) and **Netlify**
   (`netlify/edge-functions/spark.js`) share one safety logic — no logic forks (now enforced by a

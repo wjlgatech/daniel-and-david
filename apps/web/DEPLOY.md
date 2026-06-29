@@ -33,9 +33,14 @@ off). The manual steps below do the same thing by hand.
 1. **Get a free LLM key.** Create one at **[build.nvidia.com](https://build.nvidia.com)** (NVIDIA
    NIM — free tier, OpenAI-compatible). Any OpenAI-compatible key works; see the repo's
    `free-llm` notes.
-2. **Deploy `apps/web/`.** Import the repo at [vercel.com](https://vercel.com) and set
-   **Root Directory = `apps/web`** (or run `vercel` from inside `apps/web`). `public/` is served as
-   the static site; `api/spark.js` auto-deploys as an edge function at `/api/spark`.
+2. **Deploy `apps/web/`.** Import the repo at [vercel.com](https://vercel.com) and **set
+   Root Directory = `apps/web`** in the project settings. **This is required** — the site lives in a
+   subdirectory, so a default (repo-root) build serves nothing (404). ⚠️ Running `vercel` from inside
+   `apps/web` does **not** avoid this: the CLI uploads the whole git repo, so you must still set the
+   project's Root Directory to `apps/web` (or `vercel projects … --rootDirectory apps/web`). No
+   `vercel.json` is needed — once the root dir is right, zero-config serves `public/` as the static
+   site and `api/spark.js` as an edge function at `/api/spark`. ✅ Live example:
+   <https://daniel-and-david.vercel.app/>.
 3. **Set the env var** in the Vercel project: `NIM_API_KEY=<your key>`
    *(optional: `NIM_BASE_URL`, `NIM_MODEL` — defaults are NVIDIA NIM + Llama-3.1-70B).*
 4. **Wire the page to it.** Your endpoint is `https://<project>.vercel.app/api/spark`. Test it:
