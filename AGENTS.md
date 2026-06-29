@@ -120,8 +120,12 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
 - Run `./scripts/check.sh` before opening a PR. CI also runs `validate-toolkit.sh`,
   `check-links.sh`, `check-status-truth.sh` (the last fails if a public surface claims
   venture #1 is live/shipping while its README says "build not started"),
-  `check-registration-safety.sh`, `check-webapp.sh`, `check-i18n.sh`, and `check-cards.sh`
-  (app cards + gallery coherent).
+  `check-registration-safety.sh`, `check-webapp.sh`, `check-i18n.sh`, `check-cards.sh`
+  (app cards + gallery coherent), and `check-spark.sh` (free-LLM proxy: key stays server-side, no
+  child data forwarded — runs `apps/web/api/spark.test.mjs`).
+- **Free-LLM proxy** (`apps/web/api/spark.js`, parent-facing, NVIDIA NIM): an optional ✨ enhancement,
+  **off until deployed**. Deploy with `scripts/deploy-spark.sh` then `scripts/set-spark-endpoint.sh <url>`;
+  see `apps/web/DEPLOY.md`. Kid-facing demos stay LLM-free.
 - Prefer plain, readable code and prose. If a 6-year-old's parent can't follow the *why*,
   simplify.
 

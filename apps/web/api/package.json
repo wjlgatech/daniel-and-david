@@ -1,0 +1,5 @@
+{
+  "type": "module",
+  "private": true,
+  "description": "Edge functions for the demo apps' optional, parent-facing free-LLM enhancement. See ../DEPLOY.md."
+}

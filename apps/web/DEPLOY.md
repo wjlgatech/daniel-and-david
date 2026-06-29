@@ -9,6 +9,25 @@ no key, no deploy** — that's the default. This guide is only for switching on 
 > calls. The function only ever receives the **age + interest tags** the parent tapped — never a
 > child's name or any data (it sanitizes input to tags by design).
 
+## One command (after a one-time login)
+
+The proxy is **verified by tests** (`scripts/check-spark.sh` — runs in CI; proves the key stays
+server-side and a child's name/free-text is never forwarded). To deploy:
+
+```bash
+# one-time, yours (a script can't log into your accounts for you):
+npm i -g vercel && vercel login                 # browser auth
+# get a free key at https://build.nvidia.com    (NVIDIA NIM, OpenAI-compatible)
+
+# then, from the repo root:
+NIM_API_KEY=nvapi-xxxx ./scripts/deploy-spark.sh
+./scripts/set-spark-endpoint.sh https://<your-project>.vercel.app/api/spark
+git add -A && git commit -m "enable free-LLM proxy" && git push
+```
+
+`set-spark-endpoint.sh` wires the URL into every demo with a SPARK seam (pass `""` to turn it back
+off). The manual steps below do the same thing by hand.
+
 ## Fastest path — Vercel (matches `api/spark.js` as written)
 
 1. **Get a free LLM key.** Create one at **[build.nvidia.com](https://build.nvidia.com)** (NVIDIA
