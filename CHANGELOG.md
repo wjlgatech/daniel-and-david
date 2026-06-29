@@ -6,6 +6,19 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **Free-LLM proxy: verified + turnkey deploy.** Made the parent-facing Conversation Spark LLM
+  enhancement (`apps/web/api/spark.js`, NVIDIA NIM) deployable in one command and proved it safe.
+  New **mocked test suite** (`apps/web/api/spark.test.mjs`, 13 cases) + CI guard
+  (`scripts/check-spark.sh`) lock the safety invariant: a child's name or free text can **never**
+  reach the LLM (tags-only), the key stays server-side (Bearer), and missing-key/wrong-method/
+  upstream-failure degrade gracefully (500/405/502, no crash). New helpers:
+  `scripts/deploy-spark.sh` (deploy `apps/web/` to Vercel + set the key, after a one-time
+  `vercel login`) and `scripts/set-spark-endpoint.sh <url>` (wire the live URL into every SPARK-seam
+  demo, or `""` to disable). `apps/web/api/package.json` marks the function ESM. DEPLOY.md gains a
+  one-command path. The button stays off until a maintainer supplies a free NIM key + deploys —
+  honest by design; kids' apps remain fully on-device with no AI.
+
 ### Changed
 - **Landing page 10× — bold modern structure + a live demo showcase.** Redesigned the front door
   along the lovable.com / base44.com / printingpress.dev references while keeping the warm

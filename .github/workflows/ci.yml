@@ -79,3 +79,6 @@ jobs:
 
       - name: App cards (gallery + card standard coherent)
         run: bash scripts/check-cards.sh
+
+      - name: Free-LLM proxy (parent-facing, tag-only safety invariant)
+        run: bash scripts/check-spark.sh
