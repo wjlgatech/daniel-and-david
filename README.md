@@ -1,10 +1,25 @@
-# Daniel & David
+<div align="center">
 
-### A family field lab for raising wise, creative, AI-ready builders.
+# 🌱 Daniel &amp; David
 
-🌐 **The [live site](https://wjlgatech.github.io/daniel-and-david/) speaks your language** — switch
-with the selector: **English · 中文 · Español · 한국어 · 日本語**. (English is canonical; the rest are
-AI-assisted — corrections welcome. See [`docs/i18n/`](docs/i18n/).)
+**A family field lab for raising wise, creative, AI-ready builders.**
+
+<a href="https://daniel-and-david.vercel.app/">
+  <img src="https://img.shields.io/badge/Open_the_live_app-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="Open the live app">
+</a>
+
+**[Apps gallery →](https://daniel-and-david.vercel.app/apps.html)** ·
+**[Builder Loop app →](https://daniel-and-david.vercel.app/app.html)** ·
+**[Play a demo →](https://daniel-and-david.vercel.app/demos/conversation-spark.html)** ·
+**[Apply →](https://daniel-and-david.vercel.app/#apply)**
+
+<a href="https://daniel-and-david.vercel.app/">
+  <img src="docs/assets/landing-hero.png" alt="Daniel &amp; David — open the live site" width="840">
+</a>
+
+🌐 **5 languages** — English · 中文 · Español · 한국어 · 日本語 &nbsp;(English is canonical; the rest are AI-assisted — see [`docs/i18n/`](docs/i18n/)) &nbsp;·&nbsp; also on [GitHub Pages](https://wjlgatech.github.io/daniel-and-david/)
+
+</div>
 
 > **AI may change work dramatically. Your child doesn't need to be afraid of it — your child
 > needs to become wiser than it.** This is a practical, faith-informed learning system for
