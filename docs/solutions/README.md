@@ -22,6 +22,13 @@ external evidence); this folder holds *our* experience.
   shows an empty grid even when it's correct. To screenshot-verify, serve it first
   (`python3 -m http.server` then point headless Chrome at `http://localhost`). Don't conclude "broken"
   from a `file://` open.
+- **Vercel + a subdirectory site → set the project Root Directory** — our site lives in `apps/web/`,
+  not the repo root. The Vercel CLI, run *inside a git repo*, uploads the **whole repo** (not the
+  cwd), so deploying from `apps/web` still built the repo root → empty output → 404 on every path
+  (including `/api/*`). Fix: set the project's **Root Directory = `apps/web`** (a project *setting*,
+  not expressible in `vercel.json`); then zero-config serves `public/` + `api/` correctly — no
+  `vercel.json` needed. Also: new Vercel projects default to **Deployment Protection (SSO)** which
+  302-redirects the public to a login — disable `ssoProtection` to make a public site reachable.
 - **Dual-source kept honest by a check** — the Agentic App Card lives in two places on purpose: the
   portable `cards/<slug>.md` (the standard) and `cards/registry.json` (the gallery's fast index).
   Two sources risk drift, so `check-cards.sh` makes them agree (every card ↔ every entry, fields

@@ -123,9 +123,13 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
   `check-registration-safety.sh`, `check-webapp.sh`, `check-i18n.sh`, `check-cards.sh`
   (app cards + gallery coherent), and `check-spark.sh` (free-LLM proxy: key stays server-side, no
   child data forwarded — runs `apps/web/api/spark.test.mjs`).
-- **Free-LLM proxy** (`apps/web/api/spark.js`, parent-facing, NVIDIA NIM): an optional ✨ enhancement,
-  **off until deployed**. Deploy with `scripts/deploy-spark.sh` then `scripts/set-spark-endpoint.sh <url>`;
-  see `apps/web/DEPLOY.md`. Kid-facing demos stay LLM-free.
+- **Free-LLM proxy** (parent-facing, NVIDIA NIM): an optional ✨ enhancement, **off until deployed**.
+  One host-agnostic core (`apps/web/api/_spark-core.js`) is shared by the Vercel entry
+  (`api/spark.js`) and the Netlify edge function (`netlify/edge-functions/spark.js`) — never fork the
+  logic (`check-spark.sh` enforces both delegate to the core). Deploy via Vercel
+  (`scripts/deploy-spark.sh`) or **Netlify** (`apps/web/netlify.toml`, git-integration like rbit-ai),
+  then `scripts/set-spark-endpoint.sh <url|/api/spark>`. See `apps/web/DEPLOY.md`. Kid-facing demos
+  stay LLM-free.
 - Prefer plain, readable code and prose. If a 6-year-old's parent can't follow the *why*,
   simplify.
 

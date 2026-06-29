@@ -7,6 +7,22 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Live on Vercel.** The agentic webapp is deployed and public at
+  **<https://daniel-and-david.vercel.app/>** (static hub + the `/api/spark` edge function, which is
+  live and returns `NIM_API_KEY not set` until a key is added). Removed the misleading
+  `apps/web/vercel.json` (`outputDirectory: public` isn't honored without a build) — zero-config
+  works once the project's **Root Directory = `apps/web`** (required; the CLI uploads the whole git
+  repo, so a repo-root build 404s). DEPLOY.md + `docs/solutions` updated with the root-directory and
+  SSO-deployment-protection gotchas.
+- **Free-LLM proxy: Netlify host added (the rbit-ai multi-host pattern).** Factored the proxy into a
+  host-agnostic core (`apps/web/api/_spark-core.js`) so Vercel (`api/spark.js`) and **Netlify**
+  (`netlify/edge-functions/spark.js`) share one safety logic — no logic forks (now enforced by a
+  structural guard in `check-spark.sh`). Added `apps/web/netlify.toml` (publish `public/`, route
+  `/api/spark` to the edge function, NODE_VERSION 22) and `apps/web/.env.example`, mirroring how
+  rbit-ai deploys (Netlify git-integration auto-deploy + dashboard env var). `set-spark-endpoint.sh`
+  now also accepts a same-origin path (`/api/spark`) for all-on-Netlify/Vercel hosting. DEPLOY.md
+  gains a first-class Netlify section. Still off until a maintainer connects a host + sets a free NIM
+  key; kids' apps stay on-device with no AI.
 - **Free-LLM proxy: verified + turnkey deploy.** Made the parent-facing Conversation Spark LLM
   enhancement (`apps/web/api/spark.js`, NVIDIA NIM) deployable in one command and proved it safe.
   New **mocked test suite** (`apps/web/api/spark.test.mjs`, 13 cases) + CI guard

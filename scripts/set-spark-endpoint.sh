@@ -10,8 +10,10 @@ URL="${1-__MISSING__}"
 if [ "$URL" = "__MISSING__" ]; then
   echo "Usage: $0 <proxy-url|''>"; echo "  e.g. $0 https://daniel-and-david.vercel.app/api/spark"; exit 2
 fi
-if [ -n "$URL" ] && ! printf '%s' "$URL" | grep -qE '^https://'; then
-  echo "❌ Endpoint must be https:// (or empty to disable). Got: $URL"; exit 1
+# Accept an absolute https URL (cross-origin host) OR a same-origin path like /api/spark
+# (when the whole site is hosted on Netlify/Vercel) OR "" to disable.
+if [ -n "$URL" ] && ! printf '%s' "$URL" | grep -qE '^(https://|/)'; then
+  echo "❌ Endpoint must be https://… , a /same-origin/path , or '' to disable. Got: $URL"; exit 1
 fi
 
 changed=0
