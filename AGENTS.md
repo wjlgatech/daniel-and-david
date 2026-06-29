@@ -123,7 +123,9 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
   `check-registration-safety.sh`, `check-webapp.sh`, `check-i18n.sh`, `check-cards.sh`
   (app cards + gallery coherent), and `check-spark.sh` (free-LLM proxy: key stays server-side, no
   child data forwarded — runs `apps/web/api/spark.test.mjs`).
-- **Free-LLM proxy** (parent-facing, NVIDIA NIM): an optional ✨ enhancement, **off until deployed**.
+- **Free-LLM proxy** (parent-facing, NVIDIA NIM): an optional ✨ enhancement — **LIVE** at
+  `https://daniel-and-david.vercel.app/api/spark` (`NIM_API_KEY` set in Vercel; Conversation Spark's
+  `SPARK.endpoint` is wired to it; falls back to the offline bank if unavailable).
   One host-agnostic core (`apps/web/api/_spark-core.js`) is shared by the Vercel entry
   (`api/spark.js`) and the Netlify edge function (`netlify/edge-functions/spark.js`) — never fork the
   logic (`check-spark.sh` enforces both delegate to the core). Deploy via Vercel

@@ -4,6 +4,10 @@ The demos (e.g. [Conversation Spark](public/demos/conversation-spark.html)) work
 no key, no deploy** — that's the default. This guide is only for switching on the optional
 **✨ "fresh ideas (AI)"** enhancement, which is **parent-facing** and powered by a free LLM.
 
+> ✅ **Status: LIVE.** Already deployed at <https://daniel-and-david.vercel.app/> with `NIM_API_KEY`
+> set in Vercel; Conversation Spark's ✨ button is wired to `/api/spark`. The steps below are the
+> reference for redeploying or standing up another host.
+
 > **Why a server at all?** A static page can't safely hold an API key (it'd be visible to everyone).
 > So the key lives in a tiny serverless function ([`api/spark.js`](api/spark.js)) that the page
 > calls. The function only ever receives the **age + interest tags** the parent tapped — never a
