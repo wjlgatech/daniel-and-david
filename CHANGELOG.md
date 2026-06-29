@@ -7,6 +7,12 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **The ✨ AI is live.** Conversation Spark's optional "fresh ideas" button is now wired to the
+  deployed proxy (`SPARK.endpoint = https://daniel-and-david.vercel.app/api/spark`) with
+  `NIM_API_KEY` set in Vercel — the live endpoint returns real, age/interest-aligned opener questions.
+  Still parent-facing and tags-only (verified by `check-spark.sh`); the offline question bank remains
+  the default if the network/endpoint is unavailable. Absolute URL so it works from both the Vercel
+  and GitHub Pages hosts.
 - **Live on Vercel.** The agentic webapp is deployed and public at
   **<https://daniel-and-david.vercel.app/>** (static hub + the `/api/spark` edge function, which is
   live and returns `NIM_API_KEY not set` until a key is added). Removed the misleading
