@@ -52,11 +52,28 @@ off). The manual steps below do the same thing by hand.
    Commit + push. The ✨ button now generates fresh openers. (Until then it gracefully tells the
    user the built-in questions already work.)
 
+## Netlify (the rbit-ai pattern — git-integration auto-deploy)
+
+Already wired: [`netlify.toml`](netlify.toml) publishes `public/` and routes `/api/spark` to the
+Netlify Edge Function [`netlify/edge-functions/spark.js`](netlify/edge-functions/spark.js), which
+shares its body with the Vercel handler via [`api/_spark-core.js`](api/_spark-core.js) — one safety
+logic, both hosts. To deploy exactly like rbit-ai:
+
+1. **Netlify → Add new site → import this repo.** Set **Base directory = `apps/web`**. (No build
+   command — it's static; the edge function deploys automatically.)
+2. **Set the key** (Site settings → Environment, or `netlify env:set NIM_API_KEY <key>`). Free key:
+   [build.nvidia.com](https://build.nvidia.com).
+3. **Deploy.** Every push now auto-deploys. The endpoint is **same-origin** — wire it with:
+   ```bash
+   ./scripts/set-spark-endpoint.sh /api/spark
+   git add -A && git commit -m "enable free-LLM proxy" && git push
+   ```
+   (CLI alternative to the dashboard: `npm i -g netlify-cli && netlify login && cd apps/web && netlify deploy --prod`.)
+
 ## Alternatives
-- **Netlify / Cloudflare** — same logic; their edge handlers take `(request, context)` instead of
-  Vercel's `(request)`. Copy the body of `api/spark.js` into a `netlify/edge-functions/spark.js`
-  (or a Worker) with that signature and set `NIM_API_KEY`.
-- **fly.io** — wrap the same fetch-to-NIM logic in a tiny Node/Express server (`POST /api/spark`),
+- **Cloudflare Workers** — same `api/_spark-core.js` body; a Worker's `fetch(request, env, ctx)` can
+  call `handleSpark(request)` (read the key via `env`). Set `NIM_API_KEY` as a Worker secret.
+- **fly.io** — wrap a tiny Node/Express server that calls `handleSpark` on `POST /api/spark`,
   `fly secrets set NIM_API_KEY=…`, `fly deploy`.
 
 ## Safety (don't regress)

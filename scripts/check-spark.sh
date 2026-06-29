@@ -16,6 +16,16 @@ if [ ! -f "$TEST" ]; then echo "  ⚠️  $TEST not found — skipping (no proxy
 if ! command -v node >/dev/null 2>&1; then echo "  ⚠️  node not found — skipped (CI runs it)."; echo ""; exit 0; fi
 
 node "$TEST"; rc=$?
+
+# Structural guard: both host entry points must delegate to the one shared core (no logic forks).
+core="apps/web/api/_spark-core.js"
+for entry in "apps/web/api/spark.js" "apps/web/netlify/edge-functions/spark.js"; do
+  if [ -f "$entry" ]; then
+    if grep -q "_spark-core" "$entry"; then echo "  ✅ $entry delegates to the shared core";
+    else echo "  ❌ $entry does not import $core (logic must not fork)"; rc=1; fi
+  fi
+done
+
 echo "-------------------------------------------------"
 if [ "$rc" -ne 0 ]; then echo "::error::Free-LLM proxy safety tests failed."; echo ""; exit 1; fi
 echo "🎉 Proxy keeps the key server-side and never forwards child data."

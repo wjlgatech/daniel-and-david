@@ -1,0 +1,28 @@
+# Netlify deploy config for the static hub + the optional free-LLM proxy.
+# (Mirrors the multi-host pattern we use on rbit-ai — Netlify alongside Vercel.)
+#
+# This site is DEPENDENCY-FREE static HTML, so there's no build step — Netlify just publishes
+# `public/`. The one piece of server code is the parent-facing free-LLM proxy, which runs as a
+# Netlify Edge Function (Deno) at /api/spark, sharing its body with the Vercel handler via
+# api/_spark-core.js.
+#
+# To deploy (git integration, as on rbit-ai):
+#   1. In Netlify: "Add new site" → import this repo → set Base directory = `apps/web`.
+#   2. Set the env var (Site settings → Environment, or `netlify env:set`):
+#        NIM_API_KEY = <free key from build.nvidia.com>
+#        (optional: NIM_BASE_URL, NIM_MODEL — defaults are NVIDIA NIM + Llama-3.1-70B)
+#   3. Deploy. Same-origin endpoint is /api/spark — wire it with:
+#        ./scripts/set-spark-endpoint.sh /api/spark
+# Until a key is set the proxy returns a clean 500 and the demos use their offline question bank.
+
+[build]
+  publish = "public"
+  command = ""
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Parent-facing free-LLM proxy. tags-only; key stays server-side. See apps/web/api/_spark-core.js.
+[[edge_functions]]
+  path = "/api/spark"
+  function = "spark"
