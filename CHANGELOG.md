@@ -7,6 +7,18 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Adult Restoration Loop — the runnable 4-week curriculum (in design).** Built
+  `docs/curriculum/adult-restoration/` (README + printable `worksheet.md`) + a `restoration-loop-4week.svg`
+  infographic: the grown-up parallel to the kids' Builder Loop. Four weeks, one R per week —
+  **Restoration** (heals hopeless) → **Redemption** (meaningless) → **Regeneration** (helpless) →
+  **Resurrection, with Christ** (peaceless) — each pairing inner work (renew the mind, Isaiah 35
+  anchors, orphan→beloved) with one outer **Builder Loop cycle** (ship one real thing, show one real
+  person, keep the verify-the-AI habit). Measured on the same capability checkpoints
+  (Before/During/After/Transfer) and North Star (evidence of a rebuilt trajectory, month over month);
+  the "12x" = the loop repeated. Includes a compassionate **crisis/help note** (988 ·
+  findahelpline.com) since it addresses depression. Wired into the curriculum index, the Isaiah 35
+  vision doc ("run it" CTA), `README.md`, and `AGENTS.md`. Adults-only; kids stay the core; safety
+  rules unchanged. Infographic visually verified. Status: in design, not shipped.
 - **Isaiah 35 Restoration Track — adult audience expansion (in design).** Added
   `docs/vision/isaiah-35-restoration.md` + `docs/assets/isaiah-35-restoration.svg`: a parallel,
   **adults-only** track for grown-ups rebuilding their trajectory (AI-disrupted, "old in skin, young

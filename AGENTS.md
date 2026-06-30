@@ -29,7 +29,11 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   `FORM` endpoint (mailto fallback). It is **adults-only** — never collect a child's identity;
   `scripts/check-registration-safety.sh` (in CI) enforces the honeypot/consent/adults-only/privacy
   guardrails. Privacy notice: `apps/web/public/privacy.html`.
-- `docs/` — principles and a two-track curriculum (now written against measurable outcomes).
+- `docs/` — principles and the curriculum (written against measurable outcomes): two kids' tracks
+  plus `docs/curriculum/adult-restoration/` — the **Adult Restoration Loop** (🟡 in design), a 4-week
+  run of the 4 R's on the Builder Loop engine + a printable worksheet, for the adults-only
+  [Isaiah 35 track](docs/vision/isaiah-35-restoration.md). It carries a crisis/help note (988 ·
+  findahelpline.com) since it addresses depression — keep that note if you edit it.
 - `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
 - `apps/web/` — the static site, **hosted on GitHub Pages**
