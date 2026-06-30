@@ -2,6 +2,8 @@
 
 # 🌱 Daniel &amp; David
 
+**🌐 Read this in:** English · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) &nbsp;<sub>(English is the source of truth; the rest are AI-assisted)</sub>
+
 **A family field lab where the whole family becomes wise, creative, AI-ready builders — together.**
 
 <a href="https://daniel-and-david.vercel.app/">
