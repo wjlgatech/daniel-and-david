@@ -16,7 +16,12 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   an `iteration-log.md` template and `scripts/builder-loop-log.sh` (a per-child log scaffolder;
   output `builder-loop-log-*.md` is git-ignored — it can hold a child's notes). Start here.
 - `docs/vision/` — mission, the **Theory of Change + North Star metric**, and the two ladders
-  (Capability Ladder = public/measured; money ladder = advanced venture track).
+  (Capability Ladder = public/measured; money ladder = advanced venture track). Also
+  `isaiah-35-restoration.md` — the **Isaiah 35 Restoration Track**: a *parallel, adults-only*
+  expansion (🟡 in design) for grown-ups rebuilding their trajectory (AI-disrupted, orphan-minded,
+  depressed), run through the same Builder Loop on four principles (Restoration · Redemption ·
+  Regeneration · Resurrection). Faith-rooted/Christ-centered yet welcoming to all (per
+  `docs/principles/values.md`); kids stay the core and all `docs/safety/` rules are unchanged.
 - `docs/safety/` — **child-safety governance** (read before any community/account/upload feature).
 - `docs/founding-families.md` + `FOUNDERS.md` — **The Halving**: the founding-cohort program (honor
   halves each epoch, cohort doubles; Genesis = 8) and its public, consent-based ledger. The

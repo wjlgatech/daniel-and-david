@@ -74,6 +74,21 @@ shipped** (the agent runs your data **on-device**; it's always clearly an AI). P
 
 <p align="center"><img src="docs/assets/builder-loop-coach.svg" alt="The Builder Loop Coach: 1 You say it (type or talk), 2 the Coach guides (holds the 5-cycle Builder Loop as a goal and asks the next kind question), 3 it does the work on-device (nothing leaves your device), 4 you stay the mind (find one thing the AI got wrong; if you can't explain it, you don't ship it). Always an AI, never pretends to be a person." width="100%"></p>
 
+### In design: open to adults too — the Isaiah 35 Restoration Track 🌿
+
+The same engine that turns a child into a builder is exactly what an **adult in a barren season**
+needs — the job disrupted by AI, the single parent with no margin, the one *old in skin but young at
+heart*, carrying an orphan mindset or fighting depression's four lies (*hopeless, helpless,
+meaningless, peaceless*). So we're opening a **parallel, adults-only track**, anchored in **Isaiah
+35** — *"Strengthen the weak hands… say to the anxious heart, 'Be strong; fear not.'"* Four operating
+principles — **Restoration, Redemption, Regeneration, Resurrection** — run through the same Builder
+Loop, to rebuild capability, calling, and hope (a real *12x* of one's trajectory). Faith-rooted
+(Christ-centered restoration) and, as always, **everyone welcome of every belief**. **In design, not
+shipped** → [the Restoration Track](docs/vision/isaiah-35-restoration.md). Kids stay the core; all
+[child-safety rules](docs/safety/) are unchanged.
+
+<p align="center"><img src="docs/assets/isaiah-35-restoration.svg" alt="Isaiah 35 — The Restoration Track for adults: the journey from the dry land along the Way of Holiness home with joy. Four principles — RESTORATION for the hopeless (ship one small real thing), REDEMPTION for the meaningless (your story becomes your service), REGENERATION for the helpless (new heart and new skills, direct an AI team), RESURRECTION for the peaceless (new life with Christ). From orphan to beloved son and daughter." width="100%"></p>
+
 ---
 
 ## Why this exists

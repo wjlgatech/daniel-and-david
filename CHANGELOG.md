@@ -7,6 +7,16 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Isaiah 35 Restoration Track — adult audience expansion (in design).** Added
+  `docs/vision/isaiah-35-restoration.md` + `docs/assets/isaiah-35-restoration.svg`: a parallel,
+  **adults-only** track for grown-ups rebuilding their trajectory (AI-disrupted, "old in skin, young
+  at heart," orphan mindset, the four faces of depression). Anchored in **Isaiah 35** with four
+  operating principles — **Restoration · Redemption · Regeneration · Resurrection (with Christ)** —
+  each answering one of depression's lies and run through the *same* Builder Loop + Capability Ladder
+  + AI-as-teammate engine (a "12x" of one's life trajectory). Faith-rooted/Christ-centered yet
+  **welcoming to all beliefs** (consistent with `values.md`); **kids stay the core** and all
+  `docs/safety/` child-safety rules are unchanged. Wired into `README.md` (honest "in design"
+  callout) and `AGENTS.md`. Infographic visually verified. Status: in design, not shipped.
 - **Builder Loop Coach — infographic + docs.** Added `docs/assets/builder-loop-coach.svg` (brand-matched
   SVG: you say it → coach guides the 5-cycle SOP → does the work on-device → you stay the mind) and
   embedded it in `apps/web-agent/README.md` (hero) and the main `README.md` under an honest, **"in
