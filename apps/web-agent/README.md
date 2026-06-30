@@ -49,6 +49,18 @@ different protocol.
 > each provider against `/responses` and skips ones that fail — so a Gemini key is harmlessly
 > bypassed in favor of **OpenAI** (verified working) or **Groq**. Use Groq (free) or OpenAI.
 
+## PR3 probe — can on-device do real work? (`/probe-webllm`)
+
+Before building the on-device (WebLLM) brain, run the probe to see whether a small in-browser model
+reliably tool-calls (the gating question — see `SPEC.md` §11). **Needs a real GPU browser**
+(Chrome/Edge desktop); our headless test browser has no WebGPU.
+
+```bash
+npm run dev      # open http://localhost:3000/probe-webllm → pick a model → "Run probe"
+```
+
+It loads a model **entirely on-device** and reports a 🟢/🟡/🔴 verdict on tool-calling reliability.
+
 ## Privacy & safety (read before deploying)
 
 This PR uses a **cloud** model and **cloud** speech, so it is **adults-only** and gated by

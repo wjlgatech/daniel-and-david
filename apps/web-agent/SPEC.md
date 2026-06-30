@@ -182,9 +182,10 @@ the system prompt to answer in `dd.lang` and accept best-effort, since the struc
    Gemini/OpenAI → uncovered the **blocking send-reload bug (§3a)**.
 2b. ✅ **PR2.5 — live verification + CopilotKit 1.61.2 upgrade + Gemini `/responses` fix (§3a).**
    Loop proven working; "reload" was a dev-HMR/test-harness artifact, not an app bug.
-3. **PR3 — on-device WebLLM** as the default brain behind the model seam; download/caching UX.
-   **Must first verify a local model can tool-call** (the §4 finding) — else fall back to guided
-   actions on-device + full actions on the adults-only cloud path.
+3. **PR3 — on-device WebLLM.** ⏳ **Gated on the probe (§11).** A standalone probe page is built
+   (`/probe-webllm`) to answer "can a small local model reliably tool-call?" before building the
+   on-device brain. Run it on a GPU browser; then either make on-device the default (GREEN) or keep
+   full actions on the adults-only cloud path with on-device as a guided/opt-in mode (YELLOW/RED).
 4. **PR4 — on-device voice** (Whisper STT) + mic button.
 5. **PR5 — optional adults-only proxy fallback** (consent + redaction) behind the seam.
 6. **PR6 — i18n, app card, `check-web-agent.sh`, deploy** (Vercel), README + AGENTS/CLAUDE sync.
@@ -204,6 +205,36 @@ then errors mid-stream (a free tier hitting 401/429 after the stream starts, or 
 **pre-flight** (`openai.responses.create`, 16 tokens) per provider and pins the first healthy one
 (cached 5 min). Adds ~1 round-trip on a cold cache; buys real survival-chain robustness. The
 `agentic-portfolio` reference still has the original gap.
+
+## 11. PR3 probe — on-device tool-calling (built; must be run on a GPU browser)
+
+The gating question for PR3 (§4): **can a small in-browser model reliably emit `tool_calls`?** If
+not, on-device can't run the full-action coach. Built `/probe-webllm` (`app/probe-webllm/page.tsx`,
+WebLLM `0.2.84`, code-split): it loads a model **entirely on-device** and measures how often it
+calls the coach's real `recordCycleField` tool with the right field + valid args across 5 trials,
+then prints a 🟢/🟡/🔴 verdict.
+
+**Cannot be run in our automation:** the headless test browser has **no WebGPU** (verified), which
+WebLLM requires. So this is a "verify at the user's altitude" probe — run it on a real
+Chrome/Edge desktop:
+```bash
+cd apps/web-agent && npm run dev      # open http://localhost:3000/probe-webllm
+# pick a model (default Qwen2.5-3B), click "Run probe", read the verdict.
+```
+
+**Prior (to be confirmed by the probe), why this matters for the family use case:**
+- **Hermes-2-Pro / Hermes-3 (8B)** are FC-tuned → most likely to pass, but **~4.5 GB** download.
+- **Qwen2.5-3B / Llama-3.2-3B** are **~2 GB** but 3B function-calling is hit-or-miss.
+- Real UX costs for *non-technical families on phones*: a multi-GB first download, **WebGPU is
+  desktop-Chrome-strong but spotty on mobile**, and slower inference. So even a GREEN probe may not
+  make on-device the right *default* for the target users.
+
+**Decision framework (set after running the probe):**
+- 🟢 **GREEN (≥80%)** → on-device can be the default privacy brain on capable devices; cloud stays
+  the fallback for weak devices (the existing seam).
+- 🟡/🔴 **(<80%)** → keep the **full-action coach on the adults-only cloud path** (today's working
+  state) and offer on-device as an **opt-in "max privacy" / guided mode** (agent guides via plain
+  text; the app captures fields with lighter heuristics rather than trusting local tool-calls).
 
 ## 10. Investigated / rejected
 

@@ -68,7 +68,9 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   until the on-device WebLLM brain lands; all family data stays on-device (`lib/store.ts`). See
   `apps/web-agent/SPEC.md` (design + privacy model) and its `README.md` (run it). Modeled on the
   `wjlgatech/agentic-portfolio` reference build. The conversational-agent rules live in
-  `docs/safety/ai-use-boundaries.md`.
+  `docs/safety/ai-use-boundaries.md`. A `/probe-webllm` route (SPEC §11) measures whether a small
+  **on-device** model can reliably tool-call — the gate for PR3's on-device brain; run it on a real
+  GPU browser (the headless test browser has no WebGPU).
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, hooks, and **project commands**
   (`commands/goal-10x.md` — a repo-tuned objective driver wired to the five checks; `commands/check.md`
