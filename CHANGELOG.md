@@ -7,6 +7,13 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **README curriculum: adult tracks added.** Expanded "The curriculum" from "two tracks
+  (age-appropriate)" to **"one method, every age"** — kept Daniel (11) & David (6), and added four
+  grown-up archetype tracks (the single parent · the disrupted professional · the seasoned mentor ·
+  the young hustler) under the adults-only [Restoration Track](docs/vision/isaiah-35-restoration.md) /
+  4-week [Restoration Loop](docs/curriculum/adult-restoration/), all running the *same* Builder Loop
+  on the four R's. Marked *in design*. Also linked Daniel's [AI Build Kit](docs/curriculum/daniel-age-11/build-kit.md)
+  from his bullet.
 - **Whole-family rebrand (positioning).** Widened the public promise from "for your child (5–15)" to
   **the whole family — grown-ups and kids growing wiser than AI, together.** Rewrote the README
   sub-hero ("a family field lab where the whole family becomes wise, creative, AI-ready builders —

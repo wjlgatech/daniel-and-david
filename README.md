@@ -133,12 +133,31 @@ in design).
   [Builder Loop](docs/builder-loop/) — start there even before the venture ships.)
 
 ### The curriculum
-Two tracks, age-appropriate, tied to the live ventures:
+One method, **every age** — tied to real building, not worksheets.
+
+**For the kids** (tied to the live ventures):
 
 - 👦 **[Daniel — age 11](docs/curriculum/daniel-age-11/)** — builds, prices, sells, measures,
-  and reads a P&L. Writes code with an AI pair.
+  and reads a P&L. Writes code with an AI pair. (Now leads an [AI Build
+  Kit](docs/curriculum/daniel-age-11/build-kit.md): builds → shows his mentor → sells with an adult.)
 - 🧒 **[David — age 6](docs/curriculum/david-age-6/)** — counts, draws the signs, greets the
   customer, learns that *making something good for people* is the whole game.
+
+**For the grown-ups** — the adults-only [Restoration Track](docs/vision/isaiah-35-restoration.md),
+run as the 4-week [Restoration Loop](docs/curriculum/adult-restoration/) (*old in skin, young at
+heart* welcome). The *same* Builder Loop, pointed at rebuilding a life:
+
+- 👩‍👧 **The single parent** — finds one real pain, ships a tiny paid offer with an AI team, and
+  lands the first *"yes."* Restoration over résumé.
+- 👨‍💻 **The disrupted professional** (the role AI just changed) — turns hard-won know-how into a
+  product; directs an AI team to do what once took a department.
+- 👵 **The seasoned mentor** (teacher, manager, retiree) — packages a lifetime of wisdom into
+  something that serves real people (and sells). Proof it's not too late.
+- 🚗 **The young hustler** (driver, server, gig worker) — turns a side gig into a repeatable offer;
+  learns margin, demand, and leverage.
+
+> Every grown-up track runs the same engine on the four R's — **Restoration · Redemption ·
+> Regeneration · Resurrection** (Isaiah 35). *In design.*
 
 ### The principles
 How we work — the same way the best AI-native companies work:
