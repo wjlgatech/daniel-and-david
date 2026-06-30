@@ -33,7 +33,11 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   plus `docs/curriculum/adult-restoration/` — the **Adult Restoration Loop** (🟡 in design), a 4-week
   run of the 4 R's on the Builder Loop engine + a printable worksheet, for the adults-only
   [Isaiah 35 track](docs/vision/isaiah-35-restoration.md). It carries a crisis/help note (988 ·
-  findahelpline.com) since it addresses depression — keep that note if you edit it.
+  findahelpline.com) since it addresses depression — keep that note if you edit it. Also
+  `docs/curriculum/daniel-age-11/build-kit.md` — how the 11-yo builder works now (an **AI team** +
+  a **possibly-remote mentor**): the toolbelt, an async Build & Show → Feedback ritual (parent↔child
+  only), and the **present-adult rule for any public/real-world selling**. When editing it, never add
+  a child's location/schedule (child-safety #4) and keep the present-adult supervision rule intact.
 - `ventures/` — real businesses designed in the open. **Venture #1 = `kc-matchday-basecamp/`**
   (spec complete; **build not started** — say "pilot in design", never "live"/"shipping").
 - `apps/web/` — the static site, **hosted on GitHub Pages**
