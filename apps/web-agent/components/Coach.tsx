@@ -23,6 +23,7 @@ import {
   type LoopState,
 } from "@/lib/sop/builder-loop";
 import { loadLoop, saveLoop } from "@/lib/store";
+import { ShowAndSend } from "@/components/ShowAndSend";
 
 const FIELD_LABEL: Record<CycleField, string> = {
   smallestNextThing: "Smallest next thing",
@@ -136,6 +137,7 @@ function CoachInner() {
         </div>
         <CyclePanel loop={loop} completed={completed} />
       </div>
+      <ShowAndSend loop={loop} />
       <VoiceInput targetSelector=".copilotKitChat textarea, textarea" />
       {celebrate != null && <Celebration cycle={celebrate} />}
     </>

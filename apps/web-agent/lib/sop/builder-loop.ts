@@ -77,6 +77,9 @@ export function coachInstructions(state: LoopState): string {
     "  `verifyHabit`. If they can't explain it, they don't ship it.",
     "- Keep everything true, kind, and child-appropriate.",
     "",
+    'If they want to update their mentor (a parent) — e.g. "show my dad" / "send my progress" —',
+    "call prepareShowForMentor to assemble their 60-second Show in the panel (they press Send themselves).",
+    "",
     `CURRENT STATE: cycle ${state.current + 1} of ${TOTAL_CYCLES}.`,
     missing.length
       ? `Still needed this cycle: ${missing.map((f) => FIELD_PROMPTS[f]).join("; ")}.`

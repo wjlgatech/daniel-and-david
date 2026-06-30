@@ -81,7 +81,11 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
   until the on-device WebLLM brain lands; all family data stays on-device (`lib/store.ts`). See
   `apps/web-agent/SPEC.md` (design + privacy model) and its `README.md` (run it). Modeled on the
   `wjlgatech/agentic-portfolio` reference build. The conversational-agent rules live in
-  `docs/safety/ai-use-boundaries.md`. A `/probe-webllm` route (SPEC §11) measures whether a small
+  `docs/safety/ai-use-boundaries.md`. It also has an async **"Show your mentor"** surface
+  (`components/ShowAndSend.tsx` + `lib/show.ts`, SPEC §12): the agent assembles a 60-second Show and
+  the child sends it to a **parent** via their own mail client (`mailto:` seam) — parent↔child,
+  on-device, **no server storage of child data** (child-safety 5 & 8); keep that seam if you edit it.
+  A `/probe-webllm` route (SPEC §11) measures whether a small
   **on-device** model can reliably tool-call — the gate for PR3's on-device brain; run it on a real
   GPU browser (the headless test browser has no WebGPU).
 - `agents/` — small, readable starter agents.
