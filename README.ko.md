@@ -1,3 +1,4 @@
+<!-- i18n-source-sha: 861c383ed34c2357 -->
 <div align="center">
 
 # 🌱 Daniel &amp; David

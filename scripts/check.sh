@@ -59,6 +59,13 @@ else
   warn "A language tag is out of sync with English. Run: scripts/check-i18n.sh"
 fi
 
+# 6b. README translations — staleness heads-up (warn-only; English is canonical)
+if bash "$(dirname "$0")/check-readme-i18n.sh" 2>/dev/null | grep -qE "STALE|no source marker"; then
+  say "ℹ️  Some README translations may be stale (English is canonical, so this won't block). Re-translate, then run: scripts/sync-readme-i18n.sh"
+else
+  pass "README translations are in sync with README.md."
+fi
+
 # 7. Big-PR nudge
 count=$(echo "$changed" | grep -c . )
 if [ "${count:-0}" -gt 40 ]; then

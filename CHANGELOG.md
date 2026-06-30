@@ -7,6 +7,11 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **README i18n staleness guard.** Added `scripts/check-readme-i18n.sh` (warn-only; in CI +
+  `check.sh`) + `scripts/sync-readme-i18n.sh`. Each translated README now embeds a
+  `<!-- i18n-source-sha: … -->` fingerprint of the English `README.md` it was synced to; the check
+  flags any translation as **stale** when `README.md` changes (English stays canonical, so it never
+  blocks). `sync-readme-i18n.sh` re-stamps after re-translating. All six translations stamped in sync.
 - **README is now multilingual (7 languages).** Added a language switcher to `README.md` and full
   translations at repo root: `README.zh.md` (中文), `README.ko.md` (한국어), `README.ja.md` (日本語),
   `README.es.md` (Español), `README.de.md` (Deutsch), `README.fr.md` (Français). **English `README.md`
