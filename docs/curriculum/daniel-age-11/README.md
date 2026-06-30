@@ -11,6 +11,12 @@ Work through the quests in order. Each one ends with **something real you made o
 > build-show-learn cycles** (fast · frequent · failing-forward) that tie these quests to one real
 > problem and real people. An adult should skim the [safety rules](../../safety/) before you start.
 
+> 🤖 **You have an AI team now.** See **[Daniel's AI Build Kit & Remote-Mentor Loop](build-kit.md)** —
+> your tools (Codex · Hermes on `/free-llm` · `/goal-10x` · `/anyagent` · `/super-u` ·
+> `/dreammaketrue`), how to **build → show your mentor (in person *or* async) → get feedback**, and
+> the rule for selling: **a trusted adult is physically with you** for anything in public. You stay
+> the mind; the AI does the heavy lifting.
+
 ---
 
 ## Level 1 — The Engine of Value
@@ -29,8 +35,9 @@ Take one product from venture #1, the **$29 Rain + Phone Rescue kit**. It costs 
 
 ### Quest 1.3 — Read the scoreboard
 Open the venture's [conservative July-3 scenario](../../../ventures/kc-matchday-basecamp/SPEC.md).
-Find: revenue, costs, and profit. Explain to Dad in one minute *why* profit isn't the same
-as revenue. → Output: the one-minute explanation.
+Find: revenue, costs, and profit. Explain in one minute *why* profit isn't the same as revenue —
+to your mentor in person, or record a 60-second [show](build-kit.md). → Output: the one-minute
+explanation.
 
 ---
 
@@ -56,9 +63,10 @@ opened in a browser, shown to someone.
 ## Level 3 — Meet the Market
 
 ### Quest 3.1 — Sell one real thing
-With Dad's help and inside the [rules](../../principles/values.md), actually sell **one
-thing** to **one real customer.** Watch their face. Did they hesitate? Why? → Output: the sale
-+ one thing you learned from their reaction.
+**Plan the sell now** (product, price, sign, pitch — solo with your AI team). Then, **when a trusted
+adult is with you** (the *feast* — when you're together), actually sell **one thing** to **one real
+customer** inside the [rules](../../principles/values.md) (see the [selling rules](build-kit.md)).
+Watch their face. Did they hesitate? Why? → Output: the plan now; the sale + one lesson when you sell.
 
 ### Quest 3.2 — Measure it
 Track 10 attempts: how many people you asked, how many said yes. That ratio is your

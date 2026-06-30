@@ -7,6 +7,21 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Daniel's AI Build Kit & Remote-Mentor Loop.** Added `docs/curriculum/daniel-age-11/build-kit.md`
+  + `docs/assets/daniel-build-kit.svg` to match how the 11-yo builder actually works now:
+  semi-autonomous, leading an **AI team** (Codex · Hermes on `/free-llm` · `/goal-10x` · `/anyagent`
+  · `/super-u` · `/dreammaketrue`), with a **mentor who may be remote**. Documents the solo Builder
+  Loop with the kit, an async **Build & Show → Feedback** ritual (with copy-paste Show/Feedback
+  templates, kept parent↔child per safety rule 5), and **selling in the real world** with a
+  **non-negotiable present-adult rule** for anything public + the compliance basics (drinks/food need
+  permits, no protected branding, never store cards, serve-don't-exploit, give-as-you-grow). Public
+  selling is framed **plan-now / sell-together**: while the mentor is remote the child *plans* the
+  sell solo (product, price, sign, pitch) and the real public sale waits until a trusted adult is
+  physically present — so the doc never implies an unsupervised minor selling in public. Aligned
+  the track README's co-located assumptions ("explain to Dad" → "to your mentor in person or async";
+  "with Dad's help" → "with a present, trusted adult"). Safety-first by design: child stays the mind,
+  verify-the-AI, no location/schedule published (child-safety #4), present adult for real-world steps
+  (#9 + supervision note). Docs only; in design.
 - **Adult Restoration Loop — the runnable 4-week curriculum (in design).** Built
   `docs/curriculum/adult-restoration/` (README + printable `worksheet.md`) + a `restoration-loop-4week.svg`
   infographic: the grown-up parallel to the kids' Builder Loop. Four weeks, one R per week —
