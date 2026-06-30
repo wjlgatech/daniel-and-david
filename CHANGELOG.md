@@ -7,6 +7,43 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop Coach — PR2.5: live loop works + UX pass (`apps/web-agent/`).** The agent now
+  **does real work end-to-end** (verified by screenshot): a user message → the agent fires the
+  `recordCycleField` CopilotKit action → the on-device store updates → the cycle panel ticks to 17%
+  → it guides to the next field. Gave the coach a warm branded UI (gradient hero, a pulsing 5-cycle
+  **journey**, live cycle panel, cycle-complete **celebration**), an inspiring **no-key on-ramp**
+  (new `/api/health` route), `showDevConsole={false}`, and a React **error boundary**. **Upgraded
+  CopilotKit `1.5.20 → 1.61.2`** (pinned; 1.61 dropped the `.copilotKitInput` textarea class, so
+  selectors moved to `.copilotKitChat textarea`). **Root-caused & fixed a real provider bug:** 1.61
+  drives the model via `@ai-sdk/openai` (the **Responses API `/responses`**), and **Gemini's
+  OpenAI-compat endpoint 404s on `/responses`** — so `/api/copilotkit` now **pre-flights** each
+  provider against `/responses` and pins the first healthy one (cached 5 min), which also closes the
+  mid-stream failover gap (SPEC §9a). The earlier "reload on send" was a **misdiagnosis** — Next dev
+  Fast-Refresh + a test-harness command-timeout artifact, not an app bug (prod left untouched keeps
+  its context). `next build` green. Not deployed; re-verifying the full path through the headless
+  harness is flaky (recommend a real-browser confirmation). Kid-facing demos remain LLM-free.
+- **Builder Loop Coach — PR2 skeleton (`apps/web-agent/`).** Scaffolded the conversational coach
+  as a Next.js + CopilotKit app, modeled on the `wjlgatech/agentic-portfolio` reference build: a
+  free-LLM **survival chain** (`lib/llm.ts`, Groq→Gemini→NIM→OpenAI) behind `/api/copilotkit` with
+  **stream-init failover**; the Builder Loop SOP **as data** (`lib/sop/builder-loop.ts`);
+  **real-work CopilotKit actions** (`recordCycleField` / `advanceCycle`) so the agent fills the SOP
+  from conversation instead of a wizard; on-device `Store` (localStorage); a reusable **voice mic**
+  (`lib/voice/`); and an adults-only gate (`COACH_ADULT_TOKEN`) + disclosure banner. CopilotKit
+  pinned to `1.5.20`. **Key finding recorded** (SPEC §4): real-work tool-calling needs a model that
+  emits structured `tool_calls` AND streams plain `content` (reasoning models render blank) — proven
+  with cloud Groq/Gemini, which is in tension with the on-device-WebLLM goal; PR3 must verify a local
+  model can tool-call. Cloud-first, gated, **not deployed**. Voice currently uses the Web Speech API
+  (cloud STT) — flagged in-code; PR4 swaps in on-device Whisper.
+- **Conversational Builder Loop Coach — spec in design (`apps/web-agent/SPEC.md`).** Designed a
+  voice-first second "door" into the Builder Loop: a CopilotKit agent that *guides* a family
+  through the 5-cycle SOP by conversation (extracting structured inputs from natural dialogue,
+  tolerating off-script questions) instead of a wizard. Brain runs **on-device (WebLLM) by
+  default** so no child data leaves the device; the cloud free-LLM proxy is demoted to an optional
+  adults-only, consent-gated, PII-redacted fallback. Voice = **on-device Whisper** STT (and
+  flagged that the existing PWA's 🎤 Web Speech API streams audio to the cloud — a follow-up).
+  Ships **alongside** the existing static PWA, which is unchanged. Added a conversational-agent
+  section to `docs/safety/ai-use-boundaries.md` codifying the rules (on-device default, coach-not-
+  companion, always-visibly-AI, never replaces the child's thinking). Build not started.
 - **The ✨ AI is live.** Conversation Spark's optional "fresh ideas" button is now wired to the
   deployed proxy (`SPARK.endpoint = https://daniel-and-david.vercel.app/api/spark`) with
   `NIM_API_KEY` set in Vercel — the live endpoint returns real, age/interest-aligned opener questions.

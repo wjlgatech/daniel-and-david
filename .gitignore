@@ -40,3 +40,4 @@ tmp/
 # Builder Loop — a child's private iteration log (keep local; see docs/safety/privacy-by-design.md)
 builder-loop-log-*.md
 .vercel
+.gstack/

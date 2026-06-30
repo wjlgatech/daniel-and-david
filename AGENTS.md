@@ -59,6 +59,16 @@ ladder (which is a deliberately-demoted "venture track"). It holds:
     on-device (the privacy banner + no `<script src>`), collect **no child name/data**, and ship a
     matching card in `public/cards/` so it appears in the gallery. `check-webapp.sh` scans every demo
     for the on-device note + no child-name field + JS parse.
+- `apps/web-agent/` — the **Builder Loop Coach** (🟡 spec-in-design / PR2 skeleton, **not deployed**):
+  a voice-first **conversational** second door into the Builder Loop, built with **Next.js +
+  CopilotKit** (a deliberate, scoped exception to the repo's "no build" norm). The agent *guides*
+  a family through the 5-cycle SOP and **does real work** via CopilotKit actions
+  (`recordCycleField`/`advanceCycle`), backed by the free-LLM **survival chain**
+  (`lib/llm.ts`) with stream-init failover. Cloud brain is **adults-only** (`COACH_ADULT_TOKEN`)
+  until the on-device WebLLM brain lands; all family data stays on-device (`lib/store.ts`). See
+  `apps/web-agent/SPEC.md` (design + privacy model) and its `README.md` (run it). Modeled on the
+  `wjlgatech/agentic-portfolio` reference build. The conversational-agent rules live in
+  `docs/safety/ai-use-boundaries.md`.
 - `agents/` — small, readable starter agents.
 - `.claude/` — the **agent toolkit**: skills, workflows, hooks, and **project commands**
   (`commands/goal-10x.md` — a repo-tuned objective driver wired to the five checks; `commands/check.md`
