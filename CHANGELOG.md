@@ -7,6 +7,15 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop Coach — PR3 probe + dogfood finding (`apps/web-agent/`).** Added `/probe-webllm`
+  (`app/probe-webllm/page.tsx`, WebLLM `0.2.84`, code-split) — a standalone, **on-device** harness
+  that measures whether a small in-browser model reliably calls the coach's real `recordCycleField`
+  tool (right field + valid args, 5 trials → 🟢/🟡/🔴 verdict). This gates PR3 (SPEC §11): build the
+  on-device brain only if a local model can tool-call. Must be run on a **real GPU browser** — the
+  automated test browser has **no WebGPU** (verified). **Dogfood finding:** the earlier "reload on
+  send" was conclusively a **test-harness artifact** — the headless browse daemon resets the page
+  context ~every 12s (a trivial non-app page loses its marker identically); the coach itself has no
+  reload bug and the live loop is verified working. Recommend a real-browser dogfood before deploy.
 - **Builder Loop Coach — PR2.5: live loop works + UX pass (`apps/web-agent/`).** The agent now
   **does real work end-to-end** (verified by screenshot): a user message → the agent fires the
   `recordCycleField` CopilotKit action → the on-device store updates → the cycle panel ticks to 17%

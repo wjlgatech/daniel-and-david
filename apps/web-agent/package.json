@@ -13,6 +13,7 @@
     "@copilotkit/react-core": "1.61.2",
     "@copilotkit/react-ui": "1.61.2",
     "@copilotkit/runtime": "1.61.2",
+    "@mlc-ai/web-llm": "0.2.84",
     "next": "15.5.19",
     "openai": "^4.104.0",
     "react": "18.3.1",
