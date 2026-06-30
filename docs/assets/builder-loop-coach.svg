@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Verdana, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1000" height="600" fill="#F0EEE6"/>
+
+  <!-- Title -->
+  <rect x="60" y="44" width="34" height="6" rx="3" fill="#D97757"/>
+  <text x="60" y="88" font-size="34" font-weight="bold" fill="#29261F">The Builder Loop Coach</text>
+  <text x="62" y="118" font-size="18" fill="#6B6258">You talk. The agent runs the loop. You stay the mind.</text>
+
+  <!-- Flow arrows between the four cards -->
+  <g fill="#D97757">
+    <polygon points="0,-7 0,7 13,0" transform="translate(282,300)"/>
+    <polygon points="0,-7 0,7 13,0" transform="translate(522,300)"/>
+    <polygon points="0,-7 0,7 13,0" transform="translate(762,300)"/>
+  </g>
+
+  <!-- ===== CARD 1: You say it ===== -->
+  <rect x="60" y="170" width="210" height="260" rx="18" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="165" y="220" font-size="38" text-anchor="middle">🗣️</text>
+  <text x="165" y="262" font-size="17" font-weight="bold" fill="#D97757" text-anchor="middle">1. You say it</text>
+  <text x="165" y="298" font-size="14" fill="#5F574C" text-anchor="middle">Type it — or tap 🎤</text>
+  <text x="165" y="318" font-size="14" fill="#5F574C" text-anchor="middle">and just talk.</text>
+  <text x="165" y="356" font-size="13" fill="#8A8178" text-anchor="middle" font-style="italic">“I want to build a</text>
+  <text x="165" y="374" font-size="13" fill="#8A8178" text-anchor="middle" font-style="italic">lemonade-stand sign.”</text>
+
+  <!-- ===== CARD 2: Coach guides ===== -->
+  <rect x="300" y="170" width="210" height="260" rx="18" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="405" y="220" font-size="38" text-anchor="middle">🤖</text>
+  <text x="405" y="262" font-size="17" font-weight="bold" fill="#D97757" text-anchor="middle">2. Coach guides</text>
+  <text x="405" y="298" font-size="14" fill="#5F574C" text-anchor="middle">It holds the 5-cycle</text>
+  <text x="405" y="318" font-size="14" fill="#5F574C" text-anchor="middle">Builder Loop as a goal</text>
+  <text x="405" y="338" font-size="14" fill="#5F574C" text-anchor="middle">and asks the next</text>
+  <text x="405" y="358" font-size="14" fill="#5F574C" text-anchor="middle">kind question.</text>
+  <text x="405" y="392" font-size="12" fill="#8A8178" text-anchor="middle">Off-topic? It answers,</text>
+  <text x="405" y="408" font-size="12" fill="#8A8178" text-anchor="middle">then steers you back.</text>
+
+  <!-- ===== CARD 3: Does the busywork ===== -->
+  <rect x="540" y="170" width="210" height="260" rx="18" fill="#FFFFFF" stroke="#D97757" stroke-width="3"/>
+  <text x="645" y="220" font-size="38" text-anchor="middle">✨</text>
+  <text x="645" y="262" font-size="17" font-weight="bold" fill="#D97757" text-anchor="middle">3. Does the work</text>
+  <text x="645" y="298" font-size="14" fill="#5F574C" text-anchor="middle">It drops your words</text>
+  <text x="645" y="318" font-size="14" fill="#5F574C" text-anchor="middle">into the right step —</text>
+  <text x="645" y="338" font-size="14" fill="#5F574C" text-anchor="middle">on your device.</text>
+  <text x="645" y="376" font-size="13" fill="#15803D" text-anchor="middle" font-weight="bold">🔒 Nothing leaves it.</text>
+
+  <!-- ===== CARD 4: You stay the mind ===== -->
+  <rect x="780" y="170" width="210" height="260" rx="18" fill="#FFFFFF" stroke="#29261F" stroke-width="3"/>
+  <text x="885" y="220" font-size="38" text-anchor="middle">🧠</text>
+  <text x="885" y="262" font-size="17" font-weight="bold" fill="#29261F" text-anchor="middle">4. You stay the mind</text>
+  <text x="885" y="298" font-size="14" fill="#5F574C" text-anchor="middle">Find one thing the</text>
+  <text x="885" y="318" font-size="14" fill="#5F574C" text-anchor="middle">AI got wrong.</text>
+  <text x="885" y="356" font-size="13" fill="#5F574C" text-anchor="middle">Can’t explain it?</text>
+  <text x="885" y="376" font-size="13" fill="#5F574C" text-anchor="middle" font-weight="bold">You don’t ship it.</text>
+
+  <!-- The 5-cycle journey strip -->
+  <text x="60" y="486" font-size="14" fill="#6B6258">One Builder Loop = 5 fast cycles:</text>
+  <g>
+    <circle cx="330" cy="481" r="15" fill="#D97757"/><text x="330" y="486" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+    <line x1="345" y1="481" x2="383" y2="481" stroke="#EAD0C1" stroke-width="3"/>
+    <circle cx="398" cy="481" r="15" fill="#FFFFFF" stroke="#EAD0C1" stroke-width="3"/><text x="398" y="486" font-size="13" fill="#6B6258" text-anchor="middle" font-weight="bold">2</text>
+    <line x1="413" y1="481" x2="451" y2="481" stroke="#EAD0C1" stroke-width="3"/>
+    <circle cx="466" cy="481" r="15" fill="#FFFFFF" stroke="#EAD0C1" stroke-width="3"/><text x="466" y="486" font-size="13" fill="#6B6258" text-anchor="middle" font-weight="bold">3</text>
+    <line x1="481" y1="481" x2="519" y2="481" stroke="#EAD0C1" stroke-width="3"/>
+    <circle cx="534" cy="481" r="15" fill="#FFFFFF" stroke="#EAD0C1" stroke-width="3"/><text x="534" y="486" font-size="13" fill="#6B6258" text-anchor="middle" font-weight="bold">4</text>
+    <line x1="549" y1="481" x2="587" y2="481" stroke="#EAD0C1" stroke-width="3"/>
+    <circle cx="602" cy="481" r="15" fill="#FFFFFF" stroke="#EAD0C1" stroke-width="3"/><text x="602" y="486" font-size="13" fill="#6B6258" text-anchor="middle" font-weight="bold">5</text>
+  </g>
+  <text x="640" y="486" font-size="13" fill="#8A8178" font-style="italic">build · show one real person · learn · repeat</text>
+
+  <!-- Footer promise -->
+  <rect x="60" y="528" width="880" height="44" rx="12" fill="#FAF4EE" stroke="#EAD0C1" stroke-width="2"/>
+  <text x="500" y="556" font-size="14" fill="#6B6258" text-anchor="middle">Always an AI — it never pretends to be a person  ·  kind &amp; age-appropriate  ·  the child stays the mind and the conscience</text>
+</svg>

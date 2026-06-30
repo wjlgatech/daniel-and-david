@@ -4,6 +4,8 @@ A voice-first **conversational** second door into the [Builder Loop](../../docs/
 a CopilotKit agent that *guides* a family through the 5-cycle SOP by talking, extracts their
 inputs through dialogue, and **does real work** via actions — instead of a step wizard.
 
+<p align="center"><img src="../../docs/assets/builder-loop-coach.svg" alt="The Builder Loop Coach: 1 You say it (type or talk), 2 the Coach guides (holds the 5-cycle Builder Loop as a goal and asks the next kind question), 3 it does the work (drops your words into the right step, on-device — nothing leaves it), 4 you stay the mind (find one thing the AI got wrong; if you can't explain it, you don't ship it). Always an AI, never pretends to be a person." width="100%"></p>
+
 > **Status: 🟡 spec in design / PR2 skeleton.** Not deployed. See [`SPEC.md`](SPEC.md) for the
 > full design, the privacy model, and the build plan. This ships **alongside** the existing
 > static PWA (`apps/web/public/app.html`), which is unchanged.

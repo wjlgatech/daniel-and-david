@@ -64,6 +64,16 @@ This is growing from a curriculum into a **[hub](docs/community/hub.md)** — th
 **Parents, kids, engineers, designers, founders, and AI agents are all invited.** Bring a problem
 worth solving — see **[the Hub guide](docs/community/hub.md)** and [CONTRIBUTING.md](CONTRIBUTING.md).
 
+### In design: talk your way through it — the Builder Loop Coach 🗣️
+
+The Builder Loop today is a tap-through app. We're designing a **second door**: a voice-first
+**conversational coach** that runs the same loop by *talking* — you speak, an AI agent guides you
+through the five cycles, does the busywork, and you stay the mind. It's **spec in design, not
+shipped** (the agent runs your data **on-device**; it's always clearly an AI). Plan + how to run it:
+[`apps/web-agent/`](apps/web-agent/).
+
+<p align="center"><img src="docs/assets/builder-loop-coach.svg" alt="The Builder Loop Coach: 1 You say it (type or talk), 2 the Coach guides (holds the 5-cycle Builder Loop as a goal and asks the next kind question), 3 it does the work on-device (nothing leaves your device), 4 you stay the mind (find one thing the AI got wrong; if you can't explain it, you don't ship it). Always an AI, never pretends to be a person." width="100%"></p>
+
 ---
 
 ## Why this exists

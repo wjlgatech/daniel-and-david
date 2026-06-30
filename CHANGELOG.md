@@ -7,6 +7,10 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop Coach — infographic + docs.** Added `docs/assets/builder-loop-coach.svg` (brand-matched
+  SVG: you say it → coach guides the 5-cycle SOP → does the work on-device → you stay the mind) and
+  embedded it in `apps/web-agent/README.md` (hero) and the main `README.md` under an honest, **"in
+  design, not shipped"** callout in the hub section. Visually verified (Quick Look render).
 - **Builder Loop Coach — PR3 probe + dogfood finding (`apps/web-agent/`).** Added `/probe-webllm`
   (`app/probe-webllm/page.tsx`, WebLLM `0.2.84`, code-split) — a standalone, **on-device** harness
   that measures whether a small in-browser model reliably calls the coach's real `recordCycleField`
