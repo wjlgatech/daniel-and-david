@@ -34,6 +34,23 @@ A core skill we are teaching is that **AI is fallible.** So every AI-supported s
 If a child can't explain it, they don't ship it. That single habit — *use AI, then verify with
 your own judgment* — is the difference between directing AI and being directed by it.
 
+## Conversational agents (the Builder Loop Coach)
+
+A conversational agent that *talks* a family through a procedure raises the stakes on the rules
+above, so it carries extra, non-negotiable constraints (see the spec at
+[`apps/web-agent/SPEC.md`](../../apps/web-agent/SPEC.md)):
+
+- **On-device by default.** The model runs in the browser; no conversation, name, or photo leaves
+  the device. Any cloud path is **off by default, adults-only, consent-gated, and PII-redacted**,
+  with a clear in-UI banner saying which brain is active. (Rule 1.)
+- **A coach, not a companion.** It is scoped to the Builder Loop. No open-ended child
+  companionship, no "let's just keep chatting" loop. (Rule 2.)
+- **Always visibly an AI.** It self-identifies each session and never role-plays a person. (Rule 5.)
+- **It never replaces the child's thinking.** The "find one mistake the AI made / explain it
+  yourself" habit still gates every cycle — if a child can't explain it, they don't ship it. (Rule 4.)
+- **Voice stays on-device too.** Speech-to-text runs locally; a cloud STT (e.g. the Web Speech
+  API) is only allowed with the same disclosure as a cloud model.
+
 ## Honesty about AI
 
 Contributions may use AI, but must not **misrepresent** who did what. "The AI helped me write

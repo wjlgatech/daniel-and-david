@@ -1,0 +1,28 @@
+{
+  "name": "builder-loop-coach",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Conversational, voice-first Builder Loop Coach — a CopilotKit agent that guides a family through the 5-cycle SOP and does real work via actions. See SPEC.md. Status: spec in design / build started (PR2 skeleton).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@copilotkit/react-core": "1.61.2",
+    "@copilotkit/react-ui": "1.61.2",
+    "@copilotkit/runtime": "1.61.2",
+    "next": "15.5.19",
+    "openai": "^4.104.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}
