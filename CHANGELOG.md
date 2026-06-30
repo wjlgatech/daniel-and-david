@@ -7,6 +7,15 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Builder Loop Coach — async "Show your mentor" surface (`apps/web-agent/`).** Wires the `/coach`
+  app to be Daniel's async show-and-feedback surface (closes the 1,000-mile gap). New
+  `components/ShowAndSend.tsx` + `lib/show.ts`: the agent (`prepareShowForMentor` CopilotKit action)
+  assembles a **60-second Show** from the current Builder Loop cycle into the
+  [build-kit](docs/curriculum/daniel-age-11/build-kit.md) template (talk it in with 🎤), and the child
+  sends it to a **parent** via their **own mail client** (`mailto:` seam) or clipboard. **Safety
+  (child-safety 5 & 8):** parent↔child only, **on-device**, the send is a swappable seam — nothing is
+  stored on a server, no AI tool retains child data, mentor address lives only in the browser. Build
+  green; panel visually verified; docs synced (SPEC §12, app README, build-kit, AGENTS). In design.
 - **Daniel's AI Build Kit & Remote-Mentor Loop.** Added `docs/curriculum/daniel-age-11/build-kit.md`
   + `docs/assets/daniel-build-kit.svg` to match how the 11-yo builder actually works now:
   semi-autonomous, leading an **AI team** (Codex · Hermes on `/free-llm` · `/goal-10x` · `/anyagent`

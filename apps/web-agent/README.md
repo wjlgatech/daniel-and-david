@@ -34,6 +34,11 @@ coach needs (see below).
   the captured fields filling in.
 - **`lib/store.ts`** — on-device persistence seam (localStorage). Family data never leaves the device.
 - **`lib/voice/`** — reusable mic: speak instead of typing (adapted from the agentic-portfolio build).
+- **`components/ShowAndSend.tsx` + `lib/show.ts`** — the async **"Show your mentor"** surface: the
+  agent (`prepareShowForMentor` action) assembles a 60-second Show from the cycle into the
+  [build-kit](../../docs/curriculum/daniel-age-11/build-kit.md) template; the child sends it to a
+  parent via their **own mail client** (mailto seam) or clipboard. Parent↔child, on-device, no server
+  storage (child-safety 5 & 8). The mentor address is set once and lives only in the browser.
 
 ## The model must be tool-capable AND stream clean content
 

@@ -51,6 +51,10 @@ When Dad's away, the relationship doesn't stop — it goes **async**. You **buil
 **feedback and support.** (This stays just between you and your parent — see
 [safety rule 5](../../safety/child-safety.md).)
 
+> 📲 **The [Builder Loop Coach](../../../apps/web-agent/) does this for you.** Its **"Show your
+> mentor"** panel auto-fills the template below from your cycle (talk it in with 🎤), then opens
+> **your own email** to your mentor — *you* press Send. Parent↔child only; nothing is stored online.
+
 **Your "Show" (send after a cycle):**
 ```
 What I built: ______________________________

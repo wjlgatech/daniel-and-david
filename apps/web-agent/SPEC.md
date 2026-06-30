@@ -236,6 +236,23 @@ cd apps/web-agent && npm run dev      # open http://localhost:3000/probe-webllm
   state) and offer on-device as an **opt-in "max privacy" / guided mode** (agent guides via plain
   text; the app captures fields with lighter heuristics rather than trusting local tool-calls).
 
+## 12. Async Show & Send (the mentor surface)
+
+Makes the coach Daniel's **async show-and-feedback** surface (closing the 1,000-mile gap). The child
+records/dictates a 60-second update; the agent assembles it into the
+[build-kit Show template](../../docs/curriculum/daniel-age-11/build-kit.md); the child sends it to a
+**parent** from their own device.
+
+- `lib/show.ts` — `composeShow(loop, whereStuck)` builds the Show from the current cycle; `mailtoShow`
+  builds a `mailto:` link; `loadMentor`/`saveMentor` keep the mentor address **on-device only**.
+- `components/ShowAndSend.tsx` — self-contained: registers the `prepareShowForMentor` CopilotKit
+  action (the agent fills "where I'm stuck" from chat; the human presses Send) and renders the panel
+  (live Show preview, 🎤 dictation, mentor-email field, **Send to mentor** via mailto + **Copy**).
+- **Safety (child-safety 5 & 8):** parent↔child only; the **send is a swappable seam defaulting to the
+  user's own mail client / clipboard** — nothing is stored on a server and no AI tool retains the
+  child's data. Mirrors the signup form's mailto fallback. A natural future swap: a consented,
+  parent-owned endpoint — never a third-party store of child data.
+
 ## 10. Investigated / rejected
 
 - **CopilotKit runtime → cloud free-LLM proxy as the default** (the stack option's first preview).
