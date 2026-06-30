@@ -2,7 +2,7 @@
 
 # 🌱 Daniel &amp; David
 
-**A family field lab for raising wise, creative, AI-ready builders.**
+**A family field lab where the whole family becomes wise, creative, AI-ready builders — together.**
 
 <a href="https://daniel-and-david.vercel.app/">
   <img src="https://img.shields.io/badge/Open_the_live_app-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="Open the live app">
@@ -21,16 +21,16 @@
 
 </div>
 
-> **AI may change work dramatically. Your child doesn't need to be afraid of it — your child
-> needs to become wiser than it.** This is a practical, faith-informed learning system for
-> families who want to help children (roughly ages 5–15) **think clearly, use AI responsibly,
-> create real value, and serve real people.**
+> **AI may change work dramatically. You and your kids don't need to fear it — together, you can
+> become wiser than it.** This is a practical, faith-informed learning system for the **whole
+> family** — grown-ups and children (roughly ages 5–15), side by side — learning to **think clearly,
+> use AI responsibly, create real value, and serve real people.**
 
 We do that one small loop at a time. The atomic unit is the **[Builder Loop](docs/builder-loop/)** —
 a four-week family experiment run as **5 fast build-show-learn cycles** (not one big reveal):
 *pick the smallest next thing → build it rough → show one real person → learn what failed →
-repeat.* The principle is **fast · frequent · failing-forward.** AI is the child's teammate; the
-child stays **the mind and the conscience.**
+repeat.* The principle is **fast · frequent · failing-forward.** AI is the teammate; **you stay the
+mind and the conscience** — at every age, parent and child alike.
 
 > 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** (free, for everyone) · 📖 New to the
 > whole vision? [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for
@@ -44,7 +44,7 @@ child stays **the mind and the conscience.**
 
 ### The ladder we actually climb
 
-We measure **capability**, not dollars. The public ladder is what a child can *do*:
+We measure **capability**, not dollars. The public ladder is what anyone — child *or* grown-up — can *do*:
 
 <p align="center"><img src="docs/assets/capability-ladder.svg" alt="The Capability Ladder we climb: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others. The money ladder is a later venture track." width="100%"></p>
 

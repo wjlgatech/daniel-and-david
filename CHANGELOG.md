@@ -7,6 +7,16 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Whole-family rebrand (positioning).** Widened the public promise from "for your child (5–15)" to
+  **the whole family — grown-ups and kids growing wiser than AI, together.** Rewrote the README
+  sub-hero ("a family field lab where the whole family becomes wise, creative, AI-ready builders —
+  together") and hero lede ("You and your kids don't need to fear it — together, you can become wiser
+  than it… for the **whole family**, grown-ups and children (~5–15), side by side"), softened
+  kid-only lines ("AI is the teammate; **you** stay the mind and the conscience — at every age"; the
+  Capability Ladder is "what anyone — child *or* grown-up — can do"). Rebranded the live landing's
+  hero `tag` in **all 5 languages** (EN/中文/ES/한국어/日本語) — `check-i18n` green, hero visually
+  verified. Unifies with the Isaiah 35 adult Restoration Track: one engine (Builder Loop), every age.
+  Honest status unchanged (status-truth passes).
 - **Builder Loop Coach — async "Show your mentor" surface (`apps/web-agent/`).** Wires the `/coach`
   app to be Daniel's async show-and-feedback surface (closes the 1,000-mile gap). New
   `components/ShowAndSend.tsx` + `lib/show.ts`: the agent (`prepareShowForMentor` CopilotKit action)
