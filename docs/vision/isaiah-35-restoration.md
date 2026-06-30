@@ -110,6 +110,10 @@ income, and identity rising together up the [Capability Ladder](milestones.md). 
 [Builder Loop Coach](../../apps/web-agent/) is built to walk an adult through exactly this,
 conversationally — talk it through, and the agent helps you take the next step.
 
+> ▶️ **Run it:** the [**Adult Restoration Loop**](../curriculum/adult-restoration/) turns the four
+> R's into a concrete **4-week run** (one R per week, one real thing shipped each week) with a
+> printable [weekly worksheet](../curriculum/adult-restoration/worksheet.md). Start there.
+
 ## How this fits the rest of the lab
 
 - **Kids stay the core.** This is a **parallel, adults-only track**, not a replacement. All

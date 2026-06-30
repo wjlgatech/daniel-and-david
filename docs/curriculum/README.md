@@ -1,13 +1,17 @@
 # Curriculum
 
-Two tracks, one method: **learn a principle, then apply it on a live venture, and let the
-venture teach you back.** No worksheets-for-their-own-sake. Everything points at building
-something real.
+One method, every age: **learn a principle, then apply it on something real, and let reality
+teach you back.** No worksheets-for-their-own-sake. Everything points at building something real.
 
 | Track | For | Focus |
 |---|---|---|
 | 👦 [Daniel — age 11](daniel-age-11/) | the builder | ship, price, sell, measure, read a P&L, code with an AI pair |
 | 🧒 [David — age 6](david-age-6/) | the apprentice | count, create, greet the customer, learn that good work serves people |
+| 🌿 [Adult Restoration Loop](adult-restoration/) *(in design)* | adults rebuilding their trajectory | a 4-week run of the 4 R's (Restoration · Redemption · Regeneration · Resurrection) on the same Builder Loop engine — capability + calling + hope |
+
+> The **[Adult Restoration Loop](adult-restoration/)** is a **parallel, adults-only** track grounded
+> in the [Isaiah 35 Restoration Track](../vision/isaiah-35-restoration.md). Kids stay the core; all
+> [safety rules](../safety/) are unchanged.
 
 ## Thinking tools (cross-cutting)
 

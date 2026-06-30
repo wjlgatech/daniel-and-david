@@ -84,8 +84,10 @@ meaningless, peaceless*). So we're opening a **parallel, adults-only track**, an
 principles — **Restoration, Redemption, Regeneration, Resurrection** — run through the same Builder
 Loop, to rebuild capability, calling, and hope (a real *12x* of one's trajectory). Faith-rooted
 (Christ-centered restoration) and, as always, **everyone welcome of every belief**. **In design, not
-shipped** → [the Restoration Track](docs/vision/isaiah-35-restoration.md). Kids stay the core; all
-[child-safety rules](docs/safety/) are unchanged.
+shipped** → read [the Restoration Track](docs/vision/isaiah-35-restoration.md), or **run the
+[4-week Restoration Loop](docs/curriculum/adult-restoration/)** (one R per week, one real thing
+shipped each week — printable [worksheet](docs/curriculum/adult-restoration/worksheet.md)). Kids stay
+the core; all [child-safety rules](docs/safety/) are unchanged.
 
 <p align="center"><img src="docs/assets/isaiah-35-restoration.svg" alt="Isaiah 35 — The Restoration Track for adults: the journey from the dry land along the Way of Holiness home with joy. Four principles — RESTORATION for the hopeless (ship one small real thing), REDEMPTION for the meaningless (your story becomes your service), REGENERATION for the helpless (new heart and new skills, direct an AI team), RESURRECTION for the peaceless (new life with Christ). From orphan to beloved son and daughter." width="100%"></p>
 
