@@ -6,10 +6,13 @@ an **AI-native** project: agents are first-class teammates. But the human is alw
 
 ## What this repo is
 
-A **family field lab** for raising wise, creative, AI-ready builders — anchored on two kids
-(Daniel, 11; David, 6) and opening to other families. The public promise leads with
-**capability** (think clearly, use AI responsibly, create value, serve people), *not* the money
-ladder (which is a deliberately-demoted "venture track"). It holds:
+A **family field lab** for the **whole family** — anchored on two kids (Daniel, 11; David, 6) but
+explicitly **for grown-ups and kids together** (parents grow too, not just children; see the adults
+[Isaiah 35 Restoration Track](docs/vision/isaiah-35-restoration.md)). The public promise leads with
+**capability** (think clearly, use AI responsibly, create value, serve people) for *every age*, *not*
+the money ladder (a deliberately-demoted "venture track"). Keep the whole-family framing in public
+copy ("you and your kids… wiser than it, together"); the landing hero is i18n (edit EN **and** all 4
+translations). It holds:
 
 - `docs/builder-loop/` — **the atomic unit**: the four-week family Builder Loop, run as **5 fast
   build-show-learn iterations** (fast · frequent · failing-forward), *not* one big reveal. Includes
