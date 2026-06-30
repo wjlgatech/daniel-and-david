@@ -7,6 +7,14 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **README is now multilingual (7 languages).** Added a language switcher to `README.md` and full
+  translations at repo root: `README.zh.md` (中文), `README.ko.md` (한국어), `README.ja.md` (日本語),
+  `README.es.md` (Español), `README.de.md` (Deutsch), `README.fr.md` (Français). **English `README.md`
+  is the single source of truth**; each translation carries an "AI-assisted; English is canonical"
+  banner and links back. Translations reuse the *same* relative paths/images/code blocks as the
+  English original, so all links resolve and nothing else changed. **All other docs stay English** by
+  design. When the English README changes, treat translations as possibly-lagging (update or leave a
+  note); don't translate other docs.
 - **README curriculum: adult tracks added.** Expanded "The curriculum" from "two tracks
   (age-appropriate)" to **"one method, every age"** — kept Daniel (11) & David (6), and added four
   grown-up archetype tracks (the single parent · the disrupted professional · the seasoned mentor ·

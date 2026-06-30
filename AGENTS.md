@@ -148,6 +148,10 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
 
 ## Repo conventions
 
+- **The README is multilingual; English is the source of truth.** `README.md` (English) is canonical;
+  `README.{zh,ko,ja,es,de,fr}.md` are AI-assisted translations at repo root that reuse the same
+  relative links/images. When you change `README.md`, the translations may lag — that's accepted
+  (each says so). **Do NOT translate other docs** — only the README is multilingual.
 - Default branch: `main`. Branch names: `name/short-description`.
 - Run `./scripts/check.sh` before opening a PR. CI also runs `validate-toolkit.sh`,
   `check-links.sh`, `check-status-truth.sh` (the last fails if a public surface claims
