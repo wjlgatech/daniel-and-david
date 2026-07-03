@@ -19,7 +19,7 @@
   <img src="docs/assets/landing-hero.png" alt="Daniel &amp; David — open the live site" width="840">
 </a>
 
-🌐 **5 languages** — English · 中文 · Español · 한국어 · 日本語 &nbsp;(English is canonical; the rest are AI-assisted — see [`docs/i18n/`](docs/i18n/)) &nbsp;·&nbsp; also on [GitHub Pages](https://wjlgatech.github.io/daniel-and-david/)
+🌐 **The live app is in 5 languages** — English · 中文 · Español · 한국어 · 日本語 &nbsp;(this README itself is in 7, linked above; English is canonical, the rest AI-assisted — see [`docs/i18n/`](docs/i18n/)) &nbsp;·&nbsp; also on [GitHub Pages](https://wjlgatech.github.io/daniel-and-david/)
 
 </div>
 
@@ -204,7 +204,8 @@ daniel-and-david/
 ├── ventures/
 │   └── kc-matchday-basecamp/   Venture #1 — full spec, economics, app PRD
 ├── apps/
-│   └── web/             Landing page + privacy.html — hosted, with the founding-cohort form
+│   ├── web/             Landing page + privacy.html — hosted, with the founding-cohort form
+│   └── web-agent/       🟡 Builder Loop Coach — Next.js + CopilotKit voice app (spec in design)
 ├── agents/
 │   └── hello-agent/     A tiny, readable starter agent — your first AI teammate
 ├── .claude/             Agent toolkit — skills, workflows, hooks (capabilities for AI teammates)
