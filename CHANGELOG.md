@@ -6,6 +6,13 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **README two-reader clarity pass (docs-only).** Fixed the "5 languages" banner to say **the live
+  app is in 5 languages** while **the README itself is in 7** — resolving the contradiction with the
+  7-language selector directly above it (landing app i18n vs README translations are two different
+  sets). Added the omitted **`apps/web-agent/`** (Builder Loop Coach) row to the Repository map so it
+  matches `AGENTS.md`/`CLAUDE.md`. No behavior change.
+
 ### Added
 - **README i18n staleness guard.** Added `scripts/check-readme-i18n.sh` (warn-only; in CI +
   `check.sh`) + `scripts/sync-readme-i18n.sh`. Each translated README now embeds a
