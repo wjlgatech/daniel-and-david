@@ -8,7 +8,8 @@ the plan for those articles and the scoreboard for whether they worked.
 (`content/series/saw/source/*.md` → `scripts/build-saw.py` → `public/articles/saw-*.html`, gated by
 `scripts/check-saw.mjs`). This repo holds the research ([dossier](../research/shepherd-warrior-formation.md)), this
 plan, and the signal ledger ([`signal.json`](signal.json), read by [`scripts/saw-signal.sh`](../../scripts/saw-signal.sh)).
-**Status: series drafted and under the author's review; SAW itself is not built, and this repo is not renamed.**
+**Status: series written, reviewed twice by an independent reviewer, and approved for publication by the author on
+2026-10-12; SAW itself is not built, and this repo is not renamed.**
 
 ## §0 — The request, evaluated
 
@@ -50,10 +51,10 @@ thing first, and the build waits. A blank on the date counts as a fail and is sa
 
 ## Decisions only the founder can make
 
-1. **Approve the text.** The series speaks in Paul's voice about his sons and his faith, and part 2 corrects a
-   sentence he wrote. Nothing publishes until he has read it.
-2. **Translation credit.** The four other languages need about 10 US dollars of API credit (measured 2026-10-12:
-   the OpenAI key answers "no credits remaining"; no Anthropic key on the machine).
+1. **Approve the text.** The series speaks in Paul's voice about his sons and his faith, and part 2 tests a
+   sentence he wrote. *Decided 2026-10-12: publish.*
+2. **Translation credit.** The four other languages needed about 10 US dollars of API credit. *Decided 2026-10-12:
+   credit added; the pipeline run followed.*
 3. **The roster.** If any instructor has actually said yes, that is one number to change (`faculty_confirmed` in the
    series config) and one sentence to add. Until then the series says none.
 4. **The name, after the signal.** Keep "Shepherd's Academy of War" in public, or keep it as the family's name and

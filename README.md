@@ -97,8 +97,8 @@ the core; all [child-safety rules](docs/safety/) are unchanged.
 
 On car rides this autumn, Dad and the boys started a family "academy" for courage: learn how an attack works so
 you can protect people, and never treat a person as the enemy. Before building anything, we are publishing a
-five-part article series that tests the idea in public, including the name. **Status: articles under review;
-nothing built; no instructors.** Read [the plan and its scoreboard](docs/saw/SERIES.md) and
+five-part article series that tests the idea in public, including the name. **Status: articles approved and being
+published; nothing built; no instructors.** Read [the plan and its scoreboard](docs/saw/SERIES.md) and
 [the research behind it](docs/research/shepherd-warrior-formation.md).
 
 ---
