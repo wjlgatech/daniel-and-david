@@ -6,6 +6,30 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **Shepherd's Academy of War (SAW), as an article series before any build.** `docs/saw/SERIES.md` (the plan; opens
+  with the evaluation of the request and a 10X that can fail), `docs/saw/signal.json` + `scripts/saw-signal.sh`
+  (four numbers due 2026-11-11: how strangers read the name, reader mission results, an outside safeguarding
+  review, family drills run), and `docs/research/shepherd-warrior-formation.md` (five-horizon cited research).
+  README, AGENTS.md and CLAUDE.md say plainly that nothing is built and no instructor exists. Why: the idea
+  carries the word "war" next to children, so it is tested in public writing first.
+
+### Investigated / Rejected
+- **Rebrand the repo and live site to SAW now** — the name's public reading is unmeasured, and a 22,111-adult
+  survey (PRRI, 2026-09-24) plus the Lexington children's-program backlash (2026-06-30) say it reads as militant
+  by default. Series first; the name has three tripwires.
+- **Mission "raise warriors who can win the last battle of Revelation 19–20"** — the text gives the armies one
+  verb, "followed" (19:14), and the saints are surrounded when fire falls from God (20:9).
+- **A SEAL mental-toughness module on the 25→33% pass-rate number** — the number traces to a 2009 blog post
+  retelling a documentary; no primary source.
+- **Drill-and-discipline formats** — 43 studies of boot camps, no better than the alternatives (Campbell Collaboration).
+- **Striking and hard sparring for the boys** — the AAP names blows to the head and chokes as the high-risk parts;
+  86% of children's martial-arts concussions in one study happened in ordinary practice.
+- **Elite guests as one-to-one mentors** — 89% of unwanted sexual behaviour unreported (SafeSport, 2024); the law's
+  "observable and interruptible" standard.
+- **Teaching children to "read" liars** — 54% accuracy across 24,483 judges (Bond & DePaulo, 2006).
+
+
 ### Changed
 - **README two-reader clarity pass (docs-only).** Fixed the "5 languages" banner to say **the live
   app is in 5 languages** while **the README itself is in 7** — resolving the contradiction with the

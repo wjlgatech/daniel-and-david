@@ -25,6 +25,14 @@ translations). It holds:
   depressed), run through the same Builder Loop on four principles (Restoration · Redemption ·
   Regeneration · Resurrection). Faith-rooted/Christ-centered yet welcoming to all (per
   `docs/principles/values.md`); kids stay the core and all `docs/safety/` rules are unchanged.
+- `docs/saw/` — **Shepherd's Academy of War (SAW)**, 🟡 an idea being tested in writing, **not built**. `SERIES.md`
+  is the plan for a five-part article series (published from the author's portfolio repo, not from here) and opens
+  with the evaluation of the request; `signal.json` is a hand-kept ledger of four numbers due 2026-11-11, read by
+  `scripts/saw-signal.sh` (run from `check.sh`; exits 1 only on a malformed ledger or a number still missing after
+  the date). Research: `docs/research/shepherd-warrior-formation.md`. **Do not rebrand this repo, the landing page
+  or the app to SAW, and never claim an instructor**, until the ledger passes and the founder says so. Never put
+  private family matters in any SAW text; public surfaces say "people are never the enemy" and never describe a
+  person's illness as a spiritual verdict.
 - `docs/safety/` — **child-safety governance** (read before any community/account/upload feature).
 - `docs/founding-families.md` + `FOUNDERS.md` — **The Halving**: the founding-cohort program (honor
   halves each epoch, cohort doubles; Genesis = 8) and its public, consent-based ledger. The

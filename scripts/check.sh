@@ -66,6 +66,13 @@ else
   pass "README translations are in sync with README.md."
 fi
 
+# 6c. SAW article-series ledger — informational until its due date, then loud
+if bash "$(dirname "$0")/saw-signal.sh" >/dev/null 2>&1; then
+  say "ℹ️  SAW series signal: run scripts/saw-signal.sh to see the four numbers."
+else
+  warn "The SAW series ledger is malformed or past its date with a number missing. Run: scripts/saw-signal.sh"
+fi
+
 # 7. Big-PR nudge
 count=$(echo "$changed" | grep -c . )
 if [ "${count:-0}" -gt 40 ]; then
