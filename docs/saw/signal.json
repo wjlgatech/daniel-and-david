@@ -1,0 +1,9 @@
+{
+  "_what": "The signal ledger for the SAW article series. Filled in by hand from real counts; read by scripts/saw-signal.sh. A null means not measured yet.",
+  "due": "2026-11-11",
+  "strangers_asked": null,
+  "strangers_heard_militant": null,
+  "reader_mission_numbers": null,
+  "outside_reviewers_of_guest_rules": null,
+  "family_drills_run": null
+}

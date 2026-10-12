@@ -93,6 +93,14 @@ the core; all [child-safety rules](docs/safety/) are unchanged.
 
 <p align="center"><img src="docs/assets/isaiah-35-restoration.svg" alt="Isaiah 35 — The Restoration Track for adults: the journey from the dry land along the Way of Holiness home with joy. Four principles — RESTORATION for the hopeless (ship one small real thing), REDEMPTION for the meaningless (your story becomes your service), REGENERATION for the helpless (new heart and new skills, direct an AI team), RESURRECTION for the peaceless (new life with Christ). From orphan to beloved son and daughter." width="100%"></p>
 
+### Being tested in writing first: Shepherd's Academy of War 🛡️
+
+On car rides this autumn, Dad and the boys started a family "academy" for courage: learn how an attack works so
+you can protect people, and never treat a person as the enemy. Before building anything, we are publishing a
+five-part article series that tests the idea in public, including the name. **Status: articles under review;
+nothing built; no instructors.** Read [the plan and its scoreboard](docs/saw/SERIES.md) and
+[the research behind it](docs/research/shepherd-warrior-formation.md).
+
 ---
 
 ## Why this exists
@@ -195,6 +203,7 @@ daniel-and-david/
 │   ├── founding-families.md  🧱 The Halving — apply to the founding cohort (rare, fair, fixed)
 │   ├── vision/          Mission, Theory of Change + North Star, and the two ladders
 │   ├── safety/          Child-safety, privacy, consent, moderation, AI-use boundaries
+│   ├── saw/             Shepherd's Academy of War — article-series plan + signal ledger (nothing built)
 │   ├── principles/      How we work: AI-native + agentic engineering + values
 │   ├── curriculum/      Two tracks: Daniel (11) and David (6) + thinking tools
 │   ├── marketing/       The long-form story + ready-to-post LinkedIn posts

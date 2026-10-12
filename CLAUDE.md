@@ -25,6 +25,7 @@ See `apps/web-agent/SPEC.md` and `AGENTS.md`.
 ```bash
 ./scripts/setup.sh                 # one-time: makes scripts runnable, runs every guardrail (safe to re-run)
 ./scripts/check.sh                 # FAST local pre-PR check (secrets, changelog, status-truth, reg-safety, webapp, i18n)
+./scripts/saw-signal.sh            # the SAW article-series ledger: four numbers, pass / fail / not measured
 open apps/web/public/index.html    # view the landing page locally (or app.html / apps.html / demos/*.html)
 ```
 
@@ -83,6 +84,10 @@ to GitHub Pages; `i18n-translate.yml` auto-translates via `scripts/i18n-translat
   (copy `_template.md`, 6 required fields) plus a line in `public/cards/registry.json`; `apps.html`
   renders the gallery from the registry. The card's `host` field (`static`/`space`/`proxy`/`cli`/
   `concept`) is what lets the gallery mix Pages-hosted, HuggingFace-Space, and proxy apps.
+
+- **SAW is an article series, not a build.** `docs/saw/SERIES.md` (plan) + `docs/saw/signal.json` (four numbers,
+  due 2026-11-11) + `scripts/saw-signal.sh`. Nothing in `apps/` is SAW. Do not rename or rebrand toward it until
+  the ledger passes; see `AGENTS.md`.
 
 - **Status truth is mechanically checked.** Venture #1 (`ventures/kc-matchday-basecamp/`) is
   **"pilot in design / build not started"** — never "live" or "shipping". `check-status-truth.sh`
