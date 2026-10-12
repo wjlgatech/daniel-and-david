@@ -6,6 +6,10 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **SAW series status: published 2026-10-12** — README and `docs/saw/SERIES.md` now link the five live articles and
+  say what shipped (English plus 15 of 20 translated pages) and what did not (5 pages queued; no third review score).
+
 ### Added
 - **Shepherd's Academy of War (SAW), as an article series before any build.** `docs/saw/SERIES.md` (the plan; opens
   with the evaluation of the request and a 10X that can fail), `docs/saw/signal.json` + `scripts/saw-signal.sh`

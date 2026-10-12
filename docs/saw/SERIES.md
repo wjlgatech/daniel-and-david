@@ -8,8 +8,10 @@ the plan for those articles and the scoreboard for whether they worked.
 (`content/series/saw/source/*.md` → `scripts/build-saw.py` → `public/articles/saw-*.html`, gated by
 `scripts/check-saw.mjs`). This repo holds the research ([dossier](../research/shepherd-warrior-formation.md)), this
 plan, and the signal ledger ([`signal.json`](signal.json), read by [`scripts/saw-signal.sh`](../../scripts/saw-signal.sh)).
-**Status: series written, reviewed twice by an independent reviewer, and approved for publication by the author on
-2026-10-12; SAW itself is not built, and this repo is not renamed.**
+**Status: published 2026-10-12** in English, with 15 of the 20 translated pages (Chinese, Spanish, Korean, Japanese);
+the other 5 are queued by name. Reviewed twice by an independent reviewer (latest scores 82 to 85 against a bar of
+85; not scored a third time). **SAW itself is not built, and this repo is not renamed.** Start reading at
+[part 1](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html).
 
 ## §0 — The request, evaluated
 
@@ -68,11 +70,11 @@ Five parts, one question each, each saying what it leaves to the others.
 
 | Part | The one question | Slug |
 |---|---|---|
-| 1 · The name | What is Shepherd's Academy of War, and why keep the word "war" in a school for children? | `saw-academy-of-war-learn-the-attack` |
-| 2 · The war | Where is the war fought, who wins the last battle, and what does that leave a child to train for? | `saw-revelation-19-one-fighter` |
-| 3 · The evidence | What actually builds courage and self-control in a seven-year-old and an eleven-year-old? | `saw-courage-training-evidence` |
-| 4 · The teachers | How can an elite adult teach my child without ever being alone with my child? | `saw-guest-instructors-content-not-contact` |
-| 5 · The scorecard | How will we know whether it works, and what would make us stop? | `saw-scorecard-drill-numbers-tripwires` |
+| 1 · The name | What is Shepherd's Academy of War, and why keep the word "war" in a school for children? | [`saw-academy-of-war-learn-the-attack`](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| 2 · The war | Where is the war fought, who wins the last battle, and what does that leave a child to train for? | [`saw-revelation-19-one-fighter`](https://agentic-portfolio-lovat.vercel.app/articles/saw-revelation-19-one-fighter.html) |
+| 3 · The evidence | What actually builds courage and self-control in a seven-year-old and an eleven-year-old? | [`saw-courage-training-evidence`](https://agentic-portfolio-lovat.vercel.app/articles/saw-courage-training-evidence.html) |
+| 4 · The teachers | How can an elite adult teach my child without ever being alone with my child? | [`saw-guest-instructors-content-not-contact`](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| 5 · The scorecard | How will we know whether it works, and what would make us stop? | [`saw-scorecard-drill-numbers-tripwires`](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
 
 What every part carries: the one question and what it does not answer · a picture · five whys with evidence at
 each step · a 30-day mission · operate, feedback, feedforward · the series table · five exits · a 30-minute build ·
