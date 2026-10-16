@@ -1,268 +1,270 @@
-<!-- i18n-source-sha: 861c383ed34c2357 -->
+<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
 <div align="center">
 
-# 🌱 Daniel &amp; David
+# 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
 
-**🌐 언어:** [English](README.md) · [中文](README.zh.md) · 한국어 · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md)
+**🌐 Read this in:** English · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) &nbsp;<sub>(English is the source of truth; the rest are AI-assisted and may lag)</sub>
 
-**온 가족이 함께 지혜롭고 창의적이며 AI를 다룰 줄 아는 ‘만드는 사람’이 되는 가족 실습실.**
+### 공격이 어떻게 작동하는지 배우고, 보호자로 살아가세요. 함께 지혜롭고 창의적인, AI에 준비된 빌더가 되어보세요.
+
+**아버지와 두 아들이 자동차 안에서 시작한 가족 아카데미입니다. 용기, 기술, 그리고 Builder Loop(빌더 루프)는 어른과 아이(약 5–15세)가 나란히 함께합니다.**
 
 <a href="https://daniel-and-david.vercel.app/">
-  <img src="https://img.shields.io/badge/Open_the_live_app-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="라이브 앱 열기">
+  <img src="https://img.shields.io/badge/Open_the_live_site-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="Open the live site">
 </a>
 
-**[앱 갤러리 →](https://daniel-and-david.vercel.app/apps.html)** ·
-**[Builder Loop 앱 →](https://daniel-and-david.vercel.app/app.html)** ·
-**[데모 체험 →](https://daniel-and-david.vercel.app/demos/conversation-spark.html)** ·
+**[▶️ Shepherd's World Model(셰퍼드의 월드 모델) 플레이 →](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html)** ·
+**[Builder Loop(빌더 루프) 앱 →](https://daniel-and-david.vercel.app/app.html)** ·
+**[SAW(셰퍼드의 아카데미 오브 워) 시리즈 읽기 →](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html)** ·
 **[지원하기 →](https://daniel-and-david.vercel.app/#apply)**
 
 <a href="https://daniel-and-david.vercel.app/">
-  <img src="docs/assets/landing-hero.png" alt="Daniel & David — 라이브 사이트 열기" width="840">
+  <img src="docs/assets/landing-hero.png" alt="Daniel &amp; David — open the live site" width="840">
 </a>
 
 </div>
 
-> 🌐 **이것은 AI 보조 번역입니다. 영문 [README.md](README.md)가 기준이자 사실의 출처입니다**; 번역은 다소 늦을 수 있습니다.
-
-> **AI는 일의 방식을 크게 바꿀 수 있습니다. 당신과 아이 모두 그것을 두려워할 필요가 없습니다 — 함께라면
-> 그보다 더 지혜로워질 수 있습니다.** 이것은 실용적이고 신앙에 기반한 학습 시스템으로, **온 가족**을
-> 위한 것입니다 — 어른과 아이(대략 5–15세)가 나란히 — **명확히 사고하고, AI를 책임감 있게 쓰고, 진짜
-> 가치를 만들며, 실제 사람을 섬기도록.**
-
-우리는 작은 루프를 하나씩 돕니다. 가장 작은 단위는 **[Builder Loop(빌더 루프)](docs/builder-loop/)** —
-**5번의 빠른 ‘만들고-보여주고-배우는’ 사이클**로 진행하는 4주짜리 가족 실험입니다(한 번의 거창한 발표가
-아니라): *가장 작은 다음 한 걸음을 고르고 → 거칠게라도 만들고 → 실제 한 사람에게 보여주고 → 무엇이
-실패했는지 배우고 → 반복.* 원칙은 **빠르게 · 자주 · 실패하며 전진.** AI는 팀원이고, **당신은 언제나 머리와
-양심으로 남습니다** — 어른이든 아이든, 모든 나이에서.
-
-> 🚀 **여기서 시작 → [Builder Loop](docs/builder-loop/)** (무료, 누구나) · 📖 전체 비전이 처음이라면?
-> [이야기 읽기](docs/marketing/the-daniel-and-david-story.md) — 10살도 이해할 만큼 쉽고, 회의론자도 납득할 만큼 근거 있게.
-
-> 🧱 **더 깊이 들어오고 싶다면? [창립 가족으로 지원하기](docs/founding-families.md).** 공정하고 정해진
-> 일정 위의 드문 영예: 비트코인처럼 창립자의 보상은 매 시기 **반감**되고 코호트는 **두 배**가 됩니다
-> (제네시스 = 8가족, 그다음 16, 32, 64 → #121에서 전원 개방). 가장 빠른 = 가장 큰 영예, 가장 빠른 = 가장
-> 큰 위험이기에. **현재 모집 중: ⛏️ 제네시스 · 8자리.** **[라이브 사이트](https://wjlgatech.github.io/daniel-and-david/)** 에서 지원하세요.
-
-### 우리가 실제로 오르는 사다리
-
-우리는 돈이 아니라 **역량**을 측정합니다. 이 공개 사다리는 누구든 — 아이*든* 어른*이든* — *해낼 수* 있는 것들입니다:
-
-<p align="center"><img src="docs/assets/capability-ladder.svg" alt="The Capability Ladder: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others." width="100%"></p>
-
-*게임은, 오르는 동안 당신이 어떤 사람이 되느냐입니다.*(더 상급의 벤처/돈 트랙도 있지만, 일부러 아래쪽에
-둡니다. [두 사다리](docs/vision/milestones.md) 참고.)
-
-### 이것이 되어가는 것: 허브 🌍
-
-이것은 하나의 커리큘럼에서 **[허브](docs/community/hub.md)** 로 자라고 있습니다 — 셋이 하나로:
-
-1. 📚 **살아 있는 학습 허브** — 실제 아이가 쓸 때마다 더 좋아지는 오픈 커리큘럼.
-2. 🧰 **도구 허브** — 사람에게 가르치는 모든 역량을 우리 AI에게도 가르칩니다(스킬·플러그인·워크플로·훅), 전부 오픈·설치형.
-3. 🤝 **협업 허브** — AI와 사람이 아이디어를 나누고, *팀을 이루며*, 근본 문제를 푸는 프로젝트를 시작하는 곳.
-
-**부모, 아이, 엔지니어, 디자이너, 창업자, 그리고 AI 에이전트 모두 환영합니다.** 풀 만한 문제를 가져오세요 —
-**[허브 가이드](docs/community/hub.md)** 와 [CONTRIBUTING.md](CONTRIBUTING.md) 를 보세요.
-
-### 설계 중: 대화로 끝까지 — Builder Loop Coach 🗣️
-
-오늘의 Builder Loop는 탭으로 진행하는 앱입니다. 우리는 **두 번째 문**을 설계하고 있습니다: 음성 우선의
-**대화형 코치** — *말로* 같은 루프를 돕니다. 당신이 말하면 AI 에이전트가 다섯 사이클을 안내하고 잡일을
-대신하며, 당신은 머리로 남습니다. **아직 설계 중이며 출시 전**입니다(에이전트는 데이터를 **기기 내에서**
-처리하고, 항상 자신이 AI임을 분명히 밝힙니다). 계획과 실행법: [`apps/web-agent/`](apps/web-agent/).
-
-<p align="center"><img src="docs/assets/builder-loop-coach.svg" alt="The Builder Loop Coach: 1 You say it, 2 the Coach guides, 3 it does the work on-device, 4 you stay the mind. Always an AI." width="100%"></p>
-
-### 설계 중: 어른에게도 열림 — 이사야 35장 회복의 길 🌿
-
-아이를 만드는 사람으로 바꾸는 그 엔진은, **메마른 계절을 지나는 어른**에게 꼭 필요한 바로 그것입니다 —
-AI에 일자리가 흔들린 사람, 여유 없는 한부모, *피부는 늙었어도 마음은 젊은* 사람, ‘고아의 마음’을 지녔거나
-우울의 네 거짓말(*절망·무력·무의미·불안*)과 싸우는 사람. 그래서 우리는 **이사야 35장**에 뿌리내린
-**병행, 성인 전용 트랙**을 엽니다 — *“약한 손을 강하게 하며 … 겁내는 자에게 이르기를 굳세어라, 두려워하지
-말라.”* 네 가지 운영 원리 — **회복(Restoration)·구속(Redemption)·중생(Regeneration)·부활(Resurrection)** —
-같은 Builder Loop로 돌려 역량·소명·소망을 다시 세웁니다(인생 궤적의 진짜 *12배 도약*). 신앙에 뿌리내렸고
-(그리스도 중심의 회복), 늘 그렇듯 **어떤 믿음을 가졌든 모두 환영합니다.** **설계 중, 출시 전** → 
-[회복의 길](docs/vision/isaiah-35-restoration.md) 을 읽거나, **[4주 회복 루프](docs/curriculum/adult-restoration/)** 를
-실천하세요(주마다 하나의 R, 주마다 진짜 작은 결과 하나 — 인쇄용 [워크시트](docs/curriculum/adult-restoration/worksheet.md)).
-아이가 핵심이며, 모든 [아동 안전 규칙](docs/safety/)은 그대로입니다.
-
-<p align="center"><img src="docs/assets/isaiah-35-restoration.svg" alt="Isaiah 35 — The Restoration Track for adults. Four principles: Restoration, Redemption, Regeneration, Resurrection." width="100%"></p>
+> **정직한 현황 (2026-10-16).** Shepherd's Academy of War (SAW, 셰퍼드의 아카데미 오브 워)는 시작한 지 몇 주밖에 되지 않았습니다. **확정된 강사는 없습니다**, 그리고 **아직 아무것도 측정된 것이 없습니다**. 공식 명칭도 여전히 시험 중입니다 ([신호 보기](#-the-signal-is-this-working)). 현재 운영 중인 것은 Builder Loop(빌더 루프) 앱, 세 개의 작은 가족 앱, 그리고 하나의 게임 기반 훈련인 Shepherd's World Model(셰퍼드의 월드 모델)입니다.
 
 ---
 
-## 왜 이 프로젝트가 존재하는가
+## 📰 소식
 
-대부분은 일자리를 *찾으라고* 배웁니다. 우리는 가치를 *만드는 법*을 배웁니다 — 사람들이 정말 필요로 하는
-것을 만들고, 정직하게 하고, 돌아오는 것을 잘 청지기하는 법. 아이는 이것을 강의가 아니라 **AI 팀과 함께
-진짜 하나를 처음부터 끝까지 만들며** 배웁니다. [`docs/vision/mission.md`](docs/vision/mission.md) 와
-[변화 이론](docs/vision/theory-of-change.md) 을 보세요 — 인과 모델과 우리가 실제로 추적하는 지표
-(*아이 1인당 월별 ‘독립적 만들기 증거’*, 돈이나 별이 아니라).
-
-> **더 깊은 목표.** 우리는 축복하기 위해 만듭니다. 여기 모든 벤처는 얼마를 버느냐만이 아니라, 누구를 섬기고
-> 타인에게 무엇을 가능케 하느냐로 측정됩니다. [`docs/principles/values.md`](docs/principles/values.md).
-
-> **나이 든 학습자와 부모께:** 장기적인 *벤처 트랙* — $1M→$10B 마일스톤 사다리 — 도 있지만 일부러
-> 헤드라인이 **아닙니다.** 약속이 아니라 나침반이며, 우리가 앞세우는 역량 사다리 아래
-> [`docs/vision/milestones.md`](docs/vision/milestones.md) 에 있습니다.
+- **2026-10-16 · 첫 번째 플레이 가능한 훈련: Shepherd's World Model(셰퍼드의 월드 모델).** 목동이 두 무리를 지키기 위해 늑대의 비밀 습관을 배웁니다. 이것은 AI에서 가장 작은 실제 *월드 모델*입니다 (Stanford CS229 §19.3), 7세 어린이도 플레이할 수 있습니다. 15분짜리 대본(영어/중국어): [`docs/saw/drills/shepherd-world-model.md`](docs/saw/drills/shepherd-world-model.md). 어른을 위한 에세이: [World Models Start in Six Lines of CS229](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html).
+- **2026-10-16 · 네 연령대의 수(數).** 하나의 수학 아이디어("수는 그 이름이 아니다")를 7, 11, 15, 20세를 위해 솔직하게 썼습니다. 7세용은 부모와 아이가 함께하는 연극 대본입니다: [What Is a Number?](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html)
+- **2026-10-12 · SAW(셰퍼드의 아카데미 오브 워) 시리즈가, 아무것도 만들어지기 전에 공개됨.** 다섯 개의 글이 아이디어를 공개적으로 시험합니다. 이름도 포함([계획 및 점수판](docs/saw/SERIES.md)).
+- **이전 소식 · Builder Loop(빌더 루프) 앱, 앱 갤러리, Founding Families(창립 가족) 코호트**가 오픈되었습니다. [CHANGELOG.md](CHANGELOG.md) 참고.
 
 ---
 
-## 부를 창조하는 사람은 실제로 이렇게 만들어진다
+## 🧒 어떻게 작동하나요 — 10살도 따라 그리고 다시 그릴 수 있습니다
 
-강의로가 아니라. **진짜 하나를 처음부터 끝까지 만들고, 왜 됐고 안 됐는지 그 모든 부분을 배우며.** 그래서 이
-저장소는 *커리큘럼*과 *진짜 벤처*를 짝지웁니다.
-
-<p align="center"><img src="docs/assets/builder-loop.svg" alt="How you become a builder: learn a principle, build it on a real venture, learn back, repeat." width="100%"></p>
-
-### 벤처들
-
-공개적으로 설계하는 진짜 사업. 첫 번째의 전체 계획이 이 저장소에 있으며 — 단계도 정직하게 밝힙니다:
-**운영 사양은 완료, 빌드는 아직 시작 전**(파일럿 설계 중).
-
-- 🏕️ **[`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/)** — 캔자스시티의 글로벌
-  축구 여름을 위한 *합법적이고 장소 제휴형인 ‘팬 유틸리티 + 로컬 커머스’* 콘셉트. 완전한 운영 사양, 경제성,
-  컴플라이언스 게이트, 그리고 만들 수 있는 웹앱 PRD — **사양 ✅ 완료, 웹앱 🟡 빌드 미시작.** 1번 벤처입니다:
-  두 아이가 처음으로 *계획적으로* 수요·마진·출하를 맛보는 일.(교육 수단은 [Builder Loop](docs/builder-loop/)
-  — 벤처가 나오기 전에도 거기서 시작하세요.)
-
-### 커리큘럼
-
-하나의 방법, **모든 나이** — 학습지가 아니라 진짜 만들기에 묶여 있습니다.
-
-**아이들을 위해**(진짜 벤처에 연결):
-
-- 👦 **[Daniel — 11세](docs/curriculum/daniel-age-11/)** — 만들고, 가격을 매기고, 팔고, 측정하고, 손익을
-  읽습니다. AI 짝과 코드를 씁니다.(이제 [AI 빌드 키트](docs/curriculum/daniel-age-11/build-kit.md): 만들고 →
-  멘토에게 보여주고 → 어른과 함께 팝니다.)
-- 🧒 **[David — 6세](docs/curriculum/david-age-6/)** — 세고, 간판을 그리고, 손님을 맞이하며, *사람에게 좋은
-  것을 만드는 것*이 전부임을 배웁니다.
-
-**어른들을 위해** — 성인 전용 [회복의 길](docs/vision/isaiah-35-restoration.md), 4주
-[회복 루프](docs/curriculum/adult-restoration/)로 진행(*피부는 늙어도 마음은 젊은* 분 환영). 같은 Builder
-Loop를, 한 인생을 다시 세우는 데로:
-
-- 👩‍👧 **한부모** — 진짜 통점 하나를 찾아 AI 팀과 작은 유료 제품을 출시하고 첫 *“네”*를 얻습니다. 이력서보다 회복.
-- 👨‍💻 **흔들린 전문가**(AI가 막 바꾼 그 직무) — 힘들게 쌓은 노하우를 제품으로; 한때 부서가 필요하던 일을 AI 팀을 지휘해.
-- 👵 **노련한 멘토**(교사·관리자·은퇴자) — 평생의 지혜를 사람을 섬기는(그리고 팔리는) 무언가로. 늦지 않았다는 증거.
-- 🚗 **젊은 분투가**(기사·서버·긱 워커) — 부업을 반복 가능한 제품으로; 마진·수요·레버리지를 배웁니다.
-
-> 모든 성인 트랙은 같은 엔진을 네 개의 R로 돌립니다 — **회복 · 구속 · 중생 · 부활**(이사야 35장). *설계 중.*
-
-### 원칙
-
-우리가 일하는 방식 — 최고의 AI-네이티브 회사들과 같게:
-
-- 🤖 [AI-네이티브 회사](docs/principles/ai-native-company.md) — 에이전트는 기능이 아니라 팀원입니다.
-- 🛠️ [에이전틱 엔지니어링](docs/principles/agentic-engineering.md) — 작고 되돌릴 수 있는 변경, 느낌보다 평가, 문서는 코드처럼, 사람이 편집자.
-- 🔎 [Pain2Gain](docs/principles/pain2gain.md) — 통점을 *근본 원인 / 제1원리* 깊이로 이해(깊이 사다리, 5-Why, 6차원, 부담)해 해법이 변혁적이도록.
-- ✝️ [가치관](docs/principles/values.md) — 이 모든 것 아래의 *왜*.
-
-<p align="center"><img src="docs/assets/agent-loop.svg" alt="Your AI teammate is a loop: LOOK, THINK, ACT, CHECK." width="78%"></p>
-
-### 모든 빌더에게 필요한 사고 도구
-
-무엇을 만들고, 사고, 믿고, 팔기 전에 — **그것을 심문하세요.** 우리는 **5W1H 비판적 사고 격자**를 씁니다:
-어떤 주장·계획·제품에든 겨눌 수 있는 여섯 질문어로, 숨은 위험과 검증되지 않은 가정을 드러냅니다. 두 아이에게
-가르치고([🧠 비판적 사고](docs/curriculum/critical-thinking/) — David의 ‘여섯 탐정 단어’와 Daniel의 응용판),
-[우리 AI 팀원에게도 내장](.claude/README.md)했습니다(스킬·워크플로·훅·플러그인) — 사람과 에이전트가 같은
-방식으로 생각하도록.
-
-<p align="center"><img src="docs/assets/critical-thinking.svg" alt="Critical Thinking — the 5W1H grid: Who, What, Where, When, Why, How." width="100%"></p>
-
----
-
-## 저장소 지도
-
-```
-daniel-and-david/
-├── docs/
-│   ├── builder-loop/    ⭐ 4주 가족 Builder Loop — 가장 작은 단위. 여기서 시작.
-│   ├── founding-families.md  🧱 ‘반감(The Halving)’ — 창립 코호트 지원(드물고 공정하고 고정)
-│   ├── vision/          미션, 변화 이론 + 북극성 지표, 두 사다리
-│   ├── safety/          아동 안전, 프라이버시, 동의, 모더레이션, AI 사용 경계
-│   ├── principles/      우리가 일하는 법: AI-네이티브 + 에이전틱 엔지니어링 + 가치관
-│   ├── curriculum/      여러 트랙: Daniel(11), David(6) + 성인 회복 + 사고 도구
-│   ├── marketing/       장문의 이야기 + 바로 올릴 LinkedIn 글
-│   ├── community/       허브 가이드 — AI와 사람이 교류하고 팀을 이루는 법
-│   └── assets/          인포그래픽(SVG) — 이 README의 시각 자료
-├── FOUNDERS.md          창립 가족 공개 명부(가명, 동의 하)
-├── ventures/
-│   └── kc-matchday-basecamp/   1번 벤처 — 전체 사양, 경제성, 앱 PRD
-├── apps/
-│   ├── web/             랜딩 페이지 + privacy.html — 호스팅됨, 창립 코호트 폼 포함
-│   └── web-agent/       Builder Loop Coach(대화형 코치, 설계 중)
-├── agents/
-│   └── hello-agent/     작고 읽기 쉬운 입문 에이전트 — 당신의 첫 AI 팀원
-├── .claude/             에이전트 툴킷 — 스킬·워크플로·훅(AI 팀원을 위한 역량)
-├── tools/               설치형 플러그인(예: 비판적 사고 플러그인)
-├── packages/            벤처가 커지며 공유되는 코드
-├── scripts/             설치·도우미 스크립트
-└── .github/             이슈/PR 템플릿, CI, 기여자 온램프
+```mermaid
+flowchart LR
+  A["🛡️ Learn how<br/>an attack works"] --> B["🐑 Use it to<br/>protect people"]
+  B --> C["🔨 Build one<br/>real thing"]
+  C --> D["🙋 Show one<br/>real person"]
+  D --> E["📝 Learn what<br/>failed"]
+  E --> A
+  F["❌ Never: a person<br/>as the enemy"] -.- B
 ```
 
+**설명:**
+1. 어떤 것이 공격하는지 배웁니다: 늑대의 습관, 사기, 괴롭힘, 잘못된 계획 등.
+2. 그 지식을 이용해 보호합니다.
+3. 작고 실제적인 무언가를 만듭니다.
+4. 진짜 한 사람에게 보여줍니다.
+5. 실패한 것에서 배우고, 다시 한 바퀴 돕니다.
+
+절대 꺾이지 않는 한 가지 규칙: **어떤 사람도 적이 될 수 없습니다.** 우리가 싸우는 것은 공격이지, 인간이 아닙니다.
+
 ---
 
-## 여기서 시작 — 당신의 길을 고르세요
+## 무엇인가요 — 하나의 아카데미로 들어가는 세 개의 문
 
-### 👪 가족을 위해(코드·설치 불필요)
+| 문 | 그곳에서 일어나는 일 | 위치 |
+|---|---|---|
+| **1 · The Academy (SAW, 셰퍼드의 아카데미 오브 워)** | 아이들을 위한 용기와 기술: 공격이 어떻게 작동하는지 배우고, 보호자로 살아갑니다. 그 기술이 어디에 쓰일 수 있는지에 대한 다섯 가지 법칙. 게스트 강사 규칙: **콘텐츠, 접촉 금지** — 어떤 아이도 어른과 단둘이 있지 않습니다. 패배도 기록할 수 있는 점수판. | [다섯 파트 시리즈](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [연구](docs/research/shepherd-warrior-formation.md) |
+| **2 · The Field Lab (Daniel & David, 다니엘 & 데이비드)** | **[Builder Loop(빌더 루프)](docs/builder-loop/)**: 4주간 가족이 다섯 번의 빠른 빌드-공유-학습 사이클을 도는 실험. AI는 팀원이고, 당신은 마음과 양심입니다. 벤처, 커리큘럼, 원칙. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
+| **3 · Drills and demos(훈련과 데모)** | 가족이 15–20분 만에 할 수 있는 것들: 주간 **자동차 훈련**(SAW 5부)과 **Shepherd's World Model(셰퍼드의 월드 모델)** 게임. 그리고 작은 앱들(Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
 
-GitHub도 git도 어떤 설정도 필요 없습니다. 그저:
+---
 
-1. **홈페이지 열기:** **[웹에서 daniel-and-david 열기 →](https://wjlgatech.github.io/daniel-and-david/)**(평범한 링크, 어떤 브라우저든). **“See it work”** 섹션이 세 데모를 *페이지에서 바로, 실시간으로* 돌립니다 — 더 읽기 전에 하나 해 보세요.
-2. **무료 [Builder Loop 앱](https://wjlgatech.github.io/daniel-and-david/app.html) 열기** — **원클릭·가입 불필요** 웹앱으로 온 가족을 5 사이클로 안내하고 진행을 기록하며 **홈 화면에 설치**됩니다(오프라인 가능, 모든 것이 기기 내 보관). 종이가 좋다면 [인쇄용](docs/builder-loop/printable.md)과 [반복 일지](docs/builder-loop/iteration-log.md), 그리고 전체 [Builder Loop 가이드](docs/builder-loop/)가 있습니다.
-3. **[앱 갤러리](https://wjlgatech.github.io/daniel-and-david/apps.html) 둘러보기** — 모든 작은 앱을 한곳에, 각각 작은 [Agentic App Card](docs/agentic-app-card.md)로 설명(HuggingFace 모델 카드처럼, 약 10배 더 단순). [Conversation Spark](https://wjlgatech.github.io/daniel-and-david/demos/conversation-spark.html), [Transition Timer](https://wjlgatech.github.io/daniel-and-david/demos/transition-timer.html), [Homework Chunker](https://wjlgatech.github.io/daniel-and-david/demos/homework-chunker.html) 를 해 보거나, 직접 만들어 카드를 추가하세요.
-4. 시작 전 **[안전 규칙](docs/safety/)** 을 읽으세요(동의, 프라이버시, AI 경계).
-5. **아이의 트랙 열기:** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/).
-6. **더 깊이?** [창립 가족 지원](docs/founding-families.md) — 현재 ⛏️ 제네시스(8자리). 영예는 매 시기 반감되니, 다음 반감 전에 지원하세요.
+## ⚡ 빠른 시작
 
-이것이 입구의 전부입니다. 부모에게 필요한 모든 것은 평범한 웹 링크나 한 페이지의 markdown입니다.
+**👪 가족(코드/설치 필요 없음):**
+1. [Shepherd's World Model(셰퍼드의 월드 모델)](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html)을 [15분 대본](docs/saw/drills/shepherd-world-model.md)과 함께 플레이하세요.
+2. 무료 [Builder Loop(빌더 루프) 앱](https://daniel-and-david.vercel.app/app.html)을 열어보세요. 회원가입 필요 없고, 홈 화면에 설치할 수 있으며, 모든 데이터가 기기에만 저장됩니다.
+3. 시작 전에 [안전 규칙](docs/safety/)을 읽으세요.
 
-### 🛠️ 개발자·기여자·창립 가족을 위해 — 원클릭 설치
-
+**🛠️ 개발자 및 기여자:**
 ```bash
 git clone https://github.com/wjlgatech/daniel-and-david.git && cd daniel-and-david
-./scripts/setup.sh        # ← 한 명령: 스크립트 실행 권한 + 모든 가드레일 점검 실행
+./scripts/setup.sh        # 스크립트 실행 가능하게 하고 모든 가드레일 실행
+./scripts/check.sh        # PR 전 마지막 점검(동일한 가드레일을 CI에서 실행)
+./scripts/saw-signal.sh   # SAW가 작동 중인가? 네 개 숫자와 보조 숫자 출력
 ```
 
-`setup.sh`는 다시 실행해도 안전합니다. [Claude Code](https://claude.ai/code)를 감지하고 **이 저장소가
-제공하는 AI 툴킷**을 안내합니다 — 원클릭 설치, 전역 설정 불필요:
+---
 
-- **`/goal-10x`** — 목표 드라이버: 리서치 → 저장소 자체 점검에 맞춰 어떤 목표든 ‘초록불’로 → 코칭 → 자기개선. 프로젝트 명령으로 동봉(`.claude/commands/goal-10x.md`), 클론 후 바로 작동.
-- **`/check`** — CI와 같은 방식으로 다섯 가드레일(links · toolkit · status-truth · registration-safety · webapp) 전부 실행.
-- **`critical-thinking` 플러그인**(5W1H 격자를 명령 + 스킬 + 훅으로). 이 저장소의 마켓플레이스에서 설치:
-  ```text
-  /plugin marketplace add wjlgatech/daniel-and-david
-  /plugin install critical-thinking@daniel-and-david
-  ```
+## 🧭 여기서 할 수 있는 것
 
-그다음: 로컬에서 랜딩 페이지 열기(`open apps/web/public/index.html`), **[AGENTS.md](AGENTS.md)** 와
-**[.claude/README.md](.claude/README.md)** 읽기, PR 전 `./scripts/check.sh` 실행.
+| 원하는 것 | 바로가기 |
+|---|---|
+| 오늘 밤 15분 가족 훈련 실행 | [Shepherd's World Model 대본](docs/saw/drills/shepherd-world-model.md) (EN + 中文) → [게임](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) |
+| 주간 자동차 훈련 실행 | [SAW 5부: 한 번의 훈련, 네 개의 숫자, 여섯 개의 트립와이어](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
+| 4주 가족 프로젝트 시작 | [Builder Loop(빌더 루프)](docs/builder-loop/) → [앱](https://daniel-and-david.vercel.app/app.html) · [프린트용](docs/builder-loop/printable.md) |
+| SAW가 작동 중인지 확인 | `./scripts/saw-signal.sh` · 원장 [`docs/saw/signal.json`](docs/saw/signal.json) |
+| "war(전쟁)"이라는 단어가 왜 남아있는지 이해 | [SAW 1부](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| 게스트 전문가를 안전하게 초대 | [SAW 4부: 콘텐츠, 접촉 금지](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| 창립 가족으로 참여 | [Founding Families(창립 가족)](docs/founding-families.md) (⛏️ Genesis · 8자리) |
+| 기여하기 | [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) |
 
-> 🧱 **창립 가족은 오픈 툴킷 이상을 받습니다** — 스튜디오 자체 AI 워크숍(AnyAgent, Super U, DreamMakeTrue)의
-> 비공개 선체험. [**창립 가족**](docs/founding-families.md) 참고.
+---
 
-처음이세요? **[CONTRIBUTING.md](CONTRIBUTING.md)** 부터. 기여는 범위가 분명한 이슈를 중심으로 — 작고, 명확하고,
-리뷰 가능하고, 친절하며, **안전**하게(아이가 관련됨 — [`docs/safety/`](docs/safety/) 참고). 가까운 목표는 기여
-*양*이 아니라, 이 루프가 아이의 행동을 바꾼다는 증거입니다: **열 가족이 진짜 [Builder Loop](docs/builder-loop/)
-하나를 끝내기.**(더 큰 오픈 허브는 *나중* 단계 — [변화 이론](docs/vision/theory-of-change.md)과
-[허브 가이드](docs/community/hub.md) 참고.)
+## 📚 글 모음
+
+장문의 글들은 저자의 [agentic portfolio](https://agentic-portfolio-lovat.vercel.app/#writing)에 있습니다. 각각 다섯 개 언어(영어, 중국어, 스페인어, 한국어, 일본어)로 제공됩니다.
+
+| 글 | 대상 | 링크 |
+|---|---|---|
+| SAW 1 · An Academy of War for Children: Learn the Attack, Live as a Protector | 부모, 리더 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| SAW 2 · Revelation 19 Has One Fighter, and the Long War Has Five Arenas | 부모 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/saw-revelation-19-one-fighter.html) |
+| SAW 3 · Courage Training for Children: What the Evidence Supports and What Backfires | 부모 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/saw-courage-training-evidence.html) |
+| SAW 4 · Guest Instructors for Children: Content, Not Contact | 부모, 게스트 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| SAW 5 · A Scorecard for a Family Academy: One Car-Ride Drill, Four Numbers, Six Tripwires | 부모, 리더 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
+| World Models Start in Six Lines of CS229 (and the Shepherd's World Model) | 엔지니어; 훈련은 7–11세 대상 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html) · [플레이](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) |
+| What Is a Number? (Numbers at Four Ages, age 7) | 아이 + 어른 | [읽기](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html) |
+| Number Systems (age 11) · Place Value (age 15) · Number vs Representation (age 20) | 11, 15, 20세 | [11](https://agentic-portfolio-lovat.vercel.app/articles/number-systems-from-tally-to-place-value.html) · [15](https://agentic-portfolio-lovat.vercel.app/articles/place-value-ten-symbols-every-number.html) · [20](https://agentic-portfolio-lovat.vercel.app/articles/number-vs-representation-for-programmers.html) · [플레이](https://agentic-portfolio-lovat.vercel.app/play/numbers.html) |
+
+---
+
+## 🎯 확정된 결정(그리고 그 이유)
+
+- **어떤 사람도 적이 될 수 없습니다.** 기술은 공격에만 사용되고, 사람에게는 사용되지 않습니다. 사람에 대한 폭력적 언어는 시리즈의 자체 기준을 통과하지 못합니다.
+- **콘텐츠, 접촉 금지.** 게스트 전문가는 녹화 또는 감독된 콘텐츠로만 가르치며, 어떤 아이도 어른과 단둘이 있지 않습니다. 안전 규칙: [`docs/safety/`](docs/safety/).
+- **측정되지 않은 것은 주장하지 않습니다.** 원장에 기록되기 전까지 "아직 아무것도 측정되지 않았다"고 밝히며, `faculty_confirmed`가 0인 동안 강사가 있다고 주장하지 않습니다.
+- **빌드 전에 신호.** 네 개의 숫자가 통과하기 전까지 SAW 빌드는 없습니다([신호](#-the-signal-is-this-working) 참고). Shepherd's World Model(셰퍼드의 월드 모델)은 SAW가 빌려 쓰는 포트폴리오 데모이지, SAW의 빌드가 아닙니다.
+- **역량, 돈이 아님.** 우리는 아이가 강요받지 않고 할 수 있는 것을 측정합니다([변화 이론](docs/vision/theory-of-change.md)), 아래의 Capability Ladder(역량 사다리) 참고.
+
+---
+
+## 📏 신호: 이게 작동하고 있나요?
+
+SAW(셰퍼드의 아카데미 오브 워) 시리즈는 박수가 아니라 결정을 위해 쓰였습니다. **2026-11-11**까지 [`signal.json`](docs/saw/signal.json)에 이 숫자들이 기록되어야 합니다. `./scripts/saw-signal.sh`는 이 숫자들을 출력하고, 날짜 이후에도 하나라도 없으면 1로 종료합니다.
+
+| 숫자 | 통과 기준 | 결정 내용 |
+|---|---|---|
+| `strangers_asked`, `strangers_heard_militant` | 20명 이상에게 질문, 절반 미만이 "militant(군사적)"로 들음 | 공개 명칭 유지 여부(이 저장소 이름 포함) |
+| `reader_mission_numbers` | 독자가 10개 이상의 미션 결과를 게시 | 우리 외에 누가 실행하는지 여부 |
+| `outside_reviewers_of_guest_rules` | 1명 이상의 아동 보호 전문가가 4부 검토 | 첫 게스트 초대 가능 여부 |
+| `family_drills_run` | 4회 이상의 주간 자동차 훈련(아이의 카드로) | 7세 아이도 훈련을 소화하는지 여부 |
+| *보조:* `shepherd_demo_drills` | 집계만, 기준 없음 | Shepherd's World Model(셰퍼드의 월드 모델)을 실행한 가족 수(4회에 포함되지 않음) |
+
+**현재:** 4개 중 0개 측정됨. 3주차에 솔직한 수치이며, 2026-11-11에도 그대로라면 크게 알릴 것입니다.
+
+---
+
+## 🏷️ 이름에 대하여(그리고 이 저장소의 이름)
+
+저장소 이름은 일부러 아직 `daniel-and-david`입니다. SAW(셰퍼드의 아카데미 오브 워) 자체 규칙에 따라 공식 명칭은 **2026-11-11**까지 시험 중입니다: 20명 중 절반 미만이 "militant(군사적)"로 들으면 이름이 유지됩니다. 저장소를 먼저 바꾸면 데이터 없이 결과를 미리 결정하는 셈이 됩니다.
+
+이름이 통과하면, 변경은 한 줄 명령입니다:
+```bash
+gh repo rename shepherds-academy-of-war --repo wjlgatech/daniel-and-david
+```
+GitHub는 기존 저장소 URL과 git 원격을 리다이렉트하고, daniel-and-david.vercel.app의 라이브 사이트는 영향을 받지 않습니다.
+**단 한 가지만 깨집니다:** GitHub Pages 주소(`wjlgatech.github.io/daniel-and-david/`)가 이동합니다. 따라서 변경 시 이 README와 `apps/web`의 모든 Pages 링크를 함께 수정해야 합니다.
+
+이름이 통과하지 못하면, SAW는 가족의 비공개 명칭으로 남고, 저장소는 필드랩 이름을 유지합니다.
+
+---
+
+## 우리가 실제로 오르는 사다리
+
+우리는 **역량**을 측정합니다. 돈이 아닙니다. 공개 사다리는 누구나, 아이든 어른이든, *할 수 있는 것*입니다:
+
+<p align="center"><img src="docs/assets/capability-ladder.svg" alt="우리가 오르는 역량 사다리: 1 실제 문제를 발견한다, 2 좋은 질문을 한다, 3 유용한 무언가를 만든다, 4 진짜 한 사람을 섬긴다, 5 피드백에서 배운다, 6 팀과 함께 일한다, 7 자원을 사용해 다른 이를 축복한다. 돈의 사다리는 이후 벤처 트랙." width="100%"></p>
+
+*이 게임은, 오르는 동안 당신이 어떤 사람이 되는가입니다.* 고급 벤처 트랙도 있습니다. 일부러 아래에 위치합니다. [사다리 보기](docs/vision/milestones.md).
+
+---
+
+## 빌더는 어떻게 만들어지는가
+
+강의로는 만들어지지 않습니다. **실제 무언가를 처음부터 끝까지 만들어보고, 왜 성공하거나 실패했는지 모든 부분을 배우는 것**에서 시작합니다.
+
+<p align="center"><img src="docs/assets/builder-loop.svg" alt="빌더가 되는 과정: 1. 원칙을 배운다, 2. 실제 벤처에 적용해 만든다, 3. 일에서 다시 배운다 — 그리고 반복, 매번 더 강하게" width="100%"></p>
+
+- **벤처.** [`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/)는 캔자스시티 풋볼 여름을 위한 합법적, 장소 제휴 팬 유틸리티 및 지역 상거래 컨셉입니다. **명세 ✅ 완료; 웹앱 🟡 빌드 시작 전.**
+- **커리큘럼.** 한 가지 방법, 모든 연령:
+  - [Daniel(다니엘), 11세](docs/curriculum/daniel-age-11/): 만들고, 가격 매기고, 판매하고, 측정하며, [AI Build Kit](docs/curriculum/daniel-age-11/build-kit.md)도 리드합니다.
+  - [David(데이비드), 6세](docs/curriculum/david-age-6/): 셈하고, 표지판 그리며, 손님을 맞이합니다.
+  - [비판적 사고](docs/curriculum/critical-thinking/): 5W1H 그리드, [AI 팀원에도 적용됨](.claude/README.md).
+- **원칙:**
+  - [AI-Native Company](docs/principles/ai-native-company.md)
+  - [Agentic Engineering](docs/principles/agentic-engineering.md)
+  - [Pain2Gain](docs/principles/pain2gain.md)
+  - [Values](docs/principles/values.md)
+
+<p align="center"><img src="docs/assets/agent-loop.svg" alt="당신의 AI 팀원: 에이전트는 루프입니다 — 목표를 본다(LOOK), 한 걸음을 생각한다(THINK), 도구로 행동한다(ACT), 결과를 확인한다(CHECK). 당신이 보스이고, 로봇은 반복 작업을 합니다." width="78%"></p>
+
+### 설계 중, 출시 전
+
+- 🗣️ **Builder Loop Coach(빌더 루프 코치).** 음성 기반 코치가 같은 루프를 대화로 진행합니다. 데이터는 기기에만 저장되고, 항상 AI임을 명확히 알립니다. [`apps/web-agent/`](apps/web-agent/) 참고.
+- 🌿 **Isaiah 35 Restoration Track(이사야 35 회복 트랙)**은 척박한 시기의 어른을 위한 코스입니다. 네 가지 원칙(회복, 구속, 재생, 부활)을 같은 루프로 적용합니다. 신앙에 뿌리를 두었지만 모두 환영합니다. [트랙](docs/vision/isaiah-35-restoration.md)과 [4주 회복 루프](docs/curriculum/adult-restoration/) 참고.
+- 🌍 **허브.** 살아있는 학습 허브, 도구 허브, 협업 허브로, 부모, 아이, 엔지니어, 창업가, AI 에이전트 모두에게 열려 있습니다. [허브 가이드](docs/community/hub.md) 참고.
+
+---
+
+## 🗺️ 저장소 지도
+
+```
+daniel-and-david/                 (Shepherd's Academy of War의 홈; 이름 결정 2026-11-11)
+├── docs/
+│   ├── saw/             🛡️ SAW: 시리즈 계획, 신호 원장, drills/ (셰퍼드의 월드 모델 대본, EN + 中文)
+│   ├── builder-loop/    ⭐ 4주 가족 Builder Loop, 필드랩의 기본 단위
+│   ├── founding-families.md  🧱 The Halving: 창립 코호트 지원
+│   ├── vision/          미션, 변화 이론 + 북극성, 두 개의 사다리, 회복 트랙
+│   ├── safety/          아동 안전, 프라이버시, 동의, 중재, AI 사용 한계
+│   ├── research/        인용 연구, SAW의 목동-전사 포메이션 자료 포함
+│   ├── principles/      우리의 일하는 방식: AI-native, agentic engineering, values
+│   ├── curriculum/      Daniel(11), David(6), 비판적 사고, 어른 회복
+│   ├── marketing/       장문의 스토리와 LinkedIn 게시글
+│   ├── community/       허브 가이드
+│   └── assets/          이 README에 쓰인 인포그래픽(SVG)
+├── apps/web/            라이브 사이트(daniel-and-david.vercel.app): 랜딩, 빌더 루프 앱, 데모
+├── apps/web-agent/      🟡 Builder Loop Coach (명세 설계 중)
+├── ventures/            벤처 #1: kc-matchday-basecamp
+├── agents/hello-agent/  아주 작은 스타터 에이전트
+├── scripts/             setup.sh · check.sh(가드레일) · saw-signal.sh(SAW 판정)
+├── .claude/             에이전트 툴킷: 스킬, 워크플로우, 훅
+└── .github/             CI, 템플릿, 기여자 온램프
+```
+
+---
+
+## 🛠️ 개발
+
+```bash
+./scripts/check.sh   # 모든 가드레일: 링크 · 툴킷 · 상태 진실 · 등록 안전 · 웹앱 (CI와 동일)
+```
+
+초록불은 모든 링크가 연결되고, 문서의 상태 주장도 사실이며, 등록 폼이 안전하고, 웹앱이 작동함을 의미합니다. 에이전트: [AGENTS.md](AGENTS.md)와 [.claude/README.md](.claude/README.md)를 먼저 읽으세요. 우리의 단기 목표는 기여량이 아니라, **열 가족이 실제 Builder Loop(빌더 루프)를 완주하는 것**과 SAW의 네 숫자가 날짜에 맞춰 기록되는 것입니다.
+
+> 🧱 **창립 가족**은 스튜디오 자체 AI 워크숍(AnyAgent, Super U, DreamMakeTrue)에 비공개로 먼저 접근할 수 있습니다.
+> [Founding Families(창립 가족)](docs/founding-families.md) 참고.
+
+---
+
+## 📖 문서
+
+| 문서 | 내용 |
+|---|---|
+| [`docs/saw/SERIES.md`](docs/saw/SERIES.md) | SAW 계획, 실패할 수 있도록 정의된 10X, 창립자만 내릴 수 있는 결정 |
+| [`docs/saw/drills/shepherd-world-model.md`](docs/saw/drills/shepherd-world-model.md) | 15분짜리 Shepherd's World Model(셰퍼드의 월드 모델) 훈련 대본(영어/중국어) |
+| [`docs/research/shepherd-warrior-formation.md`](docs/research/shepherd-warrior-formation.md) | SAW의 뒷받침이 되는 연구 자료 |
+| [`docs/builder-loop/`](docs/builder-loop/) | Builder Loop(빌더 루프) 가이드, 프린트용, 반복 기록 |
+| [`docs/safety/`](docs/safety/) | 아동 안전, 프라이버시, 동의 규칙(모든 활동 전 필독) |
+| [`docs/vision/theory-of-change.md`](docs/vision/theory-of-change.md) | 인과 모델과 우리가 추적하는 단 하나의 지표 |
+| [`docs/founding-families.md`](docs/founding-families.md) | 창립 코호트와 절반 나누기 일정 |
+| [`docs/marketing/the-daniel-and-david-story.md`](docs/marketing/the-daniel-and-david-story.md) | 10살도 이해할 수 있고, 회의론자도 납득할 수 있는 스토리 |
 
 ---
 
 ## 우리가 지키는 기준
 
-<p align="center"><img src="docs/assets/four-question-test.svg" alt="The 4-Question Test: Is it true? Is it legal and is my word kept? Does it serve someone? Would I be proud to explain it?" width="92%"></p>
+<p align="center"><img src="docs/assets/four-question-test.svg" alt="4가지 질문 테스트: 사실인가? 합법적이고 내 약속을 지키는가? 정말 누군가에게 도움이 되는가? 설명할 때 자랑스러운가? 하나라도 아니면, 다른 길을 찾는다." width="92%"></p>
 
-- **언제나 합법적이고 정직하게.** 1번 벤처에 명확한 컴플라이언스 게이트와 ‘하지 말 것’ 목록이 있는 데는 이유가 있습니다. 지름길이 아니라 신뢰로 이깁니다.
-- **작게, 진짜를 출시.** 작동하는 것이 완벽한 계획을 이깁니다.
-- **만들며 가르친다.** 6살이 *왜*를 못 잡으면, 우리가 더 잘 설명해야 합니다.
-- **자라며 나눈다.** 관대함은 나중에 붙이는 게 아니라 모델에 내장돼 있습니다.
+- **항상 합법적이고 정직하게.** 우리는 신뢰로 이기지, 편법으로 이기지 않습니다.
+- **작게, 실제로 출시.** 작동하는 것이 완벽한 계획보다 낫습니다.
+- **만들면서 가르치기.** 6세도 *왜*를 이해하지 못하면, 더 잘 설명합니다.
+- **성장하며 나누기.** 관대함은 모델에 내장되어 있고, 나중에 덧붙이는 것이 아닙니다.
 
 ---
 
 ## 라이선스
 
-[MIT](LICENSE) — 공개적으로 만들고, 자유롭게 배우며, 자유롭게 그 위에 빌드하세요.
+[MIT](LICENSE). 공개적으로 만들어졌으며, 누구나 배우고, 기반하여 만들 수 있습니다.
 
----
-
-<p align="center"><i>좋은 것을 만드세요. 그것이 돈이 되게 하세요. 그것으로 축복하세요. — Daniel과 David에게</i></p>
+<p align="center"><i>공격을 배우고, 보호자로 살아가세요. 좋은 것을 만드세요. 그것으로 축복하세요. — for Daniel &amp; David</i></p>

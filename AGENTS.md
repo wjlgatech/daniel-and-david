@@ -187,3 +187,4 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
 Ask in the PR or open a Discussion. A clarifying question is cheaper than a wrong large diff.
 
 - SAW signal ledger: `docs/saw/signal.json` has a supplementary field `shepherd_demo_drills` (family runs of the portfolio's Shepherd's World Model demo). `scripts/saw-signal.sh` prints it on its own line; it never counts toward the four SAW numbers.
+- SAW drills live in `docs/saw/drills/` (first: `shepherd-world-model.md`, EN + 中文). The README leads with SAW; the repo name stays `daniel-and-david` until SAW's name signal (2026-11-11); the rename command is in the README's "About the name" section. After editing README.md, re-translate the six README.<lang>.md files and run `scripts/sync-readme-i18n.sh`.

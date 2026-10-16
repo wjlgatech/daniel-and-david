@@ -6,6 +6,30 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+- **README makeover: Shepherd's Academy of War at the front door, in the anyagent pattern.** The new order is:
+  - live-demo buttons, then an honest status box and dated News;
+  - a "10-year-old can follow" Mermaid diagram;
+  - three doors (Academy · Field Lab · Drills), a "what you can do here" table, and a writing table linking every
+    article in its five languages;
+  - decisions locked in, with reasons, and the live signal table;
+  - an "About the name" section with the exact rename command and what it would break.
+
+  Everything that was there (Builder Loop, Founding Families, ladders, ventures, curriculum, Restoration Track, safety)
+  is kept. All six translations were re-translated on gpt-4.1, checked to keep every link, code block and the diagram,
+  then stamped with `scripts/sync-readme-i18n.sh`.
+
+### Added
+- **`docs/saw/drills/shepherd-world-model.md`**: the 15-minute Shepherd's World Model drill script for ages 7–11 with a
+  grown-up, in English and 中文. It includes the game link, the essay link, and how a run is reported (the supplementary
+  `shepherd_demo_drills`).
+
+### Investigated / Rejected
+- *Renaming the repository to SAW now.* SAW's own rule keeps its public name on trial until 2026-11-11, with fewer than
+  half of 20 strangers allowed to hear "militant". Renaming first would decide that test before its data exists, and
+  would move the GitHub Pages address. The rename is written down as one command, to run after the signal if the name
+  passes.
+
 ### Added
 - **SAW: a supplementary signal, `shepherd_demo_drills`** (`docs/saw/signal.json`, printed by `scripts/saw-signal.sh`).
   It counts families who ran the Shepherd's World Model, a CS229 world-model demo that uses SAW's shepherd picture

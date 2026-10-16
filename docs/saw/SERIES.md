@@ -111,3 +111,13 @@ Written before any result:
 - Fewer than 4 drills run → the academy is an article series, and that is said plainly in part 5's update.
 - Any child-safety concern raised by a reader → that part comes down until a responsible adult has reviewed it
   ([child-safety rule 10](../safety/child-safety.md)).
+
+## Drills and related writing
+
+- **Drill:** [The Shepherd's World Model](drills/shepherd-world-model.md), 15 minutes, ages 7–11 with a grown-up, EN + 中文.
+  It is counted as the supplementary `shepherd_demo_drills`, never as one of the four numbers.
+- **Related writing** (author's portfolio, five languages each):
+  - [World Models Start in Six Lines of CS229](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html)
+    is the essay behind the drill.
+  - [What Is a Number?](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html) is a play script
+    for a parent and a 7-year-old, from the series Numbers at Four Ages.
