@@ -1,282 +1,283 @@
 <div align="center">
 
-# 🌱 Daniel &amp; David
+# 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
 
-**🌐 Read this in:** English · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) &nbsp;<sub>(English is the source of truth; the rest are AI-assisted)</sub>
+**🌐 Read this in:** English · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) &nbsp;<sub>(English is the source of truth; the rest are AI-assisted and may lag)</sub>
 
-**A family field lab where the whole family becomes wise, creative, AI-ready builders — together.**
+### Learn how an attack works, so you can live as a protector. Become a wise, creative, AI-ready builder, together.
+
+**A family academy started on car rides by a father and his two sons. Courage, skill and the Builder Loop, for
+grown-ups and children (about ages 5–15) side by side.**
 
 <a href="https://daniel-and-david.vercel.app/">
-  <img src="https://img.shields.io/badge/Open_the_live_app-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="Open the live app">
+  <img src="https://img.shields.io/badge/Open_the_live_site-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="Open the live site">
 </a>
 
-**[Apps gallery →](https://daniel-and-david.vercel.app/apps.html)** ·
+**[▶️ Play the Shepherd's World Model →](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html)** ·
 **[Builder Loop app →](https://daniel-and-david.vercel.app/app.html)** ·
-**[Play a demo →](https://daniel-and-david.vercel.app/demos/conversation-spark.html)** ·
+**[Read the SAW series →](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html)** ·
 **[Apply →](https://daniel-and-david.vercel.app/#apply)**
 
 <a href="https://daniel-and-david.vercel.app/">
   <img src="docs/assets/landing-hero.png" alt="Daniel &amp; David — open the live site" width="840">
 </a>
 
-🌐 **The live app is in 5 languages** — English · 中文 · Español · 한국어 · 日本語 &nbsp;(this README itself is in 7, linked above; English is canonical, the rest AI-assisted — see [`docs/i18n/`](docs/i18n/)) &nbsp;·&nbsp; also on [GitHub Pages](https://wjlgatech.github.io/daniel-and-david/)
-
 </div>
 
-> **AI may change work dramatically. You and your kids don't need to fear it — together, you can
-> become wiser than it.** This is a practical, faith-informed learning system for the **whole
-> family** — grown-ups and children (roughly ages 5–15), side by side — learning to **think clearly,
-> use AI responsibly, create real value, and serve real people.**
+> **Honest status (2026-10-16).** Shepherd's Academy of War (SAW) is weeks old. **No instructor is confirmed**, and
+> **nothing about it has been measured yet**. Its public name is still on trial (see [the signal](#-the-signal-is-this-working)).
+> What runs today: the Builder Loop app, three small family apps, and one game-based drill, the Shepherd's World Model.
 
-We do that one small loop at a time. The atomic unit is the **[Builder Loop](docs/builder-loop/)** —
-a four-week family experiment run as **5 fast build-show-learn cycles** (not one big reveal):
-*pick the smallest next thing → build it rough → show one real person → learn what failed →
-repeat.* The principle is **fast · frequent · failing-forward.** AI is the teammate; **you stay the
-mind and the conscience** — at every age, parent and child alike.
+---
 
-> 🚀 **Start here → [The Builder Loop](docs/builder-loop/)** (free, for everyone) · 📖 New to the
-> whole vision? [Read the story](docs/marketing/the-daniel-and-david-story.md) — simple enough for
-> a 10-year-old, cited enough for a skeptic.
+## 📰 News
 
-> 🧱 **Want in deeper? [Apply to be a Founding Family](docs/founding-families.md).** A rare
-> privilege on a fair, fixed schedule: like Bitcoin, the founder's reward **halves** each epoch
-> while the cohort **doubles** (Genesis = 8 families, then 16, 32, 64 → open to all at #121).
-> Earliest = most honor, because earliest = most risk. **Currently open: ⛏️ Genesis · 8 spots.**
-> Apply on the **[live site](https://wjlgatech.github.io/daniel-and-david/)**.
+- **2026-10-16 · A first drill you can play: the Shepherd's World Model.** A shepherd learns a wolf's secret habit in
+  order to guard two flocks. This is the smallest real *world model* in AI (Stanford CS229 §19.3), playable by a
+  7-year-old. 15-minute script in English and 中文: [`docs/saw/drills/shepherd-world-model.md`](docs/saw/drills/shepherd-world-model.md).
+  Essay for grown-ups: [World Models Start in Six Lines of CS229](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html).
+- **2026-10-16 · Numbers at Four Ages.** One math idea ("a number is not its name"), written honestly for ages 7, 11, 15
+  and 20, co-authored with Shifeng Chen. The age-7 piece is a play script for a parent and child:
+  [What Is a Number?](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html)
+- **2026-10-12 · The SAW series is published, before anything was built.** Five articles test the idea in public,
+  name included ([plan and scoreboard](docs/saw/SERIES.md)).
+- **Earlier · The Builder Loop app, the Apps Gallery and the Founding Families cohort** went live. See [CHANGELOG.md](CHANGELOG.md).
 
-### The ladder we actually climb
+---
 
-We measure **capability**, not dollars. The public ladder is what anyone — child *or* grown-up — can *do*:
+## 🧒 How it works — a 10-year-old can follow (and redraw) this
+
+```mermaid
+flowchart LR
+  A["🛡️ Learn how<br/>an attack works"] --> B["🐑 Use it to<br/>protect people"]
+  B --> C["🔨 Build one<br/>real thing"]
+  C --> D["🙋 Show one<br/>real person"]
+  D --> E["📝 Learn what<br/>failed"]
+  E --> A
+  F["❌ Never: a person<br/>as the enemy"] -.- B
+```
+
+**In words:**
+1. Learn how something attacks: a wolf's habit, a scam, a bully's move, a broken plan.
+2. Use that knowledge to protect.
+3. Build something small and real.
+4. Show it to one real person.
+5. Learn from what failed, and go round again.
+
+The one rule that never bends: **no person is ever the enemy.** What we fight is the attack, never the human.
+
+---
+
+## What it is — three doors into one academy
+
+| Door | What happens there | Where it lives |
+|---|---|---|
+| **1 · The Academy (SAW)** | Courage and skill for children: learn how an attack works, so you can live as a protector. Five laws about where that skill may be aimed. A guest-instructor rule: **content, not contact**, so no child is ever alone with an adult. A scorecard that can show a loss. | The [five-part series](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [research](docs/research/shepherd-warrior-formation.md) |
+| **2 · The Field Lab (Daniel & David)** | The **[Builder Loop](docs/builder-loop/)**: a four-week family experiment run as five fast build-show-learn cycles. AI is the teammate; you stay the mind and the conscience. Ventures, curriculum, principles. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
+| **3 · Drills and demos** | Things a family can run in 15–20 minutes: the weekly **car-ride drill** (SAW part 5) and the **Shepherd's World Model** game. Plus small apps (Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
+
+---
+
+## ⚡ Quick start
+
+**👪 Families (no code, no install):**
+1. [Play the Shepherd's World Model](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) with the [15-minute script](docs/saw/drills/shepherd-world-model.md).
+2. Open the free [Builder Loop app](https://daniel-and-david.vercel.app/app.html). It needs no signup, installs to your home screen, and keeps everything on your device.
+3. Read the [safety rules](docs/safety/) before you start.
+
+**🛠️ Developers and contributors:**
+```bash
+git clone https://github.com/wjlgatech/daniel-and-david.git && cd daniel-and-david
+./scripts/setup.sh        # makes scripts runnable and runs every guardrail
+./scripts/check.sh        # the finish line before any PR (the same guardrails CI runs)
+./scripts/saw-signal.sh   # is SAW working? prints the four numbers, plus the supplementary one
+```
+
+---
+
+## 🧭 What you can do here
+
+| You want to… | Go here |
+|---|---|
+| Run a 15-minute family drill tonight | [Shepherd's World Model script](docs/saw/drills/shepherd-world-model.md) (EN + 中文) → [the game](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) |
+| Run the weekly car-ride drill | [SAW part 5: one drill, four numbers, six tripwires](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
+| Start a four-week family project | [The Builder Loop](docs/builder-loop/) → [the app](https://daniel-and-david.vercel.app/app.html) · [printable](docs/builder-loop/printable.md) |
+| See whether SAW is working | `./scripts/saw-signal.sh` · the ledger [`docs/saw/signal.json`](docs/saw/signal.json) |
+| Understand why the word "war" stays (for now) | [SAW part 1](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| Invite a guest expert safely | [SAW part 4: content, not contact](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| Join as a founding family | [Founding Families](docs/founding-families.md) (⛏️ Genesis · 8 spots) |
+| Contribute | [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) |
+
+---
+
+## 📚 The writing
+
+Long-form pieces live on the author's [agentic portfolio](https://agentic-portfolio-lovat.vercel.app/#writing). Each is in
+five languages (English, 中文, Español, 한국어, 日本語).
+
+| Piece | For | Link |
+|---|---|---|
+| SAW 1 · An Academy of War for Children: Learn the Attack, Live as a Protector | parents, leaders | [read](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| SAW 2 · Revelation 19 Has One Fighter, and the Long War Has Five Arenas | parents | [read](https://agentic-portfolio-lovat.vercel.app/articles/saw-revelation-19-one-fighter.html) |
+| SAW 3 · Courage Training for Children: What the Evidence Supports and What Backfires | parents | [read](https://agentic-portfolio-lovat.vercel.app/articles/saw-courage-training-evidence.html) |
+| SAW 4 · Guest Instructors for Children: Content, Not Contact | parents, guests | [read](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| SAW 5 · A Scorecard for a Family Academy: One Car-Ride Drill, Four Numbers, Six Tripwires | parents, leaders | [read](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
+| World Models Start in Six Lines of CS229 (and the Shepherd's World Model) | engineers; the drill is for ages 7–11 | [read](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html) · [play](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) |
+| What Is a Number? (Numbers at Four Ages, age 7) | a child + a grown-up | [read](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html) |
+| Number Systems (age 11) · Place Value (age 15) · Number vs Representation (age 20) | ages 11, 15, 20 | [11](https://agentic-portfolio-lovat.vercel.app/articles/number-systems-from-tally-to-place-value.html) · [15](https://agentic-portfolio-lovat.vercel.app/articles/place-value-ten-symbols-every-number.html) · [20](https://agentic-portfolio-lovat.vercel.app/articles/number-vs-representation-for-programmers.html) · [play](https://agentic-portfolio-lovat.vercel.app/play/numbers.html) |
+
+---
+
+## 🎯 Decisions locked in (and why)
+
+- **No person is ever the enemy.** The skill is aimed at attacks, never at people. Violent language about people
+  fails the series' own gate.
+- **Content, not contact.** A guest expert teaches through recorded or supervised content, so no child is ever alone with
+  an adult. Safety rules: [`docs/safety/`](docs/safety/).
+- **Nothing claimed that isn't measured.** The series says "nothing is measured yet" until the ledger says otherwise,
+  and no instructor is claimed while `faculty_confirmed` is 0.
+- **Signal before build.** There is no SAW build until its four numbers pass ([the signal](#-the-signal-is-this-working)).
+  The Shepherd's World Model is a portfolio demo SAW borrows, not the SAW build.
+- **Capability, not dollars.** We measure what a child can do without being pushed
+  ([Theory of Change](docs/vision/theory-of-change.md)), on the Capability Ladder below.
+
+---
+
+## 📏 The signal: is this working?
+
+The SAW series was written to produce a decision, not applause. By **2026-11-11**, [`signal.json`](docs/saw/signal.json)
+must hold these numbers. `./scripts/saw-signal.sh` prints them and exits 1 if one is still missing after the date.
+
+| Number | Pass | What it decides |
+|---|---|---|
+| `strangers_asked`, `strangers_heard_militant` | 20+ asked, fewer than half hear "militant" | Whether the public name stays, including this repo's name |
+| `reader_mission_numbers` | 10+ mission results posted by readers | Whether anyone but us runs it |
+| `outside_reviewers_of_guest_rules` | 1+ child-safeguarding reviewer of part 4 | Whether a first guest may be invited |
+| `family_drills_run` | 4+ weekly car-ride drills, with the children's own cards | Whether the drill survives a seven-year-old |
+| *supplementary:* `shepherd_demo_drills` | counted, not gated | How many families ran the Shepherd's World Model (never counts toward the four) |
+
+**Today:** 0 of 4 measured. That is honest for week three, and it will be loud if it is still true on 2026-11-11.
+
+---
+
+## 🏷️ About the name (and this repository's name)
+
+The repository is still called `daniel-and-david`, on purpose. SAW's own rule puts its public name on trial until
+**2026-11-11**: if fewer than half of 20 strangers hear "militant", the name stays public. Renaming the repository first
+would decide that test before its data exists.
+
+If the name passes, the rename is one command:
+```bash
+gh repo rename shepherds-academy-of-war --repo wjlgatech/daniel-and-david
+```
+GitHub redirects the old repository URL and git remotes, and the live site at daniel-and-david.vercel.app is unaffected.
+**One thing breaks:** the GitHub Pages address (`wjlgatech.github.io/daniel-and-david/`) would move. So the rename must
+update every Pages link in this README and in `apps/web` in the same change.
+
+If the name fails, SAW stays the family's private name, and this repository keeps the field-lab name.
+
+---
+
+## The ladder we actually climb
+
+We measure **capability**, not dollars. The public ladder is what anyone, child *or* grown-up, can *do*:
 
 <p align="center"><img src="docs/assets/capability-ladder.svg" alt="The Capability Ladder we climb: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others. The money ladder is a later venture track." width="100%"></p>
 
-*The game is who you become while you climb.* (There's an advanced venture/money track too —
-it lives lower down, on purpose. See [the ladders](docs/vision/milestones.md).)
-
-### What this is becoming: a hub 🌍
-
-This is growing from a curriculum into a **[hub](docs/community/hub.md)** — three in one:
-
-1. 📚 **A living learning hub** — open curriculum that improves every time a real child uses it.
-2. 🧰 **A tools hub** — every capability we teach a human, we teach our AIs too (skills, plugins,
-   workflows, hooks), all open and installable.
-3. 🤝 **A collaboration hub** — where AI and people exchange ideas, *match into teams,* and launch
-   ventures that solve foundational problems.
-
-**Parents, kids, engineers, designers, founders, and AI agents are all invited.** Bring a problem
-worth solving — see **[the Hub guide](docs/community/hub.md)** and [CONTRIBUTING.md](CONTRIBUTING.md).
-
-### In design: talk your way through it — the Builder Loop Coach 🗣️
-
-The Builder Loop today is a tap-through app. We're designing a **second door**: a voice-first
-**conversational coach** that runs the same loop by *talking* — you speak, an AI agent guides you
-through the five cycles, does the busywork, and you stay the mind. It's **spec in design, not
-shipped** (the agent runs your data **on-device**; it's always clearly an AI). Plan + how to run it:
-[`apps/web-agent/`](apps/web-agent/).
-
-<p align="center"><img src="docs/assets/builder-loop-coach.svg" alt="The Builder Loop Coach: 1 You say it (type or talk), 2 the Coach guides (holds the 5-cycle Builder Loop as a goal and asks the next kind question), 3 it does the work on-device (nothing leaves your device), 4 you stay the mind (find one thing the AI got wrong; if you can't explain it, you don't ship it). Always an AI, never pretends to be a person." width="100%"></p>
-
-### In design: open to adults too — the Isaiah 35 Restoration Track 🌿
-
-The same engine that turns a child into a builder is exactly what an **adult in a barren season**
-needs — the job disrupted by AI, the single parent with no margin, the one *old in skin but young at
-heart*, carrying an orphan mindset or fighting depression's four lies (*hopeless, helpless,
-meaningless, peaceless*). So we're opening a **parallel, adults-only track**, anchored in **Isaiah
-35** — *"Strengthen the weak hands… say to the anxious heart, 'Be strong; fear not.'"* Four operating
-principles — **Restoration, Redemption, Regeneration, Resurrection** — run through the same Builder
-Loop, to rebuild capability, calling, and hope (a real *12x* of one's trajectory). Faith-rooted
-(Christ-centered restoration) and, as always, **everyone welcome of every belief**. **In design, not
-shipped** → read [the Restoration Track](docs/vision/isaiah-35-restoration.md), or **run the
-[4-week Restoration Loop](docs/curriculum/adult-restoration/)** (one R per week, one real thing
-shipped each week — printable [worksheet](docs/curriculum/adult-restoration/worksheet.md)). Kids stay
-the core; all [child-safety rules](docs/safety/) are unchanged.
-
-<p align="center"><img src="docs/assets/isaiah-35-restoration.svg" alt="Isaiah 35 — The Restoration Track for adults: the journey from the dry land along the Way of Holiness home with joy. Four principles — RESTORATION for the hopeless (ship one small real thing), REDEMPTION for the meaningless (your story becomes your service), REGENERATION for the helpless (new heart and new skills, direct an AI team), RESURRECTION for the peaceless (new life with Christ). From orphan to beloved son and daughter." width="100%"></p>
-
-### Being tested in writing first: Shepherd's Academy of War 🛡️
-
-On car rides this autumn, Dad and the boys started a family "academy" for courage: learn how an attack works so
-you can protect people, and never treat a person as the enemy. Before building anything, we published a
-[five-part article series](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) that tests the idea in public, including
-the name. **Status: articles published 2026-10-12; nothing built; no instructors.** Read [the plan and its scoreboard](docs/saw/SERIES.md) and
-[the research behind it](docs/research/shepherd-warrior-formation.md).
+*The game is who you become while you climb.* There is an advanced venture track too. It lives lower down, on purpose.
+See [the ladders](docs/vision/milestones.md).
 
 ---
 
-## Why this exists
+## How a builder is made
 
-Most people are taught to *find* a job. We are learning to *create* value — to make something
-people genuinely need, do it honestly, and steward what comes back well. A child learns that
-not from a lecture but from **building one real thing, end to end**, with an AI team at their
-side. See [`docs/vision/mission.md`](docs/vision/mission.md) and our
-[Theory of Change](docs/vision/theory-of-change.md) — the causal model and the metric we
-actually track (*Independent Builder Evidence per child per month*, not dollars or stars).
-
-> **The deeper aim.** We build to bless. Every venture here is measured not only by what
-> it earns, but by who it serves and what it makes possible for others. See
-> [`docs/principles/values.md`](docs/principles/values.md).
-
-> **Older learners & parents:** there's a long-horizon *venture track* — a $1M→$10B milestone
-> ladder — but it's deliberately **not** the headline. It's a compass, not a promise, and it
-> lives in [`docs/vision/milestones.md`](docs/vision/milestones.md) under the Capability Ladder
-> we lead with.
-
----
-
-## How a wealth creator is actually made
-
-Not from a lecture. From **building one real thing, end to end, and learning every part
-of why it worked or didn't.** So this repo pairs *curriculum* with *real ventures*.
+Not from a lecture. From **building one real thing, end to end, and learning every part of why it worked or didn't.**
 
 <p align="center"><img src="docs/assets/builder-loop.svg" alt="How you become a builder: 1. Learn a principle, 2. Build it on a real venture, 3. Learn back from the work — and repeat, stronger each time" width="100%"></p>
 
-### The ventures
-Real businesses, designed in the open. The first one's full plan lives in this repo — and we're
-honest about its stage: **the operating spec is complete; the build hasn't started yet** (pilot
-in design).
-
-- 🏕️ **[`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/)** — a *legal,
-  venue-partnered fan-utility + local-commerce* concept for Kansas City's global-football
-  summer. Full operating spec, economics, compliance gates, and a buildable web-app PRD —
-  **spec ✅ complete, web app 🟡 build not started.** This is venture #1: the boys' first
-  *planned* taste of demand, margin, and shipping. (The teaching vehicle is the
-  [Builder Loop](docs/builder-loop/) — start there even before the venture ships.)
-
-### The curriculum
-One method, **every age** — tied to real building, not worksheets.
-
-**For the kids** (tied to the live ventures):
-
-- 👦 **[Daniel — age 11](docs/curriculum/daniel-age-11/)** — builds, prices, sells, measures,
-  and reads a P&L. Writes code with an AI pair. (Now leads an [AI Build
-  Kit](docs/curriculum/daniel-age-11/build-kit.md): builds → shows his mentor → sells with an adult.)
-- 🧒 **[David — age 6](docs/curriculum/david-age-6/)** — counts, draws the signs, greets the
-  customer, learns that *making something good for people* is the whole game.
-
-**For the grown-ups** — the adults-only [Restoration Track](docs/vision/isaiah-35-restoration.md),
-run as the 4-week [Restoration Loop](docs/curriculum/adult-restoration/) (*old in skin, young at
-heart* welcome). The *same* Builder Loop, pointed at rebuilding a life:
-
-- 👩‍👧 **The single parent** — finds one real pain, ships a tiny paid offer with an AI team, and
-  lands the first *"yes."* Restoration over résumé.
-- 👨‍💻 **The disrupted professional** (the role AI just changed) — turns hard-won know-how into a
-  product; directs an AI team to do what once took a department.
-- 👵 **The seasoned mentor** (teacher, manager, retiree) — packages a lifetime of wisdom into
-  something that serves real people (and sells). Proof it's not too late.
-- 🚗 **The young hustler** (driver, server, gig worker) — turns a side gig into a repeatable offer;
-  learns margin, demand, and leverage.
-
-> Every grown-up track runs the same engine on the four R's — **Restoration · Redemption ·
-> Regeneration · Resurrection** (Isaiah 35). *In design.*
-
-### The principles
-How we work — the same way the best AI-native companies work:
-
-- 🤖 [AI-Native Company](docs/principles/ai-native-company.md) — agents are teammates, not features.
-- 🛠️ [Agentic Engineering](docs/principles/agentic-engineering.md) — small reversible changes,
-  evals over vibes, docs-as-code, the human stays the editor.
-- 🔎 [Pain2Gain](docs/principles/pain2gain.md) — understand a pain at *root-cause / first-principle*
-  depth (the depth ladder, 5-Why, the 6 dimensions, burden) so the solution is transformative.
-- ✝️ [Values](docs/principles/values.md) — the *why* under all of it.
+- **The ventures.** [`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/) is a legal, venue-partnered
+  fan-utility and local-commerce concept for Kansas City's football summer. **Spec ✅ complete; web app 🟡 build not
+  started.**
+- **The curriculum.** One method, every age:
+  - [Daniel, age 11](docs/curriculum/daniel-age-11/): builds, prices, sells and measures, and leads an
+    [AI Build Kit](docs/curriculum/daniel-age-11/build-kit.md);
+  - [David, age 6](docs/curriculum/david-age-6/): counts, draws the signs, greets the customer;
+  - [Critical Thinking](docs/curriculum/critical-thinking/): the 5W1H grid, also
+    [wired into our AI teammates](.claude/README.md).
+- **The principles:**
+  - [AI-Native Company](docs/principles/ai-native-company.md)
+  - [Agentic Engineering](docs/principles/agentic-engineering.md)
+  - [Pain2Gain](docs/principles/pain2gain.md)
+  - [Values](docs/principles/values.md)
 
 <p align="center"><img src="docs/assets/agent-loop.svg" alt="Your AI teammate: an agent is a loop — LOOK at the goal, THINK of one step, ACT with a tool, CHECK if it worked. You are the boss; the robot does the busy work." width="78%"></p>
 
-### The thinking tool every builder needs
+### In design, not shipped
 
-Before you build, buy, believe, or sell anything — **interrogate it.** We use the **5W1H
-critical-thinking grid**: six question-words you point at any claim, plan, or product to surface
-hidden risks and untested assumptions. It's taught to the boys
-([🧠 Critical Thinking](docs/curriculum/critical-thinking/) — David's "Six Detective Words" and
-Daniel's applied version) and [wired into our AI teammates](.claude/README.md) as a skill,
-workflow, hook, and plugin — so humans and agents think the same way.
-
-<p align="center"><img src="docs/assets/critical-thinking.svg" alt="Critical Thinking is Key — the 5W1H grid: Who, What, Where, When, Why, How, each with eight probing questions to interrogate any topic." width="100%"></p>
+- 🗣️ **The Builder Loop Coach.** A voice-first coach runs the same loop by talking. Your data stays on the device, and
+  it is always clearly an AI. See [`apps/web-agent/`](apps/web-agent/).
+- 🌿 **The Isaiah 35 Restoration Track** is for adults in a barren season. It uses four principles (Restoration,
+  Redemption, Regeneration, Resurrection) through the same loop. It is faith-rooted and everyone is welcome. See
+  [the track](docs/vision/isaiah-35-restoration.md) and the [4-week Restoration Loop](docs/curriculum/adult-restoration/).
+- 🌍 **A hub.** A living learning hub, a tools hub and a collaboration hub, open to parents, kids, engineers, founders
+  and AI agents. See the [Hub guide](docs/community/hub.md).
 
 ---
 
-## Repository map
+## 🗺️ Repository map
 
 ```
-daniel-and-david/
+daniel-and-david/                 (the home of Shepherd's Academy of War; name decision on 2026-11-11)
 ├── docs/
-│   ├── builder-loop/    ⭐ The 4-week family Builder Loop — the atomic unit. Start here.
-│   ├── founding-families.md  🧱 The Halving — apply to the founding cohort (rare, fair, fixed)
-│   ├── vision/          Mission, Theory of Change + North Star, and the two ladders
-│   ├── safety/          Child-safety, privacy, consent, moderation, AI-use boundaries
-│   ├── saw/             Shepherd's Academy of War — article-series plan + signal ledger (nothing built)
-│   ├── principles/      How we work: AI-native + agentic engineering + values
-│   ├── curriculum/      Two tracks: Daniel (11) and David (6) + thinking tools
-│   ├── marketing/       The long-form story + ready-to-post LinkedIn posts
-│   ├── community/       The Hub guide — how AI + people exchange ideas and match
-│   └── assets/          Infographics (SVG) — the visuals in this README
-├── FOUNDERS.md          The public ledger of founding families (by alias, with consent)
-├── ventures/
-│   └── kc-matchday-basecamp/   Venture #1 — full spec, economics, app PRD
-├── apps/
-│   ├── web/             Landing page + privacy.html — hosted, with the founding-cohort form
-│   └── web-agent/       🟡 Builder Loop Coach — Next.js + CopilotKit voice app (spec in design)
-├── agents/
-│   └── hello-agent/     A tiny, readable starter agent — your first AI teammate
-├── .claude/             Agent toolkit — skills, workflows, hooks (capabilities for AI teammates)
-├── tools/               Installable plugins (e.g. the critical-thinking plugin)
-├── packages/            Shared code as ventures grow
-├── scripts/             Setup and helper scripts
-└── .github/             Issue/PR templates, CI, and the contributor on-ramp
+│   ├── saw/             🛡️ SAW: series plan, signal ledger, and drills/ (the Shepherd's World Model script, EN + 中文)
+│   ├── builder-loop/    ⭐ The 4-week family Builder Loop, the atomic unit of the field lab
+│   ├── founding-families.md  🧱 The Halving: apply to the founding cohort
+│   ├── vision/          Mission, Theory of Change + North Star, the two ladders, the Restoration Track
+│   ├── safety/          Child safety, privacy, consent, moderation, AI-use boundaries
+│   ├── research/        Cited research, including the shepherd-warrior formation dossier behind SAW
+│   ├── principles/      How we work: AI-native, agentic engineering, values
+│   ├── curriculum/      Daniel (11), David (6), critical thinking, adult restoration
+│   ├── marketing/       The long-form story and ready-to-post LinkedIn posts
+│   ├── community/       The Hub guide
+│   └── assets/          Infographics (SVG) used in this README
+├── apps/web/            The live site (daniel-and-david.vercel.app): landing page, Builder Loop app, demos
+├── apps/web-agent/      🟡 Builder Loop Coach (spec in design)
+├── ventures/            Venture #1: kc-matchday-basecamp
+├── agents/hello-agent/  A tiny starter agent
+├── scripts/             setup.sh · check.sh (guardrails) · saw-signal.sh (the SAW verdict)
+├── .claude/             Agent toolkit: skills, workflows, hooks
+└── .github/             CI, templates, the contributor on-ramp
 ```
 
 ---
 
-## Start here — pick your path
-
-### 👪 For families (no code, no install)
-
-You don't need GitHub, git, or any setup. Just:
-
-1. **Open the home page:** **[daniel-and-david on the web →](https://wjlgatech.github.io/daniel-and-david/)** (a normal link — opens in any browser). The **"See it work"** section runs all three demos *live, right on the page* — try one before you read another word.
-2. **Open the free [Builder Loop app](https://wjlgatech.github.io/daniel-and-david/app.html)** — a **1-click, no-signup** web app that walks your family through the 5 cycles, tracks progress, and **installs to your home screen** (works offline; everything stays on your device). Prefer paper? There's a [printable](docs/builder-loop/printable.md) and an [iteration log](docs/builder-loop/iteration-log.md), and the full [Builder Loop guide](docs/builder-loop/).
-3. **Browse the [Apps Gallery](https://wjlgatech.github.io/daniel-and-david/apps.html)** — every small app in one place, each described by a tiny [Agentic App Card](docs/agentic-app-card.md) (like a HuggingFace model card, ~10× simpler). Play [Conversation Spark](https://wjlgatech.github.io/daniel-and-david/demos/conversation-spark.html), the [Transition Timer](https://wjlgatech.github.io/daniel-and-david/demos/transition-timer.html), or the [Homework Chunker](https://wjlgatech.github.io/daniel-and-david/demos/homework-chunker.html) — or build your own and add a card.
-4. **Read the [safety rules](docs/safety/)** before you start (consent, privacy, AI boundaries).
-5. **Open your child's track:** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/).
-6. **Want in deeper?** [Apply to be a Founding Family](docs/founding-families.md) — currently
-   ⛏️ Genesis (8 spots). The honor halves at each epoch; apply before the next halving.
-
-That's the whole on-ramp. Everything a parent needs is a plain web link or a markdown page.
-
-### 🛠️ For developers, contributors & founding families — 1-click setup
+## 🛠️ Development
 
 ```bash
-git clone https://github.com/wjlgatech/daniel-and-david.git && cd daniel-and-david
-./scripts/setup.sh        # ← the one command: makes scripts runnable + runs every guardrail
+./scripts/check.sh   # all guardrails: links · toolkit · status-truth · registration-safety · webapp (same as CI)
 ```
 
-`setup.sh` is safe to re-run. It detects [Claude Code](https://claude.ai/code) and points you at
-the **AI toolkit this repo ships** — installable in one click, no global setup:
+Green means every link resolves, every status claim in the docs is true, the registration form is safe, and the web
+app works. Agents: read [AGENTS.md](AGENTS.md) and [.claude/README.md](.claude/README.md) first. Our near-term goal is
+not contribution volume. It is **ten families finishing one real Builder Loop**, and SAW's four numbers on the date.
 
-- **`/goal-10x`** — the objective driver: research → drive any goal to green against the repo's
-  own checks → coach → self-improve. Ships as a project command (`.claude/commands/goal-10x.md`),
-  so it just works after you clone.
-- **`/check`** — run all five guardrails (links · toolkit · status-truth · registration-safety ·
-  webapp) the same way CI does.
-- **The `critical-thinking` plugin** (the 5W1H grid as a command + skill + hook). Install it from
-  this repo's own marketplace:
-  ```text
-  /plugin marketplace add wjlgatech/daniel-and-david
-  /plugin install critical-thinking@daniel-and-david
-  ```
+> 🧱 **Founding families** get private early access to the studio's own AI workshop (AnyAgent, Super U, DreamMakeTrue).
+> See [Founding Families](docs/founding-families.md).
 
-Then: open the landing page locally (`open apps/web/public/index.html`), read **[AGENTS.md](AGENTS.md)**
-and **[.claude/README.md](.claude/README.md)**, and run `./scripts/check.sh` before any PR.
+---
 
-> 🧱 **Founding families get more than the open toolkit** — private early access to the studio's
-> own AI workshop (AnyAgent, Super U, DreamMakeTrue). See
-> [**Founding Families**](docs/founding-families.md).
+## 📖 Docs
 
-New here? Start with **[CONTRIBUTING.md](CONTRIBUTING.md)**. Contributions open around tightly
-scoped issues — small, clear, reviewable, kind, and **safe** (children are involved — see
-[`docs/safety/`](docs/safety/)). Our near-term goal isn't contribution *volume*; it's proof
-that the loop changes a child's behavior: **ten families finishing one real
-[Builder Loop](docs/builder-loop/).** (A bigger open hub is a *later* stage — see the
-[Theory of Change](docs/vision/theory-of-change.md) and the [Hub guide](docs/community/hub.md).)
+| Doc | What's in it |
+|---|---|
+| [`docs/saw/SERIES.md`](docs/saw/SERIES.md) | The SAW plan, its 10X defined so it can fail, and the decisions only the founder makes |
+| [`docs/saw/drills/shepherd-world-model.md`](docs/saw/drills/shepherd-world-model.md) | The 15-minute Shepherd's World Model drill script, in English and 中文 |
+| [`docs/research/shepherd-warrior-formation.md`](docs/research/shepherd-warrior-formation.md) | The research dossier behind SAW |
+| [`docs/builder-loop/`](docs/builder-loop/) | The Builder Loop guide, printable and iteration log |
+| [`docs/safety/`](docs/safety/) | Child-safety, privacy and consent rules (read before any activity) |
+| [`docs/vision/theory-of-change.md`](docs/vision/theory-of-change.md) | The causal model and the one metric we track |
+| [`docs/founding-families.md`](docs/founding-families.md) | The founding cohort and the halving schedule |
+| [`docs/marketing/the-daniel-and-david-story.md`](docs/marketing/the-daniel-and-david-story.md) | The story, simple enough for a 10-year-old, cited enough for a skeptic |
 
 ---
 
@@ -284,8 +285,7 @@ that the loop changes a child's behavior: **ten families finishing one real
 
 <p align="center"><img src="docs/assets/four-question-test.svg" alt="The 4-Question Test: Is it true? Is it legal and is my word kept? Does it really serve someone? Would I be proud to explain it? If any answer is no, we find another way." width="92%"></p>
 
-- **Legal and honest, always.** Venture #1 has explicit compliance gates and a "do-not"
-  list for a reason. We win by being trustworthy, not by cutting corners.
+- **Legal and honest, always.** We win by being trustworthy, not by cutting corners.
 - **Ship small, ship real.** A working thing beats a perfect plan.
 - **Teach while you build.** If a 6-year-old can't grasp the *why*, we explain better.
 - **Give as you grow.** Generosity is built into the model, not bolted on later.
@@ -294,8 +294,6 @@ that the loop changes a child's behavior: **ten families finishing one real
 
 ## License
 
-[MIT](LICENSE) — built in the open, free to learn from, free to build on.
+[MIT](LICENSE). Built in the open, free to learn from, free to build on.
 
----
-
-<p align="center"><i>Build something good. Make it pay. Use it to bless. — for Daniel & David</i></p>
+<p align="center"><i>Learn the attack, live as a protector. Build something good. Use it to bless. — for Daniel &amp; David</i></p>

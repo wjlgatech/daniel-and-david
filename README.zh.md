@@ -1,264 +1,268 @@
-<!-- i18n-source-sha: 861c383ed34c2357 -->
+<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
 <div align="center">
 
-# 🌱 Daniel &amp; David
+# 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
 
-**🌐 阅读语言：** [English](README.md) · 中文 · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md)
+**🌐 Read this in:** English · [中文](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) &nbsp;<sub>(English is the source of truth; the rest are AI-assisted and may lag)</sub>
 
-**一个属于全家人的「实践工坊」——让一家人一起成为有智慧、有创造力、懂 AI 的建造者。**
+### 学习攻击是如何发生的，这样你才能成为守护者。一起成为睿智、有创造力、具备AI素养的建设者。
+
+**一个由父亲和两个儿子在车上发起的家庭学院。勇气、技能和Builder Loop（建设者循环），让大人和孩子（约5–15岁）并肩成长。**
 
 <a href="https://daniel-and-david.vercel.app/">
-  <img src="https://img.shields.io/badge/Open_the_live_app-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="打开在线应用">
+  <img src="https://img.shields.io/badge/Open_the_live_site-daniel--and--david.vercel.app-CC785C?style=for-the-badge&logo=vercel&logoColor=white" alt="打开在线网站">
 </a>
 
-**[应用展厅 →](https://daniel-and-david.vercel.app/apps.html)** ·
+**[▶️ 试玩 Shepherd's World Model（牧羊人世界模型） →](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html)** ·
 **[Builder Loop 应用 →](https://daniel-and-david.vercel.app/app.html)** ·
-**[试玩 Demo →](https://daniel-and-david.vercel.app/demos/conversation-spark.html)** ·
-**[申请 →](https://daniel-and-david.vercel.app/#apply)**
+**[阅读 SAW（Shepherd's Academy of War，牧羊人战争学院）系列 →](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html)** ·
+**[申请加入 →](https://daniel-and-david.vercel.app/#apply)**
 
 <a href="https://daniel-and-david.vercel.app/">
-  <img src="docs/assets/landing-hero.png" alt="Daniel & David — 打开在线网站" width="840">
+  <img src="docs/assets/landing-hero.png" alt="Daniel &amp; David — 打开在线网站" width="840">
 </a>
 
 </div>
 
-> 🌐 **这是 AI 辅助翻译。英文版 [README.md](README.md) 为权威与事实来源**；译文可能滞后。
-
-> **AI 可能会剧烈改变工作方式。你和孩子都不必害怕它——你们可以一起变得比它更有智慧。** 这是一套
-> 务实、植根信仰的学习系统，面向**全家人**——大人与孩子（大致 5–15 岁）并肩学习：**清晰思考、
-> 负责任地使用 AI、创造真实价值、服务真实的人。**
-
-我们一次只走一个小循环。最小单元是 **[Builder Loop（建造循环）](docs/builder-loop/)**——一个为期四周的
-家庭实验，以**5 个快速的「build-show-learn（做—展示—学习）」循环**进行（不是一次性的大揭晓）：
-*挑出最小的下一步 → 粗略地做出来 → 给一个真实的人看 → 学到哪里失败了 → 重复。* 原则是
-**快 · 频 · 在失败中前进。** AI 是队友；而**你始终是头脑与良知**——无论大人小孩，每个年龄都一样。
-
-> 🚀 **从这里开始 → [Builder Loop](docs/builder-loop/)**（免费，人人可用）· 📖 初识全貌？
-> [读这个故事](docs/marketing/the-daniel-and-david-story.md)——10 岁孩子能懂，怀疑者也信服。
-
-> 🧱 **想更深入参与？[申请成为创始家庭](docs/founding-families.md)。** 一份在公平、固定节奏上的
-> 稀有荣誉：像比特币一样，创始者的回报每个阶段**减半**，而群体规模**翻倍**（创世纪 = 8 个家庭，
-> 然后 16、32、64 → 到 #121 向所有人开放）。最早 = 最大荣誉，因为最早 = 最大风险。
-> **现已开放：⛏️ 创世纪 · 8 个名额。** 请在 **[在线网站](https://wjlgatech.github.io/daniel-and-david/)** 申请。
-
-### 我们真正攀登的阶梯
-
-我们衡量的是**能力**，而非金钱。这条公开的阶梯，是任何人——孩子*或*大人——都能*做到*的：
-
-<p align="center"><img src="docs/assets/capability-ladder.svg" alt="The Capability Ladder we climb: 1 Notice a real problem, 2 Ask good questions, 3 Make something useful, 4 Serve one real person, 5 Learn from feedback, 6 Work with a team, 7 Use resources to bless others. The money ladder is a later venture track." width="100%"></p>
-
-*这场游戏，是你攀登时所成为的那个人。*（也有一条更进阶的创业/金钱轨道——它被刻意放在更下方。
-见[两条阶梯](docs/vision/milestones.md)。）
-
-### 它正在成长为：一个枢纽 🌍
-
-它正从一套课程成长为一个 **[枢纽](docs/community/hub.md)**——三合一：
-
-1. 📚 **活的学习枢纽**——每当一个真实的孩子使用它，开放课程就变得更好。
-2. 🧰 **工具枢纽**——我们教给人的每一种能力，也教给我们的 AI（技能、插件、工作流、钩子），全部开源、可一键安装。
-3. 🤝 **协作枢纽**——AI 与人在此交流想法、*组队*，并发起解决根本问题的项目。
-
-**家长、孩子、工程师、设计师、创业者，以及 AI 智能体，都受邀加入。** 带上一个值得解决的问题——见
-**[枢纽指南](docs/community/hub.md)** 与 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
-### 设计中：用对话走完全程——Builder Loop Coach 🗣️
-
-如今的 Builder Loop 是一个点按式应用。我们正在设计**第二扇门**：一个语音优先的**对话式教练**，
-用*说话*来跑同一个循环——你开口，一个 AI 智能体带你走过五个循环、替你做杂活，而你始终是头脑。它**仍在
-设计中，尚未上线**（智能体在**你的设备本地**处理数据；并且始终明确表示自己是 AI）。方案与运行方式见
-[`apps/web-agent/`](apps/web-agent/)。
-
-<p align="center"><img src="docs/assets/builder-loop-coach.svg" alt="The Builder Loop Coach: 1 You say it, 2 the Coach guides, 3 it does the work on-device, 4 you stay the mind. Always an AI, never pretends to be a person." width="100%"></p>
-
-### 设计中：也向成年人开放——以赛亚书 35 章 · 复兴之路 🌿
-
-把孩子变成建造者的同一套引擎，正是处于**荒凉季节的成年人**所需要的——被 AI 冲击了工作的人、没有
-喘息空间的单亲家长、*皮囊已老、心却年轻*的人，背负着「孤儿心态」、或与抑郁的四个谎言（*无望、无助、
-无意义、无平安*）搏斗的人。于是我们开辟了一条**并行的、仅限成人的轨道**，根植于**以赛亚书 35 章**——
-*「要使软弱的手坚壮……对胆怯的人说：你们要刚强，不要惧怕。」* 四条运行原则——**复原、救赎、重生、复活**——
-跑同一个 Builder Loop，重建能力、使命与盼望（一次真实的人生轨迹的 *12 倍跃迁*）。植根信仰（以基督为中心的
-复兴），并且一如既往，**无论你信什么，都欢迎你**。**仍在设计中，尚未上线** → 阅读
-[复兴之路](docs/vision/isaiah-35-restoration.md)，或**实践 [四周复兴循环](docs/curriculum/adult-restoration/)**
-（每周一个 R，每周做出一件真实的小成果——可打印的[工作表](docs/curriculum/adult-restoration/worksheet.md)）。
-孩子始终是核心；所有[儿童安全规则](docs/safety/)保持不变。
-
-<p align="center"><img src="docs/assets/isaiah-35-restoration.svg" alt="Isaiah 35 — The Restoration Track for adults. Four principles: Restoration, Redemption, Regeneration, Resurrection. From orphan to beloved son and daughter." width="100%"></p>
+> **真实进展（2026-10-16）。** Shepherd's Academy of War（SAW，牧羊人战争学院）仅成立数周。**尚无确认的导师**，且**一切尚未有任何实际测量数据**。其公开名称仍在试用期（见[信号](#-the-signal-is-this-working)）。目前已上线的有：Builder Loop 应用、三个小型家庭应用，以及一个基于游戏的训练——Shepherd's World Model（牧羊人世界模型）。
 
 ---
 
-## 为什么会有这个项目
+## 📰 最新动态
 
-大多数人被教导去*找*一份工作。我们在学习*创造*价值——做出别人真正需要的东西，诚实地去做，并妥善地
-管理回报。孩子学会这点，不是靠听课，而是靠**亲手从头到尾做出一件真实的东西**，身边有一支 AI 团队。见
-[`docs/vision/mission.md`](docs/vision/mission.md) 和我们的
-[变革理论](docs/vision/theory-of-change.md)——因果模型，以及我们真正追踪的指标
-（*每个孩子每月的「独立建造证据」*，而非金钱或星标）。
-
-> **更深的目标。** 我们建造，是为了祝福。这里每一个项目，不只用它赚多少来衡量，更用它服务了谁、为他人
-> 成就了什么来衡量。见 [`docs/principles/values.md`](docs/principles/values.md)。
-
-> **年长的学习者与家长：** 也有一条长线的*创业轨道*——一条 $1M→$10B 的里程碑阶梯——但它被刻意地
-> **不**放在头条。它是罗盘，不是承诺，位于 [`docs/vision/milestones.md`](docs/vision/milestones.md)，
-> 在我们率先呈现的能力阶梯之下。
+- **2026-10-16 · 首个可玩的训练：Shepherd's World Model（牧羊人世界模型）。** 一个牧羊人学习狼的秘密习性，以守护两群羊。这是AI领域中最小的真实*世界模型*（斯坦福 CS229 §19.3），7岁孩子也能玩。15分钟剧本（中英文）：[`docs/saw/drills/shepherd-world-model.md`](docs/saw/drills/shepherd-world-model.md)。成人版随笔：[世界模型从CS229的六行代码开始](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html)。
+- **2026-10-16 · 四个年龄的数字。** 一个数学思想（“数字不是它的名字”），分别为7、11、15和20岁年龄段诚实撰写，陈世峰共同作者。7岁篇为亲子剧本：[什么是数字？](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html)
+- **2026-10-12 · SAW系列发表，尚未有任何产品。** 五篇文章公开测试理念及名称（见[计划与记分板](docs/saw/SERIES.md)）。
+- **更早 · Builder Loop 应用、应用库和创始家庭批次**已上线。详见[CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
-## 财富创造者究竟是怎样炼成的
+## 🧒 运作方式 —— 10岁孩子也能看懂（还能自己画）
 
-不是靠听课。而是靠**亲手从头到尾做出一件真实的东西，并弄懂它成或败的每一处缘由。** 因此本仓库把
-*课程*与*真实的项目*配在一起。
-
-<p align="center"><img src="docs/assets/builder-loop.svg" alt="How you become a builder: learn a principle, build it on a real venture, learn back from the work, and repeat." width="100%"></p>
-
-### 项目（Ventures）
-
-公开设计的真实生意。第一个项目的完整方案就在本仓库里——而且我们如实说明它的阶段：**运营方案已完成；
-但尚未开始搭建**（试点设计中）。
-
-- 🏕️ **[`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/)**——一个面向堪萨斯城全球
-  足球之夏的*合法、与场馆合作的「球迷服务 + 本地商业」*概念。完整运营方案、经济模型、合规关卡，以及可
-  落地的网页应用 PRD——**方案 ✅ 完成，网页应用 🟡 尚未开始。** 这是 1 号项目：两个男孩第一次*有计划地*
-  体验需求、利润与交付。（教学载体是 [Builder Loop](docs/builder-loop/)——即使项目尚未上线，也从那里开始。）
-
-### 课程
-
-一套方法，**适配每个年龄**——绑定真实的建造，而非为做题而做题。
-
-**给孩子**（绑定真实项目）：
-
-- 👦 **[Daniel — 11 岁](docs/curriculum/daniel-age-11/)**——建造、定价、销售、衡量，并读懂损益表。和 AI
-  搭档写代码。（现在还带着一套 [AI 建造工具箱](docs/curriculum/daniel-age-11/build-kit.md)：建造 → 向导师
-  展示 → 在大人陪同下销售。）
-- 🧒 **[David — 6 岁](docs/curriculum/david-age-6/)**——数数、画招牌、招呼顾客，懂得*把东西做好以服务他人*
-  才是整件事的全部。
-
-**给大人**——仅限成人的 [复兴之路](docs/vision/isaiah-35-restoration.md)，以四周的
-[复兴循环](docs/curriculum/adult-restoration/) 进行（*皮囊已老、心却年轻*的人也欢迎）。同一个 Builder
-Loop，对准重建一段人生：
-
-- 👩‍👧 **单亲家长**——找到一个真实的痛点，用 AI 团队做出一个微小的付费产品，拿下第一个*「成交」*。复兴，胜过简历。
-- 👨‍💻 **被冲击的专业人士**（岗位刚被 AI 改变）——把多年硬本领变成产品；指挥一支 AI 团队，做once需要一个部门才能做的事。
-- 👵 **资深的过来人**（老师、管理者、退休者）——把一生的智慧打包成能服务真实的人（并能卖钱）的东西。证明：永远不晚。
-- 🚗 **年轻的拼搏者**（司机、服务员、零工）——把副业变成可复制的产品；学会利润、需求与杠杆。
-
-> 每一条成人轨道都跑同一套引擎，围绕四个 R——**复原 · 救赎 · 重生 · 复活**（以赛亚书 35 章）。*设计中。*
-
-### 原则
-
-我们如何工作——与最好的 AI 原生公司一样：
-
-- 🤖 [AI 原生公司](docs/principles/ai-native-company.md)——智能体是队友，不是功能。
-- 🛠️ [Agentic Engineering（智能体工程）](docs/principles/agentic-engineering.md)——小而可回退的改动、以
-  评测代替感觉、文档即代码、人始终是编辑。
-- 🔎 [Pain2Gain](docs/principles/pain2gain.md)——在*根因 / 第一性原理*的深度上理解一个痛点（深度阶梯、
-  5-Why、六个维度、负担），让解决方案具有变革性。
-- ✝️ [价值观](docs/principles/values.md)——这一切背后的*为什么*。
-
-<p align="center"><img src="docs/assets/agent-loop.svg" alt="Your AI teammate is a loop: LOOK, THINK, ACT, CHECK. You are the boss; the robot does the busy work." width="78%"></p>
-
-### 每个建造者都需要的思考工具
-
-在你建造、购买、相信或销售任何东西之前——**先审问它。** 我们用 **5W1H 批判性思维网格**：六个问句，
-对准任何主张、计划或产品，把隐藏的风险与未经验证的假设揪出来。它教给两个男孩
-（[🧠 批判性思维](docs/curriculum/critical-thinking/)——David 的「六个侦探词」与 Daniel 的应用版），也
-[内置进我们的 AI 队友](.claude/README.md)（技能、工作流、钩子、插件）——让人与智能体用同一种方式思考。
-
-<p align="center"><img src="docs/assets/critical-thinking.svg" alt="Critical Thinking — the 5W1H grid: Who, What, Where, When, Why, How." width="100%"></p>
-
----
-
-## 仓库地图
-
-```
-daniel-and-david/
-├── docs/
-│   ├── builder-loop/    ⭐ 四周家庭 Builder Loop —— 最小单元。从这里开始。
-│   ├── founding-families.md  🧱 「减半」—— 申请创始群体（稀有、公平、固定）
-│   ├── vision/          使命、变革理论 + 北极星指标、两条阶梯
-│   ├── safety/          儿童安全、隐私、同意、审核、AI 使用边界
-│   ├── principles/      我们怎么工作：AI 原生 + 智能体工程 + 价值观
-│   ├── curriculum/      多条轨道：Daniel(11)、David(6) + 成人复兴 + 思考工具
-│   ├── marketing/       长篇故事 + 可直接发布的 LinkedIn 文案
-│   ├── community/       枢纽指南 —— AI 与人如何交流与组队
-│   └── assets/          信息图（SVG）—— 本 README 里的视觉素材
-├── FOUNDERS.md          创始家庭公开名册（以化名、经同意）
-├── ventures/
-│   └── kc-matchday-basecamp/   1 号项目 —— 完整方案、经济模型、应用 PRD
-├── apps/
-│   ├── web/             落地页 + privacy.html —— 已托管，含创始群体表单
-│   └── web-agent/       Builder Loop Coach（对话式教练，设计中）
-├── agents/
-│   └── hello-agent/     一个小巧易读的入门智能体 —— 你的第一个 AI 队友
-├── .claude/             智能体工具箱 —— 技能、工作流、钩子（给 AI 队友的能力）
-├── tools/               可安装的插件（例如批判性思维插件）
-├── packages/            随项目成长而共享的代码
-├── scripts/             安装与辅助脚本
-└── .github/             Issue/PR 模板、CI、贡献者入口
+```mermaid
+flowchart LR
+  A["🛡️ Learn how<br/>an attack works"] --> B["🐑 Use it to<br/>protect people"]
+  B --> C["🔨 Build one<br/>real thing"]
+  C --> D["🙋 Show one<br/>real person"]
+  D --> E["📝 Learn what<br/>failed"]
+  E --> A
+  F["❌ Never: a person<br/>as the enemy"] -.- B
 ```
 
+**用文字说：**
+1. 学习某种攻击是如何发生的：比如狼的习性、骗局、霸凌的手法、失败的计划。
+2. 用这些知识去保护他人。
+3. 做一件小而真实的事。
+4. 向一个真实的人展示。
+5. 从失败中学习，然后再循环一遍。
+
+唯一不可动摇的规则：**永远不把人当作敌人。** 我们对抗的是攻击本身，而不是人。
+
 ---
 
-## 从这里开始 —— 选择你的路径
+## 它是什么 —— 一所学院的三扇门
 
-### 👪 给家庭（无需写代码、无需安装）
+| 门 | 里面发生什么 | 它在哪里 |
+|---|---|---|
+| **1 · 学院（SAW）** | 面向孩子的勇气与技能：学习攻击如何发生，从而成为守护者。五条关于技能使用方向的法则。嘉宾导师规则：**内容而非接触**，确保没有孩子单独与成人相处。记分卡可以记录失败。 | [五篇系列文章](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [研究](docs/research/shepherd-warrior-formation.md) |
+| **2 · 实验田（Daniel & David）** | **[Builder Loop（建设者循环）](docs/builder-loop/)**：一个为期四周的家庭实验，包含五次快速的“构建-展示-学习”循环。AI是队友，你是大脑和良知。项目、课程、原则。 | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
+| **3 · 训练与演示** | 家庭可在15–20分钟内完成的活动：每周**车上训练**（SAW第5部分）和**Shepherd's World Model**游戏。还有小型应用（对话火花、过渡计时器、作业分块器）。 | [`docs/saw/drills/`](docs/saw/drills/) · [应用库](https://daniel-and-david.vercel.app/apps.html) |
 
-你不需要 GitHub、git 或任何配置。只需：
+---
 
-1. **打开主页：** **[在网页上打开 daniel-and-david →](https://wjlgatech.github.io/daniel-and-david/)**（普通链接，任何浏览器都能开）。**「See it work（看它运行）」**版块会*在页面上直接、实时*运行三个 demo——先玩一个，再往下读。
-2. **打开免费的 [Builder Loop 应用](https://wjlgatech.github.io/daniel-and-david/app.html)**——一个**一键、免注册**的网页应用，带全家走过 5 个循环、记录进度，并能**安装到主屏**（可离线；一切都留在你的设备上）。喜欢纸笔？有[可打印版](docs/builder-loop/printable.md)、[迭代日志](docs/builder-loop/iteration-log.md)，以及完整的 [Builder Loop 指南](docs/builder-loop/)。
-3. **逛逛 [应用展厅](https://wjlgatech.github.io/daniel-and-david/apps.html)**——所有小应用集于一处，每个都用一张小小的 [Agentic App Card](docs/agentic-app-card.md) 描述（像 HuggingFace 模型卡，但简化约 10 倍）。玩玩 [Conversation Spark](https://wjlgatech.github.io/daniel-and-david/demos/conversation-spark.html)、[Transition Timer](https://wjlgatech.github.io/daniel-and-david/demos/transition-timer.html) 或 [Homework Chunker](https://wjlgatech.github.io/daniel-and-david/demos/homework-chunker.html)——也可以自己做一个并添加卡片。
-4. 开始前，**读一读[安全规则](docs/safety/)**（同意、隐私、AI 边界）。
-5. **打开你孩子的轨道：** [Daniel (11)](docs/curriculum/daniel-age-11/) · [David (6)](docs/curriculum/david-age-6/)。
-6. **想更深入？** [申请成为创始家庭](docs/founding-families.md)——现为 ⛏️ 创世纪（8 个名额）。荣誉在每个阶段减半；趁下一次减半前申请。
+## ⚡ 快速开始
 
-这就是全部入口。家长所需的一切，都是一个普通网页链接或一页 markdown。
+**👪 家庭用户（无需编程，无需安装）：**
+1. [试玩 Shepherd's World Model（牧羊人世界模型）](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html)，配合[15分钟剧本](docs/saw/drills/shepherd-world-model.md)。
+2. 打开免费的 [Builder Loop 应用](https://daniel-and-david.vercel.app/app.html)。无需注册，可安装到主屏，所有数据仅保存在本地设备。
+3. 开始前请阅读[安全规则](docs/safety/)。
 
-### 🛠️ 给开发者、贡献者与创始家庭 —— 一键安装
-
+**🛠️ 开发者与贡献者：**
 ```bash
 git clone https://github.com/wjlgatech/daniel-and-david.git && cd daniel-and-david
-./scripts/setup.sh        # ← 一条命令：让脚本可执行 + 跑一遍所有护栏检查
+./scripts/setup.sh        # 使脚本可运行，并执行所有防护检查
+./scripts/check.sh        # 提交前终检（与CI一致的防护检查）
+./scripts/saw-signal.sh   # SAW是否有效？打印四个数字及补充项
 ```
 
-`setup.sh` 可安全地重复运行。它会检测 [Claude Code](https://claude.ai/code)，并把你指向**本仓库自带的
-AI 工具箱**——一键安装，无需全局配置：
+---
 
-- **`/goal-10x`**——目标驱动器：研究 → 对着仓库自己的检查把任何目标推到「绿灯」→ 教练 → 自我改进。作为项目命令随仓库附带（`.claude/commands/goal-10x.md`），克隆后即可用。
-- **`/check`**——像 CI 一样跑全部五项护栏（links · toolkit · status-truth · registration-safety · webapp）。
-- **`critical-thinking` 插件**（把 5W1H 网格做成命令 + 技能 + 钩子）。从本仓库自己的市场安装：
-  ```text
-  /plugin marketplace add wjlgatech/daniel-and-david
-  /plugin install critical-thinking@daniel-and-david
-  ```
+## 🧭 你可以在这里做什么
 
-然后：在本地打开落地页（`open apps/web/public/index.html`），读 **[AGENTS.md](AGENTS.md)** 和
-**[.claude/README.md](.claude/README.md)**，并在提交任何 PR 前运行 `./scripts/check.sh`。
+| 你的目标 | 跳转入口 |
+|---|---|
+| 今晚做一次15分钟的家庭训练 | [Shepherd's World Model 剧本](docs/saw/drills/shepherd-world-model.md)（中英文）→ [游戏](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) |
+| 做每周车上训练 | [SAW第5部分：一次训练、四个数字、六个警戒线](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
+| 开启为期四周的家庭项目 | [Builder Loop（建设者循环）](docs/builder-loop/) → [应用](https://daniel-and-david.vercel.app/app.html) · [可打印版](docs/builder-loop/printable.md) |
+| 查看SAW是否有效 | `./scripts/saw-signal.sh` · 记分账 [`docs/saw/signal.json`](docs/saw/signal.json) |
+| 理解为何“战争”一词暂时保留 | [SAW第1部分](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| 安全邀请嘉宾专家 | [SAW第4部分：内容而非接触](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| 以创始家庭身份加入 | [Founding Families（创始家庭）](docs/founding-families.md)（⛏️ 创世 · 8个名额） |
+| 贡献代码或内容 | [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) |
 
-> 🧱 **创始家庭获得的不止开源工具箱**——还有对工坊自有 AI 套件（AnyAgent、Super U、DreamMakeTrue）的私享
-> 抢先体验。见 [**创始家庭**](docs/founding-families.md)。
+---
 
-新来？从 **[CONTRIBUTING.md](CONTRIBUTING.md)** 开始。贡献围绕范围明确的 issue 展开——小、清晰、可评审、
-善意，且**安全**（涉及孩子——见 [`docs/safety/`](docs/safety/)）。我们近期的目标不是贡献*数量*；而是证明这个
-循环能改变一个孩子的行为：**十个家庭完成一次真实的 [Builder Loop](docs/builder-loop/)。**（更大的开放枢纽是
-*更晚*的阶段——见[变革理论](docs/vision/theory-of-change.md)与[枢纽指南](docs/community/hub.md)。）
+## 📚 文章与写作
+
+长文发布在作者的[agentic portfolio（主动性作品集）](https://agentic-portfolio-lovat.vercel.app/#writing)。每篇均有五种语言（English, 中文, Español, 한국어, 日本語）。
+
+| 文章 | 适合对象 | 链接 |
+|---|---|---|
+| SAW 1 · 儿童战争学院：学习攻击，成为守护者 | 家长、领导者 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) |
+| SAW 2 · 启示录19章只有一位战士，长久的战争有五个战场 | 家长 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/saw-revelation-19-one-fighter.html) |
+| SAW 3 · 儿童勇气训练：证据支持什么，哪些方法适得其反 | 家长 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/saw-courage-training-evidence.html) |
+| SAW 4 · 儿童嘉宾导师：内容而非接触 | 家长、嘉宾 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/saw-guest-instructors-content-not-contact.html) |
+| SAW 5 · 家庭学院记分卡：一次车上训练、四个数字、六个警戒线 | 家长、领导者 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/saw-scorecard-drill-numbers-tripwires.html) |
+| 世界模型从CS229的六行代码开始（及Shepherd's World Model） | 工程师；训练适合7–11岁 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html) · [试玩](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html) |
+| 什么是数字？（四个年龄的数字，7岁） | 孩子+大人 | [阅读](https://agentic-portfolio-lovat.vercel.app/articles/number-is-not-its-name.html) |
+| 数制（11岁）· 位值（15岁）· 数与表示（20岁） | 11、15、20岁 | [11](https://agentic-portfolio-lovat.vercel.app/articles/number-systems-from-tally-to-place-value.html) · [15](https://agentic-portfolio-lovat.vercel.app/articles/place-value-ten-symbols-every-number.html) · [20](https://agentic-portfolio-lovat.vercel.app/articles/number-vs-representation-for-programmers.html) · [试玩](https://agentic-portfolio-lovat.vercel.app/play/numbers.html) |
+
+---
+
+## 🎯 已锁定的决策（及其原因）
+
+- **永远不把人当作敌人。** 技能只针对攻击本身，绝不针对人。任何针对人的暴力言论都不被允许。
+- **内容而非接触。** 嘉宾专家通过录制或有监督的内容授课，确保没有孩子单独与成人相处。安全规则见：[`docs/safety/`](docs/safety/)。
+- **未测不宣。** 只要记分账未显示数据，系列就会声明“尚未有测量”；`faculty_confirmed`为0时，不宣称有导师。
+- **先有信号，再有建设。** 只有四项数据通过（见[信号](#-the-signal-is-this-working)），SAW才正式建设。Shepherd's World Model 只是作品集演示，非SAW正式产品。
+- **衡量能力，而非金钱。** 我们衡量孩子在未被推动下能做什么（见[变革理论](docs/vision/theory-of-change.md)），见下方能力阶梯。
+
+---
+
+## 📏 信号：它是否有效？
+
+SAW系列的目标是促成决策，而非博得掌声。到**2026-11-11**，[`signal.json`](docs/saw/signal.json)必须记录以下数据。`./scripts/saw-signal.sh`会打印这些数字，并在截止日后如有缺失则退出1。
+
+| 指标 | 通过标准 | 决定什么 |
+|---|---|---|
+| `strangers_asked`, `strangers_heard_militant` | 询问20+人，少于一半认为“激进” | 是否保留公开名称（包括本仓库名） |
+| `reader_mission_numbers` | 10+位读者发布任务结果 | 是否有外部用户参与 |
+| `outside_reviewers_of_guest_rules` | 1+位儿童保护专家评审第4部分 | 是否可邀请首位嘉宾 |
+| `family_drills_run` | 4+次家庭每周车上训练，孩子亲自填写卡片 | 训练是否适合七岁孩子 |
+| *补充项:* `shepherd_demo_drills` | 计数，不做门槛 | 有多少家庭试玩了Shepherd's World Model（不计入前四项） |
+
+**当前：** 四项中0项达标。对于第三周来说这是诚实的，如果到2026-11-11仍如此，将会公开说明。
+
+---
+
+## 🏷️ 关于名称（及本仓库名）
+
+本仓库仍名为`daniel-and-david`，这是有意为之。SAW自身规则要求其公开名称在**2026-11-11**前处于试用期：如果20位陌生人中少于一半认为“激进”，则名称保留。提前更名会让测试失去意义。
+
+如果名称通过，只需一条命令即可更名：
+```bash
+gh repo rename shepherds-academy-of-war --repo wjlgatech/daniel-and-david
+```
+GitHub会自动重定向旧仓库URL和git远程，daniel-and-david.vercel.app在线站点不受影响。**唯一受影响的是：** GitHub Pages地址（`wjlgatech.github.io/daniel-and-david/`）会变动。因此更名时需同步更新本README和`apps/web`中的所有Pages链接。
+
+如果名称未通过，SAW将作为家庭内部名称，本仓库继续使用实验田名称。
+
+---
+
+## 我们真正攀登的阶梯
+
+我们衡量的是**能力**，而非金钱。公开阶梯是任何人——无论孩子还是大人——都能*做到*的事：
+
+<p align="center"><img src="docs/assets/capability-ladder.svg" alt="我们攀登的能力阶梯：1 发现真实问题，2 提出好问题，3 做出有用的东西，4 服务一个真实的人，5 从反馈中学习，6 团队协作，7 用资源祝福他人。金钱阶梯是后续创业路径。" width="100%"></p>
+
+*游戏的意义在于你在攀登过程中成为怎样的人。* 还有一条进阶创业阶梯，故意放在后面。详见[两条阶梯](docs/vision/milestones.md)。
+
+---
+
+## 建设者是如何炼成的
+
+不是靠听讲座。而是**亲手做一件真实的事，从头到尾，弄懂每个环节为何成败。**
+
+<p align="center"><img src="docs/assets/builder-loop.svg" alt="你如何成为建设者：1. 学习一个原理，2. 在真实项目中实践，3. 从工作中反思学习——不断循环，每次更强" width="100%"></p>
+
+- **项目。** [`ventures/kc-matchday-basecamp/`](ventures/kc-matchday-basecamp/) 是一个为堪萨斯城足球夏季设计的合法、场馆合作的球迷工具与本地商业概念。**需求文档✅已完成；Web应用🟡尚未启动开发。**
+- **课程。** 一种方法，适合各年龄段：
+  - [Daniel，11岁](docs/curriculum/daniel-age-11/)：构建、定价、销售、测量，并带领[AI Build Kit](docs/curriculum/daniel-age-11/build-kit.md)；
+  - [David，6岁](docs/curriculum/david-age-6/)：数数、画标志、迎接顾客；
+  - [批判性思维](docs/curriculum/critical-thinking/)：5W1H表格，也[集成在AI队友中](.claude/README.md)。
+- **原则：**
+  - [AI原生公司](docs/principles/ai-native-company.md)
+  - [Agentic Engineering（主动性工程）](docs/principles/agentic-engineering.md)
+  - [Pain2Gain（痛点转化）](docs/principles/pain2gain.md)
+  - [价值观](docs/principles/values.md)
+
+<p align="center"><img src="docs/assets/agent-loop.svg" alt="你的AI队友：智能体是一个循环——LOOK（观察目标）、THINK（想一步）、ACT（用工具行动）、CHECK（检查是否成功）。你是老板，机器人做繁琐工作。" width="78%"></p>
+
+### 设计中，尚未发布
+
+- 🗣️ **Builder Loop Coach（建设者循环教练）。** 语音优先教练，通过对话引导同样的循环。数据仅存本地，始终明确是AI。见[`apps/web-agent/`](apps/web-agent/)。
+- 🌿 **以赛亚35复兴路径**，面向处于荒凉阶段的成年人。用四个原则（复兴、救赎、再生、复活）结合同一循环。信仰为根基，欢迎所有人。见[复兴路径](docs/vision/isaiah-35-restoration.md)及[4周复兴循环](docs/curriculum/adult-restoration/)。
+- 🌍 **学习枢纽。** 一个活跃的学习、工具和协作枢纽，向家长、孩子、工程师、创业者和AI智能体开放。见[枢纽指南](docs/community/hub.md)。
+
+---
+
+## 🗺️ 仓库结构
+
+```
+daniel-and-david/                 （Shepherd's Academy of War 的主仓库；名称决议日为2026-11-11）
+├── docs/
+│   ├── saw/             🛡️ SAW：系列计划、信号记分账、训练/（Shepherd's World Model剧本，中英文）
+│   ├── builder-loop/    ⭐ 4周家庭Builder Loop，实验田的原子单元
+│   ├── founding-families.md  🧱 创世：创始家庭申请
+│   ├── vision/          使命、变革理论与北极星、两条阶梯、复兴路径
+│   ├── safety/          儿童安全、隐私、同意、内容审核、AI使用边界
+│   ├── research/        引用研究，包括SAW背后的牧羊人-战士档案
+│   ├── principles/      工作方式：AI原生、主动性工程、价值观
+│   ├── curriculum/      Daniel（11岁）、David（6岁）、批判性思维、成人复兴
+│   ├── marketing/       长篇故事与可直接发布的LinkedIn内容
+│   ├── community/       枢纽指南
+│   └── assets/          本README用到的信息图（SVG）
+├── apps/web/            在线网站（daniel-and-david.vercel.app）：首页、Builder Loop应用、演示
+├── apps/web-agent/      🟡 Builder Loop Coach（设计中）
+├── ventures/            项目1：kc-matchday-basecamp
+├── agents/hello-agent/  极简入门智能体
+├── scripts/             setup.sh · check.sh（防护检查）· saw-signal.sh（SAW判定）
+├── .claude/             智能体工具包：技能、工作流、钩子
+└── .github/             CI、模板、贡献者入门
+```
+
+---
+
+## 🛠️ 开发
+
+```bash
+./scripts/check.sh   # 全部防护检查：链接 · 工具包 · 状态真实性 · 注册安全 · Web应用（与CI一致）
+```
+
+绿色表示所有链接可用、文档中所有状态声明真实、注册表单安全、Web应用可用。智能体开发：请先阅读[AGENTS.md](AGENTS.md)和[.claude/README.md](.claude/README.md)。近期目标不是贡献量，而是**十个家庭完成一次真实Builder Loop**，以及SAW的四项数据在截止日达标。
+
+> 🧱 **创始家庭**可提前私享工作室自有AI工具（AnyAgent、Super U、DreamMakeTrue）。详见[创始家庭](docs/founding-families.md)。
+
+---
+
+## 📖 文档
+
+| 文档 | 内容简介 |
+|---|---|
+| [`docs/saw/SERIES.md`](docs/saw/SERIES.md) | SAW计划、10X目标（可失败）、仅创始人能做的决策 |
+| [`docs/saw/drills/shepherd-world-model.md`](docs/saw/drills/shepherd-world-model.md) | 15分钟Shepherd's World Model训练剧本（中英文） |
+| [`docs/research/shepherd-warrior-formation.md`](docs/research/shepherd-warrior-formation.md) | SAW背后的研究档案 |
+| [`docs/builder-loop/`](docs/builder-loop/) | Builder Loop指南、可打印版与迭代日志 |
+| [`docs/safety/`](docs/safety/) | 儿童安全、隐私与同意规则（所有活动前必读） |
+| [`docs/vision/theory-of-change.md`](docs/vision/theory-of-change.md) | 因果模型与唯一追踪指标 |
+| [`docs/founding-families.md`](docs/founding-families.md) | 创始家庭批次与减半计划 |
+| [`docs/marketing/the-daniel-and-david-story.md`](docs/marketing/the-daniel-and-david-story.md) | 故事版本：10岁能懂，怀疑者能查证 |
 
 ---
 
 ## 我们坚守的标准
 
-<p align="center"><img src="docs/assets/four-question-test.svg" alt="The 4-Question Test: Is it true? Is it legal and is my word kept? Does it serve someone? Would I be proud to explain it?" width="92%"></p>
+<p align="center"><img src="docs/assets/four-question-test.svg" alt="四问检验：是真的吗？合法吗且守信吗？真的服务了谁吗？我会自豪地解释吗？如有一项否定，就换别的做法。" width="92%"></p>
 
-- **永远合法、诚实。** 1 号项目有明确的合规关卡与一份「do-not」清单，是有原因的。我们靠值得信任取胜，而非抄近路。
-- **小步发布、发布真东西。** 一个能用的东西胜过一个完美的计划。
-- **边建边教。** 如果一个 6 岁孩子抓不住*为什么*，那是我们没解释好。
-- **边成长边给予。** 慷慨是内建于模型之中的，不是日后才加上的。
-
----
-
-## 许可
-
-[MIT](LICENSE) —— 公开建造，自由学习，自由在其上构建。
+- **始终合法且诚实。** 我们靠值得信赖取胜，而不是投机取巧。
+- **小步快跑，务实交付。** 一个可用的作品胜过完美的计划。
+- **边做边教。** 如果6岁孩子听不懂“为什么”，我们就解释得更好。
+- **成长中慷慨。** 慷慨内嵌于模式，而非事后补充。
 
 ---
 
-<p align="center"><i>做点好东西。让它能赚钱。用它去祝福。—— 致 Daniel 与 David</i></p>
+## License
+
+[MIT](LICENSE)。开放构建，欢迎学习与再开发。
+
+<p align="center"><i>学习攻击，成为守护者。做点好事，用它去祝福他人。——献给Daniel &amp; David</i></p>
