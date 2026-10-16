@@ -5,5 +5,7 @@
   "strangers_heard_militant": null,
   "reader_mission_numbers": null,
   "outside_reviewers_of_guest_rules": null,
-  "family_drills_run": null
+  "family_drills_run": null,
+  "shepherd_demo_drills": null,
+  "_shepherd_demo": "Supplementary, NOT one of the four: family runs of the Shepherd's World Model demo (https://agentic-portfolio-lovat.vercel.app/play/shepherd.html), counted from comments on https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html. It never counts toward family_drills_run (the weekly car-ride drill)."
 }

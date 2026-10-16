@@ -185,3 +185,5 @@ The spec at `ventures/kc-matchday-basecamp/SPEC.md` is authoritative. Hard const
 ## When unsure
 
 Ask in the PR or open a Discussion. A clarifying question is cheaper than a wrong large diff.
+
+- SAW signal ledger: `docs/saw/signal.json` has a supplementary field `shepherd_demo_drills` (family runs of the portfolio's Shepherd's World Model demo). `scripts/saw-signal.sh` prints it on its own line; it never counts toward the four SAW numbers.

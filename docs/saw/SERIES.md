@@ -48,6 +48,11 @@ prints the verdict:
 | `outside_reviewers_of_guest_rules` | at least 1 person qualified in child safeguarding has reviewed part 4 | Whether a first guest may be invited |
 | `family_drills_run` | at least 4 weekly drills, with the children's own cards | Whether the drill survives contact with a seven-year-old |
 
+**Supplementary, not one of the four:** `shepherd_demo_drills` counts families who ran the
+[Shepherd's World Model](https://agentic-portfolio-lovat.vercel.app/play/shepherd.html), a world-model demo from Stanford's CS229
+notes that uses SAW's shepherd picture (essay: [World Models Start in Six Lines of CS229](https://agentic-portfolio-lovat.vercel.app/articles/world-models-start-in-cs229.html)).
+It is not the SAW build and never counts toward `family_drills_run`.
+
 Four passes: design the first build (a SAW page in this repo, behind the same honesty gates). Any fail: fix that
 thing first, and the build waits. A blank on the date counts as a fail and is said publicly.
 

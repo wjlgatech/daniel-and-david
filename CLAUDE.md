@@ -103,3 +103,5 @@ agent-facing behavior changed. `check.sh` warns when code changed without a chan
 global pre-push hook blocks pushes missing changelog + human doc + agent guide. Formatting/test-only
 changes are exempt. See `AGENTS.md` → "How to work here" for the full rule and the safety rules in
 `docs/safety/` that bind agents too.
+
+- SAW signal ledger: `docs/saw/signal.json` has a supplementary field `shepherd_demo_drills` (family runs of the portfolio's Shepherd's World Model demo). `scripts/saw-signal.sh` prints it on its own line; it never counts toward the four SAW numbers.

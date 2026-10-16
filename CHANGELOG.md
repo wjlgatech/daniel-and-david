@@ -6,6 +6,12 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **SAW: a supplementary signal, `shepherd_demo_drills`** (`docs/saw/signal.json`, printed by `scripts/saw-signal.sh`).
+  It counts families who ran the Shepherd's World Model, a CS229 world-model demo that uses SAW's shepherd picture
+  (https://agentic-portfolio-lovat.vercel.app/play/shepherd.html). It is **not** one of the four SAW numbers, never counts
+  toward `family_drills_run` (the weekly car-ride drill), and is not the SAW build, which stays gated on the four.
+
 ### Changed
 - **SAW series status: published 2026-10-12** — README and `docs/saw/SERIES.md` now link the five live articles and
   say what shipped (English plus 15 of 20 translated pages) and what did not (5 pages queued; no third review score).
