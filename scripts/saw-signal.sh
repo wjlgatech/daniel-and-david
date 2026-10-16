@@ -42,6 +42,8 @@ for name, ok, value in checks:
     print(f"  {mark} — {name}" + ("" if ok is None else f" ({value})"))
 unmeasured = sum(1 for _, ok, _ in checks if ok is None)
 passed = sum(1 for _, ok, _ in checks if ok)
+sd = s.get("shepherd_demo_drills")
+print(f"  ➕ supplementary — Shepherd's World Model demo drills: {'not measured' if sd is None else sd} (never counts toward the four)")
 print("---------------------------------------------")
 if unmeasured and today > due:
     print(f"::error::{unmeasured} number(s) still missing after {due}. A missing result on the date is a result: say so in part 5.")
