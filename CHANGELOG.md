@@ -6,7 +6,11 @@ this project aims for [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- **`docs/STATUS.md`, a status board (done · doing · next · Paul's).** So a new session resumes from a file, not from memory; Paul's column holds only direction, money or eval.
+
 ### Changed
+- `docs/saw/SERIES.md`: all 20 translated SAW pages are live (was "15 of 20").
 - **README makeover: Shepherd's Academy of War at the front door, in the anyagent pattern.** The new order is:
   - live-demo buttons, then an honest status box and dated News;
   - a "10-year-old can follow" Mermaid diagram;

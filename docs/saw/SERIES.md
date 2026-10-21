@@ -8,8 +8,8 @@ the plan for those articles and the scoreboard for whether they worked.
 (`content/series/saw/source/*.md` → `scripts/build-saw.py` → `public/articles/saw-*.html`, gated by
 `scripts/check-saw.mjs`). This repo holds the research ([dossier](../research/shepherd-warrior-formation.md)), this
 plan, and the signal ledger ([`signal.json`](signal.json), read by [`scripts/saw-signal.sh`](../../scripts/saw-signal.sh)).
-**Status: published 2026-10-12** in English, with 15 of the 20 translated pages (Chinese, Spanish, Korean, Japanese);
-the other 5 are queued by name. Reviewed twice by an independent reviewer (latest scores 82 to 85 against a bar of
+**Status: published 2026-10-12** in English; all 20 translated pages (Chinese, Spanish, Korean, Japanese) live as
+of 2026-10-21. Reviewed twice by an independent reviewer (latest scores 82 to 85 against a bar of
 85; not scored a third time). **SAW itself is not built, and this repo is not renamed.** Start reading at
 [part 1](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html).
 
