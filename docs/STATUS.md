@@ -7,7 +7,7 @@ only Paul can decide. A new session (or a new machine) starts here instead of fr
 **direction** (what to build, priorities, anything said or posted in Paul's name), **money** (with the price) or
 **eval** (a judgment only his taste can make). A mechanical step in that column is a defect: the agent does it.
 
-*Last updated: 2026-10-21.*
+*Last updated: 2026-10-21 (evening).*
 
 ## Shepherd's Academy of War (SAW) — the article series
 
@@ -17,6 +17,19 @@ only Paul can decide. A new session (or a new machine) starts here instead of fr
 | 🔄 Doing | Waiting on the signal: all four numbers in `signal.json` are still `null`; due **2026-11-11** (`./scripts/saw-signal.sh`). |
 | ⏭ Next (agent) | Draft the SBR companion article (Shaky · Bouncy · Rotating, any order) through the portfolio's SAW gate, five languages in one PR. Re-check every source on 2027-01-11. |
 | ✋ Paul | **Direction:** post part 1 on LinkedIn (the share button at the bottom of the page; the text is prefilled). **Eval:** run the car-ride drill weekly and say the count; ask strangers how the name sounds and say the tally. **Direction:** if any instructor has said yes, say who. |
+
+## SAW test case 1: a geometry coach
+
+The first test of SAW's aim (turn a child who fears mathematics into a first-principles thinker and problem-maker),
+built with a partner teacher in a separate **private** repository (`wjlgatech/geometry-coach`; the teacher's problem
+bank and any student file never come here). Prototype live at <https://geometry-coach.vercel.app>.
+
+| | |
+|---|---|
+| ✅ Done | Research (fear, AI tutors, transfer), a spec with 30-day numbers, a prototype: diagnose → pick the next problem with a reason → hints → answer locked until an attempt → teacher agrees or corrects. |
+| 🔄 Doing | Waiting for the teacher's problem bank. |
+| ⏭ Next (agent) | Load the bank, calibrate the diagnostic, redeploy. |
+| ✋ Paul | **Direction:** where the pilot students are; ownership with the teacher in writing; who holds guardian consent. **Eval:** try it as a student. |
 
 ## Not SAW
 

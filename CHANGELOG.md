@@ -7,6 +7,7 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- `docs/STATUS.md`: SAW test case 1 (a geometry coach built with a partner teacher, private repo, prototype live) so the board shows it.
 - **`docs/STATUS.md`, a status board (done · doing · next · Paul's).** So a new session resumes from a file, not from memory; Paul's column holds only direction, money or eval.
 
 ### Changed
