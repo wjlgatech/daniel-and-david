@@ -106,3 +106,4 @@ changes are exempt. See `AGENTS.md` → "How to work here" for the full rule and
 
 - SAW signal ledger: `docs/saw/signal.json` has a supplementary field `shepherd_demo_drills` (family runs of the portfolio's Shepherd's World Model demo). `scripts/saw-signal.sh` prints it on its own line; it never counts toward the four SAW numbers.
 - SAW drills live in `docs/saw/drills/` (first: `shepherd-world-model.md`, EN + 中文). The README leads with SAW; the repo name stays `daniel-and-david` until SAW's name signal (2026-11-11); the rename command is in the README's "About the name" section. After editing README.md, re-translate the six README.<lang>.md files and run `scripts/sync-readme-i18n.sh`.
+- Status board: `docs/STATUS.md` (✅ done · 🔄 doing · ⏭ next · ✋ Paul). Update it in the same PR as the work; Paul's column holds only direction, money or eval.
