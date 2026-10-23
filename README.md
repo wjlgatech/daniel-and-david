@@ -74,7 +74,7 @@ The one rule that never bends: **no person is ever the enemy.** What we fight is
 |---|---|---|
 | **1 · The Academy (SAW)** | Courage and skill for children: learn how an attack works, so you can live as a protector. Five laws about where that skill may be aimed. A guest-instructor rule: **content, not contact**, so no child is ever alone with an adult. A scorecard that can show a loss. | The [five-part series](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [research](docs/research/shepherd-warrior-formation.md) |
 | **2 · The Field Lab (Daniel & David)** | The **[Builder Loop](docs/builder-loop/)**: a four-week family experiment run as five fast build-show-learn cycles. AI is the teammate; you stay the mind and the conscience. Ventures, curriculum, principles. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · Drills and demos** | Things a family can run in 15–20 minutes: the weekly **car-ride drill** (SAW part 5) and the **Shepherd's World Model** game. Plus small apps (Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · Drills and demos** | Things a family can run in 15–20 minutes: the weekly **car-ride drill** (SAW part 5) and the **Shepherd's World Model** game. Plus small apps (Conversation Spark, Transition Timer, Homework Chunker, Up a Dimension). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 

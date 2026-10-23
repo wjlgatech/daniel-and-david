@@ -1,4 +1,4 @@
-<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
+<!-- i18n-source-sha: 1e5d53cde29ad3f6 -->
 <div align="center">
 
 # 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
@@ -66,7 +66,7 @@ flowchart LR
 |---|---|---|
 | **1 · The Academy (SAW, 셰퍼드의 아카데미 오브 워)** | 아이들을 위한 용기와 기술: 공격이 어떻게 작동하는지 배우고, 보호자로 살아갑니다. 그 기술이 어디에 쓰일 수 있는지에 대한 다섯 가지 법칙. 게스트 강사 규칙: **콘텐츠, 접촉 금지** — 어떤 아이도 어른과 단둘이 있지 않습니다. 패배도 기록할 수 있는 점수판. | [다섯 파트 시리즈](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [연구](docs/research/shepherd-warrior-formation.md) |
 | **2 · The Field Lab (Daniel & David, 다니엘 & 데이비드)** | **[Builder Loop(빌더 루프)](docs/builder-loop/)**: 4주간 가족이 다섯 번의 빠른 빌드-공유-학습 사이클을 도는 실험. AI는 팀원이고, 당신은 마음과 양심입니다. 벤처, 커리큘럼, 원칙. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · Drills and demos(훈련과 데모)** | 가족이 15–20분 만에 할 수 있는 것들: 주간 **자동차 훈련**(SAW 5부)과 **Shepherd's World Model(셰퍼드의 월드 모델)** 게임. 그리고 작은 앱들(Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · Drills and demos(훈련과 데모)** | 가족이 15–20분 만에 할 수 있는 것들: 주간 **자동차 훈련**(SAW 5부)과 **Shepherd's World Model(셰퍼드의 월드 모델)** 게임. 그리고 작은 앱들(Conversation Spark, Transition Timer, Homework Chunker, Up a Dimension). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 

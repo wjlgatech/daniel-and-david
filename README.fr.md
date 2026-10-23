@@ -1,4 +1,4 @@
-<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
+<!-- i18n-source-sha: 1e5d53cde29ad3f6 -->
 <div align="center">
 
 # 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
@@ -66,7 +66,7 @@ La règle qui ne plie jamais : **aucune personne n’est jamais l’ennemi.** Ce
 |---|---|---|
 | **1 · L’Académie (SAW, Shepherd's Academy of War)** | Courage et compétence pour les enfants : apprendre comment fonctionne une attaque, pour vivre en protecteur. Cinq lois sur où viser cette compétence. Une règle pour les intervenants invités : **contenu, pas contact**, ainsi aucun enfant n’est jamais seul avec un adulte. Un tableau de scores qui peut montrer une défaite. | La [série en cinq parties](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [recherche](docs/research/shepherd-warrior-formation.md) |
 | **2 · Le laboratoire de terrain (Daniel & David)** | Le **[Builder Loop (Boucle du Bâtisseur)](docs/builder-loop/)** : une expérience familiale de quatre semaines menée en cinq cycles rapides construire-montrer-apprendre. L’IA est le coéquipier ; vous restez l’esprit et la conscience. Projets, programme, principes. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · Exercices et démos** | Des activités qu’une famille peut faire en 15–20 minutes : l’**exercice hebdomadaire en voiture** (SAW partie 5) et le jeu **Shepherd's World Model**. Plus des petites applis (Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Galerie d’applications](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · Exercices et démos** | Des activités qu’une famille peut faire en 15–20 minutes : l’**exercice hebdomadaire en voiture** (SAW partie 5) et le jeu **Shepherd's World Model**. Plus des petites applis (Conversation Spark, Transition Timer, Homework Chunker, Up a Dimension). | [`docs/saw/drills/`](docs/saw/drills/) · [Galerie d’applications](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 

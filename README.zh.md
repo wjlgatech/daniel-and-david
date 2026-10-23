@@ -1,4 +1,4 @@
-<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
+<!-- i18n-source-sha: 1e5d53cde29ad3f6 -->
 <div align="center">
 
 # 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
@@ -66,7 +66,7 @@ flowchart LR
 |---|---|---|
 | **1 · 学院（SAW）** | 面向孩子的勇气与技能：学习攻击如何发生，从而成为守护者。五条关于技能使用方向的法则。嘉宾导师规则：**内容而非接触**，确保没有孩子单独与成人相处。记分卡可以记录失败。 | [五篇系列文章](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [研究](docs/research/shepherd-warrior-formation.md) |
 | **2 · 实验田（Daniel & David）** | **[Builder Loop（建设者循环）](docs/builder-loop/)**：一个为期四周的家庭实验，包含五次快速的“构建-展示-学习”循环。AI是队友，你是大脑和良知。项目、课程、原则。 | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · 训练与演示** | 家庭可在15–20分钟内完成的活动：每周**车上训练**（SAW第5部分）和**Shepherd's World Model**游戏。还有小型应用（对话火花、过渡计时器、作业分块器）。 | [`docs/saw/drills/`](docs/saw/drills/) · [应用库](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · 训练与演示** | 家庭可在15–20分钟内完成的活动：每周**车上训练**（SAW第5部分）和**Shepherd's World Model**游戏。还有小型应用（对话火花、过渡计时器、作业分块器、升一维（Up a Dimension）五个动手小实验）。 | [`docs/saw/drills/`](docs/saw/drills/) · [应用库](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 
