@@ -7,7 +7,7 @@ only Paul can decide. A new session (or a new machine) starts here instead of fr
 **direction** (what to build, priorities, anything said or posted in Paul's name), **money** (with the price) or
 **eval** (a judgment only his taste can make). A mechanical step in that column is a defect: the agent does it.
 
-*Last updated: 2026-10-21 (evening).*
+*Last updated: 2026-10-23.*
 
 ## Shepherd's Academy of War (SAW) — the article series
 
@@ -27,9 +27,17 @@ bank and any student file never come here). Prototype live at <https://geometry-
 | | |
 |---|---|
 | ✅ Done | Research (fear, AI tutors, transfer), a spec with 30-day numbers, a prototype: diagnose → pick the next problem with a reason → hints → answer locked until an attempt → teacher agrees or corrects. |
-| 🔄 Doing | Waiting for the teacher's problem bank. |
-| ⏭ Next (agent) | Load the bank, calibrate the diagnostic, redeploy. |
+| 🔄 Doing | Round 1 sent to the teacher on 2026-10-23 (letter + 10 golden cards in the app's private teacher room); his answers apply themselves every 10 minutes. |
+| ⏭ Next (agent) | Watch for answers the applier can't take on its own; scale past 10 golden cards once the keep-rate is ≥ 0.8; three "add a dimension" cards by 2026-11-21. |
 | ✋ Paul | **Direction:** where the pilot students are; ownership with the teacher in writing; who holds guardian consent. **Eval:** try it as a student. |
+
+## SAW first principles: five demos for the boys
+
+| | |
+|---|---|
+| ✅ Done | [Up a Dimension](https://daniel-and-david.vercel.app/demos/up-a-dimension.html): the five demos (water ring, six matchsticks, folded paper, twenty doublings, ruler lever), each a real thing on the table plus an exact screen version; the child's words are kept on the device. |
+| ⏭ Next (agent) | When the five sentences come back, log them in SAW's first-principles ledger (due 2026-11-21). |
+| ✋ Paul | **Eval:** run the five with the boys (about 10 minutes each), write each one's words before showing the answer, then press "Copy all answers" and paste them to me. |
 
 ## Not SAW
 

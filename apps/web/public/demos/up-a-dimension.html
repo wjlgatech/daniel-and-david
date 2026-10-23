@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Up a Dimension — Daniel &amp; David</title>
+  <meta name="description" content="Five 10-minute kitchen-table demos about space, scale and leverage for ages 6–12: a water ring, six matchsticks, folded paper, twenty doublings and a ruler lever. On-device, no signup, no child data." />
+  <meta name="theme-color" content="#CC785C" />
+  <style>
+    :root{ --ink:#29261F; --muted:#6F665A; --paper:#FAF9F5; --paper2:#F0EEE6; --card:#fff;
+      --clay:#CC785C; --clay-dk:#B05730; --gold:#C7822E; --sage:#5B8C7B; --line:#E6E0D2; --water:#8EC5E8; }
+    *{box-sizing:border-box} html,body{margin:0;overflow-x:hidden}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.55;}
+    h1,h2{font-family:"Tiempos Text",ui-serif,"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-0.3px;}
+    h2{font-size:24px;margin:4px 0 2px}
+    button,input,textarea{font-family:inherit;accent-color:var(--clay)}
+    .wrap{max-width:680px;margin:0 auto;padding:0 16px 80px;}
+    header{background:linear-gradient(158deg,#2b2620,#43342a 55%,#7c4a33 135%);color:#FAF9F5;text-align:center;padding:40px 16px 34px;}
+    header .em{font-size:44px}
+    header h1{font-size:clamp(26px,6vw,38px);margin:8px 0 6px}
+    header p{margin:0 auto;max-width:540px;opacity:.94}
+    .privacy{font-size:12.5px;color:#7a5230;text-align:center;padding:9px 16px;background:#FBF6EE;border-bottom:1px solid #E6D8C3}
+    .how{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:16px 0 4px;font-size:15px}
+    .how ol{margin:6px 0 0;padding-left:20px}
+    .jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 2px}
+    .jump a{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700;color:var(--ink);text-decoration:none}
+    .jump a.ok{border-color:var(--sage);background:#EEF5F1}
+    .prog{font-weight:800;color:var(--sage);margin:10px 0 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:18px 0;box-shadow:0 1px 2px rgba(41,38,31,.05);scroll-margin-top:12px}
+    .idea{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--clay-dk);background:#FBF1EC;border-radius:999px;padding:3px 10px}
+    .lab{font-weight:700;font-size:14px;margin:14px 0 6px;display:block}
+    .muted{color:var(--muted);font-size:14px}
+    ul.need{margin:4px 0;padding-left:20px} ol.do{margin:4px 0;padding-left:20px}
+    .sim{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px;margin:12px 0;text-align:center}
+    .sim canvas,.sim svg{width:100%;max-width:340px;height:auto;display:block;margin:0 auto;touch-action:none}
+    .readout{font-size:15px;font-weight:700;min-height:22px;margin:6px 0 2px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
+    input[type=range]{width:100%;max-width:320px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border:0;border-radius:999px;font-size:16px;font-weight:800;cursor:pointer;background:var(--clay);color:#FAF9F5}
+    .btn:hover{background:var(--clay-dk)}
+    .btn.secondary{background:#fff;color:var(--clay-dk);border:1.5px solid var(--line);font-size:15px}
+    .btn.on{background:var(--sage);color:#fff}
+    .ask{background:#FBF6EE;border-left:4px solid var(--gold);border-radius:8px;padding:10px 12px;margin:12px 0;font-weight:600}
+    textarea{width:100%;font-size:16px;padding:10px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);resize:vertical}
+    input[type=number]{width:70px;font-size:16px;padding:8px;border:1.5px solid var(--line);border-radius:10px;text-align:center}
+    .answer{background:#EEF5F1;border:1px solid #CFE2D8;border-radius:12px;padding:10px 14px;margin-top:10px;font-size:15px}
+    .answer .say{font-size:17px;font-weight:800;color:#2F5D4F}
+    .big{font-size:40px;font-weight:900;font-variant-numeric:tabular-nums;margin:4px 0}
+    .burst{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+    .burst span{position:absolute;top:-20px;font-size:22px;animation:fall linear forwards}
+    @keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.2}}
+    footer{max-width:680px;margin:0 auto;padding:12px 16px 30px;color:var(--muted);font-size:13px;text-align:center}
+    a{color:var(--clay-dk)}
+    .hidden{display:none!important}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="em">⬆️</div>
+    <h1>Up a Dimension</h1>
+    <p>Five 10-minute kitchen-table demos about space, scale and leverage, for ages 6–12. Do the real thing with your hands first, then play with the screen.</p>
+  </header>
+  <div class="privacy">🔒 Everything stays on your device. Nothing is stored online or sent anywhere. <strong>No child's name</strong> — just their words and their age, if you want to keep them.</div>
+
+  <main class="wrap">
+    <div class="how"><strong>How each demo works</strong>
+      <ol>
+        <li><strong>Do it</strong> with real things from the drawer (2–5 minutes).</li>
+        <li><strong>Ask</strong> the question in the yellow box.</li>
+        <li><strong>Write down what they say, in their own words</strong>, before you show the grown-up answer. Their words are the point.</li>
+      </ol>
+    </div>
+    <nav class="jump" id="jump">
+      <a href="#ring">🐜 Water ring</a>
+      <a href="#sticks">🔺 Six matchsticks</a>
+      <a href="#fold">📄 Folded paper</a>
+      <a href="#double">🔢 Twenty doublings</a>
+      <a href="#lever">📏 Ruler lever</a>
+    </nav>
+    <p class="prog" id="prog">0 of 5 done</p>
+
+    <!-- 1 · Water ring -->
+    <section class="card" id="ring">
+      <span class="idea">Big idea · add a dimension</span>
+      <h2>🐜 The water ring</h2>
+      <span class="lab">You need</span>
+      <ul class="need"><li>A plate or tray, a small upside-down cup (the island), water</li><li>A tiny toy figure and a drinking straw</li></ul>
+      <span class="lab">Do it</span>
+      <ol class="do">
+        <li>Put the cup upside-down in the middle of the plate and pour water around it.</li>
+        <li>Stand the figure on the cup. It lives on a flat world and can't swim. How does it get to the dry rim?</li>
+        <li>Let them try. Then lay the straw from the cup to the rim, from above.</li>
+      </ol>
+      <div class="sim">
+        <canvas id="ringCv" width="320" height="320" aria-label="Top view: an ant on an island inside a ring of water. Tap where the ant should walk."></canvas>
+        <div class="readout" id="ringMsg">Tap the 🏁 to make the ant walk there.</div>
+        <div class="row"><button class="btn secondary" id="ringBridge">Lay a straw from above</button><button class="btn secondary" id="ringReset">Reset</button></div>
+      </div>
+      <div class="ask">Ask: Why couldn't the ant get out? Where did the help come from?</div>
+      <div class="log" data-id="ring" data-title="The water ring">
+        <label class="lab" for="w-ring">In their own words</label>
+        <textarea id="w-ring" rows="2" placeholder="Write exactly what they said"></textarea>
+        <div class="row" style="justify-content:flex-start;margin-top:8px"><label class="muted">Age <input type="number" min="3" max="18" class="age" /></label>
+          <button class="btn secondary reveal">Show the grown-up answer</button><button class="btn secondary done">Mark done</button></div>
+        <div class="answer hidden"><div class="say">"From up here it is easy; from inside it was impossible."</div>
+          The ant only knows forward, back, left and right. The straw comes from a third direction, up, which it can't even point to. When you are stuck, add a dimension: in geometry that is drawing a line that wasn't in the problem.</div>
+      </div>
+    </section>
+
+    <!-- 2 · Six matchsticks -->
+    <section class="card" id="sticks">
+      <span class="idea">Big idea · add a dimension</span>
+      <h2>🔺 Six matchsticks</h2>
+      <span class="lab">You need</span>
+      <ul class="need"><li>Six sticks of the same length: toothpicks, straws or unlit matches</li><li>A little play-dough or tape for the corners</li></ul>
+      <span class="lab">Do it</span>
+      <ol class="do">
+        <li>The puzzle: make <strong>four</strong> triangles, every side exactly one stick, using only <strong>six</strong> sticks.</li>
+        <li>Let them try flat on the table for two minutes. (It can't be done.)</li>
+        <li>Hint, if needed: "Who said it has to stay on the table?"</li>
+      </ol>
+      <div class="sim">
+        <canvas id="tetCv" width="320" height="280" aria-label="Six sticks: a triangle base with three sticks meeting in the middle. Lift the middle with the slider; drag to turn."></canvas>
+        <label class="muted" for="tetLift">Lift the middle point</label>
+        <input type="range" id="tetLift" min="0" max="100" step="1" value="0" />
+        <div class="readout" id="tetMsg"></div>
+        <div class="muted">Drag the picture to turn it.</div>
+      </div>
+      <div class="ask">Ask: Why was it impossible flat? What changed?</div>
+      <div class="log" data-id="sticks" data-title="Six matchsticks">
+        <label class="lab" for="w-sticks">In their own words</label>
+        <textarea id="w-sticks" rows="2" placeholder="Write exactly what they said"></textarea>
+        <div class="row" style="justify-content:flex-start;margin-top:8px"><label class="muted">Age <input type="number" min="3" max="18" class="age" /></label>
+          <button class="btn secondary reveal">Show the grown-up answer</button><button class="btn secondary done">Mark done</button></div>
+        <div class="answer hidden"><div class="say">"Go up a dimension."</div>
+          Flat, the three sticks that run to the middle are too short to match the outside ones (0.58 of a stick). Lift the middle to 0.82 of a stick high and all six match: a tetrahedron, four equal triangles. Nothing was added except a direction.</div>
+      </div>
+    </section>
+
+    <!-- 3 · Folded paper -->
+    <section class="card" id="fold">
+      <span class="idea">Big idea · the space can change</span>
+      <h2>📄 Folded paper</h2>
+      <span class="lab">You need</span>
+      <ul class="need"><li>A strip of paper about 20 cm long, a pen</li></ul>
+      <span class="lab">Do it</span>
+      <ol class="do">
+        <li>Mark <strong>A</strong> at one end and <strong>B</strong> at the other. An ant walking on the paper from A to B goes 20 cm.</li>
+        <li>Challenge: make A touch B without cutting or tearing.</li>
+        <li>They will bend or fold it. Measure the paper again: still 20 cm.</li>
+      </ol>
+      <div class="sim">
+        <svg id="foldSv" viewBox="0 0 360 220" aria-label="A paper strip with A and B at its ends. Slide to bend it until A meets B."></svg>
+        <label class="muted" for="foldAng">Bend the paper</label>
+        <input type="range" id="foldAng" min="0" max="360" step="1" value="0" />
+        <div class="readout" id="foldMsg"></div>
+      </div>
+      <div class="ask">Ask: Did the paper road get shorter? Then how did A reach B?</div>
+      <div class="log" data-id="fold" data-title="Folded paper">
+        <label class="lab" for="w-fold">In their own words</label>
+        <textarea id="w-fold" rows="2" placeholder="Write exactly what they said"></textarea>
+        <div class="row" style="justify-content:flex-start;margin-top:8px"><label class="muted">Age <input type="number" min="3" max="18" class="age" /></label>
+          <button class="btn secondary reveal">Show the grown-up answer</button><button class="btn secondary done">Mark done</button></div>
+        <div class="answer hidden"><div class="say">"The road didn't get shorter; the space changed."</div>
+          The path along the paper stays 20 cm. Bending uses the third direction, so A and B meet through the air. This is the picture behind "wormholes" in science fiction; in real physics they are only math so far, and nobody has made one. Being honest about that is part of the lesson.</div>
+      </div>
+    </section>
+
+    <!-- 4 · Twenty doublings -->
+    <section class="card" id="double">
+      <span class="idea">Big idea · leap by doubling</span>
+      <h2>🔢 Twenty doublings</h2>
+      <span class="lab">You need</span>
+      <ul class="need"><li>A calculator, or the buttons below</li></ul>
+      <span class="lab">Do it</span>
+      <ol class="do">
+        <li>First, everyone guesses: how many times do you double 1 to pass a <strong>million</strong>? Write the guesses down.</li>
+        <li>Start at 1 and press ×2 again and again, counting the taps.</li>
+        <li>Compare with stepping +1 at a time.</li>
+      </ol>
+      <div class="sim">
+        <div class="big" id="dblNum">1</div>
+        <div class="readout" id="dblMsg">Taps: 0</div>
+        <div class="row"><button class="btn" id="dblBtn">Double ×2</button><button class="btn secondary" id="stepBtn">Step +1</button><button class="btn secondary" id="dblReset">Reset</button></div>
+        <div class="muted" id="dblLeft" style="margin-top:6px"></div>
+      </div>
+      <div class="ask">Ask: Which gets to a million faster, stepping or doubling? Why?</div>
+      <div class="log" data-id="double" data-title="Twenty doublings">
+        <label class="lab" for="w-double">In their own words</label>
+        <textarea id="w-double" rows="2" placeholder="Write exactly what they said"></textarea>
+        <div class="row" style="justify-content:flex-start;margin-top:8px"><label class="muted">Age <input type="number" min="3" max="18" class="age" /></label>
+          <button class="btn secondary reveal">Show the grown-up answer</button><button class="btn secondary done">Mark done</button></div>
+        <div class="answer hidden"><div class="say">"Leap by doubling, not by stepping."</div>
+          Twenty doublings give 1,048,576. Counting one per second, a million takes about 11½ days; doubling took 20 taps. Computers use the same trick backwards: you can find one name among a million sorted names in 20 yes/no questions (binary search).</div>
+      </div>
+    </section>
+
+    <!-- 5 · Ruler lever -->
+    <section class="card" id="lever">
+      <span class="idea">Big idea · small at the core, big at the tip</span>
+      <h2>📏 The ruler lever</h2>
+      <span class="lab">You need</span>
+      <ul class="need"><li>A 30 cm ruler and a round pencil</li></ul>
+      <span class="lab">Do it</span>
+      <ol class="do">
+        <li>Lay the pencil on the table. Rest the ruler across it, with the pencil 3 cm from your end.</li>
+        <li>Press your end down about 1 cm and watch the far end jump.</li>
+        <li>Now try to hold the far end perfectly still just above a line on paper. Watch it shake.</li>
+      </ol>
+      <div class="sim">
+        <svg id="levSv" viewBox="0 0 360 200" aria-label="Side view of a ruler resting on a pencil. Push your end down and watch the far end."></svg>
+        <label class="muted" for="levPush">Push your end down (0–1 cm)</label>
+        <input type="range" id="levPush" min="0" max="100" step="1" value="0" />
+        <label class="muted" for="levPiv">Pencil distance from your end</label>
+        <input type="range" id="levPiv" min="3" max="15" step="1" value="3" />
+        <div class="readout" id="levMsg"></div>
+        <div class="row"><button class="btn secondary" id="levShake">Add a shaky hand</button></div>
+      </div>
+      <div class="ask">Ask: Why did the far end move so much more? What happened to the shake?</div>
+      <div class="log" data-id="lever" data-title="The ruler lever">
+        <label class="lab" for="w-lever">In their own words</label>
+        <textarea id="w-lever" rows="2" placeholder="Write exactly what they said"></textarea>
+        <div class="row" style="justify-content:flex-start;margin-top:8px"><label class="muted">Age <input type="number" min="3" max="18" class="age" /></label>
+          <button class="btn secondary reveal">Show the grown-up answer</button><button class="btn secondary done">Mark done</button></div>
+        <div class="answer hidden"><div class="say">"Small at the core, big at the tip — and the wobble gets big too."</div>
+          The far end moves (long side ÷ short side) times as much as your hand: 27 ÷ 3 = 9 times. That is why a throw or a punch starts at the hips and ends at the hand. But the shake grows by the same 9 times, which is why careful work (writing, threading a needle) uses the fingers, not the shoulder.</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>📋 Keep their words</h2>
+      <p class="muted">Copies every answer you wrote (age + words, no names) so you can paste it into a note or a message to the family.</p>
+      <div class="row" style="justify-content:flex-start"><button class="btn" id="copyAll">Copy all answers</button><button class="btn secondary" id="clearAll">Clear this device</button></div>
+      <div class="readout" id="copyMsg" style="text-align:left"></div>
+    </section>
+
+    <p class="muted"><strong>For families of faith:</strong> the "help from above" pictures echo C. S. Lewis's sermon <em>Transposition</em> — a higher reality showing up in a lower one. That is worship, not physics; we keep the two labeled.</p>
+  </main>
+
+  <footer>Part of <a href="../apps.html">Daniel &amp; David's apps</a> · no network, no AI, no tracking · <a href="https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/cards/up-a-dimension.md">about this demo</a></footer>
+
+  <script>
+    // ── on-device store (localStorage seam; the page works without it) ──
+    var KEY = "dd.upadim.v1";
+    function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ return {}; } }
+    function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+    var S = load();
+
+    function $(id){ return document.getElementById(id); }
+    function fit(cv, w, h){
+      var r = window.devicePixelRatio || 1; cv.width = w*r; cv.height = h*r;
+      var g = cv.getContext("2d"); g.setTransform(r,0,0,r,0,0); return g;
+    }
+    function pt(cv, e, w, h){ var b = cv.getBoundingClientRect(); return {x:(e.clientX-b.left)*w/b.width, y:(e.clientY-b.top)*h/b.height}; }
+
+    // ── log boxes: words, age, done ──
+    var logs = Array.prototype.slice.call(document.querySelectorAll(".log"));
+    function paint(){
+      var n = 0;
+      logs.forEach(function(box){
+        var st = S[box.dataset.id] || {}, b = box.querySelector(".done");
+        b.textContent = st.done ? "✓ Done" : "Mark done"; b.classList.toggle("on", !!st.done);
+        var link = document.querySelector('#jump a[href="#' + box.dataset.id + '"]');
+        if (link) link.classList.toggle("ok", !!st.done);
+        if (st.done) n++;
+      });
+      $("prog").textContent = n + " of 5 done" + (n === 5 ? " — all five! 🎉" : "");
+    }
+    logs.forEach(function(box){
+      var id = box.dataset.id;
+      function st(){ return S[id] || (S[id] = {}); }
+      var ta = box.querySelector("textarea"), age = box.querySelector(".age");
+      ta.value = (S[id] && S[id].words) || ""; age.value = (S[id] && S[id].age) || "";
+      ta.addEventListener("input", function(){ st().words = ta.value; save(); });
+      age.addEventListener("input", function(){ st().age = age.value; save(); });
+      box.querySelector(".reveal").addEventListener("click", function(){ box.querySelector(".answer").classList.toggle("hidden"); });
+      box.querySelector(".done").addEventListener("click", function(){ st().done = !st().done; save(); paint(); if (st().done) confetti(); });
+    });
+    paint();
+
+    $("copyAll").addEventListener("click", function(){
+      var lines = ["Up a Dimension — " + new Date().toISOString().slice(0,10)];
+      logs.forEach(function(box, i){
+        var st = S[box.dataset.id] || {};
+        lines.push((i+1) + ". " + box.dataset.title + (st.age ? " (age " + st.age + ")" : "") + ": " + (st.words ? '"' + st.words.trim() + '"' : "—") + (st.done ? " ✓" : ""));
+      });
+      var text = lines.join("\n");
+      function ok(){ $("copyMsg").textContent = "Copied. Paste it anywhere."; }
+      function fallback(){
+        var t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select();
+        try { document.execCommand("copy"); ok(); } catch(e){ $("copyMsg").textContent = text; }
+        t.remove();
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, fallback); else fallback();
+    });
+    $("clearAll").addEventListener("click", function(){
+      if (!confirm("Clear every answer saved on this device?")) return;
+      S = {}; save();
+      logs.forEach(function(box){ box.querySelector("textarea").value = ""; box.querySelector(".age").value = ""; });
+      paint(); $("copyMsg").textContent = "Cleared.";
+    });
+
+    // ── 1 · water ring: a flat-world ant can only cross on a bridge laid from above ──
+    (function(){
+      var cv = $("ringCv"), W = 320, H = 320, g = fit(cv, W, H);
+      var cx = 160, cy = 160, R1 = 48, R2 = 112, goal = {x:292, y:160};
+      var ant, target, drop, has, won;
+      function reset(){ ant = {x:cx, y:cy}; target = null; drop = 0; has = false; won = false; say("Tap the 🏁 to make the ant walk there."); }
+      function say(t){ $("ringMsg").textContent = t; }
+      function inWater(x, y){ var d = Math.hypot(x-cx, y-cy); return d > R1 && d < R2; }
+      function onBridge(x, y){ return has && drop >= 1 && Math.abs(y-cy) < 8 && x > cx; }
+      function draw(){
+        g.clearRect(0,0,W,H);
+        g.fillStyle = "#EADFC6"; g.fillRect(0,0,W,H);
+        g.fillStyle = "#8EC5E8"; g.beginPath(); g.arc(cx,cy,R2,0,7); g.fill();
+        g.fillStyle = "#D9C49A"; g.beginPath(); g.arc(cx,cy,R1,0,7); g.fill();
+        g.font = "26px serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText("🏁", goal.x, goal.y-6);
+        if (has){
+          var s = 1 + (1-drop)*1.4, len = (R2-R1+24)*s, th = 10*s, x0 = cx+R1-12 - (len-(R2-R1+24))/2;
+          g.globalAlpha = 0.25*drop; g.fillStyle = "#000"; g.fillRect(cx+R1-12, cy-5+4, R2-R1+24, 10);
+          g.globalAlpha = Math.min(1, 0.3+drop); g.fillStyle = "#E3A857"; g.fillRect(x0, cy-th/2-(1-drop)*30, len, th);
+          g.globalAlpha = 1;
+        }
+        g.font = "22px serif"; g.fillText("🐜", ant.x, ant.y);
+      }
+      function tick(){
+        if (target){
+          var dx = target.x-ant.x, dy = target.y-ant.y, d = Math.hypot(dx,dy);
+          if (d < 2) target = null;
+          else {
+            var nx = ant.x + dx/d*2, ny = ant.y + dy/d*2;
+            if (inWater(nx,ny) && !onBridge(nx,ny)){
+              target = null;
+              say(has ? "Splash! Walk along the straw." : "Splash! The ant can't swim, and on its flat world there is no way around.");
+            } else { ant.x = nx; ant.y = ny; }
+          }
+          if (!won && Math.hypot(ant.x-goal.x, ant.y-goal.y) < 16){ won = true; target = null; say("Made it! Help came from a direction the ant can't even point to: up."); }
+        }
+        if (has && drop < 1) drop = Math.min(1, drop + 0.03);
+        draw(); requestAnimationFrame(tick);
+      }
+      cv.addEventListener("pointerdown", function(e){ target = pt(cv, e, W, H); });
+      $("ringBridge").addEventListener("click", function(){ if (!has){ has = true; say("A straw comes down from above… now tap the 🏁."); } });
+      $("ringReset").addEventListener("click", reset);
+      reset(); tick();
+    })();
+
+    // ── 2 · six sticks: lift the middle until the three spokes equal the base sides ──
+    (function(){
+      var cv = $("tetCv"), W = 320, H = 280, g = fit(cv, W, H), sl = $("tetLift");
+      var rc = 1/Math.sqrt(3), rot = 0.5, auto = true, drag = null, tilt = 0.45;
+      var base = [0,1,2].map(function(i){ var t = i*2*Math.PI/3 - Math.PI/2; return [rc*Math.cos(t), 0, rc*Math.sin(t)]; });
+      function proj(p){
+        var x = p[0]*Math.cos(rot) - p[2]*Math.sin(rot), z = p[0]*Math.sin(rot) + p[2]*Math.cos(rot);
+        var y = p[1]*Math.cos(tilt) - z*Math.sin(tilt);
+        return [W/2 + x*140, H*0.72 - y*140];
+      }
+      function stick(a, b){
+        g.lineCap = "round";
+        g.strokeStyle = "#7A5230"; g.lineWidth = 9; g.beginPath(); g.moveTo(a[0],a[1]); g.lineTo(b[0],b[1]); g.stroke();
+        g.strokeStyle = "#F0CF95"; g.lineWidth = 6; g.beginPath(); g.moveTo(a[0],a[1]); g.lineTo(b[0],b[1]); g.stroke();
+        g.fillStyle = "#C9412B"; g.beginPath(); g.arc(b[0],b[1],5,0,7); g.fill();
+      }
+      function draw(){
+        var h = sl.value/100, spoke = Math.sqrt(rc*rc + h*h), equal = Math.abs(spoke-1) < 0.012;
+        var B = base.map(proj), A = proj([0,h,0]);
+        g.clearRect(0,0,W,H);
+        g.fillStyle = "#EADFC6"; g.beginPath(); g.ellipse(W/2, H*0.72, 130, 46, 0, 0, 7); g.fill();
+        if (equal){
+          g.fillStyle = "rgba(91,140,123,.22)";
+          [[0,1],[1,2],[2,0]].forEach(function(e){ g.beginPath(); g.moveTo(A[0],A[1]); g.lineTo(B[e[0]][0],B[e[0]][1]); g.lineTo(B[e[1]][0],B[e[1]][1]); g.fill(); });
+        }
+        stick(B[0],B[1]); stick(B[1],B[2]); stick(B[2],B[0]);
+        stick(B[0],A); stick(B[1],A); stick(B[2],A);
+        $("tetMsg").textContent = equal
+          ? "Four equal triangles! The middle is " + h.toFixed(2) + " sticks high. You went up a dimension. ✓"
+          : "Middle sticks are " + spoke.toFixed(2) + " × an outside stick · equal triangles: 1" + (h === 0 ? " (flat: the three little ones are squashed)" : "");
+      }
+      function tick(){ if (auto) rot += 0.006; draw(); requestAnimationFrame(tick); }
+      cv.addEventListener("pointerdown", function(e){ drag = e.clientX; auto = false; cv.setPointerCapture(e.pointerId); });
+      cv.addEventListener("pointermove", function(e){ if (drag !== null){ rot += (e.clientX-drag)*0.012; drag = e.clientX; } });
+      cv.addEventListener("pointerup", function(){ drag = null; });
+      tick();
+    })();
+
+    // ── 3 · folded paper: the strip keeps its length; the gap through the air closes ──
+    (function(){
+      var sv = $("foldSv"), sl = $("foldAng"), L = 240, base = 190, cx = 180, PX_PER_CM = 12, NS = "http://www.w3.org/2000/svg";
+      function el(tag, attrs){ var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); return e; }
+      function draw(){
+        var th = sl.value*Math.PI/180, pts = [], i;
+        for (i = 0; i <= 80; i++){
+          var s = i/80*L;
+          if (th < 1e-3) pts.push([cx - L/2 + s, base]);
+          else { var R = L/th, phi = (s - L/2)/R; pts.push([cx + R*Math.sin(phi), base - R*(1 - Math.cos(phi))]); }
+        }
+        var chord = th < 1e-3 ? L : 2*(L/th)*Math.sin(th/2), d = pts.map(function(p){ return p[0].toFixed(1)+","+p[1].toFixed(1); }).join(" ");
+        var a = pts[0], b = pts[pts.length-1];
+        while (sv.firstChild) sv.removeChild(sv.firstChild);
+        sv.appendChild(el("polyline", {points:d, fill:"none", stroke:"#B9A98A", "stroke-width":18, "stroke-linecap":"round", "stroke-linejoin":"round"}));
+        sv.appendChild(el("polyline", {points:d, fill:"none", stroke:"#FBF4E4", "stroke-width":14, "stroke-linecap":"round", "stroke-linejoin":"round"}));
+        if (chord > 4) sv.appendChild(el("line", {x1:a[0], y1:a[1], x2:b[0], y2:b[1], stroke:"#5B8C7B", "stroke-width":2, "stroke-dasharray":"5 5"}));
+        sv.appendChild(el("circle", {cx:a[0], cy:a[1], r:8, fill:"#C9412B"}));
+        sv.appendChild(el("circle", {cx:b[0], cy:b[1], r:8, fill:"#3A6EA5"}));
+        var ta = el("text", {x:a[0]-14, y:a[1]+5, "font-size":16, "font-weight":800, fill:"#C9412B", "text-anchor":"end"}); ta.textContent = "A"; sv.appendChild(ta);
+        var tb = el("text", {x:b[0]+14, y:b[1]+5, "font-size":16, "font-weight":800, fill:"#3A6EA5"}); tb.textContent = "B"; sv.appendChild(tb);
+        var cm = chord/PX_PER_CM;
+        $("foldMsg").textContent = cm < 0.3
+          ? "They touch! Along the paper: still 20 cm. Through the air: 0 cm. ✓"
+          : "Along the paper: 20 cm (never changes) · through the air: " + cm.toFixed(1) + " cm";
+      }
+      sl.addEventListener("input", draw); draw();
+    })();
+
+    // ── 4 · twenty doublings ──
+    (function(){
+      var n = 1, taps = 0, steps = 0, cheered = false, M = 1000000;
+      function show(){
+        $("dblNum").textContent = n.toLocaleString("en-US");
+        $("dblMsg").textContent = "Doublings: " + taps + " · steps: " + steps;
+        $("dblLeft").textContent = n >= M
+          ? "Past a million in " + taps + " doublings" + (steps ? " and " + steps + " steps" : "") + ". Counting by 1 each second, a million takes about 11½ days."
+          : "Still " + (M - n).toLocaleString("en-US") + " to go. Stepping +1 would need that many more taps.";
+        if (n >= M && !cheered){ cheered = true; confetti(); }
+      }
+      $("dblBtn").addEventListener("click", function(){ n *= 2; taps++; show(); });
+      $("stepBtn").addEventListener("click", function(){ n += 1; steps++; show(); });
+      $("dblReset").addEventListener("click", function(){ n = 1; taps = 0; steps = 0; cheered = false; show(); });
+      show();
+    })();
+
+    // ── 5 · ruler lever: tip moves (L - p)/p times the hand; so does the shake ──
+    (function(){
+      var sv = $("levSv"), push = $("levPush"), piv = $("levPiv"), NS = "http://www.w3.org/2000/svg";
+      var RULER = 30, K = 11, X0 = 15, PY = 130, shaky = false, trail = [], t = 0;
+      function el(tag, attrs){ var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); return e; }
+      function frame(){
+        t += 0.05;
+        var p = +piv.value, d = push.value/100, jit = shaky ? 0.1*(0.6*Math.sin(t*3.1) + 0.4*Math.sin(t*7.3+1)) : 0;
+        var de = d + jit, ratio = (RULER - p)/p, ang = -Math.atan2(de, p)*180/Math.PI, px = X0 + p*K;
+        var tipY = PY - 4 - de*ratio*K; trail.push(tipY); if (trail.length > 24) trail.shift();
+        while (sv.firstChild) sv.removeChild(sv.firstChild);
+        sv.appendChild(el("line", {x1:0, y1:PY+12, x2:360, y2:PY+12, stroke:"#B9A98A", "stroke-width":2}));
+        if (shaky) trail.forEach(function(y, i){ sv.appendChild(el("circle", {cx:X0+RULER*K, cy:y, r:3, fill:"#C9412B", opacity:(i+1)/trail.length*0.5})); });
+        sv.appendChild(el("circle", {cx:px, cy:PY+6, r:6, fill:"#E3B23C", stroke:"#7A5230", "stroke-width":1.5}));
+        var grp = el("g", {transform:"rotate(" + ang.toFixed(3) + " " + px + " " + PY + ")"});
+        grp.appendChild(el("rect", {x:X0, y:PY-8, width:RULER*K, height:8, fill:"#F6E7B8", stroke:"#7A5230", "stroke-width":1.2}));
+        for (var c = 0; c <= RULER; c++) grp.appendChild(el("line", {x1:X0+c*K, y1:PY-8, x2:X0+c*K, y2:PY-8+(c%5 ? 3 : 6), stroke:"#7A5230", "stroke-width":1}));
+        sv.appendChild(grp);
+        var hand = el("text", {x:X0+4, y:PY-14 + de*K, "font-size":22, "text-anchor":"middle"}); hand.textContent = "👇"; sv.appendChild(hand);
+        $("levMsg").textContent = shaky
+          ? "Hand shake ±1 mm → far-end shake ±" + (ratio).toFixed(0) + " mm (×" + ratio.toFixed(1) + ")"
+          : "Your hand: " + d.toFixed(2) + " cm → far end: " + (d*ratio).toFixed(1) + " cm (×" + ratio.toFixed(1) + ")";
+        requestAnimationFrame(frame);
+      }
+      $("levShake").addEventListener("click", function(){ shaky = !shaky; trail = []; this.classList.toggle("on", shaky); this.textContent = shaky ? "Steady hand" : "Add a shaky hand"; });
+      frame();
+    })();
+
+    function confetti(){
+      var b = document.createElement("div"); b.className = "burst";
+      var bits = ["⭐","🎉","✨","🌟","💛"];
+      for (var i = 0; i < 22; i++){
+        var s = document.createElement("span"); s.textContent = bits[i%bits.length];
+        s.style.left = (5 + (i*4.3)%92) + "%"; s.style.animationDuration = (1.6 + (i%5)*0.25) + "s"; s.style.fontSize = (16 + (i%4)*7) + "px";
+        b.appendChild(s);
+      }
+      document.body.appendChild(b); setTimeout(function(){ b.remove(); }, 2600);
+    }
+  </script>
+</body>
+</html>

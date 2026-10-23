@@ -1,4 +1,4 @@
-<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
+<!-- i18n-source-sha: 1e5d53cde29ad3f6 -->
 <div align="center">
 
 # 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
@@ -66,7 +66,7 @@ Die eine Regel, die nie gebrochen wird: **Kein Mensch ist jemals der Feind.** Wa
 |---|---|---|
 | **1 · Die Akademie (SAW, Shepherd's Academy of War)** | Mut und Können für Kinder: Lerne, wie ein Angriff funktioniert, damit du als Beschützer leben kannst. Fünf Gesetze darüber, worauf dieses Können gerichtet werden darf. Eine Gastdozenten-Regel: **Inhalt, nicht Kontakt**, damit kein Kind jemals allein mit einem Erwachsenen ist. Eine Scorecard, die auch eine Niederlage zeigen kann. | Die [fünfteilige Serie](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [Forschung](docs/research/shepherd-warrior-formation.md) |
 | **2 · Das Feldlabor (Daniel & David)** | Der **[Builder Loop (Erbauerschleife)](docs/builder-loop/)**: ein vierwöchiges Familienexperiment, durchgeführt als fünf schnelle Bau-Zeige-Lern-Zyklen. KI ist der Teamkollege; du bleibst Verstand und Gewissen. Unternehmungen, Lehrplan, Prinzipien. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · Übungen und Demos** | Dinge, die eine Familie in 15–20 Minuten durchführen kann: die wöchentliche **Autofahrt-Übung** (SAW Teil 5) und das **Shepherd's World Model**-Spiel. Dazu kleine Apps (Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · Übungen und Demos** | Dinge, die eine Familie in 15–20 Minuten durchführen kann: die wöchentliche **Autofahrt-Übung** (SAW Teil 5) und das **Shepherd's World Model**-Spiel. Dazu kleine Apps (Conversation Spark, Transition Timer, Homework Chunker, Up a Dimension). | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 

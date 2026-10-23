@@ -1,4 +1,4 @@
-<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
+<!-- i18n-source-sha: 1e5d53cde29ad3f6 -->
 <div align="center">
 
 # 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
@@ -66,7 +66,7 @@ La única regla que nunca se dobla: **ninguna persona es jamás el enemigo.** Lo
 |---|---|---|
 | **1 · La Academia (SAW)** | Valentía y habilidad para niños: aprende cómo funciona un ataque, para que puedas vivir como protector. Cinco leyes sobre dónde puede dirigirse esa habilidad. Una regla para instructores invitados: **contenido, no contacto**, así ningún niño está nunca a solas con un adulto. Un marcador que puede mostrar una derrota. | La [serie de cinco partes](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [investigación](docs/research/shepherd-warrior-formation.md) |
 | **2 · El Laboratorio de Campo (Daniel & David)** | El **[Builder Loop (Bucle del Constructor)](docs/builder-loop/)**: un experimento familiar de cuatro semanas realizado como cinco ciclos rápidos de construir-mostrar-aprender. La IA es el compañero de equipo; tú sigues siendo la mente y la conciencia. Proyectos, currículo, principios. | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · Ejercicios y demostraciones** | Cosas que una familia puede hacer en 15–20 minutos: el **ejercicio semanal en el coche** (SAW parte 5) y el juego **Shepherd's World Model**. Además, pequeñas apps (Conversation Spark, Transition Timer, Homework Chunker). | [`docs/saw/drills/`](docs/saw/drills/) · [Galería de Apps](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · Ejercicios y demostraciones** | Cosas que una familia puede hacer en 15–20 minutos: el **ejercicio semanal en el coche** (SAW parte 5) y el juego **Shepherd's World Model**. Además, pequeñas apps (Conversation Spark, Transition Timer, Homework Chunker, Up a Dimension). | [`docs/saw/drills/`](docs/saw/drills/) · [Galería de Apps](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 

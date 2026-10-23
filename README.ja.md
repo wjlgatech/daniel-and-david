@@ -1,4 +1,4 @@
-<!-- i18n-source-sha: c21424bb0ef5f5e5 -->
+<!-- i18n-source-sha: 1e5d53cde29ad3f6 -->
 <div align="center">
 
 # 🛡️ Shepherd's Academy of War · 🌱 Daniel &amp; David
@@ -66,7 +66,7 @@ flowchart LR
 |---|---|---|
 | **1 · アカデミー（SAW）** | 子どものための勇気とスキル：攻撃がどう機能するかを学び、守る者として生きる。スキルの使い道に関する5つの法則。ゲストインストラクターのルール：**内容（コンテンツ）、接触（コンタクト）なし**。子どもが大人と二人きりになることはありません。負けも記録できるスコアカード。 | [5部作シリーズ](https://agentic-portfolio-lovat.vercel.app/articles/saw-academy-of-war-learn-the-attack.html) · [`docs/saw/`](docs/saw/) · [研究](docs/research/shepherd-warrior-formation.md) |
 | **2 · フィールドラボ（Daniel & David）** | **[Builder Loop](docs/builder-loop/)**：4週間の家族実験を5回のビルド・見せる・学ぶサイクルで回します。AIはチームメイト、あなたは頭脳と良心。ベンチャー、カリキュラム、原則。 | [`docs/builder-loop/`](docs/builder-loop/) · [`docs/curriculum/`](docs/curriculum/) · [`ventures/`](ventures/) |
-| **3 · ドリルとデモ** | 家族で15〜20分でできること：週1回の**車内ドリル**（SAWパート5）と**Shepherd's World Model**ゲーム。さらに小さなアプリ（Conversation Spark、Transition Timer、Homework Chunker）。 | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
+| **3 · ドリルとデモ** | 家族で15〜20分でできること：週1回の**車内ドリル**（SAWパート5）と**Shepherd's World Model**ゲーム。さらに小さなアプリ（Conversation Spark、Transition Timer、Homework Chunker、Up a Dimension）。 | [`docs/saw/drills/`](docs/saw/drills/) · [Apps Gallery](https://daniel-and-david.vercel.app/apps.html) |
 
 ---
 

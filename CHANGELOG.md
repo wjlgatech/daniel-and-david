@@ -7,6 +7,7 @@ this project aims for [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- **Up a Dimension (`apps/web/public/demos/up-a-dimension.html`), five 10-minute hands-on demos for ages 6–12:** the water ring, six matchsticks, folded paper, twenty doublings and the ruler lever, each with a screen companion whose numbers are exact (tetrahedron height √(2/3) ≈ 0.82, chord 2R·sin(θ/2), lever (30 − p)/p). The child's own words and age are kept on the device only, so a parent can paste the five sentences; this is the measure for SAW's first-principles demos (due 2026-11-21). Card + registry entry; README row in all seven languages.
 - `docs/STATUS.md`: SAW test case 1 (a geometry coach built with a partner teacher, private repo, prototype live) so the board shows it.
 - **`docs/STATUS.md`, a status board (done · doing · next · Paul's).** So a new session resumes from a file, not from memory; Paul's column holds only direction, money or eval.
 

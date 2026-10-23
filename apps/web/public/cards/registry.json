@@ -9,7 +9,12 @@
       "host": "static",
       "status": "live",
       "emoji": "🛠️",
-      "tags": ["family", "builder-loop", "ages-5-15", "pwa"],
+      "tags": [
+        "family",
+        "builder-loop",
+        "ages-5-15",
+        "pwa"
+      ],
       "llm": "none (on-device)",
       "framework": "static-html",
       "demo_url": "./app.html",
@@ -23,7 +28,11 @@
       "host": "static",
       "status": "live",
       "emoji": "💬",
-      "tags": ["parents", "conversation", "ages-5-15"],
+      "tags": [
+        "parents",
+        "conversation",
+        "ages-5-15"
+      ],
       "llm": "optional · free-llm seam",
       "framework": "static-html",
       "demo_url": "./demos/conversation-spark.html",
@@ -37,7 +46,11 @@
       "host": "static",
       "status": "live",
       "emoji": "⏳",
-      "tags": ["parents", "ages-5-7", "transitions"],
+      "tags": [
+        "parents",
+        "ages-5-7",
+        "transitions"
+      ],
       "llm": "none (on-device)",
       "framework": "static-html",
       "demo_url": "./demos/transition-timer.html",
@@ -51,11 +64,36 @@
       "host": "static",
       "status": "live",
       "emoji": "📚",
-      "tags": ["kids", "ages-10-13", "homework", "focus"],
+      "tags": [
+        "kids",
+        "ages-10-13",
+        "homework",
+        "focus"
+      ],
       "llm": "none (on-device)",
       "framework": "static-html",
       "demo_url": "./demos/homework-chunker.html",
       "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/homework-chunker.html"
+    },
+    {
+      "name": "Up a Dimension",
+      "slug": "up-a-dimension",
+      "app_type": "demo",
+      "pain_solved": "Give a 6–12-year-old five 10-minute 'whoa' moments about space, scale and leverage, with things from the kitchen drawer.",
+      "host": "static",
+      "status": "live",
+      "emoji": "⬆️",
+      "tags": [
+        "kids",
+        "ages-6-12",
+        "math",
+        "physics",
+        "hands-on"
+      ],
+      "llm": "none (on-device)",
+      "framework": "static-html",
+      "demo_url": "./demos/up-a-dimension.html",
+      "repo_url": "https://github.com/wjlgatech/daniel-and-david/blob/main/apps/web/public/demos/up-a-dimension.html"
     },
     {
       "name": "KC Matchday Basecamp",
@@ -65,7 +103,11 @@
       "host": "concept",
       "status": "concept",
       "emoji": "🏕️",
-      "tags": ["venture", "kansas-city", "football"],
+      "tags": [
+        "venture",
+        "kansas-city",
+        "football"
+      ],
       "llm": "planned",
       "framework": "static-html",
       "demo_url": "",
